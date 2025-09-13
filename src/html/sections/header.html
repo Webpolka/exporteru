@@ -1,0 +1,64 @@
+<header class="header">
+	<div class="container">
+		<div class="header__top">
+			<nav class="header__nav">
+				<ul>
+					<li><a href="#" class="header__link">Отзывы</a></li>
+					<li><a href="#" class="header__link">Контакты</a></li>
+					<li><a href="#" class="header__link">О нас</a></li>
+					<li><a href="#" class="header__link">Помощь</a></li>
+				</ul>
+			</nav>
+			<div class="header__contacts">
+				<a class="header__phone" href="tel:+78564674666">+7 856 467-46-66</a>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<a href="#" class="header__logo">
+				<img src="../../images/logo.png" alt="Logo" />
+			</a>
+
+			<div class="header__row">
+				<div class="header__row-group">
+					<!-- Catalog button -->
+					<button id="catalog-btn" class="catalog-btn" type="button" aria-label="Каталог">
+						<div class="catalog-btn__burger">
+							<span></span>
+						</div>
+						<span class="catalog-btn__name">Каталог</span>
+					</button>
+
+					<!-- Seacrh form -->
+					<form class="search-form" action="">
+						<input type="search" id="search-input" class="search-form__input" placeholder="Поиск по сайту" name="s" />
+						<button type="submit" class="search-form__button" aria-label="Поиск">
+							<svg class="icon icon--search">
+								<use href="./icons/symbol/sprite.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+
+				<!-- Login Button -->
+				<button id="login-btn" class="login-btn">
+					<span class="login-btn__icon">
+						<svg class="icon icon--profile">
+							<use href="./icons/symbol/sprite.svg#profile"></use>
+						</svg>
+					</span>
+					<span class="login-btn__name">Войти</span>
+				</button>
+
+				<!-- Language switcher -->
+				<button id="lang-switcher-btn" class="lang-switcher">
+					<span class="lang-switcher__icon">
+						<svg class="icon icon--flag-russian">
+							<use href="./icons/symbol/sprite.svg#flag-russian"></use>
+						</svg>
+					</span>
+					<span class="lang-switcher__name">Русский</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>

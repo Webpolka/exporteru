@@ -1,0 +1,185 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+COMPONENTS
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+// CATALOG BUTTON
+.catalog-btn {
+	display: flex;
+	align-items: center;
+	gap: rem(10);
+
+	padding-inline: rem(18);
+	min-height: rem(44);
+
+	background: var(--red);
+
+	@include sm{
+		min-height: rem(36);
+		width: rem(36);
+		padding-inline: 0;
+		justify-content: center;
+
+	}
+
+	// BURGER BUTTON
+	&__burger {
+		position: relative;
+		display: inline-block;
+
+		width: rem(20);
+		height: rem(13);
+
+		flex-shrink: 0;
+
+		cursor: pointer;
+
+		span,
+		&::before,
+		&::after {
+			display: block;
+			content: "";
+			transition: all 0.3s ease-in-out;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 1.5px;
+			background-color: var(--white);
+			border-radius: rem(10);
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: 50%;
+			transform: translateY(-65%);
+		}
+		&.active span {
+			width: 0;
+		}
+		&.active::before {
+			top: 50%;
+			transform: translateY(-50%) rotate(-45deg);
+		}
+		&.active::after {
+			bottom: 50%;
+			transform: translateY(50%) rotate(45deg);
+		}
+	}
+
+	// NAME
+	&__name {
+		font-weight: 500;
+		font-size: rem(18);
+		color: var(--white);
+	}
+}
+
+// SEARCH FORM
+.search-form {
+	display: flex;
+	justify-content: space-between;
+
+	padding-inline: rem(18);
+	min-height: rem(44);
+	background-color: var(--white);
+
+	flex-grow: 1;
+
+	&__input {
+		font-weight: 400;
+		font-size: rem(15);
+
+		&::placeholder {
+			color: rgba(47, 47, 47, 0.5);
+		}
+	}
+
+	&__button {
+		transform: translateY(5%);
+		svg {
+			width: rem(19);
+			height: rem(20);
+		}
+	}
+}
+
+// LOGIN BUTTON
+.login-btn {
+	max-height: rem(44);
+	height: 100%;
+
+	flex-shrink: 0;
+
+	&__icon {
+		display: inline-block;
+		// position: relative;
+		// left: 50%;
+		// transform: translateX(-50%);
+		svg {
+			width: rem(26);
+			height: rem(26);
+		}
+
+		@include sm {
+			svg {
+				width: rem(16);
+				height: rem(16);
+			}
+		}
+	}
+
+	&__name {
+		display: block;
+		margin-top: auto;
+		font-weight: 400;
+		font-size: rem(14);
+		color: var(--white);
+
+		@include sm {
+			font-size: rem(10);
+		}
+	}
+}
+
+// LANGUAGE SWITCHER
+.lang-switcher {
+	height: 100%;
+	max-height: rem(44);
+
+	flex-shrink: 0;
+
+	&__icon {
+		display: inline-block;
+
+		border-radius: rem(3);
+		overflow: hidden;
+		// position: relative;
+		// left: 50%;
+		// transform: translateX(-50%);
+		svg {
+			width: rem(34);
+			height: rem(24);
+		}
+		@include sm {
+			svg {
+				width: rem(25);
+				height: rem(16);
+			}
+		}
+	}
+
+	&__name {
+		display: block;
+		margin-top: auto;
+		font-weight: 400;
+		font-size: rem(14);
+		color: var(--white);
+
+		@include sm {
+			font-size: rem(10);
+		}
+	}
+}

@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ROOT
+--------------------------------------------------------------------------------------------------------------------------------*/
+:root {
+	--max-width: 1440px;
+
+	--container-padding-desktop: 85px;
+	--container-padding-large: 45px;
+	--container-padding-small: 15px;
+
+	--font-main: "Montserrat", sans-serif;
+	--font-title: "Montserrat", sans-serif;
+
+	--white: #fff;
+	--black: #000;
+	--accent: #0047ba;
+	--red: #e1251b;
+
+	--scrollbar: gray;
+	--scrollbar-track: gray;
+	--scrollbar-thumb: var(--accent);
+}
