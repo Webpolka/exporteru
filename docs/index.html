@@ -8,6 +8,7 @@
     <title>Главная</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
     <link rel="stylesheet" href="vendor/bootstrap-grid.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
@@ -39,11 +40,11 @@
                     <div class="header__row">
                         <div class="header__row-group">
                             <!-- Catalog button -->
-                            <button id="catalog-btn" class="catalog-btn" type="button" aria-label="Каталог">
-                                <div class="catalog-btn__burger">
+                            <button id="catalog-btn" class="btn-catalog" type="button" aria-label="Каталог">
+                                <div class="btn-catalog__burger">
                                     <span></span>
                                 </div>
-                                <span class="catalog-btn__name">Каталог</span>
+                                <span class="btn-catalog__name">Каталог</span>
                             </button>
 
                             <!-- Seacrh form -->
@@ -58,36 +59,194 @@
                         </div>
 
                         <!-- Login Button -->
-                        <button id="login-btn" class="login-btn">
-                            <span class="login-btn__icon">
-                                <svg class="icon icon--profile">
-                                    <use href="./icons/symbol/sprite.svg#profile"></use>
-                                </svg>
-                            </span>
-                            <span class="login-btn__name">Войти</span>
+                        <button id="login-btn" class="btn-login">
+                            <svg class="icon icon--profile">
+                                <use href="./icons/symbol/sprite.svg#profile"></use>
+                            </svg>
+                            <span>Войти</span>
                         </button>
 
                         <!-- Language switcher -->
-                        <button id="lang-switcher-btn" class="lang-switcher">
+                        <a href="#" class="lang-switcher">
                             <span class="lang-switcher__icon">
                                 <svg class="icon icon--flag-russian">
                                     <use href="./icons/symbol/sprite.svg#flag-russian"></use>
                                 </svg>
                             </span>
                             <span class="lang-switcher__name">Русский</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </header>
 
         <main class="main">
-            <section class="section-example">
-                <h2 class="visually-hidden">title</h2>
+            <section class="section popular">
+                <h2 class="visually-hidden">Популярные категории</h2>
                 <div class="container">
-                    Content
+                    <div class="section__header">
+                        <div class="section__header-title">Популярные категории</div>
+
+                        <!-- this button will be transfering by JS in SM mediaquery FROM THIS-->
+                        <a href="#" id="popular-transfering" class="btn-accent visible-desktop">Смотреть все</a>
+                    </div>
+
+                    <div class="popular__grid">
+                        <!-- 1 -->
+                        <div class="popular__grid-item">
+                            <img src="./images/main/main-2-1.png" alt="">
+                            <div class="popular__position">
+
+                                <h3 class="popular__title">Металлургическая продукция</h3>
+
+                                <!-- WARNING ! don't destroy this construction -->
+                                <div class="popular__more">
+                                    <a href="#" class="popular__morelink">
+                                        <span>Подробнее</span>
+                                        <svg class="icon icon--right-long">
+                                            <use href="./icons/symbol/sprite.svg#right-long"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="popular__grid-item">
+                            <img src="./images/main/main-2-2.png" alt="">
+                            <div class="popular__position">
+                                <h3 class="popular__title">Древесина</h3>
+                                <div class="popular__more">
+                                    <a href="#" class="popular__morelink">
+                                        <span>Подробнее</span>
+                                        <svg class="icon icon--right-long">
+                                            <use href="./icons/symbol/sprite.svg#right-long"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="popular__grid-item">
+                            <img src="./images/main/main-2-3.png" alt="">
+                            <div class="popular__position">
+                                <h3 class="popular__title">Минеральная продукция</h3>
+                                <div class="popular__more">
+                                    <a href="#" class="popular__morelink">
+                                        <span>Подробнее</span>
+                                        <svg class="icon icon--right-long">
+                                            <use href="./icons/symbol/sprite.svg#right-long"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="popular__grid-item">
+                            <img src="./images/main/main-2-4.png" alt="">
+                            <div class="popular__position">
+                                <h3 class="popular__title">Полезные ископаемые</h3>
+                                <div class="popular__more">
+                                    <a href="#" class="popular__morelink">
+                                        <span>Подробнее</span>
+                                        <svg class="icon icon--right-long">
+                                            <use href="./icons/symbol/sprite.svg#right-long"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- this button will be transfering by JS in SM mediaquery HERE -->
+                    <div id="popular-for-transfered" class="popular__transfered"></div>
                 </div>
             </section>
+
+            <section class="section advantages">
+                <h2 class="visually-hidden">Преимущества работы с нами</h2>
+                <div class="container">
+                    <div class="advantages__grid">
+                        <!-- 1 -->
+                        <div class="advantages__grid-item">
+                            <div class="advantages__flex">
+                                <div class="advantages__title">Преимущества работы с нами</div>
+                                <p class="advantages__description">
+                                    Почему выбирают нас? <br class="desktop-vs">
+                                    Потому что мы делаем <br class="desktop-vs">сложное - простым,<br class="desktop-vs">
+                                    а надежное - доступным!
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="advantages__grid-item">
+                            <div id="advantages-slider" class="keen-slider">
+                                <!-- 1 -->
+                                <div class="keen-slider__slide">
+                                    <div class="advantages-card">
+                                        <div class="advantages-card__count">01</div>
+                                        <div class="advantages-card__group">
+                                            <p class="advantages-card__text">Прямые контракты с проверенными производителями</p>
+                                            <div class="advantages-card__image">
+                                                <img src="./images/main/main-3-1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2 -->
+                                <div class="keen-slider__slide">
+                                    <div class="advantages-card">
+                                        <div class="advantages-card__count">02</div>
+                                        <div class="advantages-card__group">
+                                            <p class="advantages-card__text">Доступ к широкому каталогу товаров из России</p>
+                                            <div class="advantages-card__image">
+                                                <img src="./images/main/main-3-2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 3 -->
+                                <div class="keen-slider__slide">
+                                    <div class="advantages-card">
+                                        <div class="advantages-card__count">03</div>
+                                        <div class="advantages-card__group">
+                                            <p class="advantages-card__text">Единый канал для закупки из разных отраслей и регионов России</p>
+                                            <div class="advantages-card__image">
+                                                <img src="./images/main/main-3-3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 4 -->
+                                <div class="keen-slider__slide">
+                                    <div class="advantages-card">
+                                        <div class="advantages-card__count">04</div>
+                                        <div class="advantages-card__group">
+                                            <p class="advantages-card__text">Эксклюзивные условия и квоты от производителей для партнёров</p>
+                                            <div class="advantages-card__image">
+                                                <img src="./images/main/main-3-4.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 5 -->
+                                <div class="keen-slider__slide">
+                                    <div class="advantages-card">
+                                        <div class="advantages-card__count">05</div>
+                                        <div class="advantages-card__group">
+                                            <p class="advantages-card__text">Снижение затрат на закупки и валютные риски</p>
+                                            <div class="advantages-card__image">
+                                                <img src="./images/main/main-3-5.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
         <footer class="footer">
             <div class="container">
@@ -200,6 +359,7 @@
         </footer>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
     <script src="./js/main.min.js"></script>
 
 </body>

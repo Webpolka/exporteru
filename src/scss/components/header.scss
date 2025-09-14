@@ -7,7 +7,7 @@ HEADER
 			.search-form {
 				display: none;
 			}
-			.lang-switcher{
+			.lang-switcher {
 				display: none;
 			}
 		}
@@ -23,7 +23,7 @@ HEADER
 		justify-content: space-between;
 		align-items: center;
 
-		@include sm{
+		@include sm {
 			min-height: rem(20);
 		}
 	}
@@ -35,7 +35,7 @@ HEADER
 			align-items: start;
 			gap: rem(43);
 
-			@include sm{
+			@include sm {
 				gap: rem(15);
 			}
 		}
@@ -46,13 +46,13 @@ HEADER
 		font-weight: 500;
 		font-size: rem(14);
 		color: rgba(47, 47, 47, 0.7);
-		transition: all 0.3s ease-in-out;
+		transition: var(--transition);
 
 		&:hover {
 			color: var(--accent);
 		}
 
-		@include sm{
+		@include sm {
 			font-size: rem(10);
 		}
 	}
@@ -64,7 +64,7 @@ HEADER
 			font-size: rem(16);
 			color: #2f2f2f;
 
-			@include sm{
+			@include sm {
 				font-size: rem(10);
 			}
 		}
@@ -99,7 +99,7 @@ HEADER
 			background-color: var(--accent);
 		}
 
-		@include sm{
+		@include sm {
 			min-height: rem(59);
 		}
 	}
@@ -110,7 +110,13 @@ HEADER
 		width: rem(234);
 		flex-shrink: 0;
 
-		@include lg{
+		transition: var(--transition);
+
+		&:hover {
+			filter: var(--filter);
+		}
+
+		@include lg {
 			width: rem(152);
 		}
 
@@ -132,7 +138,7 @@ HEADER
 
 		flex-grow: 1;
 
-		@include lg{
+		@include lg {
 			justify-content: flex-end;
 		}
 
@@ -145,33 +151,32 @@ HEADER
 			flex-grow: 1;
 			order: 1;
 
-			@include lg{
+			@include lg {
 				flex-grow: 0;
 				order: 2;
 			}
 		}
 
-		.catalog-btn{
-			&__name{
-				@include lg{
+		.btn-catalog {
+			&__name {
+				@include lg {
 					display: none;
 				}
 			}
 		}
 
-		.login-btn{
+		.btn-login {
 			order: 2;
-			@include lg{
+			@include lg {
 				order: 1;
 			}
 		}
 
-		.lang-switcher{
+		.lang-switcher {
 			order: 3;
-			@include lg{
+			@include lg {
 				order: 3;
 			}
 		}
-
 	}
 }

@@ -1,9 +1,45 @@
+.desktop-vs {
+	display: none;
+	@media (min-width: 1200px) {
+		display: block;
+	}
+}
+.sm-vs {
+	display: none;
+	@include sm {
+		display: block;
+	}
+}
 /* ------------------------------------------------------------------------------------------------------------------------------
 COMPONENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
+.section {
+	padding-block: rem(35);
 
-// CATALOG BUTTON
-.catalog-btn {
+	@include sm {
+		padding-block: rem(30);
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		padding-bottom: rem(35);
+
+		&-title {
+			font-weight: 500;
+			font-size: rem(30);
+			color: var(--text);
+
+			@include md {
+				font-size: rem(24);
+			}
+		}
+	}
+}
+/* --------------------------------------------------------------- CATALOG BUTTON --------------------------------------------------------------------*/
+.btn-catalog {
 	display: flex;
 	align-items: center;
 	gap: rem(10);
@@ -13,15 +49,20 @@ COMPONENTS
 
 	background: var(--red);
 
-	@include sm{
+	transition: var(--transition);
+
+	&:hover {
+		filter: var(--filter);
+	}
+
+	@include sm {
 		min-height: rem(36);
 		width: rem(36);
 		padding-inline: 0;
 		justify-content: center;
-
 	}
 
-	// BURGER BUTTON
+	/* --------------------------------------------------------------- BURGER BUTTON --------------------------------------------------------------------*/
 	&__burger {
 		position: relative;
 		display: inline-block;
@@ -38,7 +79,7 @@ COMPONENTS
 		&::after {
 			display: block;
 			content: "";
-			transition: all 0.3s ease-in-out;
+			transition: var(--transition);
 			position: absolute;
 			left: 0;
 			width: 100%;
@@ -77,7 +118,7 @@ COMPONENTS
 	}
 }
 
-// SEARCH FORM
+/* --------------------------------------------------------------- SEARCH FORM --------------------------------------------------------------------*/
 .search-form {
 	display: flex;
 	justify-content: space-between;
@@ -99,6 +140,12 @@ COMPONENTS
 
 	&__button {
 		transform: translateY(5%);
+
+		transition: var(--transition);
+
+		&:hover {
+			transform: translateY(5%) scale(1.1);
+		}
 		svg {
 			width: rem(19);
 			height: rem(20);
@@ -106,37 +153,40 @@ COMPONENTS
 	}
 }
 
-// LOGIN BUTTON
-.login-btn {
-	max-height: rem(44);
-	height: 100%;
+/* --------------------------------------------------------------- LOGIN BUTTON --------------------------------------------------------------------*/
+.btn-login {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	height: rem(44);
 
-	flex-shrink: 0;
+	transition: var(--transition);
 
-	&__icon {
-		display: inline-block;
-		// position: relative;
-		// left: 50%;
-		// transform: translateX(-50%);
+	&:hover {
+		filter: var(--filter);
+	}
+
+	svg {
+		width: rem(26);
+		height: rem(26);
+	}
+
+	@include sm {
+		height: rem(32);
 		svg {
-			width: rem(26);
-			height: rem(26);
-		}
-
-		@include sm {
-			svg {
-				width: rem(16);
-				height: rem(16);
-			}
+			width: rem(16);
+			height: rem(16);
 		}
 	}
 
-	&__name {
+	span {
 		display: block;
-		margin-top: auto;
 		font-weight: 400;
 		font-size: rem(14);
 		color: var(--white);
+		line-height: 80%;
 
 		@include sm {
 			font-size: rem(10);
@@ -144,42 +194,78 @@ COMPONENTS
 	}
 }
 
-// LANGUAGE SWITCHER
+/* --------------------------------------------------------------- LANGUAGE SWITCHER --------------------------------------------------------------------*/
 .lang-switcher {
-	height: 100%;
-	max-height: rem(44);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 
-	flex-shrink: 0;
+	height: rem(44);
+	transition: var(--transition);
 
-	&__icon {
-		display: inline-block;
-
-		border-radius: rem(3);
-		overflow: hidden;
-		// position: relative;
-		// left: 50%;
-		// transform: translateX(-50%);
-		svg {
-			width: rem(34);
-			height: rem(24);
-		}
-		@include sm {
-			svg {
-				width: rem(25);
-				height: rem(16);
-			}
-		}
+	&:hover {
+		filter: var(--filter);
 	}
 
+	&__icon {
+		border-radius: rem(5);
+		overflow: hidden;
+
+		width: rem(34);
+		height: rem(24);
+	}
+
+	svg {
+		width: rem(34);
+		height: rem(24);
+	}
+	@include sm {
+		height: rem(32);
+
+		svg {
+			width: rem(25);
+			height: rem(16);
+		}
+	}
 	&__name {
 		display: block;
-		margin-top: auto;
 		font-weight: 400;
 		font-size: rem(14);
 		color: var(--white);
+		line-height: 80%;
 
 		@include sm {
 			font-size: rem(10);
 		}
+	}
+}
+
+/* --------------------------------------------------------------- ACCENT BUTTON --------------------------------------------------------------------*/
+
+.btn-accent {
+	display: inline-flex;
+	align-items: center;
+	padding-inline: rem(46);
+	min-height: rem(42);
+
+	background-color: var(--accent);
+
+	font-weight: 500;
+	font-size: rem(15);
+	line-height: 122%;
+	color: var(--white);
+
+	transition: var(--transition);
+
+	&:hover {
+		filter: var(--filter);
+	}
+
+	@include sm {
+		font-size: rem(14);
+		min-height: rem(45);
+		display: flex;
+		justify-content: center;
 	}
 }

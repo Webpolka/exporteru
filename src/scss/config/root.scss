@@ -6,7 +6,7 @@ ROOT
 
 	--container-padding-desktop: 85px;
 	--container-padding-large: 45px;
-	--container-padding-small: 15px;
+	--container-padding-small: 20px;
 
 	--font-main: "Montserrat", sans-serif;
 	--font-title: "Montserrat", sans-serif;
@@ -19,4 +19,8 @@ ROOT
 	--scrollbar: gray;
 	--scrollbar-track: gray;
 	--scrollbar-thumb: var(--accent);
+
+	--text: #2f2f2f;
+	--filter: brightness(1.5);
+	--transition: all 0.2s ease-in-out;
 }

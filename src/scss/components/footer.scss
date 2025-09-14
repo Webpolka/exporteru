@@ -92,7 +92,7 @@ FOOTER
 			text-decoration: underline;
 		}
 
-		svg{
+		svg {
 			flex-shrink: 0;
 		}
 
@@ -147,6 +147,11 @@ FOOTER
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			transition: var(--transition);
+
+			&:hover {
+				filter: var(--filter);
+			}
 		}
 
 		svg {
@@ -184,7 +189,7 @@ FOOTER
 
 		padding-block: rem(20);
 
-		@include lg{
+		@include lg {
 			padding-bottom: rem(30);
 		}
 	}
@@ -194,7 +199,13 @@ FOOTER
 		width: rem(201);
 		flex-shrink: 0;
 
-		@include lg{
+		transition: var(--transition);
+
+		&:hover {
+			filter: var(--filter);
+		}
+
+		@include lg {
 			width: rem(152);
 		}
 

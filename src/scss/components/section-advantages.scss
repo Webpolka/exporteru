@@ -1,0 +1,152 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ADVANTAGES SECTION
+--------------------------------------------------------------------------------------------------------------------------------*/
+.advantages {
+	&__title {
+		font-weight: 500;
+		font-size: rem(30);
+		line-height: 120%;
+		color: var(--text);
+
+		@include lg {
+			font-size: rem(24);
+			margin-bottom: rem(20);
+		}
+
+		@include sm {
+			font-size: rem(24);
+			line-height: 105%;
+		}
+	}
+
+	&__description {
+		font-weight: 400;
+		font-size: rem(18);
+		line-height: 120%;
+		color: var(--text);
+
+		@include lg {
+			padding-inline: 10%;
+			font-size: rem(16);
+		}
+
+		@include sm {
+			font-size: rem(14);
+			padding-inline: 0;
+		}
+	}
+
+	&__grid {
+		padding-block: rem(40);
+		background: linear-gradient(143deg, #eaeaea 0%, #fff 50%, #eaeaea 100%);
+
+		display: flex;
+
+		&-item:nth-of-type(1) {
+			width: 35.4%;
+		}
+		&-item:nth-of-type(2) {
+            padding-top: rem(10);
+			width: 64.6%;
+		}
+
+		@include lg {
+			flex-wrap: wrap;
+
+			&-item:nth-of-type(1) {
+				width: 100%;
+				text-align: center;
+				margin-bottom: rem(40);
+
+				@include sm {
+					text-align: left;
+				}
+			}
+			&-item:nth-of-type(2) {
+				width: 100%;
+				padding-inline-start: rem(15);
+                padding-inline-end: rem(0);
+			}
+		}
+
+        @include md{
+            padding-top: rem(30);
+            padding-bottom: rem(75);
+        }
+	}
+
+	&__flex {
+		padding-inline: rem(40);
+		height: 100%;
+
+        @include sm{
+            padding-inline: rem(15);
+        }
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		width: 100%;
+		height: 100%;
+
+		&__count {
+			font-weight: 400;
+			font-size: rem(22);
+			color: var(--accent);
+
+			margin-bottom: rem(20);
+		}
+		&__group {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			flex-grow: 1;
+		}
+
+		&__text {
+			font-weight: 500;
+			font-size: rem(18);
+			line-height: 113%;
+			color: var(--text);
+
+			@include lg {
+				font-size: rem(16);
+			}
+
+			margin-bottom: rem(20);
+		}
+
+		&__image {
+			aspect-ratio: 1/1;
+			width: 100%;
+			overflow: hidden;
+
+			flex-shrink: 0;
+
+			display: flex;
+			align-items: center;
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				overflow: hidden;
+			}
+		}
+	}
+
+    .navigation-wrapper .dots{
+        display: none;
+    }
+
+    
+}
