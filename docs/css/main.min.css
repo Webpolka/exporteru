@@ -9,6 +9,13 @@
 @font-face {
   font-family: AvrileSans;
   font-display: swap;
+  src: url("../fonts/AvrileSans-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: AvrileSans;
+  font-display: swap;
   src: url("../fonts/AvrileSans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -35,8 +42,8 @@ ROOT
   --container-padding-desktop: 85px;
   --container-padding-large: 45px;
   --container-padding-small: 20px;
-  --font-main: "Montserrat", sans-serif;
-  --font-title: "Montserrat", sans-serif;
+  --font-main: "AvrileSans", sans-serif;
+  --font-title: "AvrileSans", sans-serif;
   --white: #fff;
   --black: #000;
   --accent: #0047ba;
@@ -302,7 +309,7 @@ COMPONENTS
 }
 .section__header-title {
   font-weight: 500;
-  font-size: 1.875rem;
+  font-size: 1.84375rem;
   color: var(--text);
 }
 
@@ -772,13 +779,13 @@ ADVANTAGES SECTION
 --------------------------------------------------------------------------------------------------------------------------------*/
 .advantages__title {
   font-weight: 500;
-  font-size: 1.875rem;
+  font-size: 1.84375rem;
   line-height: 120%;
   color: var(--text);
 }
 .advantages__description {
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1.09375rem;
   line-height: 120%;
   color: var(--text);
 }
@@ -822,8 +829,9 @@ ADVANTAGES SECTION
 }
 .advantages-card__text {
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1.09375rem;
   line-height: 113%;
+  letter-spacing: 0;
   color: var(--text);
   margin-bottom: 1.25rem;
 }
@@ -925,7 +933,7 @@ POPULAR SECTION
 }
 .popular__title {
   font-weight: 500;
-  font-size: 1.625rem;
+  font-size: 1.59375rem;
   line-height: 122%;
   margin-bottom: 0.9375rem;
 }
