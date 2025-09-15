@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+EXPERTS SECTION
+--------------------------------------------------------------------------------------------------------------------------------*/
+.experts {
+	color: var(--text);
+	&__block {
+		position: relative;
+		padding: rem(30);
+
+		aspect-ratio: 127/46;
+
+		background-image: url("../../images/main/main-5-bg.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right bottom;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(180deg, #eaeaea 0%, #fff 50%, rgb(234, 234, 234, 0.4) 100%);
+			z-index: -1;
+		}
+
+		@include xl {
+			aspect-ratio: initial;
+			min-height: rem(412);
+			width: 100%;
+		}
+
+		@include sm {
+			background-image: url("../../images/main/main-5-bg-mobile.png");
+			justify-content: start;
+			gap: rem(25);
+
+			padding-inline: rem(12);
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: rem(29.5);
+		color: var(--text);
+		line-height: 120%;
+
+		max-width: rem(245);
+		@include xl {
+			max-width: rem(345);
+		}
+		@include md {
+			font-size: rem(24);
+		}
+		@include sm {
+			line-height: 105%;
+		}
+	}
+
+	&__description {
+		font-size: rem(18);
+		line-height: 120%;
+
+		max-width: rem(245);
+
+		@include xl {
+			max-width: rem(345);
+		}
+        @include sm{
+            font-size: rem(14);
+        }
+	}
+}

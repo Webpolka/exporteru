@@ -1,0 +1,112 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ARROWS NAVIGATION
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+[class*="_navigation-wrap"] {
+	position: relative;
+	width: rem(65);
+	height: rem(50);
+	flex-shrink: 0;
+}
+.arrow {
+	width: 24px;
+	aspect-ratio: 1/1;
+
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.arrow--right,
+.arrow--left {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.arrow--left {
+	left: 0px;
+	background-image: url("../../icons/left.svg");
+}
+
+.arrow--right {
+	left: auto;
+	right: 0px;
+	background-image: url("../../icons/right.svg");
+}
+
+.arrow--disabled {
+	opacity: 0.5;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+NAVIGATION GROUP
+--------------------------------------------------------------------------------------------------------------------------------*/
+// PAGINATION
+
+.navigation-group {
+	position: absolute;
+	bottom: 20px;
+	left: 80px;
+	z-index: 2;
+
+	@include lg {
+		left: 40px;
+	}
+	
+	
+
+	display: inline-flex;
+	align-items: center;
+	gap: rem(16);
+
+	&__counter {
+		display: inline-flex;
+		gap: rem(2);		
+		font-size: 15px;
+		line-height: 122%;
+		opacity: 0.5;
+		flex-shrink: 0;
+
+		@include sm{
+			font-size: rem(14);
+		}
+	}
+
+	// navigation
+	&__arrows {
+		position: relative;
+		width: rem(60);	
+		flex-shrink: 0;
+
+		.arrow{
+			width: rem(20);
+		}
+	}
+
+	// pagination
+	&__pagination {
+		display: inline-flex;
+		width: 100%;
+		min-width: 105px;
+
+		height: rem(8);
+		background-color: #dedede;	
+
+		.custom-pagination-bullet {
+			display: block;
+			width: 100%;
+			height: rem(8);
+			background: var(--accent);								
+			opacity: 0;		
+			transition: background 0.3s, opacity 0.1s;
+			cursor: pointer;	
+		}	
+
+		.custom-pagination-bullet--active {			
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+// sm 10px
+.g-sm-10,
+.gx-sm-10 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 10px;
+	}
+}
+.g-sm-10,
+.gy-sm-10 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 10px;
+	}
+}
+
+// 32
+.g-32,
+.gy-32 {
+	--bs-gutter-y: 32px;
+}
+.g-32,
+.gx-32 {
+	--bs-gutter-x: 32px;
+}

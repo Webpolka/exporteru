@@ -1,0 +1,27 @@
+<section class="section popularprod">
+	<h2 class="visually-hidden">Популярные категории</h2>
+	<div class="container">
+		<div class="section__header">
+			<div class="section__header-title">Популярные категории</div>
+			<!-- Navig group -->
+			<div class="popularprod__header-group" id="popularprod-navig-group">
+				<a href="#" class="btn-accent">Смотреть все</a>
+				<!-- Slider navigation -->
+				<div class="popularprod__navigation-wrap">
+					<div class="arrow arrow--left"></div>
+					<div class="arrow arrow--right"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Slider -->
+		<div class="swiper" id="popularprod-swiper">		
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">@@include('swiper-popular-products/popular-products-1.html')</div>
+				<div class="swiper-slide">@@include('swiper-popular-products/popular-products-2.html')</div>
+			</div>
+		</div>
+
+		<!-- for transfer id="popularprod-navig-group" -->
+		<div class="popularprod__sm-navigation" id="popularprod-sm-place"></div>
+	</div>
+</section>

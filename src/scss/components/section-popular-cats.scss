@@ -1,12 +1,12 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
-POPULAR SECTION
+POPULAR CATEGORIES SECTION
 --------------------------------------------------------------------------------------------------------------------------------*/
-.popular {
+.popularcats {
 	color: var(--white);
 
 	&.section {
 		@include sm {
-			padding-block-start: rem(25);			
+			padding-block-start: rem(30);
 		}
 	}
 
@@ -51,13 +51,17 @@ POPULAR SECTION
 
 		&-item {
 			position: relative;
-
+			overflow: hidden;
 			img {
 				display: block;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				overflow: hidden;
+
+				@media (max-width: 440px) {
+					aspect-ratio: 320/177;
+				}
 			}
 
 			&:after {
@@ -73,8 +77,9 @@ POPULAR SECTION
 			}
 		}
 
-		&-item:nth-of-type(1) {
-			.popular__morelink {
+		&-item:nth-of-type(1) {		
+
+			.popularcats__morelink {
 				background-color: var(--red);
 				padding-inline: rem(46);
 				min-height: rem(46);
@@ -95,7 +100,7 @@ POPULAR SECTION
 					display: none;
 				}
 			}
-			.popular__position {
+			.popularcats__position {
 				padding-block: rem(45);
 				padding-inline: rem(40);
 				padding-right: 40%;

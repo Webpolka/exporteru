@@ -1,0 +1,281 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+POPULAR PRODUCTS SECTION
+--------------------------------------------------------------------------------------------------------------------------------*/
+.popularprod {
+	color: var(--text);
+
+	&.section {
+		@include sm {
+			padding-block-start: rem(30);
+		}
+	}
+
+	.section__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		gap: rem(30);
+
+		@include sm {
+			padding-block-end: rem(40);
+		}
+	}
+
+	&__header-group {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		flex-grow: 1;
+		@include sm{
+			gap: rem(14);
+			flex-grow: 0;
+
+			.btn-accent {						
+			width: 100%;
+		}
+		}
+		
+	}
+	/* Убираем overflow у обертки слайдов */
+	.swiper-wrapper {
+		overflow: visible !important;
+	}
+
+	/* Если нужно убрать у контейнера */
+	.swiper {
+		overflow: visible !important;
+	}
+
+	&__sm-navigation {
+		@include md {
+			margin-top: rem(35);
+		}
+		@include sm{
+			margin-top: rem(28);
+		}
+	}
+}
+
+.popularprod-card {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	color: var(--text);
+
+	background: #f6f6f6;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		box-shadow: 0 0 32px 0 rgba(18, 18, 18, 0.12);
+		background: #fff;
+
+		.popularprod-card__title {
+			color: var(--accent);
+		}
+	}
+
+	&__header {
+		width: 100%;
+		aspect-ratio: 306/224;
+		overflow: hidden;
+
+		margin-bottom: rem(10);
+		@include sm {
+			margin-bottom: rem(0);
+			aspect-ratio: 155/188;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+	&__body {
+		flex-grow: 1;
+		padding: rem(12);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__location {
+		display: inline-flex;
+		align-items: start;
+		gap: rem(5);
+
+		margin-bottom: rem(10);
+		@include sm {
+			margin-bottom: rem(5);
+		}
+
+		svg {
+			position: relative;
+			top: 3px;
+			fill: var(--accent);
+			stroke: transparent;
+			width: rem(15);
+			height: rem(15);
+
+			@include sm {
+				top: 0;
+			}
+		}
+		span {
+			font-size: rem(14);
+			color: var(--text);
+			opacity: 0.5;
+
+			@include sm {
+				font-size: rem(10);
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: rem(18);
+		line-height: 129%;
+
+		color: var(--text);
+		margin-bottom: rem(15);
+
+		transition: all 0.3s ease-in-out;
+
+		@include sm {
+			font-size: rem(12);
+			line-height: 138%;
+			margin-bottom: rem(10);
+		}
+	}
+
+	&__group {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		gap: rem(4);
+		min-height: rem(28);
+
+		padding-right: rem(30);
+
+		@include md {
+			position: initial;
+			justify-content: space-between;
+			align-items: start;
+			padding-right: 0;
+		}
+	}
+
+	&__price {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(6);
+		height: 100%;
+
+		@include md {
+			flex-direction: column;
+			gap: 0;
+			align-items: initial;
+		}
+
+		&-old {
+			font-weight: 400;
+			font-size: rem(20);
+			opacity: 0.5;
+			line-height: 100%;
+
+			@include xl {
+				font-size: rem(18);
+			}
+
+			@include sm {
+				font-size: rem(12);
+			}
+		}
+		&-real {
+			font-weight: 700;
+			font-size: rem(20);
+			line-height: 100%;
+			@include xl {
+				font-size: rem(18);
+			}
+
+			@include sm {
+				font-size: rem(18);
+			}
+		}
+	}
+	&__discount {
+		font-weight: 500;
+		font-size: 14px;
+		color: var(--white);
+		max-height: rem(20);
+
+		border-radius: rem(15);
+		padding: rem(0) rem(8);
+
+		background: var(--text);
+
+		@include sm {
+			font-size: rem(8);
+		}
+	}
+
+	&__like {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		min-height: rem(30);
+
+		@include md {
+			bottom: initial;
+			top: rem(10);
+			right: rem(10);
+		}
+
+		&:hover {
+			svg {
+				stroke: var(--red);
+			}
+		}
+
+		&.active {
+			svg {
+				fill: var(--red);
+				stroke: var(--red);
+			}
+		}
+
+		svg {
+			transition: all 0.3s ease-in-out;
+			fill: transparent;
+			stroke: var(--text);
+			stroke-width: 2px;
+
+			width: rem(28);
+			height: rem(28);
+
+			@include sm {
+				fill: #d9d9d9;
+			}
+		}
+		span {
+			font-size: rem(14);
+			color: var(--text);
+			opacity: 0.5;
+		}
+	}
+}

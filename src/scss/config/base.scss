@@ -32,6 +32,9 @@ body {
 		}
 	}
 }
+.bred{
+	border: 1px solid red;
+}
 .container {
 	margin-inline: auto;
 	min-inline-size: rem(320);
@@ -44,8 +47,17 @@ body {
 		padding-inline: var(--container-padding-small);
 	}
 }
+.sm-block{
+	@include sm{
+		display: block;
+	}
+}
+
 .container-full {
-	max-width: 100%;
+	margin-inline: auto;
+	min-inline-size: rem(320);
+	max-inline-size: rem(1440);
+	width: 100%;
 }
 .img-responsive {
 	display: block;
