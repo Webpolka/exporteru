@@ -142,6 +142,8 @@ document.addEventListener("DOMContentLoaded", () => {
 SWIPER MARKETING SLIDER
 --------------------------------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
+	const marketingNav = document.getElementById("marketing-swiper-group");
+
 	const marketingSwiper = document.querySelector("#marketing-swiper");
 
 	if (marketingSwiper) {
@@ -152,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			},
 			// дополнительные параметры
 			slidesPerView: 1,
-			speed: 1500,	
+			speed: 300,
 			autoplay: {
 				delay: 7000,
 			},
@@ -169,12 +171,17 @@ document.addEventListener("DOMContentLoaded", () => {
 			},
 
 			on: {
-				init: updateNavigationGroup.bind(this),
-				slideChange: updateNavigationGroup.bind(this),
-				reachEnd: updateNavigationGroup.bind(this),
-				reachBeginning: updateNavigationGroup.bind(this),
+				init: updateAll.bind(this),
+				slideChange: updateAll.bind(this),
+				reachEnd: updateAll.bind(this),
+				reachBeginning: updateAll.bind(this),
 			},
 		});
+
+		function updateAll(swiper) {
+			uppdateTopPosition(swiper);
+			updateNavigationGroup(swiper);
+		}
 
 		// Функция для обновления классов стрелок
 		function updateNavigationGroup(swiper) {
@@ -192,5 +199,41 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.querySelector("#marketing-swiper-group .current").textContent = currentSlide;
 			document.querySelector("#marketing-swiper-group .total").textContent = totalSlides;
 		}
+
+		function uppdateTopPosition(swiper) {
+			if (window.innerWidth <= 576) {
+				const activeIndex = swiper.activeIndex;
+				const activeSlide = swiper.slides[activeIndex];
+				const targetContainer = activeSlide.querySelector(".marketing-card__content");
+				const targetContainerHeight = targetContainer.clientHeight;
+				marketingNav.style.top = targetContainerHeight + 70 + "px";
+				if (swiper.params.effect !== "fade") {
+					marketingNav.style.opacity = 0;
+					setTimeout(() => {
+						marketingNav.style.opacity = 1;
+					}, swiper.params.speed);
+				}
+			} else if (window.innerWidth > 576) {
+				marketingNav.style.removeProperty("top");
+			}
+		}
+
+		let timer;
+		window.addEventListener("change", () => {
+			clearTimeout(timmer);
+			timer = setTimeout(() => {
+				uppdateTopPosition(swiper);
+			}, 100);
+		});
+		window.addEventListener("resize", () => {
+			clearTimeout(timer);
+			timer = setTimeout(() => {
+				uppdateTopPosition(swiper);
+			}, 100);
+		});
 	}
 });
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+SWIPER MARKETING NAVIGATION SM TOP REPLACER
+--------------------------------------------------------------------------------------------------------------------------------*/
