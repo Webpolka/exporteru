@@ -35,6 +35,9 @@ body {
 .bred{
 	border: 1px solid red;
 }
+.justify-content-center{
+	display: flex;
+}
 .container {
 	margin-inline: auto;
 	min-inline-size: rem(320);

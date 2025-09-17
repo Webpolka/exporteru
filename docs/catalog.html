@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Каталог</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+
+    <link rel="stylesheet" href="vendor/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+
+<body class="front-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__top">
+                    <nav class="header__nav">
+                        <ul>
+                            <li><a href="#" class="header__link">Отзывы</a></li>
+                            <li><a href="#" class="header__link">Контакты</a></li>
+                            <li><a href="#" class="header__link">О нас</a></li>
+                            <li><a href="#" class="header__link">Помощь</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__contacts">
+                        <a class="header__phone" href="tel:+78564674666">+7 856 467-46-66</a>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <a href="main.html" class="header__logo">
+                        <img src="./images/logo.png" alt="Logo">
+                    </a>
+
+                    <div class="header__row">
+                        <div class="header__row-group">
+                            <!-- Catalog button -->
+                            <button id="catalog-btn" class="btn-catalog" type="button" aria-label="Каталог">
+                                <div class="btn-catalog__burger">
+                                    <span></span>
+                                </div>
+                                <span class="btn-catalog__name">Каталог</span>
+                            </button>
+
+                            <!-- Seacrh form -->
+                            <form class="search-form" action="">
+                                <input type="search" id="search-input" class="search-form__input" placeholder="Поиск по сайту" name="s">
+                                <button type="submit" class="search-form__button" aria-label="Поиск">
+                                    <svg class="icon icon--search">
+                                        <use href="./icons/symbol/sprite.svg#search"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Login Button -->
+                        <button id="login-btn" class="btn-login">
+                            <svg class="icon icon--profile">
+                                <use href="./icons/symbol/sprite.svg#profile"></use>
+                            </svg>
+                            <span>Войти</span>
+                        </button>
+
+                        <!-- Language switcher -->
+                        <a href="#" class="lang-switcher">
+                            <span class="lang-switcher__icon">
+                                <svg class="icon icon--flag-russian">
+                                    <use href="./icons/symbol/sprite.svg#flag-russian"></use>
+                                </svg>
+                            </span>
+                            <span class="lang-switcher__name">Русский</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <nav class="exp-breadcrumbs" aria-label="Breadcrumb">
+                    <ul class="exp-breadcrumbs__list">
+                        <li><a href="https://example.com/">Главная</a></li>
+                        <li><span>/</span></li>
+                        <li><a href="https://example.com/category/">Категория</a></li>
+                        <li><span>/</span></li>
+                        <li><span>Металлургия</span></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <section class="catalog section-topnull">
+                <h2 class="visually-hidden">Металлургия</h2>
+                <div class="container">
+                    <!-- Заголовок -->
+                    <div class="section-header">
+                        <div class="section-header__title">Металлургия</div>
+                    </div>
+
+                    <div class="row g-20">
+                        <!-- 1 -->
+                        <div class="col-lg-4 col-xl-3 col-12 col-sm-6">
+                            <div class="catalog-card">
+                                <div class="catalog-card__image">
+                                    <img src="./images/catalog/in-cat-1.png" alt="">
+                                </div>
+                                <div class="catalog-card__content">
+                                    <h3 class="catalog-card__title">Литье металлов</h3>
+                                    <ul class="catalog-card__list">
+                                        <li><a href="#">Литье чугуна</a></li>
+                                        <li><a href="#">Литье стали</a></li>
+                                        <li><a href="#">Литье легких металлов</a></li>
+                                        <li><a href="#">Литье прочих цветных металлов</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="col-lg-4 col-xl-3 col-12 col-sm-6">
+                            <div class="catalog-card">
+                                <div class="catalog-card__image">
+                                    <img src="./images/catalog/in-cat-2.png" alt="">
+                                </div>
+                                <div class="catalog-card__content">
+                                    <h3 class="catalog-card__title">Чугун, сталь и ферросплавы</h3>
+                                    <ul class="catalog-card__list">
+                                        <li><a href="#">Основные продукты из железа и стали</a></li>
+                                        <li><a href="#">Чугун</a></li>
+                                        <li><a href="#">Ферросплавы</a></li>
+                                        <li><a href="#">Продукты прямого восстановления </a></li>
+                                        <li><a href="#">Гранулы и порошки из чугуна или стали </a></li>
+                                        <li><a href="#">Сталь в слитках</a></li>
+                                        <li><a href="#">Листовой горячекатаный стальной прокат </a></li>
+                                        <li><a href="#">Листовой холоднокатаный стальной прокат </a></li>
+                                        <li><a href="#">Сортовой горячекатаный прокат и катанка</a></li>
+                                        <li><a href="#">Незамкнутые стальные профили </a></li>
+                                        <li><a href="#">Прочий прокат из черных металлов </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="col-lg-4 col-xl-3 col-12 col-sm-6">
+                            <div class="catalog-card">
+                                <div class="catalog-card__image">
+                                    <img src="./images/catalog/in-cat-3.png" alt="">
+                                </div>
+                                <div class="catalog-card__content">
+                                    <h3 class="catalog-card__title">Стальные трубы, полые профиля и фитинги</h3>
+                                    <ul class="catalog-card__list">
+                                        <li><a href="#">Бесшовные трубы и пустотелые профиля</a></li>
+                                        <li><a href="#">Сварные трубы</a></li>
+                                        <li><a href="#">Стальные фитинги для труб, кроме литых</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="col-lg-4 col-xl-3 col-12 col-sm-6">
+                            <div class="catalog-card">
+                                <div class="catalog-card__image">
+                                    <img src="./images/catalog/in-cat-4.png" alt="">
+                                </div>
+                                <div class="catalog-card__content">
+                                    <h3 class="catalog-card__title">Прочие стальные изделия первичной обработкой</h3>
+                                    <ul class="catalog-card__list">
+                                        <li><a href="#">Стальные продукты и сплошные профиля методом холодного волочения</a></li>
+                                        <li><a href="#">Холоднотянущиеся штрипса</a></li>
+                                        <li><a href="#">Профиля изготовленные с помощью холодной штамповки или гибки</a></li>
+                                        <li><a href="#">Проволока изготовленная методом холодного волочения</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="col-lg-4 col-xl-3 col-12 col-sm-6">
+                            <div class="catalog-card">
+                                <div class="catalog-card__image">
+                                    <img src="./images/catalog/in-cat-5.png" alt="">
+                                </div>
+                                <div class="catalog-card__content">
+                                    <h3 class="catalog-card__title">Основные драгоценные металлы</h3>
+                                    <ul class="catalog-card__list">
+                                        <li><a href="#">Драгоценные металлы</a></li>
+                                        <li><a href="#">Алюминий</a></li>
+                                        <li><a href="#">Свинец, цинк, олово</a></li>
+                                        <li><a href="#">Медь</a></li>
+                                        <li><a href="#">Прочие цветные металлы</a></li>
+                                        <li><a href="#">Ядерное топливо</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section companys">
+                <h2 class="visually-hidden">Компании</h2>
+                <div class="container">
+                    <!-- Заголовок -->
+                    <div class="section-flexheader">
+                        <div class="section-flexheader__title">Компании</div>
+
+                        <!-- Slider navigation -->
+                        <div class="companys__navigation-wrap" id="companys-swiper-arrows">
+                            <div class="arrow arrow--left"></div>
+                            <div class="arrow arrow--right"></div>
+                        </div>
+                    </div>
+
+                    <!-- Slider -->
+                    <div class="swiper" id="companys-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- slide 1 -->
+                            <div class="swiper-slide">
+                                <!-- slide list 1.1 -->
+                                <div class="swiper-slide__list">
+                                    <!-- slide card 1.1.1 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.2 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.3 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.4 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.5 -->
+                                    <!-- <a href="#" class="companys-card">
+			<div class="companys-card__top">
+				<div class="companys-card__avatar">
+					
+					<img src="./images/avatar.png" alt="" />
+				</div>
+				<h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+			</div>
+			<div class="companys-card__bottom">
+				<span class="companys-card__inn">ИНН: 6658133459</span>
+				<span class="companys-card__practice">Опыт: 22 года</span>
+			</div>
+		</a> -->
+                                </div>
+                            </div>
+
+                            <!-- slide 1 -->
+                            <div class="swiper-slide">
+                                <!-- slide list 1.1 -->
+                                <div class="swiper-slide__list">
+                                    <!-- slide card 1.1.1 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.2 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.3 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.4 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.5 -->
+                                    <!-- <a href="#" class="companys-card">
+			<div class="companys-card__top">
+				<div class="companys-card__avatar">
+					
+					<img src="./images/avatar.png" alt="" />
+				</div>
+				<h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+			</div>
+			<div class="companys-card__bottom">
+				<span class="companys-card__inn">ИНН: 6658133459</span>
+				<span class="companys-card__practice">Опыт: 22 года</span>
+			</div>
+		</a> -->
+                                </div>
+                            </div>
+
+                            <!-- slide 1 -->
+                            <div class="swiper-slide">
+                                <!-- slide list 1.1 -->
+                                <div class="swiper-slide__list">
+                                    <!-- slide card 1.1.1 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.2 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.3 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.4 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.5 -->
+                                    <!-- <a href="#" class="companys-card">
+			<div class="companys-card__top">
+				<div class="companys-card__avatar">
+					
+					<img src="./images/avatar.png" alt="" />
+				</div>
+				<h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+			</div>
+			<div class="companys-card__bottom">
+				<span class="companys-card__inn">ИНН: 6658133459</span>
+				<span class="companys-card__practice">Опыт: 22 года</span>
+			</div>
+		</a> -->
+                                </div>
+                            </div>
+
+                            <!-- slide 1 -->
+                            <div class="swiper-slide">
+                                <!-- slide list 1.1 -->
+                                <div class="swiper-slide__list">
+                                    <!-- slide card 1.1.1 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.2 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.3 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.4 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.5 -->
+                                    <!-- <a href="#" class="companys-card">
+			<div class="companys-card__top">
+				<div class="companys-card__avatar">
+					
+					<img src="./images/avatar.png" alt="" />
+				</div>
+				<h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+			</div>
+			<div class="companys-card__bottom">
+				<span class="companys-card__inn">ИНН: 6658133459</span>
+				<span class="companys-card__practice">Опыт: 22 года</span>
+			</div>
+		</a> -->
+                                </div>
+                            </div>
+
+                            <!-- slide 1 -->
+                            <div class="swiper-slide">
+                                <!-- slide list 1.1 -->
+                                <div class="swiper-slide__list">
+                                    <!-- slide card 1.1.1 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.2 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.3 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <span class="avatar-name">M</span>
+                                                <!-- <img src="./images/avatar.png" alt="" /> -->
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.4 -->
+                                    <a href="#" class="companys-card">
+                                        <div class="companys-card__top">
+                                            <div class="companys-card__avatar">
+                                                <!-- <span class="avatar-name">M</span> -->
+                                                <img src="./images/avatar.png" alt="">
+                                            </div>
+                                            <h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+                                        </div>
+                                        <div class="companys-card__bottom">
+                                            <span class="companys-card__inn">ИНН: 6658133459</span>
+                                            <span class="companys-card__practice">Опыт: 22 года</span>
+                                        </div>
+                                    </a>
+                                    <!-- slide card 1.1.5 -->
+                                    <!-- <a href="#" class="companys-card">
+			<div class="companys-card__top">
+				<div class="companys-card__avatar">
+					
+					<img src="./images/avatar.png" alt="" />
+				</div>
+				<h3 class="companys-card__name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “МЕТАЛЛ”</h3>
+			</div>
+			<div class="companys-card__bottom">
+				<span class="companys-card__inn">ИНН: 6658133459</span>
+				<span class="companys-card__practice">Опыт: 22 года</span>
+			</div>
+		</a> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section popularprod">
+                <h2 class="visually-hidden">Популярные категории</h2>
+                <div class="container">
+                    <div class="section-flexheader">
+                        <div class="section-flexheader__title">Популярные категории</div>
+                        <!-- Navig group -->
+                        <div class="popularprod__header-group" id="popularprod-navig-group">
+                            <a href="#" class="btn-accent">Смотреть все</a>
+                            <!-- Slider navigation -->
+                            <div class="popularprod__navigation-wrap">
+                                <div class="arrow arrow--left"></div>
+                                <div class="arrow arrow--right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slider -->
+                    <div class="swiper" id="popularprod-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="row g-3 g-sm-10 gy-32">
+                                    <!-- 1 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-1.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                        <span class="product-card__price-real">12 999 ₽</span>
+                                                    </div>
+                                                    <div class="product-card__discount">-45%</div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="9" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 2 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-2.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-real">от 12 999 ₽</span>
+                                                    </div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="2" class="product-card__like active">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 3 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-3.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                        <span class="product-card__price-real">5 849 ₽</span>
+                                                    </div>
+                                                    <div class="product-card__discount">-45%</div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="65" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 4 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-4.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-real">от 12 999 ₽</span>
+                                                    </div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="12" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 5 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-5.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-real">от 12 999 ₽</span>
+                                                    </div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="323" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 6 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-6.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                        <span class="product-card__price-real">5 849 ₽</span>
+                                                    </div>
+                                                    <div class="product-card__discount">-45%</div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="877" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 7 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-7.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-real">от 12 999 ₽</span>
+                                                    </div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="345" class="product-card__like active">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 8 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-8.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                        <span class="product-card__price-real">12 999 ₽</span>
+                                                    </div>
+                                                    <div class="product-card__discount">-45%</div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="86" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row g-3 g-sm-10 gy-32">
+                                    <!-- 1 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-8.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                        <span class="product-card__price-real">12 999 ₽</span>
+                                                    </div>
+                                                    <div class="product-card__discount">-45%</div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="9" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 2 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-7.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-real">от 12 999 ₽</span>
+                                                    </div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="2" class="product-card__like active">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 3 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-6.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                        <span class="product-card__price-real">5 849 ₽</span>
+                                                    </div>
+                                                    <div class="product-card__discount">-45%</div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="65" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 4 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-5.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-real">от 12 999 ₽</span>
+                                                    </div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="12" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 5 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-4.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-real">от 12 999 ₽</span>
+                                                    </div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="323" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 6 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-3.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                        <span class="product-card__price-real">5 849 ₽</span>
+                                                    </div>
+                                                    <div class="product-card__discount">-45%</div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="877" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 7 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-2.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-real">от 12 999 ₽</span>
+                                                    </div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="345" class="product-card__like active">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 8 -->
+                                    <div class="col-lg-4 col-xl-3 col-6">
+                                        <a href="#" class="product-card">
+                                            <!-- top -->
+                                            <div class="product-card__header">
+                                                <img src="./images/main/main-4-1.png" alt="">
+                                            </div>
+                                            <!-- bottom -->
+                                            <div class="product-card__body">
+                                                <div class="product-card__box">
+                                                    <!-- location -->
+                                                    <div class="product-card__location">
+                                                        <svg class="icon icon--location-f">
+                                                            <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                        </svg>
+                                                        <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                    </div>
+                                                    <!-- title -->
+                                                    <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                </div>
+                                                <!-- group -->
+                                                <div class="product-card__group">
+                                                    <div class="product-card__price">
+                                                        <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                        <span class="product-card__price-real">12 999 ₽</span>
+                                                    </div>
+                                                    <div class="product-card__discount">-45%</div>
+                                                    <!-- like -->
+                                                    <div role="button" data-likeid="86" class="product-card__like">
+                                                        <svg class="icon icon--star-e">
+                                                            <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- for transfer id="popularprod-navig-group" -->
+                    <div class="popularprod__sm-navigation" id="popularprod-sm-place"></div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <!-- Top -->
+                <div class="footer__top">
+                    <!-- 1 -->
+                    <div class="footer__item">
+                        <h3 class="footer__title">Основные разделы</h3>
+
+                        <div class="footer__item-row">
+                            <ul class="footer__list">
+                                <li><a class="footer__link" href="#">Главная</a></li>
+                                <li><a class="footer__link" href="#">Каталог</a></li>
+                                <li><a class="footer__link" href="#">Помощь</a></li>
+                            </ul>
+
+                            <ul class="footer__list">
+                                <li><a class="footer__link" href="#">О нас</a></li>
+                                <li><a class="footer__link" href="#">Контакты</a></li>
+                                <li><a class="footer__link" href="#">Отзывы</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="footer__item">
+                        <h3 class="footer__title">Техническая поддержка</h3>
+                        <ul class="footer__list">
+                            <li>
+                                <a class="footer__link" href="tel:89991234567">
+                                    <svg class="icon icon--phone">
+                                        <use href="./icons/symbol/sprite.svg#phone"></use>
+                                    </svg>
+                                    <span>8 999 123 45 67</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="mailto:info@mail.ru">
+                                    <svg class="icon icon--email">
+                                        <use href="./icons/symbol/sprite.svg#email"></use>
+                                    </svg>
+                                    <span>info@mail.ru</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__link" href="#">
+                                    <svg class="icon icon--tg">
+                                        <use href="./icons/symbol/sprite.svg#tg"></use>
+                                    </svg>
+                                    <span>made_in_russia</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 3 -->
+                    <div class="footer__item">
+                        <h3 class="footer__title">Информационный центр</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Правовая информация</a></li>
+                        </ul>
+                    </div>
+                    <!-- 4 -->
+                    <div class="footer__item">
+                        <h3 class="footer__title">Мой профиль</h3>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Войти в личный кабинет</a></li>
+                            <li><a href="#" class="footer__link">Регистрация</a></li>
+                        </ul>
+                    </div>
+                    <!-- 5		 -->
+                    <div class="footer__item footer__item--social">
+                        <h3 class="footer__title footer__title--social">Социальные сети</h3>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link" aria-label="VK">
+                                <svg class="icon icon--soc-vk">
+                                    <use href="./icons/symbol/sprite.svg#soc-vk"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Telegram">
+                                <svg class="icon icon--soc-tg">
+                                    <use href="./icons/symbol/sprite.svg#soc-tg"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="WhatsApp">
+                                <svg class="icon icon--soc-whatsapp">
+                                    <use href="./icons/symbol/sprite.svg#soc-whatsapp"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Max">
+                                <svg class="icon icon--soc-max">
+                                    <use href="./icons/symbol/sprite.svg#soc-max"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="WeChat">
+                                <svg class="icon icon--soc-wechat">
+                                    <use href="./icons/symbol/sprite.svg#soc-wechat"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom -->
+                <div class="footer__bottom">
+                    <a href="main.html" class="footer__logo">
+                        <img src="./images/logo.png" alt="Logo">
+                    </a>
+                    <p class="footer__copyright">© 2021-2025 Exportru</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+COMPANYS SECTION
+--------------------------------------------------------------------------------------------------------------------------------*/
+.companys {
+	color: var(--text);
+	.swiper-slide__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+	}
+}
+
+.companys-card {
+	border: 1px solid rgba(47, 47, 47, 0.1);
+	padding: rem(20) rem(10) rem(20) rem(30);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+
+	transition: all 0.3s ease-in-out;
+
+	// Hide more than 4 slides in desktop version
+	// &:nth-child(n + 5) {
+	// 	display: none;
+	// 	@include sm {
+	//         // show all slides in mobile version
+	// 		display: flex;
+	// 	}
+	// }
+
+	@include lg {
+		padding: rem(18);
+	}
+
+	&:hover {
+		border: 1px solid rgb(0, 71, 186, 0.25);
+		background-color: #f6f6f6;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(17);
+	}
+	&__bottom {
+		display: inline-flex;
+		gap: rem(15);
+
+		@include lg {
+			justify-content: space-between;
+		}
+	}
+
+	&__avatar {
+		flex-shrink: 0;
+
+		width: rem(60);
+		height: rem(60);
+
+		border-radius: 50%;
+		overflow: hidden;
+		background-color: #f6f6f6;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size: rem(45);
+		color: #0047ba;
+		font-weight: 600;
+
+		@include lg {
+			font-size: rem(35);
+			width: rem(55);
+			height: rem(55);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+		}
+
+		margin-bottom: rem(15);
+	}
+
+	&__name {
+		display: block;
+		font-weight: 400;
+		font-size: 18px;
+		color: var(--text);
+
+		@include lg {
+			font-size: rem(14);
+		}
+	}
+
+	&__inn {
+		font-weight: 500;
+		font-size: rem(18);
+		color: var(--text);
+		opacity: 0.5;
+
+		@include lg {
+			font-size: rem(14);
+		}
+	}
+
+	&__practice {
+		font-weight: 500;
+		font-size: rem(18);
+		color: var(--accent);
+
+		@include lg {
+			font-size: rem(14);
+		}
+	}
+}

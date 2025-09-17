@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	@@include('html/components/head.html', { 'title': 'Результат поиска' })
+
+	<body class="front-page">
+		<div class="wrapper">			
+			@@include('html/sections/header.html')
+			<main class="main">				
+				@@include('html/blocks/block-breadcrumbs.html')						
+				@@include('html/sections/section-search-result.html')
+				@@include('html/blocks/block-pagination.html')											
+			</main>
+			@@include('html/sections/footer.html')
+		</div>
+		@@include('html/components/script.html')
+	</body>
+</html>

@@ -1,0 +1,96 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CUSTOM CHOICES SELECT
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Добавляем стрелку через псевдоэлемент */
+.choices {
+	position: relative;
+	border: none !important;
+	box-shadow: none !important;
+	
+}
+
+.choices::before {
+	content: "";
+	position: absolute;
+	right: 0px; /* позиция справа */
+	top: 50%;
+	transform: translateY(-50%);
+
+	width: rem(14);
+	height: rem(14);
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMTEuNjE5OSA1LjIyMDgzTDcuODE2NTUgOS4wMjQxN0M3LjM2NzM4IDkuNDczMzMgNi42MzIzOCA5LjQ3MzMzIDYuMTgzMjIgOS4wMjQxN0wyLjM3OTg4IDUuMjIwODMiIHN0cm9rZT0iIzJGMkYyRiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgo8L3N2Zz4K");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+	pointer-events: none; /* чтобы не мешала кликам */
+
+	@include md {
+		width: rem(10);
+		height: rem(10);
+	}
+}
+.choices.is-open::before {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.choices__inner {
+	display: flex;
+	align-items: center;
+	font-size: rem(16);
+	font-weight: 400;
+	background-color: transparent;
+	padding-right: rem(10);
+	padding-left: 0;
+	border: none !important;
+	
+
+	@include md {
+		padding-right: rem(5);
+		font-size: rem(12);
+	}
+}
+
+.choices__placeholder {
+	opacity: 1;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+	display: none;
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	background-color: #fff;
+	top: 100%;
+	overflow: hidden;
+	word-break: break-all;
+	border: 1px solid rgb(0, 0, 0, 0.15) !important;
+	min-width: rem(200);
+
+	@include md {
+		min-width: rem(150);
+		font-size: rem(12) !important;
+	}
+}
+.choices__item {	
+	@include md {
+		font-size: rem(12) !important;
+	}
+}
+
+.choices__list--dropdown .choices__item{
+	padding-block: 10px !important;
+}
+
+.choices__item--choice.is-selected {
+	background-color: var(--accent) !important;
+	color: #fff;
+}
+.choices__item--disabled {
+	display: none;
+}
+
+.choices[data-type*="select-one"]::after {
+	display: none;
+}

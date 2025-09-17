@@ -13,22 +13,37 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 COMPONENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
-.section {
+.section,
+.section-topnull {
 	padding-block: rem(35);
 
 	@include sm {
 		padding-block: rem(30);
 	}
 
-	&__header {
+	// простой заголовок
+	&-header {
+		margin-bottom: rem(45);
+		@include sm {
+			margin-bottom: rem(25);
+		}
+		&__title {
+			font-weight: 500;
+			font-size: rem(30);
+			@include sm {
+				font-size: rem(24);
+			}
+		}
+	}
+	// заголовок для флекс
+	&-flexheader {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
 		padding-bottom: rem(35);
-		
 
-		&-title {
+		&__title {
 			font-weight: 500;
 			font-size: rem(29.5);
 			color: var(--text);
@@ -39,6 +54,13 @@ COMPONENTS
 		}
 	}
 }
+.section-topnull {
+	padding-block-start: 0;
+	@include sm {
+		padding-block-start: 0;
+	}
+}
+
 /* --------------------------------------------------------------- CATALOG BUTTON --------------------------------------------------------------------*/
 .btn-catalog {
 	display: flex;
@@ -267,6 +289,172 @@ COMPONENTS
 		font-size: rem(14);
 		min-height: rem(45);
 		display: flex;
-		justify-content: center;		
+		justify-content: center;
+	}
+}
+
+/* --------------------------------------------------------------- Search orderby --------------------------------------------------------------------*/
+.exp-search-orderby {
+	&__row {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(5);
+	}
+
+	&__button {
+		width: rem(24);
+		height: rem(24);
+		@include md {
+			width: rem(16);
+			height: rem(16);
+		}
+
+		svg {
+			aspect-ratio: 1/1;
+			width: 100%;
+		}
+	}
+	&__select {
+		width: 100%;
+		font-weight: 400;
+		font-size: rem(16);
+		color: var(--text);
+		cursor: pointer;
+
+		@include md {
+			font-size: rem(12);
+		}
+	}
+}
+
+/* --------------------------------------------------------------- Breadcrumbs --------------------------------------------------------------------*/
+
+.exp-breadcrumbs {
+	padding-block-start: rem(8);
+	padding-block-end: rem(10);
+
+	&__list {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(5);
+
+		li,
+		li span,
+		li a {
+			color: var(--text);
+			font-size: rem(13);
+			transition: color 0.3s ease-in-out;
+
+			@include sm {
+				font-size: rem(10);
+			}
+
+			opacity: 0.7;
+		}
+
+		li a:hover {
+			color: var(--accent);
+			text-decoration: underline;
+		}
+	}
+}
+
+/* --------------------------------------------------------------- pagination --------------------------------------------------------------------*/
+
+.exp-pagination {
+	display: inline-flex;
+	align-items: center;
+	gap: rem(8);
+
+	margin-bottom: rem(35);
+
+	@include sm {
+		gap: rem(6);
+	}
+
+	&__ellipsis {
+		width: rem(45);
+		height: rem(45);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size: rem(16);
+		line-height: 138%;
+		opacity: 0.5;
+
+		@include sm {
+			font-size: rem(12);
+			width: rem(35);
+			height: rem(35);
+		}
+	}
+
+	&__link {
+		color: var(--text);
+		width: rem(45);
+		height: rem(45);
+		background-color: #f6f6f6;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size: rem(16);
+		color: rgba(47, 47, 47, 0.5);
+
+		background-repeat: no-repeat;
+		background-size: 50%;
+		background-position: center;
+
+		transition: all 0.3s ease-in-out;
+
+		@include sm {
+			width: rem(35);
+			height: rem(35);
+
+			font-size: rem(12);
+		}
+
+		&:hover {
+			background-color: var(--accent);
+			opacity: 0.75;
+			color: var(--white);
+		}
+
+		&--active {
+			color: var(--white);
+			background-color: var(--accent);
+		}
+
+		&--prev {
+			background-color: transparent;
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNCAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNOS41NzAzMSA2LjQzMDA1TDMuNTAwMzEgMTIuNTAwMUw5LjU3MDMxIDE4LjU3MDEiIHN0cm9rZT0iIzJGMkYyRiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgogIDxwYXRoIGQ9Ik0yMC41IDEyLjVIMy42NyIgc3Ryb2tlPSIjMkYyRjJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIC8+Cjwvc3ZnPgo=");
+			transition: transform 0.3s ease-in-out;
+
+			&:hover {
+				transform: scale(1.4);
+				opacity: 1;
+				color: var(--text);
+				background-color: transparent;
+			}
+		}
+
+		&--next {
+			background-color: transparent;
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNCAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMTQuNDI5NyA2LjQzMDA1TDIwLjQ5OTcgMTIuNTAwMUwxNC40Mjk3IDE4LjU3MDEiIHN0cm9rZT0iIzJGMkYyRiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgogIDxwYXRoIGQ9Ik0zLjUgMTIuNUgyMC4zMyIgc3Ryb2tlPSIjMkYyRjJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIC8+Cjwvc3ZnPgo=");
+			transition: transform 0.3s ease-in-out;
+			&:hover {
+				transform: scale(1.4);
+				opacity: 1;
+				color: var(--text);
+				background-color: transparent;
+			}
+		}
+
+		&--disabled {
+			opacity: 0.5 !important;
+			transform: scale(1) !important;
+		}
 	}
 }
