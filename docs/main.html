@@ -34,7 +34,7 @@
                         <a class="header__phone" href="tel:+78564674666">+7 856 467-46-66</a>
                     </div>
                 </div>
-                <div class="header__bottom">
+                <div class="header__medium">
                     <a href="main.html" class="header__logo">
                         <img src="./images/logo.png" alt="Logo">
                     </a>
@@ -50,7 +50,7 @@
                             </button>
 
                             <!-- Seacrh form -->
-                            <form class="search-form" action="">
+                            <form class="search-form" action="" id="search-form">
                                 <input type="search" id="search-input" class="search-form__input" placeholder="Поиск по сайту" name="s">
                                 <button type="submit" class="search-form__button" aria-label="Поиск">
                                     <svg class="icon icon--search">
@@ -1105,6 +1105,330 @@
         </footer>
 
     </div>
+
+    <div class="exp-catalog">
+        <div class="container exp-catalog__menu">
+            <div id="for-sm-search-form">
+                <!-- Js wil paste here search form in small media query -->
+            </div>
+            <!-- Категории левое меню взаимодействие происходит по data-catIDoverlay и data-blockIDoverlay -->
+            <nav class="exp-catalog__sidebar">
+                <!-- Категории левая колонка -->
+                <div class="exp-catalog__catwrapper">
+                    <ul class="exp-catalog__cat">
+                        <!-- 1 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="1">
+                            <a class="exp-catalog__cat-link" href="catalog.html">
+                                <svg class="icon icon--plant-growing">
+                                    <use href="./icons/symbol/sprite.svg#plant-growing"></use>
+                                </svg>
+                                <span>Растениеводство и животноводство</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 2 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="2">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--forestry">
+                                    <use href="./icons/symbol/sprite.svg#forestry"></use>
+                                </svg>
+                                <span>Лесоводство и лесозаготовки</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 3 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="3">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--fishing">
+                                    <use href="./icons/symbol/sprite.svg#fishing"></use>
+                                </svg>
+                                <span>Рыболовство и рыбоводство</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 4 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="4">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--carbon">
+                                    <use href="./icons/symbol/sprite.svg#carbon"></use>
+                                </svg>
+                                <span>Уголь</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 5 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="5">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--oil">
+                                    <use href="./icons/symbol/sprite.svg#oil"></use>
+                                </svg>
+                                <span>Нефть и природный газ</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 6 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="6">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--metal-ore">
+                                    <use href="./icons/symbol/sprite.svg#metal-ore"></use>
+                                </svg>
+                                <span>Металлические руды</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 7 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="7">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--fossil">
+                                    <use href="./icons/symbol/sprite.svg#fossil"></use>
+                                </svg>
+                                <span>Полезные ископаемые</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 8 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="8">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--food">
+                                    <use href="./icons/symbol/sprite.svg#food"></use>
+                                </svg>
+                                <span>Пищевые продукты</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 9 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="9">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--drinks">
+                                    <use href="./icons/symbol/sprite.svg#drinks"></use>
+                                </svg>
+                                <span>Напитки</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 10 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="10">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--tabacco">
+                                    <use href="./icons/symbol/sprite.svg#tabacco"></use>
+                                </svg>
+                                <span>Табачные изделия</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 11 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="11">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--wood">
+                                    <use href="./icons/symbol/sprite.svg#wood"></use>
+                                </svg>
+                                <span>Древесина</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 12 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="12">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--paper">
+                                    <use href="./icons/symbol/sprite.svg#paper"></use>
+                                </svg>
+                                <span>Бумага и бумажные изделия</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 13 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="13">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--cox">
+                                    <use href="./icons/symbol/sprite.svg#cox"></use>
+                                </svg>
+                                <span>Кокс и нефтепродукты</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 14 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="14">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--chemical">
+                                    <use href="./icons/symbol/sprite.svg#chemical"></use>
+                                </svg>
+                                <span>Химические вещества и химические продукты</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 15 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="15">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--medicine">
+                                    <use href="./icons/symbol/sprite.svg#medicine"></use>
+                                </svg>
+                                <span>Медицина</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 16 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="16">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--rubber">
+                                    <use href="./icons/symbol/sprite.svg#rubber"></use>
+                                </svg>
+                                <span>Резиновые и пластмассовые изделия</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 17 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="17">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--mineral">
+                                    <use href="./icons/symbol/sprite.svg#mineral"></use>
+                                </svg>
+                                <span>Минеральная продукция</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                        <!-- 18 -->
+                        <li class="exp-catalog__cat-item" data-catidoverlay="18">
+                            <a class="exp-catalog__cat-link" href="#">
+                                <svg class="icon icon--metallurgy">
+                                    <use href="./icons/symbol/sprite.svg#metallurgy"></use>
+                                </svg>
+                                <span>Металлургия</span>
+                            </a>
+                            <span class="exp-catalog__cat-arrow"></span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Подкатегории правая сторона -->
+            <div class="exp-catalog__content">
+                <!-- 1 -->
+                <div class="exp-catalog__subcats" data-blockidoverlay="1">
+                    <div class="exp-catalog__subcats-header">
+                        <h2 class="exp-catalog__subcats-title">
+                            <a href="#">Растениеводство и животноводство</a>
+                        </h2>
+                    </div>
+                    <ul class="exp-catalog__subcats-list">
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мороженое </a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Молочная продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Готовые корма для животных</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Растительные и животные масла и жиры</a></li>
+                        <li>
+                            <a href="catalog.html" class="exp-catalog__subcats-link">Продукты мукомольной и крупяной промышленности, крахмал и крахмалосодержащие продукты</a>
+                        </li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Хлебобулочные и мучные кондитерские изделия</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Продукция из мяса убойных животных и мяса птицы</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мясо птицы</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Маргариновая продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Рыба, ракообразные и моллюски</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Фрукты и овощи</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Прочие пищевые продукты</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мясо и мясная пищевая продукция</a></li>
+                    </ul>
+                </div>
+
+                <!-- 2 -->
+                <div class="exp-catalog__subcats" data-blockidoverlay="2">
+                    <div class="exp-catalog__subcats-header">
+                        <h2 class="exp-catalog__subcats-title">
+                            <a href="#">Лесоводство и лесозаготовки</a>
+                        </h2>
+                    </div>
+                    <ul class="exp-catalog__subcats-list">
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Хлебобулочные и мучные кондитерские изделия</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Продукция из мяса убойных животных и мяса птицы</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мясо птицы</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Маргариновая продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Рыба, ракообразные и моллюски</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мороженое </a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Молочная продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Готовые корма для животных</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Растительные и животные масла и жиры</a></li>
+                        <li>
+                            <a href="catalog.html" class="exp-catalog__subcats-link">Продукты мукомольной и крупяной промышленности, крахмал и крахмалосодержащие продукты</a>
+                        </li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Фрукты и овощи</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Прочие пищевые продукты</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мясо и мясная пищевая продукция</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3 -->
+                <div class="exp-catalog__subcats" data-blockidoverlay="3">
+                    <div class="exp-catalog__subcats-header">
+                        <h2 class="exp-catalog__subcats-title">
+                            <a href="#">Рыболовство и рыбоводство</a>
+                        </h2>
+                    </div>
+                    <ul class="exp-catalog__subcats-list">
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Прочие пищевые продукты</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мясо и мясная пищевая продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Хлебобулочные и мучные кондитерские изделия</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Продукция из мяса убойных животных и мяса птицы</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мясо птицы</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Маргариновая продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Рыба, ракообразные и моллюски</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мороженое </a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Молочная продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Готовые корма для животных</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Растительные и животные масла и жиры</a></li>
+                        <li>
+                            <a href="catalog.html" class="exp-catalog__subcats-link">Продукты мукомольной и крупяной промышленности, крахмал и крахмалосодержащие продукты</a>
+                        </li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Фрукты и овощи</a></li>
+                    </ul>
+                </div>
+
+                <!-- 4 -->
+                <div class="exp-catalog__subcats" data-blockidoverlay="4">
+                    <div class="exp-catalog__subcats-header">
+                        <h2 class="exp-catalog__subcats-title">
+                            <a href="#">Уголь</a>
+                        </h2>
+                    </div>
+                    <ul class="exp-catalog__subcats-list">
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Готовые корма для животных</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Растительные и животные масла и жиры</a></li>
+                        <li>
+                            <a href="catalog.html" class="exp-catalog__subcats-link">Продукты мукомольной и крупяной промышленности, крахмал и крахмалосодержащие продукты</a>
+                        </li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Фрукты и овощи</a></li>
+                    </ul>
+                </div>
+
+                <!-- 5 -->
+                <div class="exp-catalog__subcats" data-blockidoverlay="5">
+                    <div class="exp-catalog__subcats-header">
+                        <h2 class="exp-catalog__subcats-title">
+                            <a href="#">Нефть и природный газ</a>
+                        </h2>
+                    </div>
+                    <ul class="exp-catalog__subcats-list">
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Готовые корма для животных</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Растительные и животные масла и жиры</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Прочие пищевые продукты</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мясо и мясная пищевая продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Хлебобулочные и мучные кондитерские изделия</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Продукция из мяса убойных животных и мяса птицы</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мясо птицы</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Маргариновая продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Рыба, ракообразные и моллюски</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Мороженое </a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Молочная продукция</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Готовые корма для животных</a></li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Растительные и животные масла и жиры</a></li>
+                        <li>
+                            <a href="catalog.html" class="exp-catalog__subcats-link">Продукты мукомольной и крупяной промышленности, крахмал и крахмалосодержащие продукты</a>
+                        </li>
+                        <li><a href="catalog.html" class="exp-catalog__subcats-link">Фрукты и овощи</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>

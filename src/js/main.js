@@ -31,3 +31,23 @@ import "./sections/companys-slider.js";
 CHOICES SEARCH FILTER
 --------------------------------------------------------------------------------------------------------------------------------*/
 import "./mini/choices-add.js";
+
+/*--------------------------------------------------------------------------------------------------------------
+DATA-CATEGORIES LISTENER
+----------------------------------------------------------------------------------------------------------------*/
+// [data-catId] - catID обязательный префикс(скрипт на нём завязан)
+import CatsMenu from "./modules/cats-menu-prod";
+
+const categoriesOverlayMenu = document.querySelector(".exp-catalog");
+
+categoriesOverlayMenu &&
+	new CatsMenu({
+		parent: ".exp-catalog",
+		openBtn: "#catalog-btn",
+		catButton: "data-catIDoverlay",
+		catBlock: "data-blockIDoverlay",
+		backButton: "data-subcatback='overlay'",
+		closeButton: "data-catsclose='overlay'",
+		openSubListButton: "data-subcatslist='overlay'",
+	});
+

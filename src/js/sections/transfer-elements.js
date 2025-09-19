@@ -3,6 +3,21 @@ TRANSFER ELEMENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
 import TransferElements from "../modules/transfer";
 
+const searchFormInHeader = document.getElementById("search-form");
+const placeForSearchForm = document.getElementById("for-sm-search-form");
+
+if (searchFormInHeader && placeForSearchForm) {
+    new TransferElements({
+        sourceElement: searchFormInHeader,
+        breakpoints: {
+            992: {
+                targetElement: placeForSearchForm,
+            },
+        },
+    });
+}
+
+
 const popularCatsButton = document.getElementById("popularcats-button");
 const popularCatsPlace = document.getElementById("popularcats-place");
 

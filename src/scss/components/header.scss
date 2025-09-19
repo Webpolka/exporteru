@@ -3,10 +3,7 @@ HEADER
 --------------------------------------------------------------------------------------------------------------------------------*/
 .front-page {
 	.header {
-		@include lg {
-			.search-form {
-				display: none;
-			}
+		@include sm {			
 			.lang-switcher {
 				display: none;
 			}
@@ -15,6 +12,10 @@ HEADER
 }
 
 .header {
+	position: sticky;
+	top: 0;
+	z-index: 999;
+			background-color: var(--white);
 	// TOP LINE
 	&__top {
 		min-height: rem(35);
@@ -70,8 +71,8 @@ HEADER
 		}
 	}
 
-	// BOTTOM
-	&__bottom {
+	// Medium
+	&__medium {
 		position: relative;
 		min-height: rem(82);
 		background-color: var(--accent);
@@ -103,6 +104,7 @@ HEADER
 			min-height: rem(59);
 		}
 	}
+
 
 	// BOTTOM LOGO
 	&__logo {
@@ -153,7 +155,7 @@ HEADER
 
 			@include lg {
 				flex-grow: 0;
-				order: 2;
+				order: 3;
 			}
 		}
 
@@ -175,7 +177,7 @@ HEADER
 		.lang-switcher {
 			order: 3;
 			@include lg {
-				order: 3;
+				order: 2;
 			}
 		}
 	}

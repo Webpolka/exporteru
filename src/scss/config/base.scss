@@ -2,7 +2,12 @@
 BASE
 --------------------------------------------------------------------------------------------------------------------------------*/
 html {
+	opacity: 0.25;
 	scroll-behavior: smooth;
+	transition: opacity 1s ease-in-out;
+	&.loaded{
+		opacity: 1;
+	}
 }
 
 body {
@@ -84,6 +89,10 @@ body {
 	}
 }
 
+.no-scroll{
+	overflow: hidden;
+}
+
 .screen-reader-text {
 	position: absolute;
 	left: -9999px;
@@ -121,7 +130,7 @@ body {
 	min-block-size: 100%;
 
 	/** Поменять на clip - если используется в проекте position: sticky */
-	overflow: hidden;
+	overflow: clip;
 	flex-direction: column;
 }
 

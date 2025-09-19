@@ -152,6 +152,10 @@ COMPONENTS
 
 	flex-grow: 1;
 
+	@include lg{
+		display: none;
+	}
+
 	&__input {
 		font-weight: 400;
 		font-size: rem(15);
@@ -174,6 +178,10 @@ COMPONENTS
 			height: rem(20);
 		}
 	}
+}
+
+.exp-catalog .search-form{
+	display: flex !important;
 }
 
 /* --------------------------------------------------------------- LOGIN BUTTON --------------------------------------------------------------------*/

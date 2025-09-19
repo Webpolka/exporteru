@@ -1,0 +1,308 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CATAALOG OVERLAY
+--------------------------------------------------------------------------------------------------------------------------------*/
+.exp-catalog {
+	opacity: 0;
+	visibility: hidden;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 910;
+	width: 100%;
+	top: 116px;
+
+	transition: all 0.3s ease-in-out;
+	border-top: 1px solid rgb(255, 255, 255, 0.05);
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		background-color: var(--accent);
+	}
+
+	@include lg {
+		top: rem(95);
+		padding-top: rem(22);
+	}
+
+	@include sm {
+		top: rem(80);
+		padding-top: rem(10);
+	}
+
+	// Само меню
+	&__menu {
+		display: flex;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		max-width: var(--site-width);
+		margin: 0 auto;
+
+		@include lg {
+			display: block;
+		}
+	}
+
+	// Левая часть навигация по категориям
+	&__sidebar {
+		@include lg {
+			width: 100%;
+		}
+	}
+
+	&__catwrapper {
+		position: relative;
+		flex-shrink: 0;
+		width: rem(400);
+		padding: rem(20) 0;
+
+		@include lg {
+			padding-block-start: rem(15);
+			width: 100%;
+		}
+	}
+
+	&__cat {
+		box-sizing: content-box;
+		overflow-y: auto;
+		max-height: calc(100vh - 160px);
+
+		padding-right: rem(25);
+
+		&::-webkit-scrollbar {
+			inline-size: rem(2);
+			background: rgb(255, 255, 255, 0.18);
+		}
+
+		&::-webkit-scrollbar-track {
+			background: rgb(255, 255, 255, 0.18);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: rem(10);
+			background-color: var(--white);
+			cursor: pointer;
+
+			@include any-hover {
+				background-color: transparent;
+			}
+		}
+
+		@include lg {
+			width: 100%;
+		}
+
+		&-item {
+			display: flex;
+			min-height: rem(42);
+			align-items: center;
+			justify-content: space-between;
+			padding-inline: rem(25);
+
+			overflow: hidden;
+			border-radius: rem(0);
+
+			@include lg {
+				padding-inline: 0;
+				border: 1px solid rgb(0, 0, 0, 0.05);
+				margin-bottom: rem(5);
+			}
+
+			@media (min-width: 992px) {
+				&.active {
+					background-color: var(--red);
+				}
+			}
+
+			@include sm {
+				border: none;
+			}
+		}
+		&-link {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(10);
+			width: 100%;
+
+			min-height: rem(47);
+			color: var(--white);
+			transition: color 0.2s ease-in-out;
+			font-weight: 500;
+			font-size: rem(16);
+			@include lg {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			@include sm {
+				font-size: rem(14);
+			}
+
+			svg {
+				width: rem(26);
+				height: rem(26);
+
+				@include sm {
+					width: rem(21);
+					height: rem(21);
+				}
+			}
+		}
+		&-arrow {
+			display: none;
+			flex-shrink: 0;
+
+			width: rem(60);
+			height: rem(60);
+			background-image: url("../../icons/right-chevron.svg");
+			background-repeat: no-repeat;
+			background-size: 40%;
+			background-position: right center;
+			cursor: pointer;
+
+			@include lg {
+				display: block;
+			}
+			@include sm {
+				width: rem(40);
+				height: rem(40);
+			}
+		}
+	}
+
+	// Правая часть
+	&__content {
+		position: relative;
+		width: 100%;
+		padding: rem(20) rem(0) rem(80) rem(24);
+		overflow-y: auto;
+		overflow-x: hidden;
+
+		&::-webkit-scrollbar {
+			inline-size: rem(0);
+			background-color: var(--scrollbar);
+		}
+	}
+
+	&__subcats {
+		position: relative;
+		height: 100%;
+		display: none;
+
+		&.active {
+			display: block;
+			animation: fade-up 0.3s ease-in-out;
+		}
+
+		@include lg {
+			position: fixed;
+			top: rem(170);
+			left: 100%;
+
+			display: block;
+
+			width: 100%;
+			height: 100%;
+			max-height: 100vh;
+			overflow-y: auto;
+
+			padding: rem(20);
+			background-color: var(--accent);
+
+			transition: all 0.3s ease-in-out;
+
+			&::-webkit-scrollbar {
+				inline-size: rem(0);
+				background: rgb(255, 255, 255, 0.18);
+			}
+
+			&.active-lg {
+				left: 0;
+			}
+
+			padding-inline: var(--container-padding-large);
+
+			padding-block-end: rem(100);
+		}
+		@include sm {
+			padding-inline: var(--container-padding-small);
+			top: rem(135);
+		}
+
+		&-title {
+			font-weight: 600;
+			font-size: rem(22);
+			color: var(--white);
+			a {
+				color: var(--white);
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			margin-bottom: rem(35);
+
+			@include lg {
+				margin-bottom: rem(20);
+			}
+
+			@include sm {
+				font-size: rem(18);
+				margin-bottom: rem(15);
+			}
+		}
+
+		&-list {
+			column-count: 3;
+			column-gap: rem(35);
+
+			@include lg {
+				column-count: 1;
+
+				display: flex;
+				flex-direction: column;
+				gap: rem(10);
+
+				padding-block-end: rem(150);
+			}
+
+			li {
+				page-break-inside: avoid;
+				break-inside: avoid;
+				padding-bottom: 20px;
+
+				@include lg {
+					padding-bottom: rem(0);
+				}
+			}
+		}
+
+		&-link {
+			display: block;
+			width: 100%;
+			text-overflow: ellipsis;
+			font-size: rem(16);
+			font-weight: 500;
+
+			color: var(--white);
+			line-height: 160%;
+
+			@include sm {
+				font-size: rem(14);
+				font-weight: normal;
+
+				line-height: 140%;
+				margin-bottom: rem(10);
+			}
+
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
