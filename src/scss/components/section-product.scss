@@ -1,0 +1,360 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+PRODUCT SECTION
+--------------------------------------------------------------------------------------------------------------------------------*/
+.product {
+	.product-block-title {
+		font-weight: 500;
+		font-size: rem(24);
+
+		margin-bottom: rem(15);
+
+		@include sm {
+			font-size: rem(18);
+			margin-bottom: rem(10);
+		}
+	}
+
+	&__row {
+		display: flex;
+		margin-inline-start: rem(-20);
+		margin-inline-end: rem(-20);
+
+		&:first-child {
+			padding-block-start: rem(40);
+			padding-block-end: rem(20);
+		}
+
+		@include md {
+			&:first-child {
+				padding-block-start: rem(20);
+				padding-block-end: rem(30);
+			}
+
+			flex-wrap: wrap;
+		}
+	}
+	&__column-1 {
+		flex-shrink: 0;
+		width: 59%;
+		padding-inline: rem(20);
+
+		@include md {
+			width: 100%;
+		}
+	}
+
+	&__column-2 {
+		width: 41%;
+		padding-inline: rem(20);
+
+		@include md {
+			width: 100%;
+		}
+	}
+
+	/* ------------------------------------------------------------------------------------------------------------------------------
+GALLERY
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+	&-gallery {
+		margin-bottom: rem(20);
+
+		@include sm {
+			margin-bottom: 0;
+		}
+
+		&__full,
+		&__thumbnails {
+			img {
+				height: 100%; /* растягиваем изображение по высоте контейнера */
+				width: auto; /* сохраняем пропорции изображения по ширине */
+				max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+
+		&__full {
+			img {
+				transition: transform 0.2s ease; /* плавное смещение */
+				will-change: transform; /* оптимизация для transform */
+			}
+			a {
+				position: relative;
+				display: flex;
+				justify-content: center; /* по горизонтали */
+				align-items: center; /* по вертикали */
+				overflow: hidden;
+				aspect-ratio: 720/390;
+				&:hover {
+					cursor: url("../../icons/search-gallery.svg"), auto;
+				}
+				@media (max-width: 441px) {
+					aspect-ratio: 320/340;
+				}
+			}
+			margin-bottom: rem(10);
+
+			@include sm {
+				margin-bottom: rem(8);
+			}
+		}
+		&__thumbnails {
+			.swiper-slide a {
+				display: flex;
+				justify-content: center; /* по горизонтали */
+				align-items: center; /* по вертикали */
+				aspect-ratio: 172/110;
+				overflow: hidden;
+
+				&:hover {
+					cursor: url("../../icons/search-gallery.svg"), auto;
+				}
+
+				@media (max-width: 441px) {
+					aspect-ratio: 74/66;
+				}
+			}
+
+			margin-bottom: rem(15);
+		}
+
+		.navigation-group__arrows {
+			min-height: rem(20);
+			@include sm {
+				display: none;
+			}
+		}
+	}
+
+	/* ------------------------------------------------------------------------------------------------------------------------------
+HEADER
+--------------------------------------------------------------------------------------------------------------------------------*/
+	&-header {
+		margin-bottom: rem(10);
+
+		@include sm {
+			margin-bottom: rem(0);
+		}
+
+		display: flex;
+		flex-direction: column;
+		gap: rem(15);
+
+		&__title {
+			order: 1;
+			@include lg {
+				font-size: rem(26);
+			}
+			@include sm {
+				font-size: rem(22);
+				order: 2;
+			}
+			font-weight: 500;
+			font-size: rem(30);
+			line-height: 120%;
+			color: var(--text);
+		}
+
+		&__rating {
+			order: 2;
+			@include sm {
+				margin-bottom: rem(-15);
+				order: 1;
+			}
+			margin-bottom: rem(5);
+		}
+
+		&__price {
+			order: 3;
+			@include sm {
+				flex-direction: column;
+				gap: 0;
+				order: 3;
+			}
+			display: inline-flex;
+			align-items: baseline;
+			flex-wrap: wrap;
+
+			gap: 0 rem(15);
+
+			.price-wrap {
+				order: 1;
+				@include sm {
+					gap: rem(10);
+					order: 2;
+				}
+				display: flex;
+				align-items: baseline;
+				gap: rem(15);
+
+				.price-all {
+					font-weight: 500;
+					font-size: rem(26);
+					color: var(--text);
+
+					@include sm {
+						font-size: rem(20);
+					}
+				}
+				.price-strike {
+					font-weight: 400;
+					font-size: rem(18);
+					text-decoration: line-through;
+					color: var(--text);
+					opacity: 0.5;
+
+					@include sm {
+						font-size: rem(12);
+					}
+				}
+			}
+
+			.price-akcia {
+				order: 2;
+				@include sm {
+					font-size: rem(10);
+					order: 1;
+				}
+
+				font-weight: 500;
+				font-size: rem(16);
+				color: var(--red);
+			}
+		}
+
+		&__request {
+			order: 4;
+			@include sm {
+				order: 4;
+				.btn-accent {
+					min-height: rem(48);
+					font-size: rem(14);
+				}
+				gap: rem(5);
+			}
+			display: flex;
+			gap: rem(15);
+
+			.btn-accent:nth-of-type(1) {
+				flex: 1;
+				justify-content: center;
+			}
+
+			.btn-accent:nth-of-type(2) {
+				flex-shrink: 0;
+
+				padding-inline: rem(0);
+				aspect-ratio: 1/1;
+				width: rem(54);
+
+				@include sm {
+					width: rem(48);
+				}
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+
+				&.active {
+					svg {
+						stroke: var(--red);
+						fill: var(--red);
+					}
+				}
+
+				svg {
+					width: 50%;
+					fill: transparent;
+					stroke: var(--white);
+				}
+			}
+
+			margin-bottom: rem(5);
+		}
+		&__listok {
+			order: 5;
+			@include sm {
+				order: 5;
+			}
+		}
+	}
+
+	/* ------------------------------------------------------------------------------------------------------------------------------
+CHARACKTERS
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+	&-characters {
+		color: var(--text);
+		margin-bottom: rem(20);
+
+		@include sm {
+			margin-bottom: rem(30);
+		}
+
+		&__listok {
+			margin-bottom: rem(40);
+
+			@include sm {
+				margin-bottom: rem(20);
+			}
+		}
+
+		&__text {
+			font-size: rem(16);
+			line-height: 135%;
+			@include sm {
+				font-size: rem(12);
+			}
+			p {
+				margin-bottom: rem(25);
+			}
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	/* ------------------------------------------------------------------------------------------------------------------------------
+INFORMATION
+--------------------------------------------------------------------------------------------------------------------------------*/
+	&-info {
+		&__provider {
+			margin-bottom: rem(20);
+			@include sm {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	/* ------------------------------------------------------------------------------------------------------------------------------
+REVIEWS
+--------------------------------------------------------------------------------------------------------------------------------*/
+	&-reviews {
+		color: var(--text);
+		padding-block-end: rem(10);
+
+		&__title {
+			font-weight: 500;
+			font-size: rem(30);
+
+			padding-block-start: rem(45);
+			@include sm {
+				padding-block-start: rem(55);
+			}
+
+			margin-bottom: rem(30);
+			@include sm {
+				font-size: rem(24);
+				margin-bottom: rem(20);
+			}
+		}
+
+		&__item:not(:last-child) {
+			margin-bottom: rem(20);
+			@include sm {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+}

@@ -5,7 +5,7 @@ html {
 	opacity: 0.25;
 	scroll-behavior: smooth;
 	transition: opacity 1s ease-in-out;
-	&.loaded{
+	&.loaded {
 		opacity: 1;
 	}
 }
@@ -37,10 +37,10 @@ body {
 		}
 	}
 }
-.bred{
+.bred {
 	border: 1px solid red;
 }
-.justify-content-center{
+.justify-content-center {
 	display: flex;
 }
 .container {
@@ -55,8 +55,8 @@ body {
 		padding-inline: var(--container-padding-small);
 	}
 }
-.sm-block{
-	@include sm{
+.sm-block {
+	@include sm {
 		display: block;
 	}
 }
@@ -89,7 +89,28 @@ body {
 	}
 }
 
-.no-scroll{
+.site-overlay {
+	opacity: 0;
+	visibility: hidden;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	backdrop-filter: blur(7px); /* эффект размытия */
+	background-color: rgba(0, 0, 0, 0.25);
+
+	z-index: 5;
+	transition: all 0.3s ease-in-out;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.no-scroll {
 	overflow: hidden;
 }
 
@@ -130,11 +151,16 @@ body {
 	min-block-size: 100%;
 
 	/** Поменять на clip - если используется в проекте position: sticky */
-	overflow: clip;
+	overflow: hidden;
 	flex-direction: column;
 }
 
-.main {
+.main {	
 	position: relative;
 	flex: 1 1 auto;
+}
+
+svg{
+	max-width: rem(50);
+	max-height: rem(50);
 }

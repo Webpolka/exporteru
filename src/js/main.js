@@ -31,7 +31,10 @@ import "./sections/companys-slider.js";
 CHOICES SEARCH FILTER
 --------------------------------------------------------------------------------------------------------------------------------*/
 import "./mini/choices-add.js";
-
+/* ------------------------------------------------------------------------------------------------------------------------------
+SWIPER PORODUCT GALLERY THUMBNAILS
+--------------------------------------------------------------------------------------------------------------------------------*/
+import "./sections/product-thumbnails-slider.js";
 /*--------------------------------------------------------------------------------------------------------------
 DATA-CATEGORIES LISTENER
 ----------------------------------------------------------------------------------------------------------------*/
@@ -51,3 +54,40 @@ categoriesOverlayMenu &&
 		openSubListButton: "data-subcatslist='overlay'",
 	});
 
+/* ------------------------------------------------------------------------------------------------------------------------------
+Main top padding listener
+--------------------------------------------------------------------------------------------------------------------------------*/
+const header = document.querySelector(".header");
+
+window.onresize = updateMainTop.bind(null, header);
+window.onchange = updateMainTop.bind(null, header);
+window.onload = updateMainTop.bind(null, header);
+
+function updateMainTop(header) {
+	if (header) {
+		const headerTopHeight = header.querySelector(".header__top").scrollHeight;
+		const headerMiddleHeight = header.querySelector(".header__medium").scrollHeight;
+		const main = document.querySelector(".main");
+		if (main) {
+			main.style.paddingTop = headerTopHeight + headerMiddleHeight + "px";
+		}
+	}
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------
+FANCYBOX
+-----------------------------------------------------------------------------------------------------------------------------*/
+Fancybox.bind("[data-fancybox]", {
+	Carousel: {
+		transition: "slide",
+	},
+	Images: {
+		zoom: false,
+	},
+	showClass: "f-fadeIn",
+});
+
+/* --------------------------------------------------------------------------------------------------------------------------
+PRODUCCT GALLERY PARALAX
+-----------------------------------------------------------------------------------------------------------------------------*/
+import "./modules/product-gallery-parallax.js";

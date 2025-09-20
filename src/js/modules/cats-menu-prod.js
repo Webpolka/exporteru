@@ -85,18 +85,24 @@ export default class CatsMenu {
 
 	addNoScroll() {
 		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-		document.documentElement.style.paddingRight = scrollbarWidth + "px";
-		// this.header.style.paddingRight = scrollbarWidth + "px";
-
-		// this.header.classList.add("no-scroll");
+		document.querySelector(".wrapper").style.paddingRight = scrollbarWidth + "px";
 		document.documentElement.classList.add("no-scroll");
+		const overlay = document.querySelector("#site-overlay");
+		overlay && overlay.classList.add("active");
+
+		const header = document.querySelector(".header");
+		if (header) {
+			header.style.marginRight = scrollbarWidth + "px";
+		}
 	}
 	removeNoScroll() {
-		// this.header.classList.remove("no-scroll");
 		document.documentElement.classList.remove("no-scroll");
+		document.querySelector(".wrapper").style.removeProperty("padding-right");
+		const overlay = document.querySelector("#site-overlay");
+		overlay && overlay.classList.remove("active");
 
-		document.documentElement.style.removeProperty("padding-right");
-		// this.header.style.removeProperty("padding-right");
+		const header = document.querySelector(".header");
+		header && header.style.removeProperty("margin-right");
 	}
 
 	init() {

@@ -152,7 +152,7 @@ COMPONENTS
 
 	flex-grow: 1;
 
-	@include lg{
+	@include lg {
 		display: none;
 	}
 
@@ -180,7 +180,7 @@ COMPONENTS
 	}
 }
 
-.exp-catalog .search-form{
+.exp-catalog .search-form {
 	display: flex !important;
 }
 
@@ -252,6 +252,7 @@ COMPONENTS
 		height: rem(24);
 	}
 	@include sm {
+		display: none;
 		height: rem(32);
 
 		svg {
@@ -463,6 +464,178 @@ COMPONENTS
 		&--disabled {
 			opacity: 0.5 !important;
 			transform: scale(1) !important;
+		}
+	}
+}
+
+/*-------------------------------------------- Rating ----------------------------------------------------*/
+[class*="__rating"] {
+	display: inline-flex;
+	align-items: center;
+	gap: rem(8);
+
+	.rating {
+		&-num {
+			font-weight: 500;
+			font-size: rem(18);
+			color: var(--text);
+			@include sm {
+				font-size: rem(12);
+			}
+		}
+
+		&-stars {
+			display: flex;
+			align-items: center;
+			gap: rem(3);
+
+			&__item {
+				display: flex;
+				align-items: center;
+				svg {
+					fill: #f7c74d;
+					stroke: #f7c74d;
+					width: rem(16);
+					height: rem(16);
+
+					@include sm {
+						width: rem(12);
+						height: rem(12);
+					}
+
+					transition: all 0.3s ease-in-out;
+				}
+			}
+		}
+		&-reviews {
+			font-weight: 400;
+			font-size: rem(16);
+			color: var(--text);
+			opacity: 0.5;
+
+			@include sm {
+				font-size: rem(10);
+			}
+
+			&:before {
+				content: "•";
+				padding-right: rem(5);
+			}
+		}
+	}
+}
+/*-------------------------------------------- Listok ----------------------------------------------------*/
+[class*="__listok"] {
+	display: flex;
+	flex-direction: column;
+	gap: rem(13);
+	li {
+		font-weight: 400;
+		font-size: rem(16);
+		color: var(--text);
+		opacity: 0.7;
+
+		display: flex;
+		align-items: baseline;
+
+		@include sm {
+			font-size: rem(10);
+		}
+
+		.dashed {
+			flex: 1; /* занимает всё пространство между текстами */
+			border-bottom: 2px dashed rgb(47, 47, 47, 0.2); /* штрих по базовой линии */
+			height: 0; /* чтобы линия шла по базовой линии текста */
+			align-self: baseline; /* по базовой линии */
+			@include sm {
+				border-bottom: 2px dashed rgb(47, 47, 47, 0.2); /* штрих по базовой линии */
+			}
+		}
+	}
+}
+
+/*-------------------------------------------- Listok ----------------------------------------------------*/
+.delivery-card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgba(47, 47, 47, 0.1);
+	padding: rem(10) rem(20) rem(15) rem(20);
+
+	@include sm{
+		padding-inline: rem(10);
+		padding-block-start: rem(10);
+		padding-block-end: rem(15);
+	}
+
+	color: var(--text);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		border: 1px solid rgb(0, 71, 186, 0.25);
+		background-color: #f6f6f6;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+
+		padding-bottom: rem(15);
+		border-bottom: 1px solid rgba(47, 47, 47, 0.1);
+
+		@include sm{
+			padding-bottom: rem(10);
+		}
+	}
+
+	&__icon {
+		margin-top: rem(4);
+		aspect-ratio: 1/1;
+		width: rem(35);
+
+		@include sm {
+			width: rem(25);
+		}
+
+		svg {
+			fill: transparent;
+			stroke: var(--accent);
+			stroke-width: 2px;
+			width: 100%;
+			aspect-ratio: 1/1;
+		}
+	}
+
+	&__address {
+		font-size: rem(18);
+		line-height: 120%;
+
+		@include sm {
+			font-size: rem(12);
+		}
+	}
+	&__caption {
+		font-size: rem(14);
+		opacity: 0.5;
+		line-height: 120%;
+
+		@include sm {
+			font-size: rem(10);
+		}
+	}
+
+	&__list {
+		padding-top: rem(10);
+		padding-left: rem(35);
+		@include sm {
+			padding-left: rem(25);
+		}
+
+		li {
+			font-size: rem(18);
+			@include sm {
+				font-size: rem(12);
+			}
 		}
 	}
 }

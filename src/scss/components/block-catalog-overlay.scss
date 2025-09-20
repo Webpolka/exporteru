@@ -5,16 +5,37 @@ CATAALOG OVERLAY
 	opacity: 0;
 	visibility: hidden;
 
-	position: fixed;
+	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 0;
-	z-index: 910;
 	width: 100%;
 	top: 116px;
 
+	z-index: 10000;
+
+	&:before {
+		position: absolute;
+		content: "";
+		height: 100%;
+		top: 0;
+		left: -100vw;
+		bottom: 0;
+		width: 100vw;
+		background-color: var(--accent);
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		height: 100%;
+		top: 0;
+		right: -100vw;
+		bottom: 0;
+		width: 100vw;
+		background-color: var(--accent);
+	}
+
 	transition: all 0.3s ease-in-out;
-	border-top: 1px solid rgb(255, 255, 255, 0.05);
 
 	&.active {
 		opacity: 1;
@@ -23,7 +44,7 @@ CATAALOG OVERLAY
 	}
 
 	@include lg {
-		top: rem(95);
+		top: rem(105);
 		padding-top: rem(22);
 	}
 
@@ -108,7 +129,7 @@ CATAALOG OVERLAY
 			@include lg {
 				padding-inline: 0;
 				border: 1px solid rgb(0, 0, 0, 0.05);
-				margin-bottom: rem(5);
+				margin-bottom: rem(4);
 			}
 
 			@media (min-width: 992px) {
@@ -252,7 +273,7 @@ CATAALOG OVERLAY
 
 			@include sm {
 				font-size: rem(18);
-				margin-bottom: rem(15);
+				margin-bottom: rem(20);
 			}
 		}
 
@@ -267,7 +288,7 @@ CATAALOG OVERLAY
 				flex-direction: column;
 				gap: rem(10);
 
-				padding-block-end: rem(150);
+				padding-block-end: rem(80);
 			}
 
 			li {
@@ -277,6 +298,13 @@ CATAALOG OVERLAY
 
 				@include lg {
 					padding-bottom: rem(0);
+				}
+				@include sm {
+					&:nth-of-type(n + 6) {
+						.exp-catalog__subcats-link {
+							font-size: rem(16);
+						}
+					}
 				}
 			}
 		}

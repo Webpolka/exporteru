@@ -3,7 +3,7 @@ HEADER
 --------------------------------------------------------------------------------------------------------------------------------*/
 .front-page {
 	.header {
-		@include sm {			
+		@include sm {
 			.lang-switcher {
 				display: none;
 			}
@@ -12,10 +12,12 @@ HEADER
 }
 
 .header {
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 999;
-			background-color: var(--white);
+	background-color: var(--white);
 	// TOP LINE
 	&__top {
 		min-height: rem(35);
@@ -81,6 +83,10 @@ HEADER
 		align-items: center;
 		gap: rem(40);
 
+		@include sm{
+			gap: rem(20);
+		}
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -104,7 +110,6 @@ HEADER
 			min-height: rem(59);
 		}
 	}
-
 
 	// BOTTOM LOGO
 	&__logo {
