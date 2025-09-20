@@ -13,6 +13,21 @@ PRODUCT SECTION
 			margin-bottom: rem(10);
 		}
 	}
+	.product-block-bigtitle {
+			font-weight: 500;
+			font-size: rem(30);
+
+			padding-block-start: rem(45);
+			@include sm {
+				padding-block-start: rem(55);
+			}
+
+			margin-bottom: rem(30);
+			@include sm {
+				font-size: rem(24);
+				margin-bottom: rem(20);
+			}
+		}
 
 	&__row {
 		display: flex;
@@ -332,23 +347,7 @@ REVIEWS
 --------------------------------------------------------------------------------------------------------------------------------*/
 	&-reviews {
 		color: var(--text);
-		padding-block-end: rem(10);
-
-		&__title {
-			font-weight: 500;
-			font-size: rem(30);
-
-			padding-block-start: rem(45);
-			@include sm {
-				padding-block-start: rem(55);
-			}
-
-			margin-bottom: rem(30);
-			@include sm {
-				font-size: rem(24);
-				margin-bottom: rem(20);
-			}
-		}
+		padding-block-end: rem(10);		
 
 		&__item:not(:last-child) {
 			margin-bottom: rem(20);

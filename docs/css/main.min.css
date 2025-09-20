@@ -2066,6 +2066,12 @@ PRODUCT SECTION
   font-size: 1.5rem;
   margin-bottom: 0.9375rem;
 }
+.product .product-block-bigtitle {
+  font-weight: 500;
+  font-size: 1.875rem;
+  padding-block-start: 2.8125rem;
+  margin-bottom: 1.875rem;
+}
 .product__row {
   display: flex;
   margin-inline-start: -1.25rem;
@@ -2233,12 +2239,6 @@ PRODUCT SECTION
 .product-reviews {
   color: var(--text);
   padding-block-end: 0.625rem;
-}
-.product-reviews__title {
-  font-weight: 500;
-  font-size: 1.875rem;
-  padding-block-start: 2.8125rem;
-  margin-bottom: 1.875rem;
 }
 .product-reviews__item:not(:last-child) {
   margin-bottom: 1.25rem;
@@ -3166,6 +3166,13 @@ MEDIAQUERIES
     font-size: 1.125rem;
     margin-bottom: 0.625rem;
   }
+  .product .product-block-bigtitle {
+    padding-block-start: 3.4375rem;
+  }
+  .product .product-block-bigtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
   .product-gallery {
     margin-bottom: 0;
   }
@@ -3230,13 +3237,6 @@ MEDIAQUERIES
   }
   .product-info__provider {
     margin-bottom: 1.875rem;
-  }
-  .product-reviews__title {
-    padding-block-start: 3.4375rem;
-  }
-  .product-reviews__title {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
   }
   .product-reviews__item:not(:last-child) {
     margin-bottom: 0.75rem;
