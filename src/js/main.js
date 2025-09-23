@@ -114,12 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		const windowWidth = window.innerWidth;
 		const wrapper = document.querySelector(".wrapper");
 		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-			
 
-		if (windowWidth >= 1200) {		
-			
+		if (windowWidth >= 1200) {
 			const pageWidth = wrapper.offsetWidth;
-
 			const minWidth = 1200;
 			const maxWidth = 6400;
 
@@ -132,12 +129,13 @@ document.addEventListener("DOMContentLoaded", function () {
 			wrapper.style.transformOrigin = "top left";
 			wrapper.style.transform = "scale(" + scaleRatio + ")";
 			wrapper.style.overflowX = "hidden";
-		
+			document.body.style.maxBlockSize = 100 / scaleRatio + "%";
+			
 		} else if (windowWidth < 1200) {
 			wrapper.style.removeProperty("transform-origin");
 			wrapper.style.removeProperty("transform-scale");
 			wrapper.style.removeProperty("overflow-x");
-		
+			document.body.style.removeProperty("max-block-size");
 		}
 	}
 
