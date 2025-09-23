@@ -11,6 +11,10 @@ html {
 }
 
 body {
+	margin: 0;
+	padding: 0;
+	transform-origin: top left; 
+
 	text-wrap: balance;
 }
 
@@ -145,8 +149,13 @@ body {
 	white-space: nowrap !important; /* предотвращает перенос текста */
 	border: 0 !important;
 }
-
+.header {
+	transform-origin: top center;
+}
 .wrapper {
+	// max-inline-size: var(--max-width);
+	transform-origin: top center;
+
 	display: flex;
 	min-block-size: 100%;
 

@@ -12,12 +12,15 @@ HEADER
 }
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// right: 0;
 	z-index: 999;
-	background-color: var(--white);
+	background-color: var(--white);	
+	position: sticky;
+	top: 0;
+
 	// TOP LINE
 	&__top {
 		min-height: rem(35);
@@ -92,18 +95,20 @@ HEADER
 			position: absolute;
 			top: 0;
 			left: -110vw;
-			width: 110vw;
+			width: 111vw;
 			height: 100%;
 			background-color: var(--accent);
+			z-index: -1;
 		}
 		&::after {
 			content: "";
 			position: absolute;
 			top: 0;
 			right: -110vw;
-			width: 110vw;
+			width: 111vw;
 			height: 100%;
 			background-color: var(--accent);
+			z-index: -1;
 		}
 
 		@include sm {

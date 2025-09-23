@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ABOUT PAGE
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.about__row {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	margin-bottom: 30px;
+
+    @include sm{
+        gap: 12px;
+    }
+}
+
+.about__title {
+	font-weight: 500;
+	font-size: 46px;
+	color: #2f2f2f;
+
+	margin-bottom: 40px;
+
+	@include sm {
+		font-size: 24px;
+
+		margin-bottom: 30px;
+	}
+}
+
+

@@ -337,25 +337,25 @@ COMPONENTS
 }
 
 /* --------------------------------------------------------------- Breadcrumbs --------------------------------------------------------------------*/
-
 .exp-breadcrumbs {
-	padding-block-start: rem(8);
-	padding-block-end: rem(10);
-
+	
 	&__list {
+		padding-block-start: rem(10);
+		padding-block-end: rem(5);
+
 		display: inline-flex;
 		align-items: center;
-		gap: rem(5);
+		gap: 5px;
 
 		li,
 		li span,
 		li a {
 			color: var(--text);
-			font-size: rem(13);
+			font-size: 13px;
 			transition: color 0.3s ease-in-out;
 
 			@include sm {
-				font-size: rem(10);
+				font-size: 10px;
 			}
 
 			opacity: 0.7;
@@ -363,7 +363,7 @@ COMPONENTS
 
 		li a:hover {
 			color: var(--accent);
-			text-decoration: underline;
+			// text-decoration: underline;
 		}
 	}
 }
@@ -561,7 +561,7 @@ COMPONENTS
 	border: 1px solid rgba(47, 47, 47, 0.1);
 	padding: rem(10) rem(20) rem(15) rem(20);
 
-	@include sm{
+	@include sm {
 		padding-inline: rem(10);
 		padding-block-start: rem(10);
 		padding-block-end: rem(15);
@@ -583,7 +583,7 @@ COMPONENTS
 		padding-bottom: rem(15);
 		border-bottom: 1px solid rgba(47, 47, 47, 0.1);
 
-		@include sm{
+		@include sm {
 			padding-bottom: rem(10);
 		}
 	}

@@ -1,0 +1,147 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ARTICLE BANNER
+--------------------------------------------------------------------------------------------------------------------------------*/
+.article-banner {
+	position: relative;
+	background-color: var(--accent);
+
+	&__wrap {
+		position: relative;
+		background-image: url("../../../images/page/page-1.png");
+		background-size: cover;
+		background-position: right bottom;
+		max-width: var(--max-width);
+		min-height: 267px;
+		margin-inline: auto;
+
+		padding-bottom: 10px;
+
+		display: flex;
+		flex-direction: column;
+
+		@include md{
+			min-height: 213px;
+		}
+
+		@include sm{
+			min-height: 163px;
+		}
+
+		&:before {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: -2px;
+			bottom: 0;
+			width: 80%;
+			background: linear-gradient(270deg, rgba(34, 34, 34, 0) 0%, #222 100%);
+			@include md {
+				width: 40%;
+				background: linear-gradient(270deg, rgba(34, 34, 34, 0) 0%, #222 100%);
+			}
+		}
+		&:after {
+			position: absolute;
+			content: none;
+			top: 0;
+			right: -2px;
+			bottom: 0;
+			width: 28%;
+			background: linear-gradient(270deg, #222 0%, rgba(34, 34, 34, 0) 100%);
+			@include md {
+				content: "";
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 46px;
+		color: var(--white);
+
+		padding-top: 45px;
+
+		@include md{
+			font-size: 36px;
+		}
+
+		@include sm{
+			display: none;
+		}
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+
+		z-index: 1;
+		flex-grow: 1;
+
+		@include sm{
+			justify-content: flex-end;
+		}
+	}
+}
+/* -------------------------------------------------- Article Post Meta -----------------------------------------------*/
+.post-meta {
+	display: flex;
+	align-items: center;
+
+	&__date {
+		font-weight: 400;
+		font-size: 14px;
+		color: var(--white);
+		opacity: 0.7;
+		transition: all 0.3s ease-in-out;
+		line-height: 100%;
+
+		padding-right: 20px;
+	}
+
+	&__upload,
+	&__likes {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+
+		line-height: 100%;
+		font-weight: 500;
+		font-size: 14px;
+
+		color: var(--white);
+		opacity: 0.7;
+		transition: all 0.3s ease-in-out;
+		border-left: 1px solid rgba(255, 255, 255, 0.7);
+		padding-inline: 20px;
+
+		svg {
+			fill: transparent;
+			stroke-width: 1px;
+			stroke: var(--white);
+
+			width: 20px;
+			aspect-ratio: 1/1;
+		}
+	}
+}
+
+/* -------------------------------------------------- White Breadcrumbs -----------------------------------------------*/
+.exp-breadcrumbs {
+	li,
+	li span,
+	li a {
+		color: var(--white);
+		opacity: 0.7;
+	}
+	li:hover a {
+		color: var(--white);
+		opacity: 1;
+	}
+
+	@include sm{
+		display: none;
+	}
+}

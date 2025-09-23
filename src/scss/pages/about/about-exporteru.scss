@@ -1,0 +1,92 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ABOUT EXPORTERU SECTION
+--------------------------------------------------------------------------------------------------------------------------------*/
+.about-exporteru {
+	color: var(--text);
+	&__block {
+		background-color: #f6f6f6;
+		position: relative;
+		padding: 60px 85px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;		
+
+		@include md{
+			padding: 0;
+		}		
+	}
+	&__image {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		max-width: 647px;
+		user-select: none;
+
+		@include md{
+			position: relative;
+			aspect-ratio: 320/213;
+		}
+
+		img {
+			display: block;
+			position: absolute;
+			inset-block-start: 0;
+			inset-inline-start: 0;
+			object-fit: cover;
+			block-size: 100%;
+			inline-size: 100%;
+		}
+
+		&:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: -2px;
+			bottom: 0;
+			width: 80%;
+			background: linear-gradient(270deg, #f6f6f6 0%, rgba(246, 246, 246, 0) 100%);
+			transform: rotate(-180deg);
+
+			@include md {
+				top: -2px;
+				left: 0;
+				width: 100%;
+				background: linear-gradient(360deg, #f6f6f6 0%, rgba(246, 246, 246, 0) 100%);
+				transform: rotate(-180deg);
+				height: 45%;
+			}
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		z-index: 1;	
+		@include md{
+			padding: 30px 20px;
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 46px;
+		line-height: 1.10989;
+		color: #2f2f2f;
+
+		max-width: 75%;
+		margin-bottom: 35px;
+
+		@include md {
+			font-size: rem(24);
+		}
+		
+	}
+	.btn {
+		min-height: 46px;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 1.2233;
+	}
+}

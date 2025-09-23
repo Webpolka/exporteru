@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ABOUT BLOCK
+--------------------------------------------------------------------------------------------------------------------------------*/
+.about-block {
+	color: var(--black);
+	border: 1px solid rgba(47, 47, 47, 0.2);
+	padding: 40px 25px;
+
+	max-width: 776px;
+	width: 100%;
+
+	display: flex;
+	gap: 30px;
+
+	&:nth-child(even) {
+		align-self: flex-end;
+	}
+
+	@include sm {
+		padding: 15px;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__number {
+		flex-shrink: 0;
+
+		line-height: 80%;
+		font-weight: 600;
+		font-size: 150px;
+		background: linear-gradient(180deg, rgba(0, 71, 186, 0.1) 0%, #0047ba 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		@include sm {
+			font-size: 70px;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 1.17;
+		color: #2f2f2f;
+		@include sm {
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__description {
+		font-weight: 400;
+		font-size: 18px;
+		color: #2f2f2f;
+
+		@include sm {
+			font-size: 14px;
+		}
+	}
+}

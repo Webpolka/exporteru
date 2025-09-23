@@ -41,12 +41,20 @@ expirience form
 		}
 
 		.rating-stars {
-			&__item svg {
-				width: rem(36);
-				height: rem(36);
-				@include sm {
-					width: rem(23);
-					height: rem(23);
+			&__item {
+				opacity: 0.5;
+				transition: opacity 0.3s ease-in-out;
+				cursor: pointer;
+				&.filled{
+					opacity: 1;
+				}
+				svg {
+					width: rem(36);
+					height: rem(36);
+					@include sm {
+						width: rem(23);
+						height: rem(23);
+					}
 				}
 			}
 		}
@@ -62,7 +70,7 @@ expirience form
 		resize: none;
 
 		@include sm {
-            font-size: rem(12);
+			font-size: rem(12);
 			min-height: rem(101);
 		}
 		font-weight: 400;
@@ -70,7 +78,6 @@ expirience form
 		&::placeholder {
 			color: rgba(47, 47, 47, 0.5);
 		}
-
 	}
 
 	&__label {
