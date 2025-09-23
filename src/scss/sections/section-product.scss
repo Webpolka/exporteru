@@ -107,11 +107,14 @@ GALLERY
 				@media (max-width: 441px) {
 					aspect-ratio: 320/340;
 				}
+				@include sm{
+					min-height: 340px;
+				}
 			}
 			margin-bottom: rem(10);
 
 			@include sm {
-				margin-bottom: rem(8);
+				margin-bottom: rem(10);
 			}
 		}
 		&__thumbnails {
@@ -128,7 +131,7 @@ GALLERY
 
 				@media (max-width: 441px) {
 					aspect-ratio: 74/66;
-				}
+				}				
 			}
 
 			margin-bottom: rem(15);

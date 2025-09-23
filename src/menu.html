@@ -4,20 +4,29 @@
 
 	<style>
 		.web-list {
-			display: flex;
-			flex-direction: column;
+			display: flex;			
 			gap: rem(10);
 		}
 
 		.web-list a {
-			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			aspect-ratio: 1/1;			
+			width: 20%;
+
 			font-size: 22px;
 			font-weight: 700;
-			color: green;
+			color: #2f2f2f;
+			text-transform: uppercase;	
+			
+			background-color: rgb(0,0,0,0.1);
 		}
 
 		.web-list a:hover {
-			color: red;
+			background-color: rgb(0,0,0,0.3);
+			color: var(--accent);
 		}
 
 		.web-center {
@@ -32,8 +41,7 @@
 	<body class="front-page">
 		<div class="wrapper">
 			@@include('html/sections/header.html')
-			<main class="main">
-				<div class="web-center">
+			<main class="main">			
                 <div class="web-list">
                     <a href="main.html">Главная</a>
                     <a href="catalog.html">Каталог</a>

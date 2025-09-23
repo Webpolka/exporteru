@@ -11,6 +11,8 @@ SEARCH RESULT PAGE
 		flex-shrink: 0;
 
 		@include md{
+			margin-top: -3px;
+			margin-bottom: 6px;
 			gap: rem(10);
 		}
 

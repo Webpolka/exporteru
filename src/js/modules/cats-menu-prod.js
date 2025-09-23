@@ -90,10 +90,10 @@ export default class CatsMenu {
 		const overlay = document.querySelector("#site-overlay");
 		overlay && overlay.classList.add("active");
 
-		const header = document.querySelector(".header");
-		if (header) {
-			header.style.marginRight = scrollbarWidth + "px";
-		}
+		// const header = document.querySelector(".header");
+		// if (header) {
+		// 	header.style.marginRight = scrollbarWidth + "px";
+		// }
 	}
 	removeNoScroll() {
 		document.documentElement.classList.remove("no-scroll");
@@ -101,8 +101,8 @@ export default class CatsMenu {
 		const overlay = document.querySelector("#site-overlay");
 		overlay && overlay.classList.remove("active");
 
-		const header = document.querySelector(".header");
-		header && header.style.removeProperty("margin-right");
+		// const header = document.querySelector(".header");
+		// header && header.style.removeProperty("margin-right");
 	}
 
 	init() {

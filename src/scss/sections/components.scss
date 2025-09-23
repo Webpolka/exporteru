@@ -41,7 +41,8 @@ COMPONENTS
 		align-items: center;
 		justify-content: space-between;
 
-		padding-bottom: rem(35);
+		padding-bottom: rem(33);
+
 
 		&__title {
 			font-weight: 500;
@@ -341,15 +342,21 @@ COMPONENTS
 	
 	&__list {
 		padding-block-start: rem(10);
-		padding-block-end: rem(5);
+		padding-block-end: rem(10);
 
 		display: inline-flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: 5px;
+
+		.bread-sep{
+			padding-left: 5px;
+		}
 
 		li,
 		li span,
 		li a {
+			line-height: 1.37;
 			color: var(--text);
 			font-size: 13px;
 			transition: color 0.3s ease-in-out;

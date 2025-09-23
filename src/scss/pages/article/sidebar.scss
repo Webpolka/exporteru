@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ARTICLE SIDEBAR
+--------------------------------------------------------------------------------------------------------------------------------*/
+.article-sidebar {
+	padding-top: 30px;
+
+	@include md {
+		margin-bottom: 15px;
+	}
+
+	@include sm {
+		padding-top: 20px;
+	}
+}
+
+/*-------------------------------------------------------- Article -widget --------------------------------------------------------*/
+
+.article-widget {
+	color: #2f2f2f;
+
+	background: #f6f6f6;
+	padding: 30px;
+
+	min-height: 303px;
+
+	@include sm {
+		padding: 20px;
+		min-height: initial;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 20px;
+
+		padding-bottom: 22px;
+
+		@include sm {
+			font-size: 18px;
+
+			padding-bottom: 20px;
+		}
+	}
+	ul li a {
+		font-weight: 400;
+		font-size: 16px;
+
+		@include sm {
+			font-size: 14px;
+		}
+
+		color: #2f2f2f;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			color: var(--accent);
+			text-decoration: underline;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		@include sm {
+			gap: 5px;
+		}
+	}
+
+	&__sublist {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		@include sm {
+			padding-top: 5px;
+			gap: 5px;
+		}
+
+		padding-left: 30px;
+		padding-top: 10px;
+	}
+}

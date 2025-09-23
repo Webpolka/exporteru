@@ -1,0 +1,150 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ARTICLE POST
+--------------------------------------------------------------------------------------------------------------------------------*/
+.article-content {
+	color: #2f2f2f;
+
+	padding-top: 30px;
+	@include md{
+		padding-top: 0px;
+	}
+	
+	h2 {
+		font-weight: 500;
+		font-size: 30px;
+
+		padding-bottom: 15px;
+		@include sm {
+			font-size: 24px;
+			padding-bottom: 10px;
+		}
+	}
+
+	h3 {
+		font-weight: 500;
+		font-size: 24px;
+
+		padding-top: 10px;
+		padding-bottom: 15px;
+		@include sm {
+			font-size: 20px;
+
+			padding-top: 20px;
+			padding-bottom: 15px;
+		}
+	}
+
+	p {
+		padding-bottom: 10px;
+	}
+
+	p,
+	li {
+		position: relative;
+		font-weight: 400;
+		font-size: 16px;
+
+		@include sm {
+			line-height: 133%;
+			font-size: 14px;
+		}
+	}
+	ul,
+	ol {
+		display: flex;
+		// align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		gap: 8px;
+		padding-bottom: 15px;
+		transform: translateY(-7px);
+
+		@include sm {
+			gap: 18px;
+		}
+	}
+	li {		
+		position: relative;
+		padding-left: 20px;
+		&:before {
+			position: absolute;
+			content: "";
+			top: 8px;
+			left: 0;
+			width: 7px;
+			height: 7px;
+			background-color: var(--accent);
+		}
+		@include sm {
+			top: 6px;
+		}
+	}
+
+	img {
+		margin-top: 20px;
+		margin-bottom: 40px;
+
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		overflow: hidden;
+
+		min-height: 200px;
+
+		object-position: 100%;
+
+		@include sm {
+			min-height: 213px;
+
+			margin-top: 15px;
+			margin-bottom: 30px;
+		}
+	}
+
+	blockquote {
+		font-weight: 400;
+		font-size: 16px;
+
+		background: #f6f6f6;
+		padding: 40px;
+
+		position: relative;
+
+		@include sm {
+			line-height: 137%;
+			font-size: 14px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: 0;
+			aspect-ratio: 1/1;
+			width: 40px;
+			background-image: url("../../../icons/quote-down.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			@include sm {
+				width: 35px;
+			}
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 10px;
+			right: 0;
+			aspect-ratio: 1/1;
+			width: 40px;
+			background-image: url("../../../icons/quote-up.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			@include sm {
+				width: 35px;
+			}
+		}
+	}
+}

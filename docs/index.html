@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Статья</title>
+    <title>Результат поиска</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
@@ -19,7 +19,52 @@
 </head>
 
 
-<body>
+<style>
+    .web-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .web-list a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        aspect-ratio: 1/1;
+        width: 12.5%;
+        min-width: 100px;
+
+        font-size: 14px;
+        font-weight: 700;
+        color: #2f2f2f;
+        text-transform: uppercase;
+
+        border: 1px solid rgb(0, 0, 0, 0.5);
+        background-color: rgb(0, 0, 0, 0.1);
+    }
+
+    .web-list a:hover {
+        background-color: rgb(0, 0, 0, 0.3);
+        color: var(--accent);
+        border: 1px solid rgb(0, 0, 255, 0.5);
+    }
+
+    .web-center {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body class="front-page">
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -37,7 +82,7 @@
                     </div>
                 </div>
                 <div class="header__medium">
-                    <a href="main.html" class="header__logo">
+                    <a href="index.html" class="header__logo">
                         <img src="./images/logo.png" alt="Logo">
                     </a>
 
@@ -413,66 +458,15 @@
             </div>
         </header>
 
-        <main class="article main">
-            <section class="article-banner">
-                <h2 class="visually-hidden">Заголовок статьи</h2>
-                <div class="article-banner__wrap">
-                    <nav class="exp-breadcrumbs" aria-label="Breadcrumb">
-                        <div class="container">
-                            <ul class="exp-breadcrumbs__list">
-                                <li><a href="https://example.com/">Главная</a></li>
-                                <li><span>/</span></li>
-                                <li><a href="https://example.com/">Новости</a></li>
-                                <li><span>/</span></li>
-                                <li><span>Заголовок статьи</span></li>
-                            </ul>
-                        </div>
-                    </nav>
-
-                    <div class="container article-banner__container">
-                        <!-- title -->
-                        <div class="article-banner__title">Заголовок статьи</div>
-                        <!-- post meta -->
-                        <div class="article-banner__meta post-meta">
-                            <div class="post-meta__date">20 сентября 2025</div>
-                            <div class="post-meta__likes">
-                                <span>12</span>
-                                <svg class="icon icon--like">
-                                    <use href="./icons/symbol/sprite.svg#like"></use>
-                                </svg>
-                            </div>
-                            <button data-id="" aria-label="Загрузить" class="post-meta__upload">
-                                <svg class="icon icon--share">
-                                    <use href="./icons/symbol/sprite.svg#share"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <div class="container article__layout">
-                <div class="row">
-                    <div class="col-sm-8 ord-1">
-                        <div class="article__content"></div>
-                    </div>
-                    <div class="col-sm-4 ord-2">
-                        <div class="article__sidebar">
-                            <div class="article-widget">
-                                <h2 class="article-widget__title">Содержание статьи</h2>
-                                <ul class="article-widget__list">
-                                    <li><a href="#">1.Заголовок</a>
-                                        <ul class="article-widget__sublist">
-                                            <li><a href="#">1.1. Заголовок</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">2.Заголовок</a></li>
-                                    <li><a href="#">3.Заголовок</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+        <main class="main">
+            <div class="container">
+                <div class="web-list">
+                    <a href="main.html">Главная</a>
+                    <a href="about.html">О нас</a>
+                    <a href="article.html">Статья</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="product.html">Страница товара</a>
+                    <a href="search-result.html">Страница результатов поиска</a>
                 </div>
             </div>
         </main>
@@ -587,7 +581,6 @@
         </footer>
 
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>

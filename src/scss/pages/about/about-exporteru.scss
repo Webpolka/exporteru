@@ -10,11 +10,11 @@ ABOUT EXPORTERU SECTION
 
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;		
+		justify-content: space-between;
 
-		@include md{
+		@include md {
 			padding: 0;
-		}		
+		}
 	}
 	&__image {
 		position: absolute;
@@ -25,7 +25,7 @@ ABOUT EXPORTERU SECTION
 		max-width: 647px;
 		user-select: none;
 
-		@include md{
+		@include md {
 			position: relative;
 			aspect-ratio: 320/213;
 		}
@@ -63,9 +63,12 @@ ABOUT EXPORTERU SECTION
 
 	&__wrap {
 		position: relative;
-		z-index: 1;	
-		@include md{
+		z-index: 1;
+		@include md {
 			padding: 30px 20px;
+		}
+		@include sm{
+			padding: 30px 20px 35px;
 		}
 	}
 
@@ -81,12 +84,15 @@ ABOUT EXPORTERU SECTION
 		@include md {
 			font-size: rem(24);
 		}
-		
+
+		@include sm {
+			margin-bottom: 20px;
+		}
 	}
 	.btn {
 		min-height: 46px;
 		font-weight: 500;
 		font-size: 15px;
-		line-height: 1.2233;
+		line-height: 1.2233;	
 	}
 }
