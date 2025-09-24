@@ -3,10 +3,19 @@ COMPANYS SECTION
 --------------------------------------------------------------------------------------------------------------------------------*/
 .companys {
 	color: var(--text);
+
+	.section-flexheader {
+		padding-bottom: 37px;
+		@include sm{
+			padding-top: 15px;
+			padding-bottom: 32px;
+		}
+	}
+
 	.swiper-slide__list {
 		display: flex;
 		flex-direction: column;
-		gap: rem(10);
+		gap: rem(11);
 	}
 	margin-top: -5px;
 }
@@ -34,7 +43,7 @@ COMPANYS SECTION
 	@include lg {
 		padding: rem(18);
 	}
-	@include sm{
+	@include sm {
 		padding-block-end: rem(15);
 	}
 
@@ -46,7 +55,13 @@ COMPANYS SECTION
 	&__top {
 		display: flex;
 		justify-content: space-between;
-		gap: rem(17);
+		align-items: center;
+		gap: 22px;
+		margin-bottom: rem(15);
+
+		@include sm {
+			gap: 10px;
+		}
 	}
 	&__bottom {
 		display: inline-flex;
@@ -60,8 +75,8 @@ COMPANYS SECTION
 	&__avatar {
 		flex-shrink: 0;
 
-		width: rem(60);
-		height: rem(60);
+		width: rem(80);
+		height: rem(80);
 
 		border-radius: 50%;
 		overflow: hidden;
@@ -88,8 +103,6 @@ COMPANYS SECTION
 			object-fit: cover;
 			overflow: hidden;
 		}
-
-		margin-bottom: rem(15);
 	}
 
 	&__name {

@@ -85,7 +85,7 @@ expirience form
 
 		display: flex;
 		align-items: center;
-		gap: rem(10);
+		gap: 5px;
 
 		&:hover {
 			text-decoration: none;
@@ -101,8 +101,8 @@ expirience form
 		text-decoration: underline;
 		text-decoration-skip-ink: none;
 
-		padding-top: rem(5);
-		padding-bottom: rem(8);
+		padding-top: 3px;
+		padding-bottom: 8px;
 
 		@include sm {
 			font-size: rem(12);

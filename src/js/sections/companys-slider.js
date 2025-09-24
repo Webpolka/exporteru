@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			// },
 			// дополнительные параметры
 			slidesPerView: 3, // показывать 4 слайда одновременно
-			spaceBetween: 10, //
+			spaceBetween: 12, //
 
 			speed: 600,
 			autoplay: {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				1300: {
 					slidesPerView: 3,
-					spaceBetween: 30,
+					spaceBetween: 12,
 				},				
 			},
 			navigation: {

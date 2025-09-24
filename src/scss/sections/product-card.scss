@@ -28,7 +28,7 @@ Product card
 		aspect-ratio: 306/224;
 		overflow: hidden;
 
-		margin-bottom: rem(10);
+		margin-bottom: 4px;
 		@include sm {
 			margin-bottom: rem(0);
 			aspect-ratio: 155/188;
@@ -36,7 +36,7 @@ Product card
 
 		img {
 			display: block;
-			width: 100%;
+			width: auto;
 			height: 100%;
 			object-fit: cover;
 			overflow: hidden;
@@ -44,17 +44,22 @@ Product card
 	}
 	&__body {
 		flex-grow: 1;
-		padding: rem(12);
+		padding: 0 13px 12px 13px;
 
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+
+		@include md{
+			padding-top: 10px;
+			padding-bottom: 5px;
+		}
 	}
 
 	&__location {
 		display: inline-flex;
 		align-items: start;
-		gap: rem(5);
+		gap: 9px;
 
 		margin-bottom: rem(10);
 		@include sm {
@@ -71,6 +76,9 @@ Product card
 
 			@include sm {
 				top: 0;
+				width: rem(12);
+			height: rem(12);
+
 			}
 		}
 		span {
@@ -90,7 +98,7 @@ Product card
 		line-height: 129%;
 
 		color: var(--text);
-		margin-bottom: rem(15);
+		margin-bottom: rem(18);
 
 		transition: all 0.3s ease-in-out;
 
@@ -106,7 +114,7 @@ Product card
 
 		display: flex;
 		align-items: center;
-		gap: rem(4);
+		gap: 9px;
 		min-height: rem(28);
 
 		padding-right: rem(30);
@@ -116,6 +124,7 @@ Product card
 			justify-content: space-between;
 			align-items: start;
 			padding-right: 0;
+			min-height: initial;
 		}
 	}
 

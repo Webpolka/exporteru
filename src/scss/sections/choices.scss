@@ -13,7 +13,7 @@ CUSTOM CHOICES SELECT
 .choices::before {
 	content: "";
 	position: absolute;
-	right: 0px; /* позиция справа */
+	right: 2px; /* позиция справа */
 	top: 50%;
 	transform: translateY(-50%);
 

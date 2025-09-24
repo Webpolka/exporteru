@@ -7,9 +7,9 @@ FOOTER
 	&__top {
 		display: flex;
 		justify-content: space-between;
-		gap: 5%;
-
-		padding-block: rem(20);
+	
+		padding-block-start: 22px;
+		padding-block-end: 32px;
 		min-height: rem(165);
 
 		@include lg {
@@ -24,8 +24,18 @@ FOOTER
 		}
 	}
 
-	&__item {
-		width: 20%;
+	&__item {	
+
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5){
+			transform: translate(3px, 2px);
+
+			@include sm{
+				transform: translate(0,1px);
+			}
+
+		}
 
 		@include lg {
 			width: 50%;
@@ -33,6 +43,22 @@ FOOTER
 		@include sm {
 			padding-left: rem(30);
 			padding-right: rem(30);
+		}
+
+		&:first-child{
+			.footer__list{
+				gap: 2px;
+			}
+		}
+		&:nth-child(2){
+			.footer__list{
+				gap: 5px;
+			}
+		}
+		&:nth-child(4){
+			.footer__list{
+				gap: 0px;
+			}
 		}
 
 		&-row {
@@ -135,7 +161,7 @@ FOOTER
 		flex-wrap: wrap;
 		max-width: rem(140);
 
-		gap: rem(10);
+		gap: 16px 20px;
 
 		@include lg {
 			max-width: 100%;
@@ -159,6 +185,13 @@ FOOTER
 
 			&:hover {
 				filter: var(--filter);
+			}
+
+			&:nth-child(3){
+				display: none;
+				@include sm{
+					display: block;
+				}
 			}
 		}
 
@@ -195,7 +228,8 @@ FOOTER
 
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 
-		padding-block: rem(20);
+		padding-block-start: rem(14);
+		padding-block-end: rem(20);
 
 		@include lg {
 			padding-bottom: rem(30);

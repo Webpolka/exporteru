@@ -2,12 +2,38 @@
 CATALOG SECTION
 --------------------------------------------------------------------------------------------------------------------------------*/
 .catalog {
-	color: var(--text);	
+	.exp-breadcrumbs {
+		margin-bottom: -3px;
+
+		@include sm {
+			margin-bottom: 0;
+		}
+	}
+	.category {
+		color: var(--text);
+
+		.section-header {
+			margin-bottom: 40px;
+
+			@include sm{
+				margin-bottom: 24px;
+			}
+		}
+	}
+	.popularprod {
+		.section-flexheader {
+			margin-bottom: 5px;
+		}
+	}
+	.companys {
+		margin-top: -20px;
+		padding-bottom: 31px;
+	}
 }
 
-.catalog-card {
+.category-card {
 	background: #f6f6f6;
-    height: 100%;
+	height: 100%;
 
 	&__image {
 		width: 100%;
@@ -27,47 +53,51 @@ CATALOG SECTION
 	}
 
 	&__content {
-		padding-block-start: rem(15);
-        padding-block-end: rem(40);
-		padding-inline: rem(20);
+		padding-block-start: 16px;
+		padding-block-end: 42px;
+		padding-inline: 24px;
 
-        @include md{
-            padding-inline: rem(15);
-            padding-block-end: rem(15);
-        }
+		@include md {
+			padding-inline: rem(15);
+			padding-block-end: rem(15);
+		}
 	}
 
 	&__title {
 		font-weight: 500;
 		font-size: rem(18);
+		line-height: 120%;
 
-		margin-bottom: rem(20);
+		margin-bottom: 24px;
 
-        @include md{
-            font-size: rem(16);
-            margin-bottom: rem(10);
-        }
+		@include md {
+			font-size: rem(16);
+			margin-bottom: rem(10);
+		}
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: rem(10);
-        @include md{
-            gap: rem(5);
-        }
+		gap: 10px;
+		@include md {
+			gap: rem(5);
+		}
 
-		li a {
-			font-size: rem(16);
-			color: var(--text);
-			transition: color 0.3s ease-in-out;
+		li {
+			line-height: 130%;
+			a {
+				font-size: rem(16);
+				color: var(--text);
+				transition: color 0.3s ease-in-out;
 
-            @include md{
-                font-size: rem(14);
-            }
+				@include md {
+					font-size: rem(14);
+				}
 
-			&:hover {
-				color: var(--accent);               
+				&:hover {
+					color: var(--accent);
+				}
 			}
 		}
 	}

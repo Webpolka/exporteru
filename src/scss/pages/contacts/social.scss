@@ -1,0 +1,89 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CONTACT PAGE SOCIAL
+--------------------------------------------------------------------------------------------------------------------------------*/
+.contacts-social {
+	color: #2f2f2f;
+
+	@include md {
+		margin-inline: auto;
+		max-width: 360px;
+	}
+	@include sm {
+		padding-top: 4px;
+	}
+	.contacts-social__item {
+		width: 100%;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 46px;
+		line-height: 100%;
+
+		margin-top: -8px;
+		margin-bottom: 40px;
+		@include md {
+			display: none;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		align-items: start;
+
+		transition: all 0.3s ease-in-out;
+
+		@include sm {
+			gap: 8px;
+		}
+
+		&:hover {
+			transform: scale(1.1) translateX(2%);
+		}
+	}
+
+	&__network {
+		display: inline-flex;
+		gap: 14px;
+		white-space: nowrap;
+		svg {
+			aspect-ratio: 1/1;
+			height: 24px;
+
+			@include sm {
+				height: 20px;
+			}
+		}
+		svg.icon--contacts-wechat {
+			height: 32px;
+			margin-top: -5px;
+			@include sm {
+				margin-top: -2px;
+				height: 25px;
+			}
+		}
+		font-weight: 500;
+		font-size: 18px;
+		color: #2f2f2f;
+
+		@include sm {
+			font-weight: 500;
+			font-size: 16px;
+			color: #171717;
+		}
+	}
+
+	&__nikname {
+		font-weight: 400;
+		font-size: 16px;
+		color: #2f2f2f;
+		white-space: nowrap;
+
+		@include sm {
+			font-weight: 400;
+			font-size: 14px;
+			color: #171717;
+		}
+	}
+}

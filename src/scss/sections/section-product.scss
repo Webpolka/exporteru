@@ -6,7 +6,7 @@ PRODUCT SECTION
 		font-weight: 500;
 		font-size: rem(24);
 
-		margin-bottom: rem(15);
+		margin-bottom: 15px;
 
 		@include sm {
 			font-size: rem(18);
@@ -14,20 +14,24 @@ PRODUCT SECTION
 		}
 	}
 	.product-block-bigtitle {
-			font-weight: 500;
-			font-size: rem(30);
+		font-weight: 500;
+		font-size: rem(30);
 
-			padding-block-start: rem(45);
-			@include sm {
-				padding-block-start: rem(55);
-			}
-
-			margin-bottom: rem(30);
-			@include sm {
-				font-size: rem(24);
-				margin-bottom: rem(20);
-			}
+		padding-block-start: rem(50);
+		@include sm {
+			padding-block-start: rem(55);
 		}
+
+		margin-bottom: rem(30);
+		@include sm {
+			font-size: rem(24);
+			margin-bottom: rem(20);
+		}
+	}
+	.product-info .product-block-title {
+		padding-top: 3px;
+		margin-bottom: 15px;
+	}
 
 	&__row {
 		display: flex;
@@ -50,7 +54,7 @@ PRODUCT SECTION
 	}
 	&__column-1 {
 		flex-shrink: 0;
-		width: 59%;
+		width: 58%;
 		padding-inline: rem(20);
 
 		@include md {
@@ -59,7 +63,7 @@ PRODUCT SECTION
 	}
 
 	&__column-2 {
-		width: 41%;
+		width: 42%;
 		padding-inline: rem(20);
 
 		@include md {
@@ -107,7 +111,7 @@ GALLERY
 				@media (max-width: 441px) {
 					aspect-ratio: 320/340;
 				}
-				@include sm{
+				@include sm {
 					min-height: 340px;
 				}
 			}
@@ -131,14 +135,14 @@ GALLERY
 
 				@media (max-width: 441px) {
 					aspect-ratio: 74/66;
-				}				
+				}
 			}
 
-			margin-bottom: rem(15);
+			margin-bottom: 15px;
 		}
 
 		.navigation-group__arrows {
-			min-height: rem(20);
+			min-height: 20px;
 			@include sm {
 				display: none;
 			}
@@ -149,43 +153,43 @@ GALLERY
 HEADER
 --------------------------------------------------------------------------------------------------------------------------------*/
 	&-header {
-		margin-bottom: rem(10);
+		margin-bottom: 10px;
 
 		@include sm {
-			margin-bottom: rem(0);
+			margin-bottom: 0;
 		}
 
 		display: flex;
 		flex-direction: column;
-		gap: rem(15);
+		gap: 12px;
 
 		&__title {
 			order: 1;
 			@include lg {
-				font-size: rem(26);
+				font-size: 26px;
 			}
 			@include sm {
-				font-size: rem(22);
+				font-size: 22px;
 				order: 2;
 			}
 			font-weight: 500;
-			font-size: rem(30);
-			line-height: 120%;
+			font-size: 30px;
+			line-height: 137%;
 			color: var(--text);
 		}
 
 		&__rating {
 			order: 2;
 			@include sm {
-				margin-bottom: rem(-15);
+				margin-bottom: -15px;
 				order: 1;
 			}
-			margin-bottom: rem(5);
 		}
 
 		&__price {
 			order: 3;
 			@include sm {
+				margin-bottom: 0;
 				flex-direction: column;
 				gap: 0;
 				order: 3;
@@ -194,36 +198,38 @@ HEADER
 			align-items: baseline;
 			flex-wrap: wrap;
 
-			gap: 0 rem(15);
+			margin-bottom: 7px;
+
+			gap: 0 10px;
 
 			.price-wrap {
 				order: 1;
 				@include sm {
-					gap: rem(10);
+					gap: 10px;
 					order: 2;
 				}
 				display: flex;
 				align-items: baseline;
-				gap: rem(15);
+				gap: 15px;
 
 				.price-all {
 					font-weight: 500;
-					font-size: rem(26);
+					font-size: 26px;
 					color: var(--text);
 
 					@include sm {
-						font-size: rem(20);
+						font-size: 20px;
 					}
 				}
 				.price-strike {
 					font-weight: 400;
-					font-size: rem(18);
+					font-size: 18px;
 					text-decoration: line-through;
 					color: var(--text);
 					opacity: 0.5;
 
 					@include sm {
-						font-size: rem(12);
+						font-size: 12px;
 					}
 				}
 			}
@@ -231,12 +237,12 @@ HEADER
 			.price-akcia {
 				order: 2;
 				@include sm {
-					font-size: rem(10);
+					font-size: 10px;
 					order: 1;
 				}
 
 				font-weight: 500;
-				font-size: rem(16);
+				font-size: 16px;
 				color: var(--red);
 			}
 		}
@@ -246,28 +252,29 @@ HEADER
 			@include sm {
 				order: 4;
 				.btn-accent {
-					min-height: rem(48);
-					font-size: rem(14);
+					min-height: 48px;
+					font-size: 14px;
 				}
-				gap: rem(5);
+				gap: 5px;
 			}
 			display: flex;
-			gap: rem(15);
+			gap: 15px;
 
 			.btn-accent:nth-of-type(1) {
 				flex: 1;
 				justify-content: center;
+				font-size: 18px;
 			}
 
 			.btn-accent:nth-of-type(2) {
 				flex-shrink: 0;
 
-				padding-inline: rem(0);
+				padding-inline: 0;
 				aspect-ratio: 1/1;
-				width: rem(54);
+				width: 54px;
 
 				@include sm {
-					width: rem(48);
+					width: 48px;
 				}
 
 				display: flex;
@@ -305,28 +312,31 @@ CHARACKTERS
 
 	&-characters {
 		color: var(--text);
-		margin-bottom: rem(20);
+		margin-bottom: 20px;
 
 		@include sm {
-			margin-bottom: rem(30);
+			margin-bottom: 30px;
 		}
 
 		&__listok {
-			margin-bottom: rem(40);
+			margin-bottom: 40px;
 
 			@include sm {
-				margin-bottom: rem(20);
+				margin-bottom: 20px;
 			}
 		}
 
 		&__text {
-			font-size: rem(16);
+			font-size: 16px;
 			line-height: 135%;
 			@include sm {
-				font-size: rem(12);
+				font-size: 12px;
 			}
 			p {
-				margin-bottom: rem(25);
+				margin-bottom: 20px;
+				@include sm {
+					margin-bottom: 25px;
+				}
 			}
 			p:last-child {
 				margin-bottom: 0;
@@ -339,9 +349,9 @@ INFORMATION
 --------------------------------------------------------------------------------------------------------------------------------*/
 	&-info {
 		&__provider {
-			margin-bottom: rem(20);
+			margin-bottom: 23px;
 			@include sm {
-				margin-bottom: rem(30);
+				margin-bottom: 30px;
 			}
 		}
 	}
@@ -350,12 +360,15 @@ REVIEWS
 --------------------------------------------------------------------------------------------------------------------------------*/
 	&-reviews {
 		color: var(--text);
-		padding-block-end: rem(10);		
+		padding-block-end: 35px;
+		@include sm {
+			padding-block-end: 25px;
+		}
 
 		&__item:not(:last-child) {
-			margin-bottom: rem(20);
+			margin-bottom: 20px;
 			@include sm {
-				margin-bottom: rem(12);
+				margin-bottom: 12px;
 			}
 		}
 	}

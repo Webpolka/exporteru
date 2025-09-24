@@ -2,6 +2,10 @@
 SEARCH RESULT PAGE
 --------------------------------------------------------------------------------------------------------------------------------*/
 .searchresult {
+	.exp-breadcrumbs{
+		margin-bottom: -2px;
+	}
+
 	&__filter {
 		flex-grow: 1;
 		display: flex;
@@ -29,7 +33,8 @@ SEARCH RESULT PAGE
 
 	.section-flexheader {
 		&__title{
-			padding-block-start: 0;
+			padding-block-start: 0px;
+			margin-bottom:7px;
 		}
 		@include md {
 			font-size: rem(24);

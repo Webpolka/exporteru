@@ -9,6 +9,9 @@ POPULAR CATEGORIES SECTION
 			padding-block-start: rem(30);
 		}
 	}
+	.section-flexheader{
+		padding-bottom: 30px;
+	}
 
 	&__grid {
 		display: grid;
@@ -81,10 +84,12 @@ POPULAR CATEGORIES SECTION
 
 			.popularcats__morelink {
 				background-color: var(--red);
-				padding-inline: rem(46);
+				padding-inline: rem(36);
 				min-height: rem(46);
+				padding-top: 3px;
 
 				margin-top: rem(5);
+				font-size: 18px;
 
 				@include sm {
 					min-height: rem(41);
@@ -193,7 +198,7 @@ POPULAR CATEGORIES SECTION
 		@include lg {
 			gap: rem(5);
 			font-size: rem(14);
-		}
+		}		
 
 		&:hover {
 			transform: translateX(7px) scale(1.1);

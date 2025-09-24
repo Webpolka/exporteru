@@ -25,16 +25,16 @@ ABOUT BLOCK
 	&__number {
 		flex-shrink: 0;
 
-		line-height: 100%;
+		line-height: 72%;
 		font-weight: 600;
 		font-size: 150px;
 		background: linear-gradient(180deg, rgba(0, 71, 186, 0.1) 0%, #0047ba 100%);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		
 
 		@include sm {
+			line-height: 100%;		
 			margin-bottom: -10px;
 			font-size: 70px;
 		}
@@ -43,7 +43,9 @@ ABOUT BLOCK
 	&__title {
 		font-weight: 500;
 		font-size: 32px;
-		line-height: 1.17;		
+		line-height: 1.17;	
+		
+		margin-bottom: 5px;
 		@include sm {
 			font-size: 20px;
 			margin-bottom: 3px;

@@ -3,14 +3,14 @@ OnE REVIEW
 --------------------------------------------------------------------------------------------------------------------------------*/
 .review {
 	border: 1px solid rgba(47, 47, 47, 0.1);
-	padding: rem(20);
+	padding: 20px 20px 20px 20px;
 
 	@include sm{
 		padding: rem(15) rem(12) rem(15);
 	}
 
 	.rating-stars {
-		gap: rem(4);
+		gap: 5px;
 		&__item svg {
 			width: rem(12);
 			height: rem(12);
@@ -25,7 +25,7 @@ OnE REVIEW
 	&-header {
 		display: flex;
 		align-items: center;
-		gap: rem(7);
+		gap: rem(17);
 
 		margin-bottom: rem(15);
 
@@ -40,9 +40,9 @@ OnE REVIEW
 
 			aspect-ratio: 1/1;
 			overflow: hidden;
-			width: rem(50);
+			width: 47px;
 
-			padding: rem(3);
+			padding: 3px;
 			border-radius: 50%;
 			flex-shrink: 0;
 
@@ -57,14 +57,16 @@ OnE REVIEW
 		&__info {
 			display: flex;
 			flex-direction: column;
-			gap: rem(2);
+			gap: 2px;
 		}
 		&__info-group {
 			display: flex;
 			flex-direction: row;
 
-			gap: rem(10);
+			gap: 8px;
 			align-items: baseline;
+
+			margin-top: -3px;
 
 			.info-group__name {
 				font-weight: 500;

@@ -11,11 +11,7 @@ HEADER
 	}
 }
 
-.header {
-	// position: fixed;
-	// top: 0;
-	// left: 0;
-	// right: 0;
+.header {	
 	z-index: 999;
 	background-color: var(--white);	
 	position: sticky;
@@ -39,7 +35,7 @@ HEADER
 		ul {
 			display: inline-flex;
 			align-items: start;
-			gap: rem(43);
+			gap: rem(40);
 
 			@include sm {
 				gap: rem(15);
@@ -146,7 +142,7 @@ HEADER
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: rem(20);
+		gap: rem(25);
 
 		flex-grow: 1;
 

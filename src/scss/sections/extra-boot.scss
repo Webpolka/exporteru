@@ -1,3 +1,17 @@
+// sm 8px
+.g-sm-8,
+.gx-sm-8 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 8px;
+	}
+}
+.g-sm-8,
+.gy-sm-8 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 8px;
+	}
+}
+
 // sm 10px
 .g-sm-10,
 .gx-sm-10 {
@@ -12,6 +26,73 @@
 	}
 }
 
+// sm 40px
+.g-sm-40,
+.gx-sm-40 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 44px;
+	}
+}
+.g-sm-40,
+.gy-sm-40 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 44px;
+	}
+}
+
+
+// 11
+.g-11,
+.gy-11 {
+	--bs-gutter-y: 11px;
+}
+.g-11,
+.gx-11 {
+	--bs-gutter-x: 11px;
+}
+
+// 13
+.g-13,
+.gy-13 {
+	--bs-gutter-y: 13px;
+}
+.g-13,
+.gx-13 {
+	--bs-gutter-x: 13px;
+}
+
+// 20
+.g-20,
+.gy-20 {
+	--bs-gutter-y: 20px;
+}
+.g-20,
+.gx-20 {
+	--bs-gutter-x: 20px;
+}
+
+
+// 25
+.g-25,
+.gy-25 {
+	--bs-gutter-y: 25px;
+}
+.g-25,
+.gx-25 {
+	--bs-gutter-x: 25px;
+}
+
+// 30
+.g-30,
+.gy-30 {
+	--bs-gutter-y: 30px;
+}
+.g-30,
+.gx-30 {
+	--bs-gutter-x: 30px;
+}
+
+
 // 32
 .g-32,
 .gy-32 {
@@ -23,12 +104,47 @@
 }
 
 
-// 20
-.g-20,
-.gy-20 {
-	--bs-gutter-y: 20px;
+// 40
+.g-40,
+.gy-40 {
+	--bs-gutter-y: 40px;
 }
-.g-20,
-.gx-20 {
-	--bs-gutter-x: 20px;
+.g-40,
+.gx-40 {
+	--bs-gutter-x: 40px;
 }
+
+// 50
+.g-50,
+.gy-50 {
+	--bs-gutter-y: 50px;
+}
+.g-50,
+.gx-50 {
+	--bs-gutter-x: 50px;
+}
+
+
+// 65
+.g-65,
+.gy-65 {
+	--bs-gutter-y: 65px;
+}
+.g-65,
+.gx-65 {
+	--bs-gutter-x: 65px;
+}
+
+
+
+// 100
+.g-100,
+.gy-100 {
+	--bs-gutter-y: 100px;
+}
+.g-100,
+.gx-100 {
+	--bs-gutter-x: 100px;
+}
+
+

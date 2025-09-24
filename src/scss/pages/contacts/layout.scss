@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CONTACTS PAGE LAYOUT
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.contacts {
+	padding-bottom: 35px;
+
+	@include sm{
+		padding-bottom: 30px;
+	}
+	.exp-breadcrumbs {
+		margin-bottom: 22px;
+		@include sm{
+			margin-bottom: 8px;
+		}
+	}
+	.ord-1 {
+		order: 1;
+		@include md {
+			order: 2;
+		}
+	}
+	.ord-2 {
+		order: 2;
+		@include md {
+			order: 1;
+		}
+	}
+}
+.contacts-layout {
+	padding: 50px 60px 40px 40px;
+	background: #f6f6f6;
+
+	@include sm {
+		padding: 28px 20px 20px;
+	}
+}

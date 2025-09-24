@@ -36,10 +36,10 @@ MARKETING SECTION
 .marketing-card {
 	color: var(--text);
 
-	min-height: rem(374);
+	min-height: 374px;
 
-	padding-block-start: rem(60);
-	padding-block-end: rem(70);
+	padding-block-start: rem(65);
+	padding-block-end: rem(60);
 
 	width: 100%;
 	user-select: none;
@@ -160,7 +160,7 @@ MARKETING SECTION
 		font-size: rem(46);
 		line-height: 111%;
 
-		margin-bottom: rem(25);
+		margin-bottom: 20px;
 		@include lg {
 			width: 75%;
 			font-size: rem(38);
@@ -176,6 +176,7 @@ MARKETING SECTION
 
 	&__description {
 		font-size: rem(20);
+		line-height: 137%;
 		opacity: 0.7;
 
 		margin-bottom: rem(25);
@@ -198,5 +199,6 @@ MARKETING SECTION
 	.btn-accent {
 		min-height: rem(46);
 		font-size: rem(14.5);
+		letter-spacing: 0.3px;
 	}
 }
