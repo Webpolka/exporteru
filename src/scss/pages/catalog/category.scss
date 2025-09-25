@@ -1,0 +1,109 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CATALOG CATEGORYS 
+--------------------------------------------------------------------------------------------------------------------------------*/
+.categorys {
+    &.section-topnull{
+        margin-top: -5px;
+        padding-bottom: 30px;
+    }
+	.section-header {
+		margin-bottom: 43px;
+        @include sm{
+            margin-bottom: 30px;
+        }
+	}
+ 
+}
+
+.categorys-card {
+	display: block;
+	position: relative;
+	aspect-ratio: 302/201;
+	background: #f6f6f6;
+	overflow: hidden;
+
+	color: #2f2f2f;
+	padding: 15px 14px;
+	border: 1px solid transparent;
+
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		border: 1px solid rgb(0, 0, 0, 0.15);
+		box-shadow: 0 0 32px 0 rgba(18, 18, 18, 0.12);
+		.categorys-card__title {
+			color: var(--accent);
+		}
+	}
+
+	@include sm {
+		aspect-ratio: 320/210;
+	}
+
+	&__title {
+		position: relative;
+		z-index: 2;
+
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.062;
+		text-shadow: 3px 3px 5px #ffffff, -3px -3px 5px #ffffff;
+		transition: all 0.3s ease-in-out;
+
+		@include md {
+			font-size: 18px;
+		}
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 49%;
+		left: 1%;
+		border-radius: 50%;
+		width: 43%;
+		aspect-ratio: 3/2;
+		background-color: rgba(255, 105, 180, 0.5);
+		box-shadow: 0 0 20px 10px rgba(255, 105, 180, 0.5); /* розовая тень */
+		transform: rotate(-20deg);
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: 33%;
+		left: 25%;
+		border-radius: 50%;
+		width: 66%;
+		aspect-ratio: 3/2;
+		background-color: rgba(0, 191, 255, 0.5);
+		box-shadow: 0 0 30px 15px rgba(0, 191, 255, 0.5); /* голубая тень */
+	}
+
+	&__image {
+		position: absolute;
+		top: 33%;
+		left: 0;
+		display: block;
+		overflow: hidden;
+		height: 125%;
+		width: 150%;
+
+		z-index: 1;
+
+		border-radius: 50%; /* Делает контейнер овальным, если размеры одинаковые */
+
+		// box-shadow: 0 0 20px 10px rgba(255, 105, 180, 0.5), /* розовая тень */ 0 0 30px 15px rgba(0, 191, 255, 0.5); /* голубая тень */
+		// /* Можно добавить размер и позицию, чтобы тени были видны */
+		/* Можно добавить размер и позицию, чтобы тени были видны */
+		img {
+			position: absolute;
+			bottom: 18%;
+			right: 22%;
+			display: block;
+
+			width: 80%; /* или любой размер, который вам нужен */
+			height: auto;
+			object-fit: cover;
+		}
+	}
+}

@@ -2038,37 +2038,30 @@ ARTICLE SIDEBAR
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-CATALOG SECTION
+CATEGORY FILTER IN Section
 --------------------------------------------------------------------------------------------------------------------------------*/
-.catalog .exp-breadcrumbs {
-  margin-bottom: -3px;
-}
-.catalog .category {
+/* ------------------------------------------------------------------------------------------------------------------------------
+CATEGORY IN Section
+--------------------------------------------------------------------------------------------------------------------------------*/
+.category-in {
   color: var(--text);
 }
-.catalog .category .section-header {
+.category-in .section-header {
   margin-bottom: 40px;
 }
-.catalog .popularprod .section-flexheader {
-  margin-bottom: 5px;
-}
-.catalog .companys {
-  margin-top: -20px;
-  padding-bottom: 31px;
-}
 
-.category-card {
+.category-in-card {
   background: #f6f6f6;
   height: 100%;
 }
-.category-card__image {
+.category-in-card__image {
   width: 100%;
   aspect-ratio: 302/201;
   overflow: hidden;
   display: flex;
   align-items: center;
 }
-.category-card__image img {
+.category-in-card__image img {
   display: block;
   width: 100%;
   height: auto;
@@ -2076,37 +2069,126 @@ CATALOG SECTION
      object-fit: cover;
   overflow: hidden;
 }
-.category-card__content {
+.category-in-card__content {
   padding-block-start: 16px;
   padding-block-end: 42px;
   padding-inline: 24px;
 }
-.category-card__title {
+.category-in-card__title {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 120%;
   margin-bottom: 24px;
 }
-.category-card__list {
+.category-in-card__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.category-card__list li {
+.category-in-card__list li {
   line-height: 130%;
 }
-.category-card__list li a {
+.category-in-card__list li a {
   font-size: 1rem;
   color: var(--text);
   transition: color 0.3s ease-in-out;
 }
-.category-card__list li a:hover {
+.category-in-card__list li a:hover {
   color: var(--accent);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+CATALOG CATEGORYS 
+--------------------------------------------------------------------------------------------------------------------------------*/
+.categorys.section-topnull {
+  margin-top: -5px;
+  padding-bottom: 30px;
+}
+.categorys .section-header {
+  margin-bottom: 43px;
+}
+
+.categorys-card {
+  display: block;
+  position: relative;
+  aspect-ratio: 302/201;
+  background: #f6f6f6;
+  overflow: hidden;
+  color: #2f2f2f;
+  padding: 15px 14px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.categorys-card:hover {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 32px 0 rgba(18, 18, 18, 0.12);
+}
+.categorys-card:hover .categorys-card__title {
+  color: var(--accent);
+}
+.categorys-card__title {
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.062;
+  text-shadow: 3px 3px 5px #ffffff, -3px -3px 5px #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.categorys-card:before {
+  content: "";
+  position: absolute;
+  top: 49%;
+  left: 1%;
+  border-radius: 50%;
+  width: 43%;
+  aspect-ratio: 3/2;
+  background-color: rgba(255, 105, 180, 0.5);
+  box-shadow: 0 0 20px 10px rgba(255, 105, 180, 0.5); /* розовая тень */
+  transform: rotate(-20deg);
+}
+.categorys-card:after {
+  content: "";
+  position: absolute;
+  top: 33%;
+  left: 25%;
+  border-radius: 50%;
+  width: 66%;
+  aspect-ratio: 3/2;
+  background-color: rgba(0, 191, 255, 0.5);
+  box-shadow: 0 0 30px 15px rgba(0, 191, 255, 0.5); /* голубая тень */
+}
+.categorys-card__image {
+  position: absolute;
+  top: 33%;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  height: 125%;
+  width: 150%;
+  z-index: 1;
+  border-radius: 50%; /* Делает контейнер овальным, если размеры одинаковые */
+  /* Можно добавить размер и позицию, чтобы тени были видны */
+}
+.categorys-card__image img {
+  position: absolute;
+  bottom: 18%;
+  right: 22%;
+  display: block;
+  width: 80%; /* или любой размер, который вам нужен */
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
 COMPANYS SECTION
 --------------------------------------------------------------------------------------------------------------------------------*/
+.catalog .companys {
+  margin-top: -20px;
+  padding-bottom: 31px;
+}
+
 .companys {
   color: var(--text);
   margin-top: -5px;
@@ -2182,6 +2264,19 @@ COMPANYS SECTION
   font-weight: 500;
   font-size: 1.125rem;
   color: var(--accent);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Extra margins paddings for catalog
+--------------------------------------------------------------------------------------------------------------------------------*/
+.catalog .category-in {
+  margin-top: -3px;
+}
+.catalog .categorys {
+  margin-top: -3px;
+}
+.catalog .popularprod .section-flexheader {
+  margin-bottom: 5px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -2746,7 +2841,7 @@ Product card
 }
 .product-card__body {
   flex-grow: 1;
-  padding: 0 13px 12px 13px;
+  padding: 0 13px 14px 13px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3476,19 +3571,22 @@ MEDIAQUERIES
     margin-left: 0px;
     margin-bottom: 15px;
   }
-  .category-card__content {
+  .category-in-card__content {
     padding-inline: 0.9375rem;
     padding-block-end: 0.9375rem;
   }
-  .category-card__title {
+  .category-in-card__title {
     font-size: 1rem;
     margin-bottom: 0.625rem;
   }
-  .category-card__list {
+  .category-in-card__list {
     gap: 0.3125rem;
   }
-  .category-card__list li a {
+  .category-in-card__list li a {
     font-size: 0.875rem;
+  }
+  .categorys-card__title {
+    font-size: 18px;
   }
   .contacts-form {
     padding-left: 0;
@@ -3987,11 +4085,14 @@ MEDIAQUERIES
     padding-top: 5px;
     gap: 5px;
   }
-  .catalog .exp-breadcrumbs {
-    margin-bottom: 0;
-  }
-  .catalog .category .section-header {
+  .category-in .section-header {
     margin-bottom: 24px;
+  }
+  .categorys .section-header {
+    margin-bottom: 30px;
+  }
+  .categorys-card {
+    aspect-ratio: 320/210;
   }
   .companys .section-flexheader {
     padding-top: 15px;

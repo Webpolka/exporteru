@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-	@@include('html/components/head.html', { 'title': 'Каталог: категории' })
+	@@include('html/components/head.html', { 'title': 'Каталог: фильтр внутри категории' })
 
 	<body class="front-page">
 		<div class="wrapper">			
 			@@include('html/sections/header.html')
 			<main class="main catalog">				
 				@@include('html/blocks/block-breadcrumbs.html')		
-				@@include('html/sections/catalog/categorys.html')			
-				@@include('html/sections/main/popular-products.html')								
+				@@include('html/sections/catalog/category-in-filter.html')													
 			</main>
 			@@include('html/sections/footer.html')
 		</div>

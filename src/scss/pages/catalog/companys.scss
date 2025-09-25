@@ -1,23 +1,29 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 COMPANYS SECTION
 --------------------------------------------------------------------------------------------------------------------------------*/
+.catalog {
+	.companys {
+		margin-top: -20px;
+		padding-bottom: 31px;
+	}
+}
+
 .companys {
 	color: var(--text);
-
+	margin-top: -5px;
+	
 	.section-flexheader {
 		padding-bottom: 37px;
-		@include sm{
+		@include sm {
 			padding-top: 15px;
 			padding-bottom: 32px;
 		}
 	}
-
 	.swiper-slide__list {
 		display: flex;
 		flex-direction: column;
 		gap: rem(11);
-	}
-	margin-top: -5px;
+	}	
 }
 
 .companys-card {

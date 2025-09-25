@@ -1,37 +1,17 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
-CATALOG SECTION
+CATEGORY IN Section
 --------------------------------------------------------------------------------------------------------------------------------*/
-.catalog {
-	.exp-breadcrumbs {
-		margin-bottom: -3px;
-
+.category-in {
+	color: var(--text);
+	.section-header {
+		margin-bottom: 40px;
 		@include sm {
-			margin-bottom: 0;
+			margin-bottom: 24px;
 		}
-	}
-	.category {
-		color: var(--text);
-
-		.section-header {
-			margin-bottom: 40px;
-
-			@include sm{
-				margin-bottom: 24px;
-			}
-		}
-	}
-	.popularprod {
-		.section-flexheader {
-			margin-bottom: 5px;
-		}
-	}
-	.companys {
-		margin-top: -20px;
-		padding-bottom: 31px;
 	}
 }
 
-.category-card {
+.category-in-card {
 	background: #f6f6f6;
 	height: 100%;
 
