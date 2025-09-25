@@ -50,6 +50,11 @@ ROOT
   --accent: rgb(0, 71, 186);
   --red: #e1251b;
   --text: #2f2f2f;
+  --vk: #0077FF;
+  --tg: #0088CC;
+  --wechat: #2bc100;
+  --whatsapp: #25D366;
+  --max: url("../images/max-bg");
   --scrollbar: gray;
   --scrollbar-track: gray;
   --scrollbar-thumb: var(--accent);
@@ -1186,6 +1191,49 @@ expirience form
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
+INNER SVG STYLES FOR SOICAL ICONS
+--------------------------------------------------------------------------------------------------------------------------------*/
+.soc-wechat-char-1 {
+  fill: white;
+}
+
+.soc-wechat-char-2 {
+  fill: white;
+}
+
+.soc-wechat-eye-1 {
+  fill: var(--wechat);
+}
+
+.soc-wechat-eye-2 {
+  fill: var(--wechat);
+}
+
+.soc-tg-char {
+  fill: white;
+}
+
+.soc-vk-char {
+  fill: var(--vk);
+}
+
+.soc-vk-tile {
+  fill: white;
+}
+
+.soc-whatsapp-char {
+  fill: white;
+}
+
+.soc-max-char {
+  fill: white;
+}
+
+.soc-max-tile {
+  fill: transparent;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
 FOOTER
 --------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
@@ -1260,13 +1308,13 @@ FOOTER
 .footer__social {
   display: flex;
   flex-wrap: wrap;
-  max-width: 8.75rem;
-  gap: 16px 20px;
+  max-width: 11.25rem;
+  gap: 15px;
 }
 .footer__social-link {
+  border-radius: 50%;
   width: 2.25rem;
-  height: 2.25rem;
-  background-color: var(--red);
+  aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1275,31 +1323,27 @@ FOOTER
 .footer__social-link:hover {
   filter: var(--filter);
 }
-.footer__social-link:nth-child(3) {
-  display: none;
+.footer__social-link--vk {
+  background-color: var(--vk);
 }
-.footer__social svg {
-  transform: translateX(0);
+.footer__social-link--tg {
+  background-color: var(--tg);
 }
-.footer__social .icon--soc-vk {
-  width: 1.125rem;
-  height: 1.125rem;
+.footer__social-link--tg svg {
+  transform: translateX(-3px);
 }
-.footer__social .icon--soc-max {
-  width: 1.125rem;
-  height: 1.125rem;
+.footer__social-link--max {
+  background-image: url("../images/max-bg.png");
 }
-.footer__social .icon--soc-whatsapp {
-  width: 1.125rem;
-  height: 1.125rem;
+.footer__social-link--max svg {
+  height: 25px;
+  width: 25px;
 }
-.footer__social .icon--soc-tg {
-  width: 1.125rem;
-  height: 1rem;
+.footer__social-link--wechat {
+  background-color: var(--wechat);
 }
-.footer__social .icon--soc-wechat {
-  width: 1.4375rem;
-  height: 1.1875rem;
+.footer__social-link--whatsapp {
+  background-color: var(--whatsapp);
 }
 .footer__bottom {
   display: flex;
@@ -3344,6 +3388,47 @@ MEDIAQUERIES
   .exp-search-orderby__select {
     font-size: 0.75rem;
   }
+  .soc-wechat-char-2 {
+    fill: #dedede;
+  }
+  .soc-wechat-eye-1 {
+    fill: var(--red);
+  }
+  .soc-wechat-eye-2 {
+    fill: var(--red);
+  }
+  .soc-vk-char {
+    fill: var(--red);
+  }
+  .soc-max-char {
+    fill: var(--red);
+  }
+  .soc-max-tile {
+    fill: white;
+  }
+  .footer__social-link {
+    border-radius: 0;
+  }
+  .footer__social-link--vk {
+    background-color: var(--red);
+  }
+  .footer__social-link--tg {
+    background-color: var(--red);
+  }
+  .footer__social-link--max {
+    background-image: none;
+    background-color: var(--red);
+  }
+  .footer__social-link--max svg {
+    height: initial;
+    width: initial;
+  }
+  .footer__social-link--wechat {
+    background-color: var(--red);
+  }
+  .footer__social-link--whatsapp {
+    background-color: var(--red);
+  }
   .about-exporteru__block {
     padding: 0;
   }
@@ -3734,9 +3819,6 @@ MEDIAQUERIES
   .footer__link .icon--tg {
     width: 1rem;
     height: 0.8125rem;
-  }
-  .footer__social-link:nth-child(3) {
-    display: block;
   }
   .footer__bottom {
     padding-block-start: 0.9375rem;
