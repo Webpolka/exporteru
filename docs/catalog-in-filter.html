@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="vendor/bootstrap-grid.css">
     <link rel="stylesheet" href="./css/main.min.css">
@@ -414,24 +415,482 @@
         </header>
 
         <main class="catalog main">
-            <nav class="exp-breadcrumbs" aria-label="Breadcrumb">
-                <div class="container">
-                    <ul class="exp-breadcrumbs__list">
-                        <li><a href="https://example.com/">Главная</a><span class="bread-sep">/</span></li>
-                        <li><a href="https://example.com/category/">Категория</a><span class="bread-sep">/</span></li>
-                        <li><span>Металлургия</span></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <section class="category-filter section-topnull">
+            <section class="category-banner">
                 <h2 class="visually-hidden">Металлургия</h2>
-                <div class="container">
-                    Баннер
-                    <br>
-                    Контент
+                <div class="container category-banner__container">
+                    <nav class="exp-breadcrumbs" aria-label="Breadcrumb">
+                        <ul class="exp-breadcrumbs__list">
+                            <li><a href="https://example.com/">Главная</a><span class="bread-sep">/</span></li>
+                            <li><a href="https://example.com/">Категории</a><span class="bread-sep">/</span></li>
+                            <li><span>Металлургия</span></li>
+                        </ul>
+                    </nav>
+
+                    <div class="category-banner__title">Металлургия</div>
+                    <div class="category-banner__description">
+                        Lörem ipsum kiliga prenera, sufygisk dir i larett infrast, lalig sävarad. Vagt heterodekror religen. Made obed om makrologi, och
+                        lasm.
+                    </div>
+
+                    <div class="category-banner__image">
+                        <img src="./images/catalog/cat/truba.webp" alt="">
+                    </div>
                 </div>
             </section>
+
+            <!-- 1 -->
+            <div class="container filter-layout">
+                <div class="filter-layout__dolly"><!-- Dolly --></div>
+                <div class="filter-layout__content">
+                    <div class="filter-content__searchorderby">
+                        <!-- выпадающий селект -->
+                        <div class="filter-content__orderby">
+                            <div class="exp-search-orderby">
+                                <form id="search-filter-orderby" class="exp-search-orderby__row" method="get">
+                                    <button class="exp-search-orderby__button" id="search-filter-toggle" type="button">
+                                        <svg class="icon icon--filter-arrows">
+                                            <use href="./icons/symbol/sprite.svg#filter-arrows"></use>
+                                        </svg>
+                                    </button>
+                                    <label for="search-filter-select" class="screen-reader-text">Сортировать по</label>
+                                    <select class="exp-search-orderby__select" name="search-filter-select" id="search-filter-select">
+                                        <option value="popularity" selected="selected">По популярности</option>
+                                        <option value="rating">По рейтингу</option>
+                                        <option value="date">По новинкам</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- форма поиска для фильтра -->
+                        <form class="filter-content__search filter-search-form" action="" id="filter-search-form">
+                            <input type="search" id="filter-search-input" class="search-form__input" placeholder="Поиск по товарам" name="fs">
+                            <button type="submit" class="search-form__button" aria-label="Поиск по товарам">
+                                <svg class="icon icon--search">
+                                    <use href="./icons/symbol/sprite.svg#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="container filter-layout">
+                <div class="filter-layout__sidebar">
+                    <div class="filter-widget">
+                        <!-- widget header -->
+                        <div class="filter-header filter-widget__header">
+                            <button class="filter-header__btn" type="button" data-id="filter-back">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5415 16.6004L7.10817 11.1671C6.4665 10.5254 6.4665 9.47539 7.10817 8.83372L12.5415 3.40039" stroke="#2F2F2F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <h2 class="filter-header__title">Стальные трубы, полые профиля и фитинги</h2>
+                        </div>
+
+                        <!-- widget form -->
+                        <form class="filter-form" id="filter-widget-form">
+                            <div class="filter-form__group">
+                                <input class="custom-checkbox" type="checkbox" name="option-1" id="filter-option-1">
+                                <label for="filter-option-1">Бесшовные трубы и пустотелые профиля</label>
+                            </div>
+                            <div class="filter-form__group">
+                                <input class="custom-checkbox" type="checkbox" name="option-1" id="filter-option-2">
+                                <label for="filter-option-2">Сварные трубы</label>
+                            </div>
+                            <div class="filter-form__group">
+                                <input class="custom-checkbox" type="checkbox" name="option-1" id="filter-option-3">
+                                <label for="filter-option-3">Стальные фитинги для труб, кроме литых</label>
+                            </div>
+
+                            <div class="filter-form__price">
+                                <h3 class="filter-form__subtitle">Цена</h3>
+
+                                <!-- widget range-inputs -->
+                                <div class="filter-form__rangeinputs">
+                                    <label>
+                                        <span>от </span>
+                                        <input type="number" id="filter-range-min">
+                                    </label>
+                                    <label>
+                                        <span>до </span>
+                                        <input type="number" id="filter-range-max">
+
+                                    </label>
+                                </div>
+
+                                <!-- widget range-slider -->
+                                <div class="filter-form__rangeslider">
+                                    <div id="filter-range-slider"></div>
+                                </div>
+                            </div>
+
+                            <button type="button" data-id="filter-reset" class="btn-accent">Сбросить&nbsp;<span id="filter-reset-nums">(2)</span></button>
+
+                            <button type="submit" hidden></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="filter-layout__content">
+                    <div class="filter-content">
+                        <!-- слайдер с кнопками -->
+                        <ul class="buttons-slider filter-content__buttons" id="filter-buttons-slider">
+                            <li><button data-subcat="23" class="btn-gray">Бесшовные трубы и пустотелые профиля</button></li>
+                            <li><button data-subcat="45" class="btn-gray btn-gray--active">Сварные трубы</button></li>
+                            <li><button data-subcat="56" class="btn-gray">Стальные фитинги для труб, кроме литых</button></li>
+                            <li><button data-subcat="33" class="btn-gray">Бесшовные трубы и пустотелые профиля</button></li>
+                            <li><button data-subcat="2" class="btn-gray">Стальные фитинги для труб, кроме литых</button></li>
+                        </ul>
+
+                        <!-- Витрина -->
+                        <div class="filter-content__vitrine">
+                            <div class="g-20 row">
+                                <!-- 1 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-1.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                    <span class="product-card__price-real">12 999 ₽</span>
+                                                </div>
+                                                <div class="product-card__discount">-45%</div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="9" class="product-card__like">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-2.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-real">от 12 999 ₽</span>
+                                                </div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="2" class="product-card__like active">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 3 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-3.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                    <span class="product-card__price-real">5 849 ₽</span>
+                                                </div>
+                                                <div class="product-card__discount">-45%</div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="65" class="product-card__like">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 4 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-4.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-real">от 12 999 ₽</span>
+                                                </div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="12" class="product-card__like">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 5 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-5.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-real">от 12 999 ₽</span>
+                                                </div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="323" class="product-card__like">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 6 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-6.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                    <span class="product-card__price-real">5 849 ₽</span>
+                                                </div>
+                                                <div class="product-card__discount">-45%</div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="877" class="product-card__like">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 7 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-7.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-real">от 12 999 ₽</span>
+                                                </div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="345" class="product-card__like active">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- 8 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-8.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                    <span class="product-card__price-real">12 999 ₽</span>
+                                                </div>
+                                                <div class="product-card__discount">-45%</div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="86" class="product-card__like">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- 9 -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a href="#" class="product-card">
+                                        <!-- top -->
+                                        <div class="product-card__header">
+                                            <img src="./images/main/main-4-1.png" alt="">
+                                        </div>
+                                        <!-- bottom -->
+                                        <div class="product-card__body">
+                                            <div class="product-card__box">
+                                                <!-- location -->
+                                                <div class="product-card__location">
+                                                    <svg class="icon icon--location-f">
+                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                    </svg>
+                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                </div>
+                                                <!-- title -->
+                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                            </div>
+                                            <!-- group -->
+                                            <div class="product-card__group">
+                                                <div class="product-card__price">
+                                                    <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                    <span class="product-card__price-real">12 999 ₽</span>
+                                                </div>
+                                                <div class="product-card__discount">-45%</div>
+                                                <!-- like -->
+                                                <div role="button" data-likeid="9" class="product-card__like">
+                                                    <svg class="icon icon--star-e">
+                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container justify-content-center">
+                            <div class="exp-pagination">
+                                <a href="#" class="exp-pagination__link exp-pagination__link--disabled exp-pagination__link--prev"></a>
+                                <a href="#" class="exp-pagination__link exp-pagination__link--active">1</a>
+                                <a href="#" class="exp-pagination__link">2</a>
+                                <a href="#" class="exp-pagination__link">3</a>
+                                <a href="#" class="exp-pagination__link">4</a>
+                                <span class="exp-pagination__ellipsis">...</span>
+                                <a href="#" class="exp-pagination__link">45</a>
+                                <a href="#" class="exp-pagination__link exp-pagination__link--next"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
         </main>
         <footer class="footer">
@@ -568,6 +1027,7 @@
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
 
     <script src="./js/main.min.js"></script>
 

@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+UI range slider for filter apge
+--------------------------------------------------------------------------------------------------------------------------------*/
+/* Обертка слайдера */
+
+/* Основной трек */
+.noUi-connect {
+	background-color: var(--accent);
+}
+/* Убираем все стили у трека (target) */
+.noUi-target {
+	position: relative;
+	background: #dedede; /* прозрачный фон, чтобы не было видно стандартного */
+	border: none; /* убираем границы, если есть */
+	box-shadow: none; /* убираем тень */
+	height: 4px; /* задаем свою высоту, если нужно */
+	border-radius: 0; /* убираем скругление */
+	outline: none; /* убираем обводку при фокусе */
+  &:before {
+    content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 12px;
+		height: 4px;
+		transform: translateX(-12px);
+		background-color: #dedede;
+	}
+  &:after {
+    content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 12px;
+		height: 4px;
+		transform: translateX(12px);
+		background-color: #dedede;
+	}
+}
+
+/* Также можно убрать стили у base, если нужно */
+.noUi-base {
+	background: transparent;
+	height: 4px; /* или нужная вам высота */	
+}
+.noUi-handle {
+	box-shadow: none; /* убираем тень и внутренние полоски */
+} /* Если внутри ручки есть псевдоэлементы или дополнительные полоски, можно скрыть их */
+.noUi-handle::before,
+.noUi-handle::after {
+	display: none;
+}
+
+/* Ползунок (ручка) */
+.noUi-horizontal .noUi-handle {
+	border: 5px solid var(--accent); /* без рамки */
+	height: 24px;
+	width: 24px;
+	border-radius: 50%; /* круглая ручка */
+	transform: translateY(-20%);
+  background-color: #f6f6f6;
+	cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+	transform: translate(-25%, -20%);
+}
+
+.noUi-horizontal .noUi-handle-lower {
+	transform: translate(-25%, -20%);
+}
+/* Ползунок (ручка) */
+
+/* Подсказки (если есть) */
+.noUi-tooltip {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	background: #fff;
+	padding: 2px 6px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

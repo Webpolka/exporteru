@@ -35,8 +35,24 @@ import "./mini/choices-add.js";
 SWIPER PORODUCT GALLERY THUMBNAILS
 --------------------------------------------------------------------------------------------------------------------------------*/
 import "./sections/product-thumbnails-slider.js";
+
+/* --------------------------------------------------------------------------------------------------------------------------
+PRODUCCT GALLERY PARALAX
+-----------------------------------------------------------------------------------------------------------------------------*/
+import "./modules/product-gallery-parallax.js";
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------
+Auto scale 
+-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+import "./modules/auto-scale.js";
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------
+UISLIDER aside filter range slider (здесь же скрипт для обнуления полей при ресете)
+-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+import "./sections/catalog-aside-filter.js";
+
 /*--------------------------------------------------------------------------------------------------------------
-DATA-CATEGORIES LISTENER
+DATA-CATEGORIES LISTENER Dropodown menu BIG
 ----------------------------------------------------------------------------------------------------------------*/
 // [data-catId] - catID обязательный префикс(скрипт на нём завязан)
 import CatsMenu from "./modules/cats-menu-prod";
@@ -54,26 +70,6 @@ categoriesOverlayMenu &&
 		openSubListButton: "data-subcatslist='overlay'",
 	});
 
-/* ------------------------------------------------------------------------------------------------------------------------------
-Main top padding listener
---------------------------------------------------------------------------------------------------------------------------------*/
-// const header = document.querySelector(".header");
-
-// window.onresize = updateMainTop.bind(null, header);
-// window.onchange = updateMainTop.bind(null, header);
-// window.onload = updateMainTop.bind(null, header);
-
-// function updateMainTop(header) {
-// 	if (header) {
-// 		const headerTopHeight = header.querySelector(".header__top").scrollHeight;
-// 		const headerMiddleHeight = header.querySelector(".header__medium").scrollHeight;
-// 		const main = document.querySelector(".main");
-// 		if (main) {
-// 			main.style.paddingTop = headerTopHeight + headerMiddleHeight - 1 + "px";
-// 		}
-// 	}
-// }
-
 /* --------------------------------------------------------------------------------------------------------------------------
 FANCYBOX
 -----------------------------------------------------------------------------------------------------------------------------*/
@@ -86,11 +82,6 @@ Fancybox.bind("[data-fancybox]", {
 	},
 	showClass: "f-fadeIn",
 });
-
-/* --------------------------------------------------------------------------------------------------------------------------
-PRODUCCT GALLERY PARALAX
------------------------------------------------------------------------------------------------------------------------------*/
-import "./modules/product-gallery-parallax.js";
 
 /* --------------------------------------------------------------------------------------------------------------------------
 STAR RATING
@@ -106,41 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 });
 
-/* -------------------------------------------------------------------------------------------------------------------------------------------------
-Auto scale 
------------------------------------------------------------------------------------------------------------------------------------------------------*/
-document.addEventListener("DOMContentLoaded", function () {
-	function scalePage() {
-		const windowWidth = window.innerWidth;
-		const wrapper = document.querySelector(".wrapper");
-		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-
-		if (windowWidth >= 1200) {
-			const pageWidth = wrapper.offsetWidth;
-			const minWidth = 1200;
-			const maxWidth = 6400;
-
-			const constrainedWidth = Math.max(minWidth, Math.min(windowWidth, maxWidth));
-
-			let sum = constrainedWidth - scrollbarWidth;
-			let scaleRatio = sum / pageWidth;
-			// Пересчитываем масштаб с учетом ограничений
-
-			wrapper.style.transformOrigin = "top left";
-			wrapper.style.transform = "scale(" + scaleRatio + ")";
-			wrapper.style.overflowX = "hidden";
-			document.body.style.maxBlockSize = 100 / scaleRatio + "%";
-			
-		} else if (windowWidth < 1200) {
-			wrapper.style.removeProperty("transform-origin");
-			wrapper.style.removeProperty("transform-scale");
-			wrapper.style.removeProperty("overflow-x");
-			document.body.style.removeProperty("max-block-size");
-		}
-	}
-
-	// Вызов при загрузке и при изменении размера окна
-	window.onload = scalePage();
-	window.onresize = scalePage;
-	window.onchange = scalePage;
-});
+/* --------------------------------------------------------------------------------------------------------------------------
+FILTER PAGE BUTTONS SlIDER
+-----------------------------------------------------------------------------------------------------------------------------*/
+import "./sections/catalog-buttons-slider.js";

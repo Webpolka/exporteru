@@ -5,8 +5,10 @@
 	<body class="front-page">
 		<div class="wrapper">			
 			@@include('html/sections/header.html')
-			<main class="main catalog">				
-				@@include('html/blocks/block-breadcrumbs.html')		
+			<main class="main catalog">		
+				<div class="container">
+					@@include('html/blocks/block-breadcrumbs.html')				
+				</div>			
 				@@include('html/sections/catalog/category-in.html')			
 				@@include('html/sections/catalog/companys.html')	
 				@@include('html/sections/main/popular-products.html')								

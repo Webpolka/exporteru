@@ -1,0 +1,167 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CATEGORY BANNER
+--------------------------------------------------------------------------------------------------------------------------------*/
+.category-banner {
+	position: relative;
+	z-index: 1;
+	background: #f6f6f6;
+
+	min-height: 285px;
+	display: flex;
+	flex-direction: column;
+
+	@include sm {
+		min-height: 320px;
+	}
+
+	&__title {
+		position: relative;
+		z-index: 2;
+
+		font-weight: 500;
+		font-size: 46px;
+		color: #2f2f2f;
+
+		text-shadow: 3px 3px 5px #ffffff, -3px -3px 5px #ffffff;
+
+		@include md {
+			font-size: 36px;
+		}
+
+		@include sm {
+			margin-top: -3px;
+			font-size: 24px;
+		}
+	}
+
+	&__description {
+		position: relative;
+		z-index: 2;
+
+		text-shadow: 3px 3px 5px #ffffff, -3px -3px 5px #ffffff;
+
+		max-width: 60%;
+		line-height: 137%;
+		font-weight: 400;
+		font-size: 20px;
+		color: rgba(47, 47, 47, 0.7);
+
+		@include sm {
+			max-width: 100%;
+			font-size: 12px;
+		}
+	}
+	&__container {
+		flex-grow: 1;
+		position: relative;
+		max-width: var(--max-width);
+		margin-inline: auto;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		padding-bottom: 70px;
+		overflow: hidden;
+
+		@include sm {
+			justify-content: start;
+			padding-bottom: 0;
+		}	
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0%;
+			right: 36%;
+			border-radius: 50%;
+			width: 17%;
+			aspect-ratio: 35/20;
+			background-color: rgba(255, 105, 180, 0.5);
+			box-shadow: 0 0 20px 20px rgba(255, 105, 180, 0.5); /* розовая тень */
+			transform: rotate(-70deg);
+		
+			@include sm {
+				bottom: 20%;
+				right: 51%;
+				width: 55%;
+				transform: rotate(-20deg);
+			}
+			@media(max-width:430px) {
+				bottom: 14%;				
+			}
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 30%;
+			right: 28%;
+			border-radius: 50%;
+			width: 20%;
+			aspect-ratio: 35/20;
+			background-color: rgba(0, 191, 255, 0.5);
+			box-shadow: 0 0 30px 20px rgba(0, 191, 255, 0.5); /* голубая тень */
+			transform: rotate(-45deg);
+		
+
+			@include sm {
+				bottom: 35%;
+				right: 32%;
+				width: 40%;
+				transform: rotate(5deg);
+			}
+			@media(max-width:430px) {
+				bottom: 27%;				
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		aspect-ratio: 961/703;
+		bottom: 0;
+		transform: translateY(50%);
+		left: 50%;
+		display: block;
+		overflow: hidden;
+		width: 70%;
+		min-width: 961px;
+		z-index: 1;
+
+		 border-radius: 50% 50% 0 0 ;
+
+		@include sm {
+			margin-top: -14px;
+
+			position: relative;
+			aspect-ratio: 450/254;
+
+			min-width: 390px;
+			width: 125%;
+			left: 50%;
+			transform: translate(-50%, 15%);
+		    border-radius: 50% 50% 0 0 ;
+		}
+
+		// box-shadow: 0 0 20px 10px rgba(255, 105, 180, 0.5), /* розовая тень */ 0 0 30px 15px rgba(0, 191, 255, 0.5); /* голубая тень */
+		// /* Можно добавить размер и позицию, чтобы тени были видны */
+		/* Можно добавить размер и позицию, чтобы тени были видны */
+		img {
+			position: absolute;		
+			top: 20%;
+			left: 0;
+			display: block;
+			transform: translateY(-30%);
+
+			width: 76%; /* или любой размер, который вам нужен */
+			height: auto;
+			object-fit: cover;
+
+			@include sm {
+				top: 23%;
+				min-width: 427px;
+				width: 95%;
+				object-fit: contain;
+			}
+		}
+	}
+}

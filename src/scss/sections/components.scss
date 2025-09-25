@@ -142,7 +142,8 @@ COMPONENTS
 }
 
 /* --------------------------------------------------------------- SEARCH FORM --------------------------------------------------------------------*/
-.search-form {
+.search-form,
+.filter-search-form {
 	display: flex;
 	justify-content: space-between;
 
@@ -151,10 +152,6 @@ COMPONENTS
 	background-color: var(--white);
 
 	flex-grow: 1;
-
-	@include lg {
-		display: none;
-	}
 
 	&__input {
 		font-weight: 400;
@@ -178,6 +175,14 @@ COMPONENTS
 			height: rem(20);
 		}
 	}
+}
+.search-form {
+	@include lg {
+		display: none;
+	}
+}
+.filter-search-form {
+	border: 1px solid #dedede;
 }
 
 .exp-catalog .search-form {
@@ -539,7 +544,7 @@ COMPONENTS
 	flex-direction: column;
 	gap: 10px;
 	padding-top: 4px;
-	@include sm{
+	@include sm {
 		gap: 13px;
 	}
 	li {
@@ -650,5 +655,91 @@ COMPONENTS
 				font-size: rem(12);
 			}
 		}
+	}
+}
+
+/*-------------------------------------------- Rating ----------------------------------------------------*/
+.custom-radio,
+.custom-checkbox {
+	flex-shrink: 0;
+	appearance: none;
+
+	border: 1px solid transparent;
+
+	width: 24px;
+	height: 24px;
+	background-color: #dedede;
+
+	cursor: pointer;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+	&:checked {
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNS4xNjQxMiA5LjYxNTU0QzQuOTA1NTMgOS42MTU1NCA0LjY1OTg3IDkuNTEyNTEgNC40Nzg4NSA5LjMzMjIxTDAuODE5NzkyIDUuNjg3NTVDMC40NDQ4MzUgNS4zMTQwNyAwLjQ0NDgzNSA0LjY5NTg5IDAuODE5NzkyIDQuMzIyNDFDMS4xOTQ3NSAzLjk0ODkzIDEuODE1MzcgMy45NDg5MyAyLjE5MDMyIDQuMzIyNDFMNS4xNjQxMiA3LjI4NDVMMTEuODA5OSAwLjY2NDg3NkMxMi4xODQ5IDAuMjkxMzk1IDEyLjgwNTUgMC4yOTEzOTUgMTMuMTgwNCAwLjY2NDg3NkMxMy41NTU0IDEuMDM4MzYgMTMuNTU1NCAxLjY1NjUzIDEzLjE4MDQgMi4wMzAwMUw1Ljg0OTM4IDkuMzMyMjFDNS42NjgzNyA5LjUxMjUxIDUuNDIyNzEgOS42MTU1NCA1LjE2NDEyIDkuNjE1NTRaIiBmaWxsPSJ3aGl0ZSIgLz4KPC9zdmc+Cg==");
+		background-repeat: no-repeat;
+		background-size: 70%;
+		background-position: center center;
+		background-color: var(--red) !important;
+	}
+	&:hover {
+		filter: brightness(0.95);
+	}
+	&:active {
+		outline: 2px solid var(--red);
+	}
+}
+
+/* --------------------------------------------------------------- GRAY BUTTON --------------------------------------------------------------------*/
+
+.btn-gray {
+	color: #2f2f2f;
+
+	display: inline-flex;
+	align-items: center;
+	padding-inline: 15px;
+	min-height: rem(46);
+
+	background: #f6f6f6;
+
+	font-weight: 500;
+	font-size: 16px;
+
+	transition: var(--transition);
+
+	&:hover {
+		filter: brightness(0.95);
+	}
+	&--active:hover,
+	&.active:hover {
+		filter: initial !important;
+	}
+
+	&--active,
+	&.active {
+		background: var(--accent);
+		color: var(--white);
+	}
+
+	@include sm {
+		font-size: rem(12);
+		min-height: rem(42);
+		padding-inline: 12px;
+	}
+}
+
+/* --------------------------------------------------------------- BUTTONS SLIDER --------------------------------------------------------------------*/
+
+.buttons-slider {
+	display: inline-flex;
+	gap: 10px;
+	flex-wrap: nowrap;
+	& > * {
+		flex-shrink: 0;
+	}
+	overflow-x: auto; /* или overflow: auto; если есть вертикальный скролл */
+	scrollbar-width: none; /* Для Firefox */
+	-ms-overflow-style: none; /* Для IE и Edge */
+
+	&::-webkit-scrollbar {
+		display: none;
 	}
 }

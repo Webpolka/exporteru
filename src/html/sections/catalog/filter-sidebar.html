@@ -1,0 +1,59 @@
+<div class="filter-widget">
+	<!-- widget header -->
+	<div class="filter-widget__header filter-header">
+		<button class="filter-header__btn" type="button" data-id="filter-back">
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M12.5415 16.6004L7.10817 11.1671C6.4665 10.5254 6.4665 9.47539 7.10817 8.83372L12.5415 3.40039"
+					stroke="#2F2F2F"
+					stroke-width="1.5"
+					stroke-miterlimit="10"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</button>
+		<h2 class="filter-header__title">Стальные трубы, полые профиля и фитинги</h2>
+	</div>
+
+	<!-- widget form -->
+	<form class="filter-form" id="filter-widget-form">
+		<div class="filter-form__group">
+			<input class="custom-checkbox" type="checkbox" name="option-1" id="filter-option-1" />
+			<label for="filter-option-1">Бесшовные трубы и пустотелые профиля</label>
+		</div>
+		<div class="filter-form__group">
+			<input class="custom-checkbox" type="checkbox" name="option-1" id="filter-option-2" />
+			<label for="filter-option-2">Сварные трубы</label>
+		</div>
+		<div class="filter-form__group">
+			<input class="custom-checkbox" type="checkbox" name="option-1" id="filter-option-3" />
+			<label for="filter-option-3">Стальные фитинги для труб, кроме литых</label>
+		</div>
+
+		<div class="filter-form__price">
+			<h3 class="filter-form__subtitle">Цена</h3>
+
+			<!-- widget range-inputs -->
+			<div class="filter-form__rangeinputs">
+				<label>
+					<span>от </span>
+					<input type="number" id="filter-range-min" />
+				</label>
+				<label>
+					<span>до </span>
+					<input type="number" id="filter-range-max" />
+				</labelstyle=>
+			</div>
+
+			<!-- widget range-slider -->
+			<div class="filter-form__rangeslider">
+				<div id="filter-range-slider"></div>
+			</div>			
+		</div>
+
+		<button type="button" data-id="filter-reset" class="btn-accent">Сбросить&nbsp;<span id="filter-reset-nums">(2)</span></button>
+		
+		<button type="submit" hidden></button>
+	</form>
+</div>
