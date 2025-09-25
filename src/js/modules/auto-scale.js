@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			wrapper.style.transformOrigin = "top left";
 			wrapper.style.transform = "scale(" + scaleRatio + ")";
 			wrapper.style.overflowX = "hidden";
-			document.body.style.maxBlockSize = 100 / scaleRatio + "%";
+			document.body.style.maxBlockSize =  100 / scaleRatio + "%";
 		} else if (windowWidth < 1200) {
 			wrapper.style.removeProperty("transform-origin");
 			wrapper.style.removeProperty("transform-scale");
