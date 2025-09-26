@@ -232,6 +232,72 @@ COMPONENTS
 	}
 }
 
+/* --------------------------------------------------------------- RED RECTANAGLE BUTTON --------------------------------------------------------------------*/
+
+.btn-redrect {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-inline: rem(46);
+	min-height: rem(53);
+
+	background-color: transparent;
+	border: 2px var(--red) solid;
+
+	font-weight: 500;
+	font-size: rem(18);
+	line-height: 122%;
+	color: #2f2f2f;
+
+	transition: var(--transition);
+
+	&:hover {
+		color: var(--white);
+		background-color: var(--red);
+	}
+
+	@include sm {
+		font-size: rem(14);
+		min-height: rem(48);
+		display: flex;
+		justify-content: center;
+	}
+}
+
+/* --------------------------------------------------------------- LOGIN WITH BUTTON --------------------------------------------------------------------*/
+
+.btn-loginwith {
+	display: inline-flex;
+	align-items: center;
+	gap: 13px;
+
+	margin-inline: auto;
+
+	font-weight: 400;
+	font-size: 14px;
+	color: #2f2f2f;
+	@include sm{
+		font-size: 12px;
+		gap: 11px;
+	}
+
+	transition: all 0.1s ease-in-out;
+
+	svg {
+		aspect-ratio: 24/20;
+		width: 24px;
+
+		@include sm{
+			width: 18px;
+		}
+	}
+
+	&:hover {
+		text-decoration: underline;		
+	}
+}
+
 /* --------------------------------------------------------------- LANGUAGE SWITCHER --------------------------------------------------------------------*/
 .lang-switcher {
 	display: flex;
@@ -311,7 +377,42 @@ COMPONENTS
 	}
 }
 
+/* --------------------------------------------------------------- aside lines word --------------------------------------------------------------------*/
+
+/* Общий контейнер для центрирования */
+.lines-word {
+	display: flex;
+	justify-content: center; /* Центр по горизонтали */
+}
+
+/* Основной элемент */
+.lines-word__element {
+	display: flex;
+	align-items: center; /* Вертикальное выравнивание */
+}
+
+/* Полосы по бокам */
+.lines-word__line {
+	width: 50px; /* ширина полосы */
+	height: 1px; /* высота полосы, например, 4px */
+	background-color: rgba(47, 47, 47, 0.3);
+	margin: 0 15px; /* отступы слева и справа от полосы */
+}
+
+/* Само слово с отступами */
+.lines-word__word {	
+	background-color: transparent; /* можно добавить фон, если нужно */
+	font-weight: 400;
+	font-size: 14px;
+	color: #2f2f2f;
+
+	@include sm{
+		font-size: 12px;
+	}
+}
+
 /* --------------------------------------------------------------- Search orderby --------------------------------------------------------------------*/
+
 .exp-search-orderby {
 	&__row {
 		display: inline-flex;
@@ -730,7 +831,7 @@ COMPONENTS
 
 .buttons-slider {
 	display: inline-flex;
-	gap: 10px;
+	gap: 14px;
 	flex-wrap: nowrap;
 	& > * {
 		flex-shrink: 0;

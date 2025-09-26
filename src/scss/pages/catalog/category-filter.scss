@@ -3,24 +3,43 @@ CATEGORY FILTER IN Section
 --------------------------------------------------------------------------------------------------------------------------------*/
 .filter-layout {
 	display: flex;
-	gap: 20px;
-	position: relative;
-	&__dolly {
-		width: 30.2%;
-		height: inherit;
-	}
+	gap: 20px;	
 
 	&__sidebar {
-		position: sticky;
-
+		position: relative;
 		background: #f6f6f6;
 
 		width: 30.2%;
-		height: inherit;
+		min-width: 270px;
+		height: inherit;	
+
+		@include md {
+			width: 38%;
+		}
 	}
 	&__content {
+		max-width: calc(100% - 285px);
 		width: 69.8%;
 		height: 100%;
+
+		@include md {
+			width: 62%;
+		}
+	}
+	&__adaptive {
+		max-width: calc(100% - 285px);
+		width: 69.8%;
+		height: 100%;
+
+		@include lg {
+			max-width: 100%;
+			width: 100%
+		}
+	}
+
+	.exp-pagination {
+		padding-top: 28px;
+		margin-bottom: 36px;
 	}
 }
 
@@ -28,12 +47,18 @@ CATEGORY FILTER IN Section
 
 .filter-content {
 	&__buttons {
+		padding-right: var(--container-padding-desktop);
 		margin-bottom: 20px;
+		width: calc(100% + var(--container-padding-desktop));
 		margin-right: calc(0px - var(--container-padding-desktop));
 		@include lg {
+			padding-right: var(--container-padding-large);
+			width: calc(100% + var(--container-padding-large));
 			margin-right: calc(0px - var(--container-padding-large));
-		}
+		}	
 		@include sm {
+			padding-right: var(--container-padding-small);
+			width: calc(100% + var(--container-padding-small));
 			margin-right: calc(0px - var(--container-padding-small));
 		}
 	}
@@ -41,23 +66,54 @@ CATEGORY FILTER IN Section
 	&__searchorderby {
 		display: flex;
 		align-items: center;
-		gap: 20px;
+		gap: 22px;
 
 		padding-top: 20px;
-		margin-bottom: 35px;
+		margin-bottom: 33px;
 	}
 
-	.exp-pagination {
-		padding-top: 30px;
+	&__vitrine {
+		.product-card__header {
+			aspect-ratio: 306/244;
+		}
+
+		.product-card__location {
+			padding-top: 5px;
+			margin-bottom: 5px;
+		}
+		.product-card__title {
+			@media (max-width: 850px) {
+				font-size: 16px;
+			}
+		}
+		.product-card__price-old {
+			@media (max-width: 850px) {
+				font-size: 14px;
+			}
+		}
+		.product-card__like {
+			bottom: -1px;
+			right: 4px;
+			width: 26px;
+			&.active {
+				width: 23px;
+			}
+		}
 	}
 }
 
 /* ------------------------------------------------ Filter sidebar -----------------------------------------------------------------*/
 .filter-widget {
+	position: sticky;
+	top: 117px;
+	@include sm{
+		top: 82px;
+	} 
+
 	padding: 20px 25px;
 
 	&__header {
-		margin-bottom: 20px;
+		margin-bottom: 18px;
 	}
 }
 
@@ -67,7 +123,7 @@ CATEGORY FILTER IN Section
 	gap: 13px;
 
 	&__btn {
-		padding-left: 3px;
+		padding-right: 3px;
 		width: 24px;
 		aspect-ratio: 1/1;
 
@@ -88,7 +144,7 @@ CATEGORY FILTER IN Section
 
 	display: flex;
 	flex-direction: column;
-	gap: 23px;
+	gap: 21px;
 
 	&__group {
 		display: inline-flex;
@@ -103,7 +159,9 @@ CATEGORY FILTER IN Section
 	}
 
 	&__price {
-		margin-bottom: 22px;
+		margin-top: 7px;
+		margin-left: 0px;
+		margin-bottom: 23px;
 	}
 
 	&__subtitle {
@@ -117,13 +175,13 @@ CATEGORY FILTER IN Section
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 20px;
+		gap: 15px;
 
 		margin-bottom: 25px;
 
 		label {
 			display: inline-flex;
-			gap: 8px;
+			gap: 5px;
 			width: 50%;
 
 			background: #dedede;
@@ -150,16 +208,15 @@ CATEGORY FILTER IN Section
 		padding-right: 12px;
 	}
 
-	.btn-accent{
+	.btn-accent {
 		font-size: 15px;
 		line-height: 1.22;
 		font-size: var(--white);
 		background: #e1251b;
 
 		justify-content: center;
-		span{
+		span {
 			opacity: 0.5;
 		}
-
 	}
 }

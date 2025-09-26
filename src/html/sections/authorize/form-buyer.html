@@ -1,0 +1,85 @@
+<form class="authorize-form" id="authorize-buyer-form">
+	<a href="authorize-login.html" class="authorize-form__loginlink">Есть аккаунт? Войти!</a>
+
+	<h2 class="authorize-form__title">Регистрация</h2>
+
+	<!-- link buttons -->
+	<div class="authorize-form__toggle">
+		<a href="authorize-buyer.html" class="btn-gray active">Я покупатель</a>
+		<a href="authorize-seller.html" class="btn-gray">Я продавец</a>
+	</div>
+
+	<!-- input fields -->
+	<div class="authorize-form__inputs">
+		<!-- 1 -->
+		<div class="authorize-form__group">
+			<label for="authorize-buyer-country">Страна/Регион</label>
+			<select id="authorize-buyer-country" name="authorize-buyer-country" required></select>
+		</div>
+		<!-- 2 -->
+		<div class="authorize-form__group">
+			<label for="authorize-buyer-logname">Логин</label>
+			<input
+				type="text"
+				id="authorize-buyer-logname"
+				name="authorize-buyer-logname"				
+				maxlength="50"
+				placeholder="Введите логин"
+				required
+				autocomplete="on"
+			/>
+		</div>
+
+		<!-- 3 -->
+		<div class="authorize-form__group">
+			<label for="authorize-buyer-password">Пароль</label>
+			<input
+				type="text"
+				id="authorize-buyer-password"
+				name="authorize-buyer-password"			
+				maxlength="50"
+				placeholder="Придумайте пароль"
+				required
+				autocomplete="off"
+			/>
+		</div>
+
+		<!-- 4 -->
+		<div class="authorize-form__group">
+			<label for="authorize-buyer-phone">Мобильный телефон</label>
+			<input
+				type="text"
+				id="authorize-buyer-phone"
+				name="authorize-buyer-phone"				
+				maxlength="50"
+				placeholder="Введите Ваш номер телефона"
+				required
+				autocomplete="on"
+			/>
+		</div>
+
+		<!-- 5 -->
+		<div class="authorize-form__group">
+			<label for="authorize-buyer-email">Почта</label>
+			<input
+				type="text"
+				id="authorize-buyer-email"
+				name="authorize-buyer-email"			
+				maxlength="50"
+				placeholder="Введите Ваш E-mail"
+				required
+				autocomplete="on"
+			/>
+			<p class="group-hint">Предпочтительна бизнес-электронная почта.</p>
+		</div>
+
+		<!-- 6 -->
+		<div class="authorize-form__checkbox">
+			<input class="authorize-checkbox" type="checkbox" name="authorize-policy" id="authorize-buyer-policy" />
+			<label for="authorize-buyer-policy">Я согласен с пользовательским соглашением и политикой конфиденциальности</label>
+		</div>
+
+		<!-- 7 -->
+		<button type="submit" class="btn-accent">Далее</button>
+	</div>
+</form>

@@ -3,14 +3,16 @@
 	@@include('html/components/head.html', { 'title': 'Каталог: фильтр внутри категории' })
 
 	<body class="front-page">
-		<div class="wrapper">			
+		<div class="wrapper">
+			<div class="wrapper-inner">
 			@@include('html/sections/header.html')
-			<main class="main catalog">								
-				@@include('html/sections/catalog/banner.html')													
-				@@include('html/sections/catalog/filter-layout.html')													
+			<main class="main catalog">
+				@@include('html/sections/catalog/banner.html') @@include('html/sections/catalog/filter-layout.html')
 			</main>
 			@@include('html/sections/footer.html')
+			</div>
 		</div>
+
 		@@include('html/components/script.html')
 	</body>
 </html>

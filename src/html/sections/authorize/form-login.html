@@ -1,0 +1,62 @@
+<form class="authorize-form authorize-form--login" id="authorize-login-form">
+	<h2 class="authorize-form__title">Войти в аккаунт</h2>
+
+	<!-- input fields -->
+	<div class="authorize-form__inputs">
+		<!-- 1 -->
+		<div class="authorize-form__group">
+			<label for="authorize-login-logname">Логин</label>
+			<input
+				type="text"
+				id="authorize-login-logname"
+				name="authorize-login-logname"
+				class="input"
+				maxlength="50"
+				placeholder="Введите логин"
+				required
+				autocomplete="on"
+			/>
+		</div>
+
+		<!-- 2 -->
+		<div class="authorize-form__group mb-7">
+			<label for="authorize-login-password">Пароль</label>
+			<input
+				type="text"
+				id="authorize-login-password"
+				name="authorize-login-password"
+				class="input"
+				maxlength="50"
+				placeholder="Введите пароль"
+				required
+				autocomplete="off"
+			/>
+		</div>
+
+		<div class="authorize-form__group">
+			<!-- 3 -->
+			<button type="submit" class="btn-accent">Войти</button>
+
+			<!-- 4 -->
+			<a href="authorize-buyer.html" class="btn-redrect">Зарегистрироваться</a>
+		</div>
+	</div>
+	<a href="authorize-login.html" class="authorize-form__forgetlink decor-none">Забыли пароль? Восстановить</a>
+
+	<div class="lines-word">
+		<div class="lines-word__element">
+			<div class="lines-word__line"></div>
+			<div class="lines-word__word">Или</div>
+			<div class="lines-word__line"></div>
+		</div>
+
+		<a href="#" class="btn-loginwith">
+		<svg class="icon icon--contacts-tg">
+			<use href="./icons/symbol/sprite.svg#contacts-tg"></use>
+		</svg>
+		<span>Войти через Telegram</span>
+	</a>
+	</div>
+
+	
+</form>

@@ -1,0 +1,53 @@
+<form class="authorize-form" id="authorize-confirm-form">
+	<a href="authorize-login.html" class="authorize-form__loginlink">Есть аккаунт? Войти!</a>
+
+	<div class="authorize-form__spacebetween">
+        <!-- top -->
+		<div class="authorize-form__header">
+			<h2 class="authorize-form__title">Регистрация</h2>
+
+			<p class="authorize-form__notation">
+				Код подтверждения был отправлен на ваш адрес электронной почты info@mail.ru
+			</p>
+
+			<!-- input fields -->		
+			<div class="uthorize-form__group authorize-form__group form-code-confirm">
+				<label for="authorize-confirm-code">Введите код</label>
+				<input
+					type="text"
+					id="authorize-confirm-code"
+					name="authorize-confirm-code"
+					maxlength="4"
+					placeholder="____"
+					required
+					autocomplete="on"
+				/>
+			</div>
+		</div>
+
+		<!-- bottom -->
+		<div class="authorize-form__footer">
+			<div class="authorize-form__checkemail">
+				<!-- back btn -->
+				<a href="#" class="btn-accent btn-accent--back">
+					<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M17.4992 23.24L9.8925 15.6333C8.99417 14.735 8.99417 13.265 9.8925 12.3667L17.4992 4.76001"
+							stroke="white"
+							stroke-width="2"
+							stroke-miterlimit="10"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</a>
+				<!-- check -->
+				<a href="#" class="btn-accent btn-accent--full">Проверить электронную почту</a>
+			</div>
+
+			<a href="authorize-login.html" class="authorize-form__forgetlink">Есть проблемы с получением кода?</a>
+			<!-- hidden submit -->
+			<button type="submit" hidden></button>
+		</div>
+	</div>
+</form>

@@ -11,8 +11,8 @@ html {
 }
 
 body {
+	padding: 0;
 	margin: 0;
-	padding: 0;	
 	text-wrap: balance;
 }
 
@@ -149,23 +149,23 @@ body {
 }
 
 .wrapper {
-	max-inline-size: var(--max-width);
-	transform-origin: top center;
+	// max-inline-size: var(--max-width);
+	// transform-origin: top center;
 
 	display: flex;
 	min-block-size: 100%;
 
 	/** Поменять на clip - если используется в проекте position: sticky */
-	overflow: hidden;
+	overflow: clip;
 	flex-direction: column;
 }
 
-.main {	
+.main {
 	position: relative;
 	flex: 1 1 auto;
 }
 
-svg{
+svg {
 	max-width: rem(50);
 	max-height: rem(50);
 }

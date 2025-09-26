@@ -1,0 +1,148 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+AUTHORIZE SLIDER
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.authorize-slider {
+	margin-top: 58px;
+	user-select: none;
+
+	margin-bottom: 30px;
+
+	@include md {
+		margin-top: 30px;
+		margin-bottom: 0px;
+	}
+	@media (max-width: 440px) {
+		margin-top: 55px;
+	}
+
+	&__card {
+		position: relative;
+		color: #2f2f2f;
+		aspect-ratio: 530/399;
+
+		&.card-text--short {
+			.authorize-slider__title {
+				@include xxl {
+					max-width: 75%;
+				}
+			}
+		}
+		&.card-text--short {
+			.authorize-slider__description {
+				@include xxl {
+					max-width: 50%;
+				}
+			}
+		}
+
+		@media (max-width: 1300px) {
+			aspect-ratio: 320/341;
+		}
+	}
+
+	&__title {
+		position: relative;
+		z-index: 1;
+
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 112%;
+
+		padding-right: 105px;
+		margin-bottom: 15px;
+
+		text-shadow: 3px 3px 5px #ffffff, -3px -3px 5px #ffffff;
+
+		@include lg {
+			font-size: 20px;
+		}
+
+		@include md {
+			font-size: 30px;
+		}
+
+		@include sm {
+			margin-bottom: 5px;
+
+			font-size: 20px;
+			line-height: 1.1257;
+		}
+		@media (max-width: 440px) {
+			padding-right: 0;
+		}
+	}
+
+	&__description {
+		position: relative;
+		z-index: 1;
+
+		font-weight: 400;
+		font-size: 16px;
+
+		padding-right: 105px;
+
+		text-shadow: 3px 3px 5px #ffffff, -3px -3px 5px #ffffff;
+
+		@include lg {
+			font-size: 14px;
+		}
+
+		@include md {
+			font-size: 16px;
+		}
+
+		@include sm {
+			padding-right: 0;
+			font-size: 12px;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		bottom: 0%;
+		right: 0%;
+		width: 105%;
+		aspect-ratio: 530/399;
+
+		@media (max-width: 1300px) {
+			aspect-ratio: 320/341;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+
+			@media (max-width: 1300px) {
+				width: 135%;
+				height: auto;
+
+				position: absolute;
+				right: 0;
+				bottom: 0;
+
+				inset-inline-start: -35%;
+			}
+		}
+	}
+
+	&__navigation-wrap {
+		position: absolute;
+		top: -3px;
+		right: 33px;
+		z-index: 1;
+		transition: opacity 0.05s ease-in-out;
+
+		@media (max-width: 576px) {
+			right: initial;
+			left: 0;
+		}
+	}
+
+	.swiper-wrapper {
+		position: relative;
+	}
+}

@@ -6,8 +6,7 @@ CUSTOM CHOICES SELECT
 .choices {
 	position: relative;
 	border: none !important;
-	box-shadow: none !important;
-	
+	box-shadow: none !important;	
 }
 
 .choices::before {
@@ -45,7 +44,7 @@ CUSTOM CHOICES SELECT
 	border: none !important;
 	
 
-	@include md {
+	@include sm {
 		padding-right: rem(5);
 		font-size: rem(12);
 	}
@@ -68,13 +67,13 @@ CUSTOM CHOICES SELECT
 	border: 1px solid rgb(0, 0, 0, 0.15) !important;
 	min-width: rem(200);
 
-	@include md {
+	@include sm {
 		min-width: rem(150);
 		font-size: rem(12) !important;
 	}
 }
 .choices__item {	
-	@include md {
+	@include sm {
 		font-size: rem(12) !important;
 	}
 }

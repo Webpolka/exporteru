@@ -51,6 +51,16 @@ CATEGORY BANNER
 			font-size: 12px;
 		}
 	}
+	&__content{
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 12px;
+
+		padding-bottom: 77px;
+	}
+
 	&__container {
 		flex-grow: 1;
 		position: relative;
@@ -60,9 +70,8 @@ CATEGORY BANNER
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-
-		padding-bottom: 70px;
-		overflow: hidden;
+		height: 100%;		
+		overflow: hidden;		
 
 		@include sm {
 			justify-content: start;
@@ -120,14 +129,14 @@ CATEGORY BANNER
 		aspect-ratio: 961/703;
 		bottom: 0;
 		transform: translateY(50%);
-		left: 50%;
+		left: 50.7%;
 		display: block;
 		overflow: hidden;
 		width: 70%;
 		min-width: 961px;
 		z-index: 1;
 
-		 border-radius: 50% 50% 0 0 ;
+		 border-radius: 47% 50% 0 0 ;
 
 		@include sm {
 			margin-top: -14px;
@@ -150,7 +159,7 @@ CATEGORY BANNER
 			top: 20%;
 			left: 0;
 			display: block;
-			transform: translateY(-30%);
+			transform: translate(-4%, -29%);
 
 			width: 76%; /* или любой размер, который вам нужен */
 			height: auto;

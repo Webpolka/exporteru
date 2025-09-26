@@ -1,0 +1,119 @@
+<form class="authorize-form" id="authorize-seller-form">
+	<a href="authorize-login.html" class="authorize-form__loginlink">Есть аккаунт? Войти!</a>
+
+	<h2 class="authorize-form__title">Регистрация</h2>
+
+	<!-- link buttons -->
+	<div class="authorize-form__toggle">
+		<a href="authorize-buyer.html" class="btn-gray">Я покупатель</a>
+		<a href="authorize-seller.html" class="btn-gray active">Я продавец</a>
+	</div>
+
+	<!-- input fields -->
+	<div class="authorize-form__inputs">
+		<div class="row gx-11 gy-9">
+			<div class="col-sm-6">
+				<!-- 1 -->
+				<div class="authorize-form__group">
+					<label for="authorize-seller-inn">ИНН компании</label>
+					<input
+						type="number"
+						id="authorize-seller-inn"
+						name="authorize-seller-inn"					
+						maxlength="50"
+						placeholder="Введите ИНН компании"
+						required
+						autocomplete="on"
+					/>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<!-- 2 -->
+				<div class="authorize-form__group">
+					<label for="authorize-seller-phone">Мобильный телефон</label>
+					<input
+						type="phone"
+						id="authorize-seller-phone"
+						name="authorize-seller-phone"					
+						maxlength="50"
+						placeholder="Введите Ваш номер телефона"
+						required
+						autocomplete="off"
+					/>
+				</div>
+			</div>
+		</div>
+		<!-- 3 -->
+		<div class="authorize-form__group">
+			<label for="authorize-seller-countries">Страны присутствия</label>
+			<select id="authorize-seller-countries" name="authorize-seller-countries" required></select>
+		</div>
+
+		<!-- 4 -->
+		<div class="authorize-form__group">
+			<label for="authorize-seller-company">Название компании</label>
+			<input
+				type="text"
+				id="authorize-seller-company"
+				name="authorize-seller-company"				
+				maxlength="100"
+				placeholder="Введите название компании"
+				required
+				autocomplete="on"
+			/>
+		</div>
+
+		<!-- 5 -->
+		<div class="authorize-form__group">
+			<label for="authorize-seller-email">Корпоративная почта</label>
+			<input
+				type="email"
+				id="authorize-seller-email"
+				name="authorize-seller-email"			
+				maxlength="100"
+				placeholder="Введите корпоративную почту"
+				required
+				autocomplete="on"
+			/>
+		</div>
+
+		<!-- 6 -->
+		<div class="authorize-form__group">
+			<label for="authorize-seller-password">Пароль</label>
+			<input
+				type="text"
+				id="authorize-seller-password"
+				name="authorize-seller-password"				
+				maxlength="100"
+				placeholder="Придумайте пароль"
+				required
+				autocomplete="on"
+			/>
+		</div>
+
+		<!-- 7 -->
+		<div class="authorize-form__group">
+			<label for="authorize-seller-category">Категории товаров</label>
+			<input
+				type="text"
+				id="authorize-seller-category"
+				name="authorize-seller-category"				
+				maxlength="100"
+				placeholder="Выберите категории товаров"
+				required
+				autocomplete="on"
+			/>
+
+			<p class="group-hint">Выберите основные категории товаров, с которыми работает ваша <br class="xxl-v"> компания</p>
+		</div>
+
+		<!-- 8 -->
+		<div class="authorize-form__checkbox">
+			<input class="authorize-checkbox" type="checkbox" name="authorize-policy" id="authorize-policy" />
+			<label for="authorize-policy">Я согласен с пользовательским соглашением и политикой конфиденциальности</label>
+		</div>
+
+		<!-- 9 -->
+		<button type="submit" class="btn-accent">Далее</button>
+	</div>
+</form>

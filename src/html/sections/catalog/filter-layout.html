@@ -1,15 +1,14 @@
 <!-- 1 -->
-<div class="container filter-layout">
-	<div class="filter-layout__dolly"><!-- Dolly --></div>
-	<div class="filter-layout__content">
+<div class="container filter-layout justify-content-end">
+	<div class="filter-layout__adaptive ">
 		<div class="filter-content__searchorderby">
 			<!-- выпадающий селект -->
 			<div class="filter-content__orderby">@@include('../../blocks/block-filter.html')</div>
 
 			<!-- форма поиска для фильтра -->
 			<form class="filter-content__search filter-search-form" action="" id="filter-search-form">
-				<input type="search" id="filter-search-input" class="search-form__input" placeholder="Поиск по товарам" name="fs" />
-				<button type="submit" class="search-form__button" aria-label="Поиск по товарам">
+				<input type="search" id="filter-search-input" class="search-form__input" placeholder="Поиск" name="fs" />
+				<button type="submit" class="search-form__button" aria-label="Поиск">
 					<svg class="icon icon--search">
 						<use href="./icons/symbol/sprite.svg#search"></use>
 					</svg>
@@ -23,3 +22,10 @@
 	<div class="filter-layout__sidebar">@@include('./filter-sidebar.html')</div>
 	<div class="filter-layout__content">@@include('./filter-content.html')</div>
 </div>
+
+<div class="container filter-layout justify-content-end">	
+	<div class="filter-layout__adaptive">@@include('../../blocks/block-pagination.html')</div>
+</div>
+
+
+	

@@ -1,0 +1,23 @@
+.authorize-layout {
+	padding-top: 25px;
+	padding-bottom: 38px;
+
+	@include sm {
+		padding-top: 6px;
+		padding-bottom: 30px;
+	}
+
+	.authorize-column-1 {
+		width: 54%;
+
+		@include md {
+			width: 100%;
+		}
+	}
+	.authorize-column-2 {
+		width: 46%;
+		@include md {
+			width: 100%;
+		}
+	}
+}

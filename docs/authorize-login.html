@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Результат поиска</title>
+    <title>Авторизация: логин</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
@@ -21,68 +21,7 @@
 </head>
 
 
-<style>
-    .web-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
-
-    .web-list a {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        text-align: center;
-
-        aspect-ratio: 1/1;
-        width: 12.5%;
-        min-width: 100px;
-
-        font-size: 14px;
-        font-weight: 700;
-        color: #2f2f2f;
-        text-transform: uppercase;
-
-        border: 1px solid rgb(0, 0, 0, 0.5);
-        background-color: rgb(0, 0, 0, 0.1);
-    }
-
-    .web-list a span {
-        position: absolute;
-        right: 7px;
-        top: 7px;
-        font-size: 12px;
-        padding: 5px;
-        background-color: gold;
-        color: red;
-    }
-
-    .web-list a span.hot {
-        background-color: red;
-        color: white;
-    }
-
-    .web-list a:hover {
-        background-color: rgb(0, 0, 0, 0.3);
-        color: var(--accent);
-        border: 1px solid rgb(0, 0, 255, 0.5);
-    }
-
-    .web-center {
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
-
-<body class="front-page">
+<body>
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -476,24 +415,140 @@
             </div>
         </header>
 
-        <main class="main">
+        <main class="authorize main">
             <div class="container">
-                <div class="web-list">
-                    <a href="main.html">Главная</a>
-                    <a href="about.html">О нас</a>
-                    <a href="article.html">Статья</a>
-                    <a href="product.html">Страница товара</a>
-                    <a href="search-result.html">Страница результатов поиска</a>
-                    <a href="contacts.html">Контакты<span>Prev</span></a>
-                    <a href="catalog-in.html">Каталог: внутри категории</a>
-                    <a href="catalog.html">Каталог: все категории<span>Prev</span></a>
-                    <a href="catalog-in-filter.html">Каталог: фильтр внутри категории<span class="hot">New</span></a>
-                    <a href="authorize-buyer.html">Авторизация: я покупатель<span class="hot">New</span></a>
-                    <a href="authorize-seller.html">Авторизация: я продавец<span class="hot">New</span></a>
-                    <a href="authorize-confirm.html">Авторизация: ввести код<span class="hot">New</span></a>
-                    <a href="authorize-login.html">Авторизация: войти в аккаунт<span class="hot">New</span></a>
+                <nav class="exp-breadcrumbs" aria-label="Breadcrumb">
+                    <ul class="exp-breadcrumbs__list">
+                        <li><a href="https://example.com/">Главная</a><span class="bread-sep">/</span></li>
+                        <li><a href="https://example.com/category/">Категория</a><span class="bread-sep">/</span></li>
+                        <li><span>Металлургия</span></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="container authorize-layout">
+                <div class="g-2xl-40 gx-97 gx-lg-30 gy-md-14 row">
+                    <!-- column 1 -->
+                    <div class="authorize-column-1">
+                        <form class="authorize-form authorize-form--login" id="authorize-login-form">
+                            <h2 class="authorize-form__title">Войти в аккаунт</h2>
+
+                            <!-- input fields -->
+                            <div class="authorize-form__inputs">
+                                <!-- 1 -->
+                                <div class="authorize-form__group">
+                                    <label for="authorize-login-logname">Логин</label>
+                                    <input type="text" id="authorize-login-logname" name="authorize-login-logname" class="input" maxlength="50" placeholder="Введите логин" required autocomplete="on">
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="authorize-form__group mb-7">
+                                    <label for="authorize-login-password">Пароль</label>
+                                    <input type="text" id="authorize-login-password" name="authorize-login-password" class="input" maxlength="50" placeholder="Введите пароль" required autocomplete="off">
+                                </div>
+
+                                <div class="authorize-form__group">
+                                    <!-- 3 -->
+                                    <button type="submit" class="btn-accent">Войти</button>
+
+                                    <!-- 4 -->
+                                    <a href="authorize-buyer.html" class="btn-redrect">Зарегистрироваться</a>
+                                </div>
+                            </div>
+                            <a href="authorize-login.html" class="authorize-form__forgetlink decor-none">Забыли пароль? Восстановить</a>
+
+                            <div class="lines-word">
+                                <div class="lines-word__element">
+                                    <div class="lines-word__line"></div>
+                                    <div class="lines-word__word">Или</div>
+                                    <div class="lines-word__line"></div>
+                                </div>
+
+                                <a href="#" class="btn-loginwith">
+                                    <svg class="icon icon--contacts-tg">
+                                        <use href="./icons/symbol/sprite.svg#contacts-tg"></use>
+                                    </svg>
+                                    <span>Войти через Telegram</span>
+                                </a>
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+                    <!-- column 2 -->
+                    <div class="authorize-column-2">
+                        <!-- Slider -->
+                        <div class="authorize-slider swiper" id="authorize-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 1 -->
+                                <div class="swiper-slide">
+                                    <div class="authorize-slider__card">
+                                        <div class="authorize-slider__textwrap">
+                                            <h2 class="authorize-slider__title">Проверенные поставщики по всей России</h2>
+                                            <p class="authorize-slider__description">
+                                                Lörem ipsum din dån och semil disisa, båheten tädade tädirar. Karen krode, relogi, presam.
+                                            </p>
+                                        </div>
+                                        <div class="authorize-slider__image">
+                                            <img src="./images/registration-slider/slide-1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2 -->
+                                <div class="swiper-slide">
+                                    <div class="authorize-slider__card">
+                                        <div class="authorize-slider__textwrap">
+                                            <h2 class="authorize-slider__title">Персональный менеджер для вашей компании</h2>
+                                            <p class="authorize-slider__description">
+                                                Lörem ipsum din dån och semil disisa, båheten tädade tädirar. Karen krode, relogi, presam.
+                                            </p>
+                                        </div>
+                                        <div class="authorize-slider__image">
+                                            <img src="./images/registration-slider/slide-2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 3 -->
+                                <div class="swiper-slide">
+                                    <div class="authorize-slider__card">
+                                        <div class="authorize-slider__textwrap">
+                                            <h2 class="authorize-slider__title">Доступ к оптовым ценам</h2>
+                                            <p class="authorize-slider__description">
+                                                Lörem ipsum din dån och semil disisa, båheten tädade tädirar. Karen krode, relogi, presam.
+                                            </p>
+                                        </div>
+                                        <div class="authorize-slider__image">
+                                            <img src="./images/registration-slider/slide-3.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 4 -->
+                                <div class="swiper-slide">
+                                    <div class="authorize-slider__card card-text--short">
+                                        <div class="authorize-slider__textwrap">
+                                            <h2 class="authorize-slider__title">Уникальная ресурсная база</h2>
+                                            <p class="authorize-slider__description">
+                                                Lörem ipsum din dån och semil disisa, båheten tädade tädirar. Karen krode, relogi, presam.
+                                            </p>
+                                        </div>
+                                        <div class="authorize-slider__image">
+                                            <img src="./images/registration-slider/slide-4.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slider navigation -->
+                            <div class="authorize-slider__navigation-wrap" id="authorize-slider-nav">
+                                <div class="arrow arrow--left"></div>
+                                <div class="arrow arrow--right"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </main>
         <footer class="footer">
             <div class="container">
@@ -623,6 +678,7 @@
         </footer>
 
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>

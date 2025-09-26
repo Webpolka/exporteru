@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	@@include('html/components/head.html', { 'title': 'Авторизация: я покупатель' })
+
+	<body>
+		<div class="wrapper">			
+			@@include('html/sections/header.html')
+			<main class="main authorize">
+				<div class="container">
+					@@include('html/blocks/block-breadcrumbs.html')		
+				</div>		
+				@@include('html/sections/authorize/authorize-buyer.html')				
+			</main>
+			@@include('html/sections/footer.html')
+	    </div>
+
+		@@include('html/components/script.html')
+	</body>
+</html>
