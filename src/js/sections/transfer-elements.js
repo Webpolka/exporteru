@@ -60,3 +60,18 @@ if (popularProdGroup && popularProdGroupPlace) {
         },
     });
 }
+
+const filterTransHeader = document.getElementById("filter-trans-header");
+const filterTransPlace = document.getElementById("filter-trans-place");
+
+if (filterTransHeader && filterTransPlace) {
+    new TransferElements({
+        sourceElement: filterTransHeader,
+        breakpoints: {
+            768: {
+                targetElement: filterTransPlace,
+            },
+        },
+    });
+}
+

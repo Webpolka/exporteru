@@ -10,6 +10,24 @@
 .fpl-15{
 	padding-left: 15px;
 }
+.sm-hidden{
+	@include sm{
+		display: none;
+	}
+}
+.sm-visible{
+	display: none;
+	@include sm{
+		display: flex;
+	}
+}
+
+.md-visible{
+	display: none;
+	@include md{
+		display: flex;
+	}
+}
 
 // sm 8px
 .g-sm-8,

@@ -24,6 +24,7 @@ Product card
 	}
 
 	&__header {
+		position: relative;
 		width: 100%;
 		aspect-ratio: 306/224;
 		overflow: hidden;
@@ -34,11 +35,12 @@ Product card
 			aspect-ratio: 155/188;
 		}
 
-		img {
+		img {			
 			display: block;
+
 			width: auto;
 			height: 100%;
-			object-fit: cover;
+			object-fit: cover;		
 			overflow: hidden;
 		}
 	}
@@ -50,20 +52,20 @@ Product card
 		flex-direction: column;
 		justify-content: space-between;
 
-		@include md{
+		@include sm{
 			padding-top: 10px;
 			padding-bottom: 5px;
 		}
 	}
 
 	&__location {
-		display: inline-flex;
-		align-items: start;
-		gap: 9px;
-
+		display: block;	
 		margin-bottom: rem(10);
+
+
 		@include sm {
 			margin-bottom: rem(5);
+			line-height: 80%;
 		}
 
 		svg {
@@ -74,17 +76,25 @@ Product card
 			width: rem(15);
 			height: rem(15);
 
+			margin-right: 5px;
+		
+		
 			@include sm {
 				top: 0;
 				width: rem(12);
-			height: rem(12);
+			    height: rem(12);
 
 			}
 		}
-		span {
+		span {		
+			display: inline;
+			vertical-align: middle;
+
 			font-size: rem(14);
 			color: var(--text);
 			opacity: 0.5;
+
+			line-height: 145%;
 
 			@include sm {
 				font-size: rem(10);
@@ -191,7 +201,9 @@ Product card
 		cursor: pointer;
 		display: inline-flex;
 		align-items: center;
-		min-height: rem(30);
+		
+		height: rem(30);
+		width: remm(30);
 
 		@include md {
 			bottom: initial;

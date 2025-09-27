@@ -251,7 +251,7 @@ AUTHORIZE FORM
 		gap: 13px;
 		flex-direction: column;
 
-		@include sm{
+		@include sm {
 			padding-bottom: 7px;
 		}
 	}
@@ -375,6 +375,8 @@ AUTHORIZE FORM
 
 	.choices__list--dropdown,
 	.choices__list[aria-expanded] {
+		left: 0;
+
 		.choices__item {
 			font-weight: 400;
 			font-size: 14px !important;

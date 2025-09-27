@@ -2,19 +2,48 @@
 CATEGORY FILTER IN Section
 --------------------------------------------------------------------------------------------------------------------------------*/
 .filter-layout {
+	position: relative;
 	display: flex;
-	gap: 20px;	
+	gap: 20px;
+
+	@include md {
+		flex-wrap: wrap;
+	}
 
 	&__sidebar {
-		position: relative;
 		background: #f6f6f6;
 
 		width: 30.2%;
 		min-width: 270px;
-		height: inherit;	
+		height: inherit;
 
 		@include md {
-			width: 38%;
+			position: absolute;
+			top: 0;
+			left: -110vw;
+			z-index: 1000;
+			width: 100%;
+			background-color: #fff;
+
+			transition: left 0.3s ease-in-out;
+
+			&.show {
+				left: 0;
+			}
+
+			max-height: calc(100vh - 130px);
+			overflow-y: auto;
+
+			& > * {
+				flex-shrink: 0;
+			}
+			overflow-x: auto; /* или overflow: auto; если есть вертикальный скролл */
+			scrollbar-width: none; /* Для Firefox */
+			-ms-overflow-style: none; /* Для IE и Edge */
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 	}
 	&__content {
@@ -23,7 +52,8 @@ CATEGORY FILTER IN Section
 		height: 100%;
 
 		@include md {
-			width: 62%;
+			max-width: 100%;
+			width: 100%;
 		}
 	}
 	&__adaptive {
@@ -31,9 +61,13 @@ CATEGORY FILTER IN Section
 		width: 69.8%;
 		height: 100%;
 
+		padding-left: 13px;
+
 		@include lg {
+			padding-left: 0;
+
 			max-width: 100%;
-			width: 100%
+			width: 100%;
 		}
 	}
 
@@ -55,7 +89,7 @@ CATEGORY FILTER IN Section
 			padding-right: var(--container-padding-large);
 			width: calc(100% + var(--container-padding-large));
 			margin-right: calc(0px - var(--container-padding-large));
-		}	
+		}
 		@include sm {
 			padding-right: var(--container-padding-small);
 			width: calc(100% + var(--container-padding-small));
@@ -70,33 +104,130 @@ CATEGORY FILTER IN Section
 
 		padding-top: 20px;
 		margin-bottom: 33px;
+
+		@include md {
+			flex-direction: column;
+			gap: 0;
+			padding-top: 0;
+			margin-bottom: 0;
+			align-items: initial;
+			margin-bottom: 8px;
+		}
 	}
 
 	&__vitrine {
 		.product-card__header {
 			aspect-ratio: 306/244;
+
+			@include md {
+				aspect-ratio: 155/192;
+			}
+		}
+		.product-card__body {
+			@include sm {
+				padding-inline: 10px;
+			}
 		}
 
 		.product-card__location {
-			padding-top: 5px;
-			margin-bottom: 5px;
+			padding-top: 3px;
+			margin-bottom: 7px;
+			vertical-align: middle;
+
+			span {
+				@include md {
+					line-height: 147%;
+				}
+			}
 		}
 		.product-card__title {
+			margin-bottom: 15px;
 			@media (max-width: 850px) {
 				font-size: 16px;
 			}
+			@include md {
+				font-size: 15px;
+			}
+			@include sm {
+				font-size: 12px;
+			}
 		}
+		.product-card__group {
+			flex-direction: column;
+			align-items: start;
+			gap: 6px;
+			@include md {
+				flex-direction: row;
+			}
+		}
+
+		.product-card__discount {
+			order: 1;
+			@include md {
+				order: 2;
+			}
+		}
+		.product-card__price {
+			order: 2;
+			@include md {
+				order: 1;
+			}
+		}
+
 		.product-card__price-old {
 			@media (max-width: 850px) {
 				font-size: 14px;
 			}
+			@include sm {
+				font-size: 12px;
+			}
 		}
 		.product-card__like {
+			order: 3;
+			@include md {
+				order: 3;
+			}
 			bottom: -1px;
 			right: 4px;
 			width: 26px;
+			@include md {
+				right: 8px;
+			}
 			&.active {
 				width: 23px;
+			}
+		}
+	}
+
+	&__box {
+		@include md {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: -5px;
+		}
+	}
+
+	&__mobilebtn {
+		color: #2f2f2f;
+		display: none;
+
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		@include md {
+			display: flex;
+			align-items: center;
+			gap: 7px;
+
+			font-weight: 400;
+			font-size: 12px;
+
+			svg {
+				width: 16px;
+				aspect-ratio: 1/1;
 			}
 		}
 	}
@@ -104,23 +235,42 @@ CATEGORY FILTER IN Section
 
 /* ------------------------------------------------ Filter sidebar -----------------------------------------------------------------*/
 .filter-widget {
-	position: sticky;
-	top: 117px;
-	@include sm{
-		top: 82px;
-	} 
-
+	// position: sticky;
+	// top: 117px;
 	padding: 20px 25px;
 
-	&__header {
+	@include md {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		position: relative;
+		top: 0;
+		padding-bottom: 45px;
+
+		min-height: 812px;
+	}
+
+	@include sm {
+		padding-inline: 15px;
+	}
+	&__header-xxl {
 		margin-bottom: 18px;
 	}
 }
 
-.filter-header {
+// desktop header in filter sidebar
+.filter-header-xxl {
 	display: inline-flex;
 	align-items: center;
 	gap: 13px;
+
+	margin-bottom: 20px;
+
+	@include md {
+		padding-top: 15px;
+		margin-bottom: 4px;
+	}
 
 	&__btn {
 		padding-right: 3px;
@@ -130,26 +280,98 @@ CATEGORY FILTER IN Section
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		@include md {
+			display: none;
+		}
 	}
 	&__title {
 		font-weight: 500;
 		font-size: 18px;
-		line-height: 1.17554;
+		line-height: 112%;
 		color: #000;
+	}
+}
+
+// mobile header in filter sidebar
+.filter-header-md {
+	position: relative;
+	display: none;
+
+	margin-bottom: 24px;
+
+	@include md {
+		display: block;
+	}
+
+	&__btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 16px;
+		aspect-ratio: 1/1;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 16px;
+		color: #171717;
+
+		text-align: center;
 	}
 }
 
 .filter-form {
 	color: #2f2f2f;
 
-	display: flex;
-	flex-direction: column;
-	gap: 21px;
+	@include md {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-grow: 1;
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+
+		margin-bottom: 21px;
+
+		@include sm {
+			gap: 12px;
+			margin-bottom: 12px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 21px;
+		@include sm {
+			gap: 12px;
+		}
+	}
 
 	&__group {
 		display: inline-flex;
 		gap: 13px;
+
+		@include sm {
+			gap: 9px;
+		}
 		label {
+			font-weight: 400;
+			font-size: 16px;
+			color: #2f2f2f;
+			margin-top: 2px;
+			@include sm {
+				font-size: 14px;
+			}
 			cursor: pointer;
 			transition: all 0.3s ease-in-out;
 			&:hover {
@@ -159,9 +381,13 @@ CATEGORY FILTER IN Section
 	}
 
 	&__price {
-		margin-top: 7px;
-		margin-left: 0px;
+		margin-top: 11px;
+		margin-left: -1px;
 		margin-bottom: 23px;
+
+		@include sm {
+			margin-top: 14px;
+		}
 	}
 
 	&__subtitle {
@@ -169,6 +395,12 @@ CATEGORY FILTER IN Section
 		font-size: 18px;
 
 		margin-bottom: 32px;
+
+		@include sm {
+			font-size: 14px;
+
+			margin-bottom: 12px;
+		}
 	}
 
 	&__rangeinputs {
@@ -179,8 +411,14 @@ CATEGORY FILTER IN Section
 
 		margin-bottom: 25px;
 
+		@include sm {
+			gap: 10px;
+			margin-bottom: 40px;
+		}
+
 		label {
 			display: inline-flex;
+			align-items: center;
 			gap: 5px;
 			width: 50%;
 
@@ -189,6 +427,11 @@ CATEGORY FILTER IN Section
 
 			min-height: 43px;
 			color: rgba(47, 47, 47, 0.6);
+			@include sm {
+				min-height: 38px;
+				padding-block: 5px;
+				font-size: 12px;
+			}
 		}
 		input {
 			background: #dedede;
@@ -196,6 +439,9 @@ CATEGORY FILTER IN Section
 			font-size: 16px;
 			color: rgba(47, 47, 47, 0.6);
 			width: 100%;
+			@include sm {
+				font-size: 12px;
+			}
 
 			&::placeholder {
 				color: rgba(47, 47, 47, 0.6);
@@ -207,16 +453,26 @@ CATEGORY FILTER IN Section
 		padding-left: 12px;
 		padding-right: 12px;
 	}
-
 	.btn-accent {
+		justify-content: center;
+	}
+
+	.btn-accent--red {
 		font-size: 15px;
 		line-height: 1.22;
 		font-size: var(--white);
 		background: #e1251b;
 
 		justify-content: center;
+
+		@include sm {
+			font-size: 14px !important;
+		}
 		span {
 			opacity: 0.5;
 		}
 	}
+	.choices__inner {
+		border: 1px solid rgba(47, 47, 47, 0.2) !important;	
+	}	
 }

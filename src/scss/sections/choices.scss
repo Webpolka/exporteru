@@ -6,7 +6,7 @@ CUSTOM CHOICES SELECT
 .choices {
 	position: relative;
 	border: none !important;
-	box-shadow: none !important;	
+	box-shadow: none !important;
 }
 
 .choices::before {
@@ -42,7 +42,6 @@ CUSTOM CHOICES SELECT
 	padding-right: rem(10);
 	padding-left: 0;
 	border: none !important;
-	
 
 	@include sm {
 		padding-right: rem(5);
@@ -58,17 +57,24 @@ CUSTOM CHOICES SELECT
 .choices__list[aria-expanded] {
 	display: none;
 	z-index: 1;
-	position: absolute;
+	position: absolute;	
 	width: 100%;
 	background-color: #fff;
 	top: 100%;
+	left: -25px;
 	overflow: hidden;
 	word-break: break-all;
 	border: 1px solid rgb(0, 0, 0, 0.15) !important;
-	min-width: rem(200);
 
-	@include sm {
-		min-width: rem(150);
+	min-width: 184px;
+
+	@include md{
+			top: 85%;
+	}
+
+	@include sm {	
+		left: -20px;		
+		min-width: 143px;
 		font-size: rem(12) !important;
 	}
 }
@@ -78,13 +84,21 @@ CUSTOM CHOICES SELECT
 	}
 }
 
-.choices__list--dropdown .choices__item{
-	padding-block: 10px !important;
+
+.choices__list--dropdown .choices__item {
+	padding-block: 5px !important;
+	padding-inline-start: 30px !important;
+	padding-inline-end: 10px !important;
+
+	display: flex;
+	align-items: center;
+	max-height: 27px;
+
 }
 
 .choices__item--choice.is-selected {
-	background-color: var(--accent) !important;
-	color: #fff;
+	background-color: #dedede !important;
+	color: #2f2f2f;
 }
 .choices__item--disabled {
 	display: none;

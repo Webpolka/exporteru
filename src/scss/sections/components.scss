@@ -415,6 +415,7 @@ COMPONENTS
 
 .exp-search-orderby {
 	&__row {
+		
 		display: inline-flex;
 		align-items: center;
 		gap: 3px;
@@ -777,7 +778,7 @@ COMPONENTS
 	&:checked {
 		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNS4xNjQxMiA5LjYxNTU0QzQuOTA1NTMgOS42MTU1NCA0LjY1OTg3IDkuNTEyNTEgNC40Nzg4NSA5LjMzMjIxTDAuODE5NzkyIDUuNjg3NTVDMC40NDQ4MzUgNS4zMTQwNyAwLjQ0NDgzNSA0LjY5NTg5IDAuODE5NzkyIDQuMzIyNDFDMS4xOTQ3NSAzLjk0ODkzIDEuODE1MzcgMy45NDg5MyAyLjE5MDMyIDQuMzIyNDFMNS4xNjQxMiA3LjI4NDVMMTEuODA5OSAwLjY2NDg3NkMxMi4xODQ5IDAuMjkxMzk1IDEyLjgwNTUgMC4yOTEzOTUgMTMuMTgwNCAwLjY2NDg3NkMxMy41NTU0IDEuMDM4MzYgMTMuNTU1NCAxLjY1NjUzIDEzLjE4MDQgMi4wMzAwMUw1Ljg0OTM4IDkuMzMyMjFDNS42NjgzNyA5LjUxMjUxIDUuNDIyNzEgOS42MTU1NCA1LjE2NDEyIDkuNjE1NTRaIiBmaWxsPSJ3aGl0ZSIgLz4KPC9zdmc+Cg==");
 		background-repeat: no-repeat;
-		background-size: 70%;
+		background-size: 62%;
 		background-position: center center;
 		background-color: var(--red) !important;
 	}

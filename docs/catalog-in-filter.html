@@ -22,6 +22,7 @@
 
 
 <body>
+    <div class="site-overlay" id="site-overlay"></div>
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -442,24 +443,35 @@
             </section>
             <!-- 1 -->
             <div class="container filter-layout justify-content-end">
-                <div class="filter-layout__adaptive">
+                <div class="filter-layout__adaptive" id="filter-trans-place">
                     <div class="filter-content__searchorderby">
-                        <!-- выпадающий селект -->
-                        <div class="filter-content__orderby">
-                            <div class="exp-search-orderby">
-                                <form id="search-filter-orderby" class="exp-search-orderby__row" method="get">
-                                    <button class="exp-search-orderby__button" id="search-filter-toggle" type="button">
-                                        <svg class="icon icon--filter-arrows">
-                                            <use href="./icons/symbol/sprite.svg#filter-arrows"></use>
-                                        </svg>
-                                    </button>
-                                    <label for="search-filter-select" class="screen-reader-text">Сортировать по</label>
-                                    <select class="exp-search-orderby__select" name="search-filter-select" id="search-filter-select">
-                                        <option value="popularity" selected="selected">По популярности</option>
-                                        <option value="rating">По рейтингу</option>
-                                        <option value="date">По новинкам</option>
-                                    </select>
-                                </form>
+                        <div class="filter-content__box">
+                            <!-- кнопка для мобильно й версии -->
+                            <button type="button" id="filter-open" class="filter-content__mobilebtn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.7336 2.73372V4.20039C13.7336 4.73372 13.4002 5.40039 13.0669 5.73372L10.2002 8.26706C9.80025 8.60039 9.53358 9.26706 9.53358 9.80039V12.6671C9.53358 13.0671 9.26692 13.6004 8.93358 13.8004L8.00025 14.4004C7.13358 14.9337 5.93358 14.3337 5.93358 13.2671V9.73372C5.93358 9.26706 5.66692 8.66706 5.40025 8.33372L5.08692 8.00706C4.88025 7.78706 4.84025 7.45372 5.00692 7.19372L8.42025 1.71372C8.54025 1.52039 8.75358 1.40039 8.98692 1.40039H12.4002C13.1336 1.40039 13.7336 2.00039 13.7336 2.73372Z" fill="#2F2F2F" />
+                                    <path d="M6.89994 2.42039L4.53327 6.21372C4.3066 6.58039 3.7866 6.63372 3.4866 6.32039L2.8666 5.66706C2.53327 5.33372 2.2666 4.73372 2.2666 4.33372V2.80039C2.2666 2.00039 2.8666 1.40039 3.59993 1.40039H6.33327C6.85327 1.40039 7.17327 1.97372 6.89994 2.42039Z" fill="#2F2F2F" />
+                                </svg>
+                                <span>Фильтр</span>
+                            </button>
+                            <!-- выпадающий селект -->
+                            <div class="filter-content__orderby">
+                                <div class="exp-search-orderby">
+                                    <form id="search-filter-orderby" class="exp-search-orderby__row" method="get">
+                                        <button class="exp-search-orderby__button" id="search-filter-toggle" type="button">
+                                            <svg class="icon icon--filter-arrows">
+                                                <use href="./icons/symbol/sprite.svg#filter-arrows"></use>
+                                            </svg>
+                                        </button>
+                                        <label for="search-filter-select" class="screen-reader-text">По популярности</label>
+                                        <select class="exp-search-orderby__select" name="search-filter-select" id="search-filter-select">
+                                            <option value="popular" selected="selected">По популярности</option>
+                                            <option value="new">По новизне</option>
+                                            <option value="low">Вначале дешевле</option>
+                                            <option value="up">Вначале дороже</option>
+                                        </select>
+                                    </form>
+                                </div>
                             </div>
                         </div>
 
@@ -477,58 +489,74 @@
             </div>
             <!-- 2 -->
             <div class="container filter-layout">
-                <div class="filter-layout__sidebar">
+                <div class="filter-layout__sidebar" id="mobile-sidebar">
                     <div class="filter-widget">
-                        <!-- widget header -->
-                        <div class="filter-header filter-widget__header">
-                            <button class="filter-header__btn" type="button" data-id="filter-back">
+                        <!-- widget desktop header -->
+                        <div class="filter-widget__header filter-header-xxl" id="filter-trans-header">
+                            <button class="filter-header-xxl__btn" type="button" id="filter-back">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.5415 16.6004L7.10817 11.1671C6.4665 10.5254 6.4665 9.47539 7.10817 8.83372L12.5415 3.40039" stroke="#2F2F2F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <h2 class="filter-header__title">Стальные трубы, полые профиля и фитинги</h2>
+                            <h2 class="filter-header-xxl__title">Стальные трубы, полые профиля и фитинги</h2>
+                        </div>
+
+                        <!-- widget mobile header -->
+                        <div class="filter-widget__header filter-header-md">
+                            <button class="filter-header-sm__btn" type="button" id="filter-close">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4L4 12" stroke="#171717" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M4 4L12 12" stroke="#171717" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <h2 class="filter-header-md__title">Фильтр</h2>
                         </div>
 
                         <!-- widget form -->
                         <form class="filter-form" id="filter-widget-form">
-                            <div class="filter-form__group">
-                                <input class="custom-checkbox" type="radio" name="option-1" id="filter-option-1">
-                                <label for="filter-option-1">Бесшовные трубы и пустотелые профиля</label>
-                            </div>
-                            <div class="filter-form__group">
-                                <input class="custom-checkbox" type="radio" name="option-1" id="filter-option-2">
-                                <label for="filter-option-2">Сварные трубы</label>
-                            </div>
-                            <div class="filter-form__group">
-                                <input class="custom-radio" type="radio" name="option-1" id="filter-option-3">
-                                <label for="filter-option-3">Стальные фитинги для труб, кроме литых</label>
-                            </div>
-
-                            <div class="filter-form__price">
-                                <h3 class="filter-form__subtitle">Цена</h3>
-
-                                <!-- widget range-inputs -->
-                                <div class="filter-form__rangeinputs">
-                                    <label>
-                                        <span>от </span>
-                                        <input type="number" id="filter-range-min">
-                                    </label>
-                                    <label>
-                                        <span>до </span>
-                                        <input type="number" id="filter-range-max">
-
-                                    </label>
+                            <div class="filter-form__top">
+                                <div class="filter-form__group">
+                                    <input class="custom-checkbox" type="radio" name="option-1" id="filter-option-1">
+                                    <label for="filter-option-1">Бесшовные трубы и пустотелые профиля</label>
+                                </div>
+                                <div class="filter-form__group">
+                                    <input class="custom-checkbox" type="radio" name="option-1" id="filter-option-2">
+                                    <label for="filter-option-2">Сварные трубы</label>
+                                </div>
+                                <div class="filter-form__group">
+                                    <input class="custom-radio" type="radio" name="option-1" id="filter-option-3">
+                                    <label for="filter-option-3">Стальные фитинги для труб, кроме литых</label>
                                 </div>
 
-                                <!-- widget range-slider -->
-                                <div class="filter-form__rangeslider">
-                                    <div id="filter-range-slider"></div>
+                                <div class="filter-form__price">
+                                    <h3 class="filter-form__subtitle">Цена</h3>
+
+                                    <!-- widget range-inputs -->
+                                    <div class="filter-form__rangeinputs">
+                                        <label>
+                                            <span>от </span>
+                                            <input type="number" id="filter-range-min">
+                                        </label>
+                                        <label>
+                                            <span>до </span>
+                                            <input type="number" id="filter-range-max">
+                                        </label>
+                                    </div>
+
+                                    <!-- widget range-slider -->
+                                    <div class="filter-form__rangeslider">
+                                        <div id="filter-range-slider"></div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <button type="button" data-id="filter-reset" class="btn-accent">Сбросить&nbsp;<span id="filter-reset-nums">(2)</span></button>
+                            <div class="filter-form__bottom">
+                                <button type="submit" class="btn-accent md-visible" data-id="filter-accept">Применить</button>
 
-                            <button type="submit" hidden></button>
+                                <button type="button" data-id="filter-reset" class="btn-accent btn-accent--red">
+                                    Сбросить&nbsp;<span id="filter-reset-nums">(2)</span>
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -545,9 +573,9 @@
 
                         <!-- Витрина -->
                         <div class="filter-content__vitrine">
-                            <div class="g-13 gy-31 row">
+                            <div class="g-13 g-sm-10 gy-31 row">
                                 <!-- 1 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -585,7 +613,7 @@
                                 </div>
 
                                 <!-- 2 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -620,7 +648,7 @@
                                     </a>
                                 </div>
                                 <!-- 3 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -657,7 +685,7 @@
                                     </a>
                                 </div>
                                 <!-- 4 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -692,7 +720,7 @@
                                     </a>
                                 </div>
                                 <!-- 5 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -727,7 +755,7 @@
                                     </a>
                                 </div>
                                 <!-- 6 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -764,7 +792,7 @@
                                     </a>
                                 </div>
                                 <!-- 7 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -799,7 +827,7 @@
                                     </a>
                                 </div>
                                 <!-- 8 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -837,7 +865,7 @@
                                 </div>
 
                                 <!-- 9 -->
-                                <div class="col-12 col-md-6 col-xl-4">
+                                <div class="col-6 col-md-6 col-xl-4">
                                     <a href="#" class="product-card">
                                         <!-- top -->
                                         <div class="product-card__header">
@@ -895,9 +923,6 @@
                     </div>
                 </div>
             </div>
-
-
-
 
         </main>
         <footer class="footer">

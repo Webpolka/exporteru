@@ -22,6 +22,7 @@
 
 
 <body>
+    <div class="site-overlay" id="site-overlay"></div>
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -441,11 +442,12 @@
                                                 <use href="./icons/symbol/sprite.svg#filter-arrows"></use>
                                             </svg>
                                         </button>
-                                        <label for="search-filter-select" class="screen-reader-text">Сортировать по</label>
+                                        <label for="search-filter-select" class="screen-reader-text">По популярности</label>
                                         <select class="exp-search-orderby__select" name="search-filter-select" id="search-filter-select">
-                                            <option value="popularity" selected="selected">По популярности</option>
-                                            <option value="rating">По рейтингу</option>
-                                            <option value="date">По новинкам</option>
+                                            <option value="popular" selected="selected">По популярности</option>
+                                            <option value="new">По новизне</option>
+                                            <option value="low">Вначале дешевле</option>
+                                            <option value="up">Вначале дороже</option>
                                         </select>
                                     </form>
                                 </div>

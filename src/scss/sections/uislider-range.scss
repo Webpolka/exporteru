@@ -16,8 +16,11 @@ UI range slider for filter apge
 	height: 6px; /* задаем свою высоту, если нужно */
 	border-radius: 0; /* убираем скругление */
 	outline: none; /* убираем обводку при фокусе */
-  &:before {
-    content: "";
+	@include sm {
+		height: 5px;
+	}
+	&:before {
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -25,9 +28,13 @@ UI range slider for filter apge
 		height: 6px;
 		transform: translateX(-12px);
 		background-color: #dedede;
+
+		@include sm {
+			height: 5px;
+		}
 	}
-  &:after {
-    content: "";
+	&:after {
+		content: "";
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -35,13 +42,19 @@ UI range slider for filter apge
 		height: 6px;
 		transform: translateX(12px);
 		background-color: #dedede;
+		@include sm {
+			height: 5px;
+		}
 	}
 }
 
 /* Также можно убрать стили у base, если нужно */
 .noUi-base {
 	background: transparent;
-	height: 6px; /* или нужная вам высота */	
+	height: 6px; /* или нужная вам высота */
+	@include sm {
+		height: 5px;
+	}
 }
 .noUi-handle {
 	box-shadow: none; /* убираем тень и внутренние полоски */
@@ -58,7 +71,7 @@ UI range slider for filter apge
 	width: 24px;
 	border-radius: 50%; /* круглая ручка */
 	transform: translateY(-20%);
-  background-color: #f6f6f6;
+	background-color: #f6f6f6;
 	cursor: pointer;
 }
 
