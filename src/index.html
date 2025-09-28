@@ -1,92 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-	@@include('html/components/head.html', { 'title': 'Результат поиска' })
+	@@include('html/components/head.html', { 'title': 'ЛК : Продавца' })
 
-	<style>
-		.web-list {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 10px;
-
-			padding-top: 35px;
-			padding-bottom: 35px;
-		}
-
-		.web-list a {
-			position: relative;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			text-align: center;
-
-			aspect-ratio: 1/1;
-			width: 12.5%;
-			min-width: 100px;
-
-			font-size: 14px;
-			font-weight: 700;
-			color: #2f2f2f;
-			text-transform: uppercase;
-
-			border: 1px solid rgb(0, 0, 0, 0.5);
-			background-color: rgb(0, 0, 0, 0.1);
-		}
-
-		.web-list a span {
-			position: absolute;
-			right: 7px;
-			top: 7px;
-			font-size: 12px;
-			padding: 5px;
-			background-color: gold;
-			color: red;
-		}
-		.web-list a span.hot {
-			background-color: red;
-			color: white;
-		}
-
-		.web-list a:hover {
-			background-color: rgb(0, 0, 0, 0.3);
-			color: var(--accent);
-			border: 1px solid rgb(0, 0, 255, 0.5);
-		}
-
-		.web-center {
-			width: 100%;
-			height: 30vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	</style>
-
-	<body class="front-page">
-		<div class="site-overlay" id="site-overlay"></div>
-		<div class="wrapper">
+	<body>
+		<div class="wrapper">			
 			@@include('html/sections/header.html')
-			<main class="main">
+			<main class="main account">
 				<div class="container">
-					<div class="web-list">
-						<a href="main.html">Главная</a>
-						<a href="about.html">О нас</a>
-						<a href="article.html">Статья</a>
-						<a href="product.html">Страница товара</a>
-						<a href="search-result.html">Страница результатов поиска</a>
-						<a href="contacts.html">Контакты<span>Prev</span></a>
-						<a href="catalog-in.html">Каталог: внутри категории</a>
-						<a href="catalog.html">Каталог: все категории<span>Prev</span></a>
-						<a href="catalog-in-filter.html">Каталог: фильтр внутри категории<span class="hot">New</span></a>
-						<a href="authorize-buyer.html">Авторизация: я покупатель<span class="hot">New</span></a>
-						<a href="authorize-seller.html">Авторизация: я продавец<span class="hot">New</span></a>
-						<a href="authorize-confirm.html">Авторизация: ввести код<span class="hot">New</span></a>
-						<a href="authorize-login.html">Авторизация: войти в аккаунт<span class="hot">New</span></a>
-					</div>
+					@@include('html/blocks/block-breadcrumbs-product.html')
 				</div>
+				
+				@@include('html/sections/account-seller/personal.html')			
 			</main>
 			@@include('html/sections/footer.html')
-		</div>
+	    </div>
+
 		@@include('html/components/script.html')
 	</body>
 </html>

@@ -1,0 +1,81 @@
+<label class="editable">
+	<span class="editable-text">Номер телефона</span>
+	<div class="editable-wrap">
+		<input class="editable-input" value="+7 999 123 45 67" type="phone" id="profile-phone" placeholder="Здесь пока что пусто" disabled />
+	
+		<div class="editable-close" title="Удалить" data-id="delete">
+            <svg class="icon icon--close">
+                <use href="./icons/symbol/sprite.svg#close"></use>
+            </svg>
+        </div>	
+		<div class="editable-edit" title="Редактировать" data-id="edit">
+            <svg class="icon icon--edit">
+                <use href="./icons/symbol/sprite.svg#edit"></use>
+            </svg>
+        </div>    
+		<div class="editable-plus" title="Создать" data-id="create">
+            <svg class="icon icon--plus">
+                <use href="./icons/symbol/sprite.svg#plus"></use>
+            </svg>
+
+        </div>
+	</div>
+</label>
+
+<!-- 
+<style>
+  .input-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  input[type="text"] {
+    padding-right: 50px; /* место под иконки */
+    padding-left: 10px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-pencil {
+    right: 30px;
+  }
+
+  .icon-close {
+    right: 5px;
+  }
+
+  /* Можно добавить стили для иконок, например, через встроенные изображения или SVG */
+</style>
+
+
+<script>
+  const input = document.getElementById('myInput');
+  const editIcon = document.getElementById('editIcon');
+  const clearIcon = document.getElementById('clearIcon');
+
+  // При нажатии на карандаш активируем поле для редактирования
+  editIcon.onclick = () => {
+    input.disabled = false;
+    input.focus();
+  };
+
+  // При нажатии на крестик очищаем поле и делаем его неактивным
+  clearIcon.onclick = () => {
+    input.value = '';
+    input.disabled = true;
+  };
+
+  // Можно дополнительно сделать так, чтобы при фокусе поле становилось активным
+  input.onfocus = () => {
+    input.disabled = false;
+  };
+</script> -->

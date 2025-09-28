@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Результат поиска</title>
+    <title>ЛК : Продавца</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
@@ -21,69 +21,7 @@
 </head>
 
 
-<style>
-    .web-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
-
-    .web-list a {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        text-align: center;
-
-        aspect-ratio: 1/1;
-        width: 12.5%;
-        min-width: 100px;
-
-        font-size: 14px;
-        font-weight: 700;
-        color: #2f2f2f;
-        text-transform: uppercase;
-
-        border: 1px solid rgb(0, 0, 0, 0.5);
-        background-color: rgb(0, 0, 0, 0.1);
-    }
-
-    .web-list a span {
-        position: absolute;
-        right: 7px;
-        top: 7px;
-        font-size: 12px;
-        padding: 5px;
-        background-color: gold;
-        color: red;
-    }
-
-    .web-list a span.hot {
-        background-color: red;
-        color: white;
-    }
-
-    .web-list a:hover {
-        background-color: rgb(0, 0, 0, 0.3);
-        color: var(--accent);
-        border: 1px solid rgb(0, 0, 255, 0.5);
-    }
-
-    .web-center {
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
-
-<body class="front-page">
-    <div class="site-overlay" id="site-overlay"></div>
+<body>
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -477,24 +415,235 @@
             </div>
         </header>
 
-        <main class="main">
+        <main class="account main">
             <div class="container">
-                <div class="web-list">
-                    <a href="main.html">Главная</a>
-                    <a href="about.html">О нас</a>
-                    <a href="article.html">Статья</a>
-                    <a href="product.html">Страница товара</a>
-                    <a href="search-result.html">Страница результатов поиска</a>
-                    <a href="contacts.html">Контакты<span>Prev</span></a>
-                    <a href="catalog-in.html">Каталог: внутри категории</a>
-                    <a href="catalog.html">Каталог: все категории<span>Prev</span></a>
-                    <a href="catalog-in-filter.html">Каталог: фильтр внутри категории<span class="hot">New</span></a>
-                    <a href="authorize-buyer.html">Авторизация: я покупатель<span class="hot">New</span></a>
-                    <a href="authorize-seller.html">Авторизация: я продавец<span class="hot">New</span></a>
-                    <a href="authorize-confirm.html">Авторизация: ввести код<span class="hot">New</span></a>
-                    <a href="authorize-login.html">Авторизация: войти в аккаунт<span class="hot">New</span></a>
-                </div>
+                <nav class="exp-breadcrumbs" aria-label="Breadcrumb">
+                    <ul class="exp-breadcrumbs__list">
+                        <li><a href="https://example.com/">Главная</a><span class="bread-sep">/</span></li>
+                        <li><a href="https://example.com/">Категория</a><span class="bread-sep">/</span></li>
+                        <li><a href="https://example.com/">Металлургия</a><span class="bread-sep">/</span></li>
+                        <li><span>Труба нержавеющая сварная aisi 304 / 316</span></li>
+                    </ul>
+                </nav>
+
             </div>
+
+            <section class="section-topnull">
+                <h2 class="visually-hidden">Личный кабинет</h2>
+                <div class="container">
+                    <!-- Заголовок -->
+                    <div class="section-header">
+                        <div class="section-header__title">Личный кабинет</div>
+                    </div>
+
+                    <div class="account-layout">
+                        <!-- sidebar -->
+                        <div class="account-layout__sidebar">
+                            <nav class="account-menu">
+                                <!-- list 1 -->
+                                <ul class="account-menu__list">
+                                    <!-- 1 -->
+                                    <li>
+                                        <a class="account-menu__link account-menu__link--active" href="#">
+                                            <svg class="icon icon--account-profile">
+                                                <use href="./icons/symbol/sprite.svg#account-profile"></use>
+                                            </svg>
+                                            <span>Личные данные</span>
+                                        </a>
+                                    </li>
+                                    <!-- 2 -->
+                                    <li>
+                                        <a class="account-menu__link" href="#">
+                                            <svg class="icon icon--account-favorite">
+                                                <use href="./icons/symbol/sprite.svg#account-favorite"></use>
+                                            </svg>
+                                            <span>Избранное</span>
+                                        </a>
+                                    </li>
+                                    <!-- 3 -->
+                                    <li>
+                                        <a class="account-menu__link" href="#">
+                                            <svg class="icon icon--account-search">
+                                                <use href="./icons/symbol/sprite.svg#account-search"></use>
+                                            </svg>
+                                            <span>Недавно просмотренные</span>
+                                        </a>
+                                    </li>
+                                    <!-- 4 -->
+                                    <li>
+                                        <a class="account-menu__link" href="#">
+                                            <svg class="icon icon--account-reviews">
+                                                <use href="./icons/symbol/sprite.svg#account-reviews"></use>
+                                            </svg>
+                                            <span>Мои отзывы</span>
+                                        </a>
+                                    </li>
+                                    <!-- 5 -->
+                                    <li>
+                                        <a class="account-menu__link" href="#">
+                                            <svg class="icon icon--account-sessions">
+                                                <use href="./icons/symbol/sprite.svg#account-sessions"></use>
+                                            </svg>
+                                            <span>Мои сессии</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- list 2 -->
+                                <ul class="account-menu__list">
+                                    <!-- 1 -->
+                                    <li>
+                                        <a class="account-menu__link account-menu__link--red" href="#">
+                                            <svg class="icon icon--account-trash">
+                                                <use href="./icons/symbol/sprite.svg#account-trash"></use>
+                                            </svg>
+                                            <span>Удалить аккаунт</span>
+                                        </a>
+                                    </li>
+                                    <!-- 2 -->
+                                    <li>
+                                        <a class="account-menu__link" href="#">
+                                            <svg class="icon icon--account-log">
+                                                <use href="./icons/symbol/sprite.svg#account-log"></use>
+                                            </svg>
+                                            <span>Выйти</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- content -->
+                        <div class="account-layout__content">
+                            <div class="account-tile">
+                                <!-- header -->
+                                <div class="account-tile__header">
+                                    <h2 class="account-tile__title">Личные данные</h2>
+                                    <div class="account-tile__date">
+                                        <span>Дата регистрации</span>
+                                        <span>17.08.25</span>
+                                    </div>
+                                </div>
+
+                                <form action="" id="personal-seller-form" class="account-form">
+                                    <div class="g-14 row">
+                                        <div class="col-sm-6">
+                                            <label class="editable">
+                                                <span class="editable-text">Имя пользователя</span>
+                                                <div class="editable-wrap">
+                                                    <input class="editable-input" value="" type="text" id="seller-personal-name" placeholder="User Name" disabled="disabled">
+
+                                                    <div class="editable-buttons">
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6">Select</div>
+                                        <div class="col-sm-6">
+                                            <label class="editable">
+                                                <span class="editable-text">Пароль</span>
+                                                <div class="editable-wrap">
+                                                    <input class="editable-input" value="" type="password" id="seller-personal-password" placeholder="•••••••••••••••••••" disabled="disabled">
+
+                                                    <div class="editable-buttons">
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <div role="button" data-id="show-password" class="editable-button" title="Посмотреть">
+                                                            <svg class="icon icon--account-eye">
+                                                                <use href="./icons/symbol/sprite.svg#account-eye"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="editable">
+                                                <span class="editable-text">Номер телефона</span>
+                                                <div class="editable-wrap">
+                                                    <input class="editable-input" value="+7 999 123 45 67" type="phone" id="seller-personal-phone" placeholder="+7 999 123 45 67" disabled="disabled">
+
+                                                    <div class="editable-buttons">
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="editable">
+                                                <span class="editable-text">Электронная почта</span>
+                                                <div class="editable-wrap">
+                                                    <input class="editable-input" value="+7 999 123 45 67" type="phone" id="seller-personal-email" placeholder="info@mail.ru" disabled="disabled">
+
+                                                    <div class="editable-buttons">
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <div role="button" data-id="clear-value" class="editable-button" title="Очистить">
+                                                            <svg class="icon icon--account-close">
+                                                                <use href="./icons/symbol/sprite.svg#account-close"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label class="editable" id="plus-minus">
+                                                <span class="editable-text">Плюс Минус Тест</span>
+                                                <div class="editable-wrap">
+                                                    <input class="editable-input" value="" type="text" id="seller-personal-test" placeholder="test" disabled="disabled">
+
+                                                    <div class="editable-buttons">
+                                                        <div role="button" data-id="password-value" class="editable-button" title="Посмотреть">
+                                                            <svg class="icon icon--account-eye">
+                                                                <use href="./icons/symbol/sprite.svg#account-eye"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <div role="button" data-id="clear-value" class="editable-button" title="Очистить">
+                                                            <svg class="icon icon--account-close">
+                                                                <use href="./icons/symbol/sprite.svg#account-close"></use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <div class="editable-buttons">
+                                                            <div role="button" data-id="add-value" data-state="plus" class="editable-button" title="Добавить"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
         <footer class="footer">
             <div class="container">
@@ -624,6 +773,7 @@
         </footer>
 
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>

@@ -1,0 +1,98 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+Account content
+--------------------------------------------------------------------------------------------------------------------------------*/
+.account-tile {
+	background-color: #f6f6f6;
+	padding: 30px 40px;
+	color: #2f2f2f;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 24px;
+
+		margin-bottom: 30px;
+	}
+
+	&__date {
+		display: flex;
+		flex-direction: column;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 114%;
+		opacity: 0.5;
+	}
+}
+
+.account-form {
+	margin-bottom: 60px;
+}
+
+.editable {
+	color: rgba(47, 47, 47);
+	&-text {
+		display: block;
+		font-weight: 400;
+		font-size: 14px;	
+		
+		margin-bottom: 7px;
+	}
+
+	&-wrap {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		background: var(--white);
+		padding: 10px 12px;
+	}
+	&-input {
+		background: var(--white);
+		flex-grow: 1;
+		font-weight: 400;
+		font-size: 14px;
+
+		&::placeholder {
+			opacity: 0.5;
+		}
+	}
+
+	&-buttons {
+		display: flex;
+		align-items: center;
+		gap: 9px;
+	}
+
+	&-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		height: 100%;
+		aspect-ratio: 1/1;
+
+		font-size: 20px;
+		font-weight: bold;
+
+
+		&:hover {
+			color: var(--accent);
+			svg {
+				stroke: var(--accent);				
+			}
+		}
+		svg {
+			stroke: var(--text);
+			aspect-ratio: 1/1;
+			width: 22px;
+
+			transition: 0.3s ease-in-out;
+		}
+	}
+}
