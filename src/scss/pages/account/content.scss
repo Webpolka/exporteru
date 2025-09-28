@@ -1,6 +1,13 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
-Account content
+Account content styles
 --------------------------------------------------------------------------------------------------------------------------------*/
+.account .exp-pagination {
+	padding-top: 30px;
+	margin-bottom: 0;
+}
+
+
+/*---------------------------------------------Tile ---------------------------------------------*/
 .account-tile {
 	background-color: #f6f6f6;
 	padding: 30px 40px;
@@ -30,10 +37,110 @@ Account content
 	}
 }
 
+/*--------------------------------------------- Reviewsw---------------------------------------------*/
+.account-reviews{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+}
+
+/*--------------------------------------------- Form ---------------------------------------------*/
+
 .account-form {
 	margin-bottom: 60px;
 }
 
+
+/*--------------------------------------------- Vitrine ---------------------------------------------*/
+.account-vitrine {
+	.product-card {
+		border: 1px solid rgba(47, 47, 47, 0.1);
+	}
+	.product-card__header {
+		aspect-ratio: 306/244;
+
+		@include md {
+			aspect-ratio: 155/192;
+		}
+	}
+	.product-card__body {
+		@include sm {
+			padding-inline: 10px;
+		}
+	}
+
+	.product-card__location {
+		padding-top: 3px;
+		margin-bottom: 7px;
+		vertical-align: middle;
+
+		span {
+			@include md {
+				line-height: 147%;
+			}
+		}
+	}
+	.product-card__title {
+		margin-bottom: 15px;
+		@media (max-width: 850px) {
+			font-size: 16px;
+		}
+		@include md {
+			font-size: 15px;
+		}
+		@include sm {
+			font-size: 12px;
+		}
+	}
+	.product-card__group {
+		flex-direction: column;
+		align-items: start;
+		gap: 6px;
+		@include md {
+			flex-direction: row;
+		}
+	}
+
+	.product-card__discount {
+		order: 1;
+		@include md {
+			order: 2;
+		}
+	}
+	.product-card__price {
+		order: 2;
+		@include md {
+			order: 1;
+		}
+	}
+
+	.product-card__price-old {
+		@media (max-width: 850px) {
+			font-size: 14px;
+		}
+		@include sm {
+			font-size: 12px;
+		}
+	}
+	.product-card__like {
+		order: 3;
+		@include md {
+			order: 3;
+		}
+		bottom: -1px;
+		right: 4px;
+		width: 26px;
+		@include md {
+			right: 8px;
+		}
+		&.active {
+			width: 23px;
+		}
+	}
+}
+
+/*--------------------------------------------- Editable input  ---------------------------------------------*/
 .editable {
 	color: rgba(47, 47, 47);
 	&-text {
