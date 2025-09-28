@@ -368,6 +368,10 @@ CUSTOM CHOICES SELECT
   transform: translateY(-50%) rotate(180deg);
 }
 
+.choices__input {
+  background-color: white;
+}
+
 .choices__inner {
   display: flex;
   align-items: center;
@@ -418,6 +422,76 @@ CUSTOM CHOICES SELECT
 
 .choices[data-type*=select-one]::after {
   display: none;
+}
+
+.choices__list::-webkit-scrollbar {
+  inline-size: 0.1875rem;
+  background-color: transparent;
+}
+.choices__list::-webkit-scrollbar-track {
+  box-shadow: none;
+  background: transparent;
+}
+.choices__list::-webkit-scrollbar-thumb {
+  border: none;
+  background-color: rgba(0, 71, 186, 0.55);
+  cursor: pointer;
+}
+
+.choices__list--multiple .choices__item {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 28px;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 7px;
+  margin-bottom: 5px;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+  word-break: break-all;
+  box-sizing: border-box;
+}
+
+.choices[data-type*=select-multiple] .choices__button,
+.choices[data-type*=text] .choices__button {
+  border-left: none;
+  margin: 0;
+}
+
+.choices[data-type*=select-multiple] .choices__inner,
+.choices[data-type*=text] .choices__inner {
+  cursor: pointer;
+}
+
+.choices__list--multiple .choices__item.is-highlighted {
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  filter: brightness(1.2);
+}
+
+.choices__list--multiple {
+  display: flex;
+  overflow-x: auto; /* горизонтальный скролл */
+  flex-wrap: nowrap; /* без переноса */
+  gap: 10зx; /* расстояние между тегами */
+  margin-right: 20px;
+}
+.choices__list--multiple::-webkit-scrollbar {
+  block-size: 0.0625rem;
+  background-color: transparent;
+}
+.choices__list--multiple::-webkit-scrollbar-track {
+  box-shadow: none;
+  background: transparent;
+}
+.choices__list--multiple::-webkit-scrollbar-thumb {
+  border: none;
+  background-color: rgba(0, 71, 186, 0.25);
+  cursor: pointer;
 }
 
 .desktop-vs {
@@ -2497,6 +2571,26 @@ Account content styles
 .editable-input--textarea {
   min-height: 210px;
   resize: none;
+  line-height: 133%;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(47, 47, 47, 0.5);
+}
+.editable-input--textarea:focus {
+  color: rgb(47, 47, 47);
+}
+.editable-input--textarea::-webkit-scrollbar {
+  inline-size: 0rem;
+  background-color: transparent;
+}
+.editable-input--textarea::-webkit-scrollbar-track {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  inline-size: 1px;
+}
+.editable-input--textarea::-webkit-scrollbar-thumb {
+  border: none;
+  background-color: rgba(0, 71, 186, 0.5);
 }
 .editable-input::-moz-placeholder {
   opacity: 0.5;
@@ -2508,6 +2602,14 @@ Account content styles
   display: flex;
   align-items: center;
   gap: 9px;
+}
+.editable-buttons--abs {
+  position: relative;
+}
+.editable-buttons--abs .editable-button {
+  position: absolute;
+  right: 0px;
+  top: 10px;
 }
 .editable-button {
   display: flex;
@@ -6541,6 +6643,12 @@ MEDIAQUERIES
 }
 @media (any-hover: hover){
   *::-webkit-scrollbar-thumb:hover {
+    background-color: grey;
+  }
+  .choices__list::-webkit-scrollbar-thumb:hover {
+    background-color: grey;
+  }
+  .choices__list--multiple::-webkit-scrollbar-thumb:hover {
     background-color: grey;
   }
   .exp-catalog__cat::-webkit-scrollbar-thumb:hover {
