@@ -6,7 +6,6 @@ Account content styles
 	margin-bottom: 0;
 }
 
-
 /*---------------------------------------------Tile ---------------------------------------------*/
 .account-tile {
 	background-color: #f6f6f6;
@@ -23,7 +22,12 @@ Account content styles
 		font-weight: 400;
 		font-size: 24px;
 
-		margin-bottom: 30px;
+		margin-bottom: 25px;
+
+		&--lh08 {
+			line-height: 80%;
+			font-size: 24px;
+		}
 	}
 
 	&__date {
@@ -35,14 +39,155 @@ Account content styles
 		line-height: 114%;
 		opacity: 0.5;
 	}
+
+	&__accgrid {
+		display: flex;
+		gap: 13px;
+		margin-bottom: 30px;
+
+		@include sm {
+			flex-wrap: wrap;
+		}
+
+		&--short {
+			width: 19%;
+			height: inherit;
+
+			display: flex;
+			align-items: center;
+
+			@include sm {
+				width: 100%;
+			}
+		}
+		&--long {
+			width: 81%;
+			height: inherit;
+			@include sm {
+				width: 100%;
+			}
+		}
+	}
 }
 
-/*--------------------------------------------- Reviewsw---------------------------------------------*/
-.account-reviews{
+/*--------------------------------------------- acc card ---------------------------------------------*/
+.acc-card {
+	min-height: 106px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--white);
+
+	padding: 15px;
+
+	&__part {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+
+		&:nth-child(2){
+			align-self: flex-end;
+		}
+	}
+
+	&__label {
+		svg {
+			aspect-ratio: 1/1;
+			width: 28px;
+			stroke: var(--accent);
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.07421;
+	}
+
+	&__count {
+		font-weight: 600;
+		font-size: 26px;
+		line-height: 1.15229;
+	}
+
+	&__star {
+		display: inline-flex;
+		align-items: center;
+		margin-left: -7px;
+		margin-top: -2px;
+		svg {
+			aspect-ratio: 1/1;
+			width: 24px;
+		}
+	}
+}
+
+/* ------------------------------------------------- Session --------------------------------------------*/
+.account-sessions {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
+}
 
+.session {
+	color: #2f2f2f;
+	background-color: var(--white);
+	padding: 30px 40px;
+
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+
+	@include sm {
+		padding: rem(15) rem(12);
+	}
+
+	&-group {
+		display: flex;
+		gap: 20px;
+
+		.btn-accent {
+			padding-inline: 0;
+			height: 44px;
+			aspect-ratio: 1/1;
+			justify-content: center;
+			svg {
+				stroke: white;
+				width: 24px;
+				aspect-ratio: 1/1;
+			}
+		}
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+
+		&--type {
+			padding-right: 5px;
+		}
+		&--browser {
+			padding-right: 10px;
+		}
+
+		&__name {
+			font-weight: 500;
+			font-size: 18px;
+		}
+
+		&__info {
+			font-weight: 400;
+			font-size: 16px;
+			opacity: 0.5;
+		}
+	}
+}
+/*--------------------------------------------- Reviewsw---------------------------------------------*/
+.account-reviews {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
 /*--------------------------------------------- Form ---------------------------------------------*/
@@ -50,7 +195,6 @@ Account content styles
 .account-form {
 	margin-bottom: 60px;
 }
-
 
 /*--------------------------------------------- Vitrine ---------------------------------------------*/
 .account-vitrine {
@@ -159,12 +303,21 @@ Account content styles
 		padding: 10px 12px;
 
 		min-height: 48px;
+
+		&--top{
+			align-items: start;
+		}
 	}
 	&-input {
 		background: var(--white);
 		flex-grow: 1;
 		font-weight: 400;
 		font-size: 14px;
+
+		&--textarea{
+			min-height: 210px;
+			resize: none;
+		}
 
 		&::placeholder {
 			opacity: 0.5;
@@ -175,6 +328,7 @@ Account content styles
 		display: flex;
 		align-items: center;
 		gap: 9px;
+		
 	}
 
 	&-button {

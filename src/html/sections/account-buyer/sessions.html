@@ -13,14 +13,84 @@
 			<!-- content -->
 			<div class="account-layout__content">
 				<div class="account-tile">
-					<!-- header --> 
+					<!-- header -->
 					<div class="account-tile__header">
-						<h2 class="account-tile__title">Мои сессии</h2>						
+						<h2 class="account-tile__title">Мои сессии</h2>
 					</div>
 
 					<div class="account-sessions">
-                        сессии
-                    </div>
+						<!--session 1 -->
+						<div class="account-sessions__block session">
+							<!-- широкая колонка -->
+							<div class="session-group">
+								<!-- 1 (Тип устройства)-->
+								<div class="session-item session-item--type">
+									<div class="session-item__name">Тип устройства:</div>
+									<div class="session-item__info">Компьютер</div>
+								</div>
+								<!-- 2 (Тип устройства)-->
+								<div class="session-item session-item--browser">
+									<div class="session-item__name">Браузер:</div>
+									<div class="session-item__info">Yandex</div>
+								</div>
+								<!-- 3 (Тип устройства)-->
+								<div class="session-item session-item--system">
+									<div class="session-item__name">Операционная система:</div>
+									<div class="session-item__info">Windows 10</div>
+								</div>
+								<!-- 4 (Тип устройства)-->
+								<div class="session-item session-item--last">
+									<div class="session-item__name">Последний вход:</div>
+									<div class="session-item__info">29.08.25</div>
+								</div>
+							</div>
+							<!-- колонка с кнопкой -->
+							<div class="session-group">
+								<button type="button" data-id="" class="btn-accent session-removebtn">
+									<svg class="icon icon--account-close">
+										<use href="./icons/symbol/sprite.svg#account-close"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+
+						<!--session 2 -->
+						<div class="account-sessions__block session">
+							<!-- широкая колонка -->
+							<div class="session-group">
+								<!-- 1 (Тип устройства)-->
+								<div class="session-item session-item--type">
+									<div class="session-item__name">Тип устройства:</div>
+									<div class="session-item__info">Компьютер</div>
+								</div>
+								<!-- 2 (Тип устройства)-->
+								<div class="session-item session-item--browser">
+									<div class="session-item__name">Браузер:</div>
+									<div class="session-item__info">Yandex</div>
+								</div>
+								<!-- 3 (Тип устройства)-->
+								<div class="session-item session-item--system">
+									<div class="session-item__name">Операционная система:</div>
+									<div class="session-item__info">Windows 10</div>
+								</div>
+								<!-- 4 (Тип устройства)-->
+								<div class="session-item session-item--last">
+									<div class="session-item__name">Последний вход:</div>
+									<div class="session-item__info">29.08.25</div>
+								</div>
+							</div>
+							<!-- колонка с кнопкой -->
+							<div class="session-group">
+								<button type="button" data-id="" class="btn-accent session-removebtn">
+									<svg class="icon icon--account-close">
+										<use href="./icons/symbol/sprite.svg#account-close"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					@@include('../../blocks/block-pagination.html')
 				</div>
 			</div>
 		</div>

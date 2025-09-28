@@ -13,8 +13,215 @@
 			<!-- content -->
 			<div class="account-layout__content">
 				<div class="account-tile">
-					
-					Личные данные
+					<!-- acc 4 cards -->
+					<div class="account-tile__accgrid">
+						<div class="account-tile__accgrid--short">
+							<div class="account-tile__title--lh08">Личные данные</div>
+						</div>
+						<div class="account-tile__accgrid--long">
+							<div class="row g-13">
+								<!-- acc-card 1-->
+								<div class="col-sm-4">
+									<div class="acc-card">
+										<!--part 1 -->
+										<div class="acc-card__part">
+											<span class="acc-card__label">
+												<svg class="icon icon--account-eye">
+													<use href="./icons/symbol/sprite.svg#account-eye"></use>
+												</svg>
+											</span>
+											<h3 class="acc-card__title">Просмотры аккаунта за месяц</h3>
+										</div>
+										<!--part 2 -->
+										<div class="acc-card__part">
+											<span class="acc-card__count">1 234</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- acc-card 2-->
+								<div class="col-sm-4">
+									<div class="acc-card">
+										<!--part 1 -->
+										<div class="acc-card__part">
+											<span class="acc-card__label">
+												<svg class="icon icon--account-reviews">
+													<use href="./icons/symbol/sprite.svg#account-reviews"></use>
+												</svg>
+											</span>
+											<h3 class="acc-card__title">Отзывы</h3>
+										</div>
+										<!--part 2 -->
+										<div class="acc-card__part">
+											<span class="acc-card__count">1 234</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- acc-card 3-->
+								<div class="col-sm-4">
+									<div class="acc-card">
+										<!--part 1 -->
+										<div class="acc-card__part">
+											<span class="acc-card__label">
+												<svg class="icon icon--rating">
+													<use href="./icons/symbol/sprite.svg#rating"></use>
+												</svg>
+											</span>
+											<h3 class="acc-card__title">Рейтинг</h3>
+										</div>
+										<!--part 2 -->
+										<div class="acc-card__part">
+											<span class="acc-card__count">4</span>
+											<!-- star -->
+											<span class="acc-card__star">
+												<svg class="icon icon--star-edge">
+													<use href="./icons/symbol/sprite.svg#star-edge"></use>
+												</svg>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- form -->
+					<form action="" id="seller-personal-form" class="account-form">
+						<div class="row g-14">
+							<!-- 1 -->
+							<div class="col-sm-6">
+								<label class="editable">
+									<span class="editable-text">Название компании</span>
+									<div class="editable-wrap">
+										<input
+											class="editable-input"
+											value="ООО “КАРБО”"
+											type="text"
+											id="seller-personal-company"
+											placeholder="Введите название компании"
+											disabled
+										/>
+
+										<div class="editable-buttons">
+											<div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+												<svg class="icon icon--account-edit">
+													<use href="./icons/symbol/sprite.svg#account-edit"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="choices-select-group">
+									<label for="seller-personal-country">Страна/Регион</label>
+									<select id="seller-personal-country" name="seller-personal-country" required></select>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<label class="editable">
+									<span class="editable-text">Пароль</span>
+									<div class="editable-wrap">
+										<input
+											class="editable-input"
+											value="8939284627429837482"
+											type="password"
+											id="seller-personal-password"
+											placeholder="•••••••••••••••••••"
+											disabled
+										/>
+
+										<div class="editable-buttons">
+											<div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+												<svg class="icon icon--account-edit">
+													<use href="./icons/symbol/sprite.svg#account-edit"></use>
+												</svg>
+											</div>
+
+											<div role="button" data-id="password-value" class="editable-button" title="Посмотреть">
+												<svg class="icon icon--account-eye">
+													<use href="./icons/symbol/sprite.svg#account-eye"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="choices-select-group">
+									<label for="seller-personal-categories">Категории товаров</label>
+									<select id="seller-personal-categories" name="seller-personal-categories" required></select>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<label class="editable">
+									<span class="editable-text">Описание</span>
+									<div class="editable-wrap editable-wrap--top">
+										<textarea
+											class="editable-input editable-input--textarea"
+											id="seller-personal-description"
+											placeholder="Введите некоторое описание о вашей компании"
+											disabled
+										></textarea>
+
+										<div class="editable-buttons">
+											<div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+												<svg class="icon icon--account-edit">
+													<use href="./icons/symbol/sprite.svg#account-edit"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+
+							<div class="col-12">
+								<!-- Нужно писать скрипт для вывода и обработки изображений загрузки -->
+								<div class="mediaload">
+									<label class="media-label" for="seller-personal-media">Фото</label>
+									<input type="file" id="seller-personal-media" multiple accept="image/jpeg, image/png" hidden />
+
+									<div class="mediaload-preview">
+										<!-- 1 -->
+										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
+											<svg class="icon icon--account-plus">
+												<use href="./icons/symbol/sprite.svg#account-plus"></use>
+											</svg>
+										</button>
+										<!-- 2 -->
+										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
+											<svg class="icon icon--account-plus">
+												<use href="./icons/symbol/sprite.svg#account-plus"></use>
+											</svg>
+										</button>
+										<!-- 3 -->
+										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
+											<svg class="icon icon--account-plus">
+												<use href="./icons/symbol/sprite.svg#account-plus"></use>
+											</svg>
+										</button>
+										<!-- 4 -->
+										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
+											<svg class="icon icon--account-plus">
+												<use href="./icons/symbol/sprite.svg#account-plus"></use>
+											</svg>
+										</button>
+										<!-- 5 -->
+										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
+											<svg class="icon icon--account-plus">
+												<use href="./icons/symbol/sprite.svg#account-plus"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

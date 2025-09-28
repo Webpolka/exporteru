@@ -1003,6 +1003,55 @@ COMPONENTS
   display: none;
 }
 
+/*------------------------------------------------------- Media Load ----------------------------------------------------*/
+.mediaload {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.mediaload-preview {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.mediaload-button {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 159/114;
+  background-color: var(--white);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+.mediaload-button:hover {
+  border: 1px solid rgba(47, 47, 247, 0.5);
+}
+.mediaload-button:hover svg {
+  stroke: var(--accent);
+}
+.mediaload-button svg {
+  transition: all 0.3s ease-in-out;
+  stroke: var(--text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 57px;
+  aspect-ratio: 1/1;
+  z-index: 2;
+}
+.mediaload-button img {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------
 EDITABLE INPUT
 --------------------------------------------------------------------------------------------------------------------------------*/
@@ -1274,6 +1323,16 @@ expirience form
 .g-9,
 .gx-9 {
   --bs-gutter-x: 9px;
+}
+
+.g-10,
+.gy-10 {
+  --bs-gutter-y: 10px;
+}
+
+.g-10,
+.gx-10 {
+  --bs-gutter-x: 10px;
 }
 
 .g-11,
@@ -2236,7 +2295,11 @@ Account content styles
 .account-tile__title {
   font-weight: 400;
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+.account-tile__title--lh08 {
+  line-height: 80%;
+  font-size: 24px;
 }
 .account-tile__date {
   display: flex;
@@ -2244,6 +2307,115 @@ Account content styles
   font-weight: 400;
   font-size: 14px;
   line-height: 114%;
+  opacity: 0.5;
+}
+.account-tile__accgrid {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 30px;
+}
+.account-tile__accgrid--short {
+  width: 19%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.account-tile__accgrid--long {
+  width: 81%;
+  height: inherit;
+}
+
+/*--------------------------------------------- acc card ---------------------------------------------*/
+.acc-card {
+  min-height: 106px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--white);
+  padding: 15px;
+}
+.acc-card__part {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.acc-card__part:nth-child(2) {
+  align-self: flex-end;
+}
+.acc-card__label svg {
+  aspect-ratio: 1/1;
+  width: 28px;
+  stroke: var(--accent);
+}
+.acc-card__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.07421;
+}
+.acc-card__count {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.15229;
+}
+.acc-card__star {
+  display: inline-flex;
+  align-items: center;
+  margin-left: -7px;
+  margin-top: -2px;
+}
+.acc-card__star svg {
+  aspect-ratio: 1/1;
+  width: 24px;
+}
+
+/* ------------------------------------------------- Session --------------------------------------------*/
+.account-sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.session {
+  color: #2f2f2f;
+  background-color: var(--white);
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.session-group {
+  display: flex;
+  gap: 20px;
+}
+.session-group .btn-accent {
+  padding-inline: 0;
+  height: 44px;
+  aspect-ratio: 1/1;
+  justify-content: center;
+}
+.session-group .btn-accent svg {
+  stroke: white;
+  width: 24px;
+  aspect-ratio: 1/1;
+}
+.session-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.session-item--type {
+  padding-right: 5px;
+}
+.session-item--browser {
+  padding-right: 10px;
+}
+.session-item__name {
+  font-weight: 500;
+  font-size: 18px;
+}
+.session-item__info {
+  font-weight: 400;
+  font-size: 16px;
   opacity: 0.5;
 }
 
@@ -2313,11 +2485,18 @@ Account content styles
   padding: 10px 12px;
   min-height: 48px;
 }
+.editable-wrap--top {
+  align-items: start;
+}
 .editable-input {
   background: var(--white);
   flex-grow: 1;
   font-weight: 400;
   font-size: 14px;
+}
+.editable-input--textarea {
+  min-height: 210px;
+  resize: none;
 }
 .editable-input::-moz-placeholder {
   opacity: 0.5;
@@ -5657,6 +5836,18 @@ MEDIAQUERIES
     font-size: 24px;
     margin-top: -8px;
     margin-bottom: 25px;
+  }
+  .account-tile__accgrid {
+    flex-wrap: wrap;
+  }
+  .account-tile__accgrid--short {
+    width: 100%;
+  }
+  .account-tile__accgrid--long {
+    width: 100%;
+  }
+  .session {
+    padding: 0.9375rem 0.75rem;
   }
   .account-vitrine .product-card__body {
     padding-inline: 10px;
