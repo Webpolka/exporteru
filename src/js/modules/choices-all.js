@@ -24,18 +24,30 @@ CHOICES AUTHORIZE SELLER
 --------------------------------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
 	const authorizeSelect = document.querySelector("#authorize-seller-countries");
+	const buyerPesonalCountry = document.querySelector("#buyer-personal-counrty");
+
+	const countryList = [
+		{ value: "ru", label: "Россия" },
+		{ value: "kz", label: "Казахстан" },
+		{ value: "cn", label: "Китай" },
+		{ value: "by", label: "Беларусь" },
+	];
 
 	if (authorizeSelect) {
-		const choices = new Choices("#authorize-seller-countries", {
+		const choices = new Choices(authorizeSelect, {
 			searchEnabled: false,
 			itemSelectText: "",
 			removeItemButton: false,
-			choices: [
-				{ value: "ru", label: "Россия" },
-				{ value: "kz", label: "Казахстан" },
-				{ value: "cn", label: "Китай" },
-				{ value: "by", label: "Беларусь" },
-			],
+			choices: countryList,
+		});
+	}
+
+	if (buyerPesonalCountry) {
+		const choices = new Choices(buyerPesonalCountry, {
+			searchEnabled: false,
+			itemSelectText: "",
+			removeItemButton: false,
+			choices: countryList,
 		});
 	}
 });

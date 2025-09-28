@@ -1,6 +1,18 @@
 export default class EditableInput {
 	constructor(editable) {
-		this.container = document.querySelector(editable);
+		if (editable instanceof Element) {
+			this.container = editable;
+		} else if (typeof editable === "string") {			
+			const foundElement = document.querySelector(editable);
+			if (foundElement) {
+				this.container = foundElement;
+			} else {
+				throw new Error(`Элемент по селектору "${editable}" не найден`);
+			}
+		} else {
+			throw new Error("Передан некорректный аргумент. Ожидается DOM-элемент или селектор.");
+		}
+
 		this.input = this.container.querySelector(".editable-input");
 		this.plusButton = this.container.querySelector('.editable-button[data-id="add-value"]');
 		this.editButton = this.container.querySelector('.editable-button[data-id="edit-value"]');
@@ -23,10 +35,10 @@ export default class EditableInput {
 			this.clearButton.addEventListener("click", () => this.clearInput());
 		}
 		// Обработка изменения инпута
-		this.input.addEventListener("input", () => this.updatePlusMinusButton());
+		this.plusButton && this.input.addEventListener("input", () => this.updatePlusMinusButton());
 
 		// Обработка клика вне контейнера
-		document.addEventListener("click", (e) => {
+		this.plusButton && document.addEventListener("click", (e) => {
 			if (!this.container.contains(e.target)) {
 				this.setPlus(this.plusButton);
 				this.input.disabled = true;
@@ -53,7 +65,7 @@ export default class EditableInput {
 
 	clearInput() {
 		this.input.value = "";
-		this.updatePlusMinusButton();
+		this.plusButton && this.updatePlusMinusButton();
 	}
 
 	handlePlusMinus() {

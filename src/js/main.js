@@ -46,11 +46,6 @@ Auto scale
 -----------------------------------------------------------------------------------------------------------------------------------------------------*/
 // import "./modules/auto-scale.js";
 
-/* -------------------------------------------------------------------------------------------------------------------------------------------------
-UISLIDER aside filter range slider (здесь же скрипт для обнуления полей при ресете)
------------------------------------------------------------------------------------------------------------------------------------------------------*/
-import "./sections/catalog-aside-filter.js";
-
 /*--------------------------------------------------------------------------------------------------------------
 DATA-CATEGORIES LISTENER Dropodown menu BIG
 ----------------------------------------------------------------------------------------------------------------*/
@@ -87,7 +82,6 @@ Fancybox.bind("[data-fancybox]", {
 STAR RATING
 -----------------------------------------------------------------------------------------------------------------------------*/
 import StarRating from "./modules/rating-stars.js";
-
 document.addEventListener("DOMContentLoaded", () => {
 	const expirienceRating = document.querySelector(".expirience-form__rating");
 	expirienceRating &&
@@ -97,8 +91,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 });
 
+/* -------------------------------------------------------------------------------------------------------------------------------------------------
+CATALOG FILTER - noUislider и обработчик мобильной версии фильтра (также скрипт для обнуления полей при ресете)
+-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+import "./sections/catalog-aside-filter.js";
 /* --------------------------------------------------------------------------------------------------------------------------
-FILTER PAGE BUTTONS SlIDER
+CATALOG FILTER - карусель кнопок 
 -----------------------------------------------------------------------------------------------------------------------------*/
 import "./sections/catalog-buttons-slider.js";
 
@@ -108,40 +106,10 @@ SWIPER AUTHORIZE
 import "./sections/authorize-slider.js";
 
 /* --------------------------------------------------------------------------------------------------------------------------
-FILTER CATALOG MOBILE BUTTON
------------------------------------------------------------------------------------------------------------------------------*/
-
-document.addEventListener("DOMContentLoaded", () => {
-	const mobileBtn = document.getElementById("filter-open");
-	const mobileClose = document.getElementById("filter-close");
-	const mobileSidebar = document.getElementById("mobile-sidebar");
-	const topSearchOrderBy = document.getElementById("filter-trans-place");
-	const overlay = document.getElementById("site-overlay");
-
-	if (mobileBtn && mobileClose) {
-		mobileBtn.onclick = () => {
-			mobileSidebar.classList.add("show");
-			overlay.classList.add("active");
-			topInit();
-		};
-		mobileClose.onclick = () => {
-			mobileSidebar.classList.remove("show");
-			overlay.classList.remove("active");
-		};
-
-		window.onchange = topInit;
-		window.onresize = topInit;
-
-		function topInit() {
-			const topBlockHeight = topSearchOrderBy.offsetHeight;
-			mobileSidebar.style.top = -topBlockHeight + "px";
-		}
-	}
-});
-
-/* --------------------------------------------------------------------------------------------------------------------------
 Editable inputs listener
 -----------------------------------------------------------------------------------------------------------------------------*/
 import EditableInput from "./modules/editable-input.js";
-
-const myForm = new EditableInput("#plus-minus");
+const allEditableInputs = document.querySelectorAll(".editable");
+allEditableInputs.forEach((input) => {
+	new EditableInput(input);
+});

@@ -2151,6 +2151,7 @@ Account content
   width: 100%;
   background: var(--white);
   padding: 10px 12px;
+  min-height: 48px;
 }
 .editable-input {
   background: var(--white);
@@ -2192,6 +2193,54 @@ Account content
   transition: 0.3s ease-in-out;
 }
 
+/* --------------------------------------------------------------- Choices select group --------------------------------------------------------------------*/
+.choices-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  /* -------------------------------------------------------- Choices custom ------------------------------------------------------*/
+}
+.choices-select-group label {
+  font-weight: 400;
+  font-size: 14px;
+}
+.choices-select-group .group-hint {
+  font-weight: 400;
+  font-size: 14px;
+  color: #2f2f2f;
+  padding-top: 10px;
+  margin-bottom: -5px;
+}
+.choices-select-group .choices {
+  color: rgba(47, 47, 47, 0.5);
+  background-color: #fff;
+  min-height: 48px;
+}
+.choices-select-group .choices:before {
+  right: 10px;
+  opacity: 0.5;
+}
+.choices-select-group .choices__inner {
+  border: 1px solid transparent !important;
+  padding-inline: 10px;
+}
+.choices-select-group .choices__list--dropdown,
+.choices-select-group .choices__list[aria-expanded] {
+  left: 0;
+}
+.choices-select-group .choices__list--dropdown .choices__item,
+.choices-select-group .choices__list[aria-expanded] .choices__item {
+  font-weight: 400;
+  font-size: 14px !important;
+  padding-inline: 15px;
+  min-height: 47px;
+  display: flex;
+  align-items: center;
+}
+.choices-select-group .choices::before {
+  right: 15px; /* позиция справа */
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------
 Account sidebar
 --------------------------------------------------------------------------------------------------------------------------------*/
@@ -2221,6 +2270,9 @@ Account sidebar
   stroke: #939393;
   transition: all 0.15s ease-in-out;
 }
+.account-menu__link svg.icon--account-faq {
+  height: 23px;
+}
 .account-menu__link span {
   font-weight: 400;
   font-size: 16px;
@@ -2244,6 +2296,51 @@ Account sidebar
 .account-menu__link--active svg,
 .account-menu__link .active svg {
   stroke: var(--accent) !important;
+}
+
+.account-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.account-avatar__image {
+  width: 65px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.account-avatar__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.account-avatar__edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(47, 47, 47, 0.5);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 15px;
+}
+.account-avatar__edit:hover {
+  color: var(--text);
+}
+.account-avatar__edit:hover svg {
+  stroke: var(--text);
+}
+.account-avatar__edit svg {
+  width: 18px;
+  aspect-ratio: 1/1;
+  stroke: #939393;
+  transition: all 0.3s ease-in-out;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -5349,6 +5446,18 @@ MEDIAQUERIES
     font-size: 24px;
     margin-top: -8px;
     margin-bottom: 25px;
+  }
+  .choices-select-group {
+    gap: 4px;
+  }
+  .choices-select-group label {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .choices-select-group .group-hint {
+    font-size: 10px;
+    padding-top: 0;
+    margin-bottom: 5px;
   }
   .article-banner__wrap {
     min-height: 163px;

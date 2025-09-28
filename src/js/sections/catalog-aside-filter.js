@@ -1,7 +1,37 @@
 /* -------------------------------------------------------------------------------------------------------------------------------------------------
-UISLIDER filter range  slider
+Catalog aside Filter script
 -----------------------------------------------------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
+	/* -------------------------------------- mobile show button filter --------------------------------------------------- */
+
+	const mobileBtn = document.getElementById("filter-open");
+	const mobileClose = document.getElementById("filter-close");
+	const mobileSidebar = document.getElementById("mobile-sidebar");
+	const topSearchOrderBy = document.getElementById("filter-trans-place");
+	const overlay = document.getElementById("site-overlay");
+
+	if (mobileBtn && mobileClose) {
+		mobileBtn.onclick = () => {
+			mobileSidebar.classList.add("show");
+			overlay.classList.add("active");
+			topInit();
+		};
+		mobileClose.onclick = () => {
+			mobileSidebar.classList.remove("show");
+			overlay.classList.remove("active");
+		};
+
+		window.onchange = topInit;
+		window.onresize = topInit;
+
+		function topInit() {
+			const topBlockHeight = topSearchOrderBy.offsetHeight;
+			mobileSidebar.style.top = -topBlockHeight + "px";
+		}
+	}
+
+	/*---------------------- UISLIDER filter range  slider ---------------------------------*/
+
 	var slider = document.getElementById("filter-range-slider");
 
 	if (slider) {

@@ -21,13 +21,16 @@ Account sidebar
 		gap: 10px;
 
 		color: rgba(47, 47, 47, 0.5);
-        transition: all 0.15s ease-in-out;
+		transition: all 0.15s ease-in-out;
 		svg {
 			fill: transparent;
 			width: 24px;
 			aspect-ratio: 1/1;
 			stroke: #939393;
-            transition: all 0.15s ease-in-out;
+			transition: all 0.15s ease-in-out;
+		}
+		svg.icon--account-faq {
+			height: 23px;
 		}
 
 		span {
@@ -42,7 +45,7 @@ Account sidebar
 			}
 		}
 
-        &:hover {
+		&:hover {
 			color: var(--gray);
 			svg {
 				stroke: var(--gray);
@@ -55,6 +58,59 @@ Account sidebar
 			svg {
 				stroke: var(--accent) !important;
 			}
+		}
+	}
+}
+.account-avatar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+
+	&__image {
+		width: 65px;
+		aspect-ratio: 1/1;
+		overflow: hidden;
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+
+	&__edit {
+		display: inline-flex;
+		align-items: center;
+		gap: 9px;
+
+		font-weight: 400;
+		font-size: 14px;
+		color: rgba(47, 47, 47, 0.5);
+
+		transition: all 0.3s ease-in-out;
+
+		margin-bottom: 15px;
+
+		&:hover {
+			color: var(--text);
+			svg {
+				stroke: var(--text);
+			}
+		}
+
+		svg {
+			width: 18px;
+			aspect-ratio: 1/1;
+			stroke: #939393;
+
+			transition: all 0.3s ease-in-out;
 		}
 	}
 }
