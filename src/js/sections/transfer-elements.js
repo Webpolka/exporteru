@@ -61,6 +61,20 @@ if (popularProdGroup && popularProdGroupPlace) {
     });
 }
 
+const myproductsProdGroup = document.getElementById("myproducts-navig-group");
+const myproductsProdGroupPlace = document.getElementById("myproducts-sm-place");
+
+if (myproductsProdGroup && myproductsProdGroupPlace) {
+    new TransferElements({
+        sourceElement: myproductsProdGroup,
+        breakpoints: {
+            768: {
+                targetElement: myproductsProdGroupPlace,
+            },
+        },
+    });
+}
+
 const filterTransHeader = document.getElementById("filter-trans-header");
 const filterTransPlace = document.getElementById("filter-trans-place");
 
@@ -75,3 +89,17 @@ if (filterTransHeader && filterTransPlace) {
     });
 }
 
+
+const similarArrows = document.getElementById("similar-arrows");
+const similarArrowsPlace = document.getElementById("similar-sm-place");
+
+if (similarArrows && similarArrowsPlace) {
+    new TransferElements({
+        sourceElement: similarArrows,
+        breakpoints: {
+            768: {
+                targetElement: similarArrowsPlace,             
+            },
+        },
+    });
+}

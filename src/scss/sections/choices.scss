@@ -1,7 +1,6 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
-CUSTOM CHOICES SELECT
+CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 --------------------------------------------------------------------------------------------------------------------------------*/
-
 /* Добавляем стрелку через псевдоэлемент */
 .choices {
 	position: relative;
@@ -29,6 +28,25 @@ CUSTOM CHOICES SELECT
 		height: rem(10);
 	}
 }
+
+// ---- на странице СОЗДАТЬ ТОВАР
+.beforeplus {
+	.choices::before {
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNiAxMkgxOCIgc3Ryb2tlPSIjMkYyRjJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgogIDxwYXRoIGQ9Ik0xMiAxOFY2IiBzdHJva2U9IiMyRjJGMkYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIC8+Cjwvc3ZnPg==");
+		width: rem(24);
+		height: rem(24);
+		opacity: 1 !important;
+		transition: all 0.3s ease-in-out;
+	}
+	.choices__list--multiple{
+		margin-right: 35px;
+	}
+	.choices__input.choices__input--cloned{
+		margin-left: -35px;
+	}
+}
+// ----- 
+
 .choices.is-open::before {
 	transform: translateY(-50%) rotate(180deg);
 }
@@ -161,7 +179,7 @@ CUSTOM CHOICES SELECT
 .choices[data-type*="text"] .choices__inner {
 	cursor: pointer;
 }
-.choices__list--multiple .choices__item.is-highlighted{
+.choices__list--multiple .choices__item.is-highlighted {
 	background-color: var(--accent);
 	border: 1px solid var(--accent);
 	filter: brightness(1.2);

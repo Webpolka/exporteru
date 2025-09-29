@@ -538,8 +538,408 @@
                         <!-- content -->
                         <div class="account-layout__content">
                             <div class="account-tile">
+                                <!-- header -->
+                                <div class="account-tile__header">
+                                    <h2 class="account-tile__title">Создать товар</h2>
+                                </div>
 
-                                Создать товар
+                                <form action="" id="seller-create-form" class="account-form">
+                                    <div class="row gy-20 gx-14">
+                                        <div class="col-sm-6">
+                                            <label class="editable">
+                                                <span class="editable-text">Название товара</span>
+                                                <div class="editable-wrap">
+                                                    <input class="editable-input" value="Как осуществляется доставка?" type="text" name="seller-create-name" placeholder="Введите название товара" disabled="disabled">
+
+                                                    <div class="editable-buttons">
+                                                        <!-- Кнопка удалить -->
+                                                        <div role="button" data-id="clear-value" class="editable-button" title="Удалить">
+                                                            <svg class="icon icon--account-close">
+                                                                <use href="./icons/symbol/sprite.svg#account-close"></use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <!-- Кнопка редактировать -->
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="beforeplus choices-select-group">
+                                                <label for="seller-create-category">Категории товара</label>
+                                                <select id="seller-create-category" name="seller-create-category" multiple="multiple" required></select>
+                                            </div>
+                                        </div>
+
+                                        <!-- 5 в ряд -->
+                                        <div class="col-12">
+                                            <div class="row gx-13">
+                                                <!-- 1 -->
+                                                <div class="custom-col-5">
+                                                    <label class="editable">
+                                                        <span class="editable-text">Кол-во единиц</span>
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="number" name="seller-create-nums" placeholder="Кол-во">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div class="custom-col-5">
+                                                    <label class="editable">
+                                                        <span class="editable-text">Цена без скидки</span>
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="number" name="seller-create-price" placeholder="Цена без скидки">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- 3 -->
+                                                <div class="custom-col-5">
+                                                    <label class="editable">
+                                                        <span class="editable-text">Цена со скидкой</span>
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="number" name="seller-create-discount-price" placeholder="Цена со скидкой">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div class="custom-col-5">
+                                                    <label class="editable">
+                                                        <span class="editable-text">Валюта</span>
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="text" name="seller-create-currency" placeholder="Валюта">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- 5 -->
+                                                <div class="custom-col-5">
+                                                    <label class="editable">
+                                                        <span class="editable-text">Единица измерения</span>
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="text" name="seller-create-unit" placeholder="Единица измерения">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Заголовок с кнопкой размножения "Описание и характеристика" -->
+                                    <div class="editable-group">
+                                        <span class="editable-text">Таблица описания и характеристик</span>
+                                        <button type="button" data-id="editable-repeater" class="editable-button">
+                                            <svg class="icon icon--account-plus">
+                                                <use href="./icons/symbol/sprite.svg#account-plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <!--Первый блок для размножения "Описание и характеристика"-->
+                                    <div class="row editable-repeater-block" id="repeater-block">
+                                        <div class="col-sm-6">
+                                            <div class="editable editable-wrap">
+                                                <input class="editable-input" value="" type="text" name="seller-create-list-name[]" placeholder="Название" disabled="disabled">
+
+                                                <div class="editable-buttons">
+                                                    <!-- Кнопка удалить -->
+                                                    <div role="button" data-id="clear-value" class="editable-button" title="Удалить">
+                                                        <svg class="icon icon--account-close">
+                                                            <use href="./icons/symbol/sprite.svg#account-close"></use>
+                                                        </svg>
+                                                    </div>
+
+                                                    <!-- Кнопка редактировать -->
+                                                    <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <svg class="icon icon--account-edit">
+                                                            <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="editable editable-wrap">
+                                                <input class="editable-input" value="" type="text" name="seller-create-list-property[]" placeholder="Характеристика" disabled="disabled">
+
+                                                <div class="editable-buttons">
+                                                    <!-- Кнопка удалить -->
+                                                    <div role="button" data-id="clear-value" class="editable-button" title="Удалить">
+                                                        <svg class="icon icon--account-close">
+                                                            <use href="./icons/symbol/sprite.svg#account-close"></use>
+                                                        </svg>
+                                                    </div>
+
+                                                    <!-- Кнопка редактировать -->
+                                                    <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <svg class="icon icon--account-edit">
+                                                            <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gy-20 gx-14">
+                                        <div class="col-12">
+                                            <label class="editable">
+                                                <span class="editable-text">Описание</span>
+                                                <div class="editable-wrap editable-wrap--top">
+                                                    <textarea class="editable-input editable-input--textarea" name="seller-create-description" placeholder="Опишите товар" disabled="disabled"></textarea>
+
+                                                    <div class="editable-buttons">
+                                                        <!-- Кнопка редактировать -->
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="editable">
+                                                <span class="editable-text">До окончания акции</span>
+                                                <div class="editable-wrap">
+                                                    <input class="editable-input" value="" type="text" name="seller-create-days" placeholder="Дни до конца акции" disabled="disabled">
+
+                                                    <div class="editable-buttons">
+                                                        <!-- Кнопка удалить -->
+                                                        <div role="button" data-id="clear-value" class="editable-button" title="Удалить">
+                                                            <svg class="icon icon--account-close">
+                                                                <use href="./icons/symbol/sprite.svg#account-close"></use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <!-- Кнопка редактировать -->
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="editable">
+                                                <span class="editable-text">Максимальный объем заказа</span>
+                                                <div class="editable-wrap">
+                                                    <input class="editable-input" value="" type="text" name="seller-create-max" placeholder="Макс. объем" disabled="disabled">
+
+                                                    <div class="editable-buttons">
+                                                        <!-- Кнопка удалить -->
+                                                        <div role="button" data-id="clear-value" class="editable-button" title="Удалить">
+                                                            <svg class="icon icon--account-close">
+                                                                <use href="./icons/symbol/sprite.svg#account-close"></use>
+                                                            </svg>
+                                                        </div>
+
+                                                        <!-- Кнопка редактировать -->
+                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                            <svg class="icon icon--account-edit">
+                                                                <use href="./icons/symbol/sprite.svg#account-edit"></use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gx-13">
+                                        <!-- 1 половина -->
+                                        <div class="col-sm-6">
+                                            <!-- Заголовок группы -->
+                                            <div class="editable-group">
+                                                <span class="editable-text">Информация о доставке</span>
+                                            </div>
+
+                                            <div class="row gy-20 gx-14">
+                                                <!-- 1 -->
+                                                <div class="col-sm-6">
+                                                    <label class="editable">
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="text" name="seller-create-delivery-name" placeholder="Название">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div class="col-sm-6">
+                                                    <label class="editable">
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="text" name="seller-create-delivery-deadlines" placeholder="Сроки">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 2 половина -->
+                                        <div class="col-sm-6">
+                                            <!-- Заголовок группы -->
+                                            <div class="editable-group">
+                                                <span class="editable-text">Варианты упаковки</span>
+                                            </div>
+
+                                            <div class="row gy-20 gx-14">
+                                                <!-- 1 -->
+                                                <div class="col-sm-6">
+                                                    <label class="editable">
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="text" name="seller-create-packaging-name" placeholder="Упаковка">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div class="col-sm-6">
+                                                    <label class="editable">
+                                                        <div class="editable-wrap">
+                                                            <input class="editable-input" value="" type="text" name="seller-create-packaging-price" placeholder="Цена">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Заголовок группы -->
+                                    <div class="editable-group">
+                                        <span class="editable-text">Изображение товара</span>
+                                    </div>
+
+                                    <div class="row gy-20 gx-12 gy-sm-30 upload-gallery">
+                                        <!-- Big -->
+                                        <div class="col-sm-6">
+                                            <div class="up-item upload-gallery__image">
+                                                <!-- <img src="./images/main/main-10-bg.png" alt="" /> -->
+                                            </div>
+                                        </div>
+                                        <!-- Container with small -->
+                                        <div class="col-sm-6">
+                                            <div class="upload-gallery__thumbnails">
+                                                <!-- 1 -->
+                                                <div class="upload-gallery__col">
+                                                    <div class="up-item upload-gallery__thumb up-access">
+                                                        <!-- <img src="./images/product-page/gallery-child-1.png" alt="" /> -->
+                                                    </div>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div class="upload-gallery__col">
+                                                    <div class="up-item upload-gallery__thumb">
+                                                        <!-- <img src="./images/product-page/gallery-child-2.png" alt="" /> -->
+                                                    </div>
+                                                </div>
+                                                <!-- 3 -->
+                                                <div class="upload-gallery__col">
+                                                    <div class="up-item upload-gallery__thumb">
+                                                        <!-- <img src="./images/product-page/gallery-child-3.png" alt="" /> -->
+                                                    </div>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div class="upload-gallery__col">
+                                                    <div class="up-item upload-gallery__thumb">
+                                                        <!-- <img src="./images/product-page/gallery-child-4.png" alt="" /> -->
+                                                    </div>
+                                                </div>
+                                                <!-- 5 -->
+                                                <div class="upload-gallery__col">
+                                                    <div class="up-item upload-gallery__thumb">
+                                                        <!-- <img src="./images/product-page/gallery-child-1.png" alt="" /> -->
+                                                    </div>
+                                                </div>
+                                                <!-- 6 -->
+                                                <div class="upload-gallery__col">
+                                                    <div class="up-item upload-gallery__thumb">
+                                                        <!-- <img src="./images/product-page/gallery-child-2.png" alt="" /> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="similar-flexheader">
+                                        <div class="similar-flexheader__title">Похожие товары</div>
+                                        <div class="similar-flexheader__navigation-wrap" id="similar-arrows">
+                                            <div class="arrow arrow--left"></div>
+                                            <div class="arrow arrow--right"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Витрина -->
+                                    <div class="similar__vitrine">
+                                        <div class="swiper" id="similar-swiper">
+                                            <div class="swiper-wrapper">
+                                                <!-- 1 -->
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="product-card">
+                                                        <!-- top -->
+                                                        <div class="product-card__header">
+                                                            <img src="./images/main/main-4-1.png" alt="">
+                                                        </div>
+                                                        <!-- bottom -->
+                                                        <div class="product-card__body">
+                                                            <div class="product-card__box">
+                                                                <!-- location -->
+                                                                <div class="product-card__location">
+                                                                    <svg class="icon icon--location-f">
+                                                                        <use href="./icons/symbol/sprite.svg#location-f"></use>
+                                                                    </svg>
+                                                                    <span>г. Чебоксары <span class="sm-block">“ ООО МЕТАЛЛ”</span></span>
+                                                                </div>
+                                                                <!-- title -->
+                                                                <h3 class="product-card__title">Труба нержавеющая сварная aisi 304 / 316</h3>
+                                                            </div>
+                                                            <!-- group -->
+                                                            <div class="product-card__group">
+                                                                <div class="product-card__price">
+                                                                    <span class="product-card__price-old"> от <s>12 999 ₽</s> </span>
+                                                                    <span class="product-card__price-real">12 999 ₽</span>
+                                                                </div>
+                                                                <div class="product-card__discount">-45%</div>
+                                                                <!-- like -->
+                                                                <div role="button" data-likeid="9" class="product-card__like">
+                                                                    <svg class="icon icon--star-e">
+                                                                        <use href="./icons/symbol/sprite.svg#star-e"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <!-- 2 -->
+                                                <div class="swiper-slide">
+                                                    <button type="button" data-id="add-similar" class="product-card__placeholder"></button>
+                                                </div>
+
+                                                <!-- 3 -->
+                                                <div class="swiper-slide">
+                                                    <button type="button" data-id="add-similar" class="product-card__placeholder"></button>
+                                                </div>
+
+                                                <!-- 4 -->
+                                                <div class="swiper-slide">
+                                                    <button type="button" data-id="add-similar" class="product-card__placeholder"></button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- for transfer id="simnilar-navig-group" -->
+                                        <div class="similar__sm-navigation" id="similar-sm-place"></div>
+
+                                        <div class="similar__submit">
+                                            <button type="submit" class="btn-accent btn-accent--max493">Создать</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

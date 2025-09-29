@@ -1,17 +1,5 @@
-.desktop-vs {
-	display: none;
-	@media (min-width: 1200px) {
-		display: block;
-	}
-}
-.sm-vs {
-	display: none;
-	@include sm {
-		display: block;
-	}
-}
 /* ------------------------------------------------------------------------------------------------------------------------------
-COMPONENTS
+COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ) 
 --------------------------------------------------------------------------------------------------------------------------------*/
 .section,
 .section-topnull {
@@ -364,6 +352,21 @@ COMPONENTS
 	color: var(--white);
 
 	transition: var(--transition);
+	
+	&--max493 {
+		display: flex;
+		min-width: 493px;
+		justify-content: center;
+		margin-inline: auto;
+		margin-top: 20px;
+		min-height: 53px;
+		font-size: 18px;
+
+		@include md{
+			min-width: initial;
+			width: 100%;
+		}
+	}
 
 	&:hover {
 		filter: var(--filter);
@@ -898,6 +901,124 @@ COMPONENTS
 			object-fit: cover;
 			block-size: 100%;
 			inline-size: 100%;
+		}
+	}
+}
+
+/*------------------------------------------------------- Upload gallery ----------------------------------------------------*/
+.upload-gallery {
+	&__image {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: start;
+		overflow: hidden;
+
+		height: 100%;
+		background-color: var(--white);
+		overflow: hidden;
+		cursor: pointer;
+
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			background-color: rgb(0, 0, 0, 0.1);
+			&:before {
+				transform: scale(1.05) translate(-48%, -48%);
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 21.2%;
+			aspect-ratio: 1/1;
+			background-image: url("../../icons/account-placeholder.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			transform: translate(-50%, -50%);
+
+			transition: all 0.3s ease-in-out;
+		}
+
+		img {
+			height: 100%;
+			width: auto;
+			max-width: 100%;
+			-o-object-fit: cover;
+			object-fit: cover;
+			-o-object-position: center center;
+			object-position: center center;
+			z-index: 1;
+		}
+	}
+	&__thumbnails {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px 0;
+
+		margin-left: -6px;
+		margin-right: -6px;
+
+		align-items: start;
+	}
+	&__col {
+		width: 33.33%;
+		padding-right: 6px;
+		padding-left: 6px;
+	}
+
+	&__thumb {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+
+		aspect-ratio: 130/96;
+
+		background-color: var(--white);
+			transition: all 0.3s ease-in-out;
+
+		&.up-access {
+			&:hover {
+				background-color: rgb(0, 0, 0, 0.1);
+				cursor: pointer;
+				&:before {
+					display: block;
+				}
+			}
+		}
+
+		&:before {
+			display: none;
+
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 21.2%;
+			aspect-ratio: 1/1;
+			background-image: url("../../icons/account-placeholder.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			transform: translate(-50%, -50%);
+
+			z-index: 1;
+		}
+
+		img {
+			height: 100%;
+			width: auto;
+			-o-object-fit: cover;
+			object-fit: cover;
+			-o-object-position: center center;
+			object-position: center center;
+			z-index: 1;
 		}
 	}
 }

@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+MY PRODUCTS BLOCK (БЛОК МОИ ТОВАРЫ В ЛИЧНОМ КАБИНЕТЕ)
+--------------------------------------------------------------------------------------------------------------------------------*/
+.myproducts {
+	color: var(--text);
+
+	&.section {
+		@include sm {
+			padding-block-start: rem(30);
+		}
+	}
+
+	.section-flexheader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		gap: rem(30);
+
+		@include md {          
+			padding-block-end: rem(35);
+		}
+	}
+
+	&__header-group {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		flex-grow: 1;
+		@include md {
+			justify-content: space-between;
+			gap: rem(14);
+			flex-grow: 1;
+
+			
+		}
+
+		.btn-accent {
+			display: none;
+			@include md {
+                width: 100%;
+				display: flex;
+			}
+		}
+	}
+
+    &__sm-navigation {
+		@include md {
+			margin-top: rem(35);
+		}
+		@include sm{
+			margin-top: rem(28);
+		}
+	}
+}

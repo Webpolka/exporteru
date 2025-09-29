@@ -98,7 +98,7 @@
 											class="editable-input"
 											value="ООО “КАРБО”"
 											type="text"
-											id="seller-personal-company"
+											name="seller-personal-company"
 											placeholder="Введите название компании"
 											disabled
 										/>
@@ -129,7 +129,7 @@
 											class="editable-input"
 											value="8939284627429837482"
 											type="password"
-											id="seller-personal-password"
+											name="seller-personal-password"
 											placeholder="•••••••••••••••••••"
 											disabled
 										/>
@@ -164,8 +164,7 @@
 									<div class="editable-wrap editable-wrap--top">
 										<textarea
 											class="editable-input editable-input--textarea"
-											id="seller-personal-description"
-											placeholder="Введите некоторое описание о вашей компании"
+											name="seller-personal-description"											
 											disabled
 										>
 В современном мире, где требования к сохранению природных ресурсов выходят на новый уровень, особую актуальность приобретают продукты и технологические решения, которые помогают природе и людям жить в гармонии. Чистая вода, свежий воздух, высокий уровень ответственности при добыче и переработке природных ископаемых — именно в этом мы видим одну из приоритетных задач для ответственного бизнеса в 21 веке.
@@ -190,7 +189,7 @@
 								<!-- Нужно писать скрипт для вывода и обработки изображений загрузки -->
 								<div class="mediaload">
 									<label class="media-label" for="seller-personal-media">Фото</label>
-									<input type="file" id="seller-personal-media" multiple accept="image/jpeg, image/png" hidden />
+									<input type="file" name="seller-personal-media" id="seller-personal-media" multiple accept="image/jpeg, image/png" hidden />
 
 									<div class="mediaload-preview">
 										<!-- 1 -->
@@ -231,5 +230,30 @@
 				</div>
 			</div>
 		</div>
+
+			<!-- Слайдер мои товары -->
+		<div class="section-flexheader">			
+			<div class="section-flexheader__title">Мои товары</div>
+			
+			<!-- Navig group -->
+			<div class="myproducts__header-group" id="myproducts-navig-group">				
+				<a href="#" class="btn-accent myproducts__button">Смотреть все</a>
+				<!-- Slider navigation -->
+				<div class="myproducts__navigation-wrap">
+					<div class="arrow arrow--left"></div>
+					<div class="arrow arrow--right"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Slider -->
+		<div class="swiper" id="myproducts-swiper">		
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-1.html')</div>
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-2.html')</div>
+			</div>
+		</div>
+
+		<!-- for transfer id="myproducts-navig-group" -->
+		<div class="myproducts__sm-navigation" id="myproducts-sm-place"></div>
 	</div>
 </section>

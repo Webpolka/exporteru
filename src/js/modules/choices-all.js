@@ -1,34 +1,8 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
-CHOICES AUTHORIZE BUYER
+CHOICES 
 --------------------------------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
-	const authorizeSelect = document.querySelector("#authorize-buyer-country");
-
-	if (authorizeSelect) {
-		const choices = new Choices("#authorize-buyer-country", {
-			searchEnabled: false,
-			itemSelectText: "",
-			removeItemButton: false,
-			choices: [
-				{ value: "ru", label: "Россия" },
-				{ value: "kz", label: "Казахстан" },
-				{ value: "cn", label: "Китай" },
-				{ value: "by", label: "Беларусь" },
-			],
-		});
-	}
-});
-
-/* ------------------------------------------------------------------------------------------------------------------------------
-CHOICES AUTHORIZE SELLER
---------------------------------------------------------------------------------------------------------------------------------*/
-document.addEventListener("DOMContentLoaded", () => {
-	const authorizeSelect = document.querySelector("#authorize-seller-countries");
-	const buyerPesonalCountry = document.querySelector("#buyer-personal-counrty");
-	const sellerPesonalCountry = document.querySelector("#seller-personal-country");
-	const sellerPesonalCategories = document.querySelector("#seller-personal-categories");
-	let iii;
-
+	// Список стран (потом будет ответ сервера в формате JSON)
 	const countryList = [
 		{ value: "ru", label: "Россия" },
 		{ value: "kz", label: "Казахстан" },
@@ -36,19 +10,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		{ value: "by", label: "Беларусь" },
 	];
 
+	// Список категорий (потом будет ответ сервера в формате JSON)
 	const CategoryList = [
-		{ value: "уголь", label: "Уголь" },
-		{ value: "металлургия", label: "Металлургия" },
-		{ value: "рыба", label: "Рыба" },
-		{ value: "масло", label: "Масло" },
-		{ value: "руда", label: "Руда" },
-		{ value: "напитки", label: "Напитки" },
-		{ value: "древесина", label: "Древесина" },
-		{ value: "медицина", label: "Медицина" },
+		{ value: "0", label: "Уголь" },
+		{ value: "1", label: "Металлургия" },
+		{ value: "2", label: "Рыба" },
+		{ value: "3", label: "Масло" },
+		{ value: "4", label: "Руда" },
+		{ value: "5", label: "Напитки" },
+		{ value: "6", label: "Древесина" },
+		{ value: "7", label: "Медицина" },
 	];
+	/*------------------------------------------------------- АВТОРИЗАЦИЯ --------------------------------------------------*/
 
-	if (authorizeSelect) {
-		const choices = new Choices(authorizeSelect, {
+	// Инициализация селекта ВЫБОРА СТРАНЫ на странице АВТОРИЗАЦИИ для Я ПОКУПАТЕЛЬ
+	const authorizeBuyerCountry = document.getElementById("authorize-buyer-country");
+	if (authorizeBuyerCountry) {
+		const choices = new Choices(authorizeBuyerCountry, {
 			searchEnabled: false,
 			itemSelectText: "",
 			removeItemButton: false,
@@ -56,6 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	// Инициализация селекта ВЫБОРА СТРАН на странице АВТОРИЗАЦИИ для Я ПРОДАВЕЦ
+	const authorizeSellerCountries = document.getElementById("authorize-seller-countries");
+	if (authorizeSellerCountries) {
+		const choices = new Choices(authorizeSellerCountries, {
+			searchEnabled: false,
+			itemSelectText: "",
+			removeItemButton: false,
+			choices: countryList,
+		});
+	}
+
+	/*------------------------------------------------------- ЛИЧНЫЙ КАБИНЕТ --------------------------------------------------*/
+
+	// Инициализация селекта выбора СТРАНЫ на странице ЛИЧНЫЕ ДАННЫЕ (Я ПОКУПАТЕЛЬ)
+	const buyerPesonalCountry = document.getElementById("buyer-personal-counrty");
 	if (buyerPesonalCountry) {
 		const choices = new Choices(buyerPesonalCountry, {
 			searchEnabled: false,
@@ -65,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	// Инициализация селекта выбора СТРАНЫ на странице ЛИЧНЫЕ ДАННЫЕ (Я ПРОДАВЕЦ)
+	const sellerPesonalCountry = document.getElementById("seller-personal-country");
 	if (sellerPesonalCountry) {
 		const choices = new Choices(sellerPesonalCountry, {
 			searchEnabled: false,
@@ -74,8 +69,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	// Инициализация селекта выбора КАТЕГОРИИ ТОВАРА на странице ЛИЧНЫЕ ДАННЫЕ (Я ПРОДАВЕЦ)
+	const sellerPesonalCategories = document.getElementById("seller-personal-categories");
 	if (sellerPesonalCategories) {
-		const choices = new Choices(sellerPesonalCategories, {			
+		const choices = new Choices(sellerPesonalCategories, {
+			// placeholder: true,
+			// placeholderValue: "Выберите из списка...",
 			searchEnabled: false,
 			choices: CategoryList,
 			items: CategoryList,
@@ -84,36 +83,39 @@ document.addEventListener("DOMContentLoaded", () => {
 			itemSelectText: false,
 			maxItemText: (maxItemCount) => {
 				return `Только ${maxItemCount} позволено`;
-			}			
+			},
 		});
-
 		choices.setChoiceByValue([CategoryList[0].value, CategoryList[1].value]);
 	}
-});
 
-/* ------------------------------------------------------------------------------------------------------------------------------
-CHOICES AUTHORIZE 
---------------------------------------------------------------------------------------------------------------------------------*/
-document.addEventListener("DOMContentLoaded", () => {
-	const authorizeSelect = document.querySelector("#authorize-country");
-
-	if (authorizeSelect) {
-		const choices = new Choices("#authorize-country", {
+	// Инициализация селекта выбора КАТЕГОРИЙ на странице СОЗДАТЬ ТОВАР (Я ПРОДАВЕЦ)
+	const sellerCreateCategory = document.getElementById("seller-create-category");
+	if (sellerCreateCategory) {
+		const choices = new Choices(sellerCreateCategory, {
+			placeholder: true,
+			placeholderValue: "Выберите категории товара",
 			searchEnabled: false,
-			itemSelectText: "",
-			removeItemButton: false,
-			choices: [
-				{ value: "ru", label: "Россия" },
-				{ value: "kz", label: "Казахстан" },
-				{ value: "cn", label: "Китай" },
-				{ value: "by", label: "Беларусь" },
-			],
+			choices: CategoryList,
+			items: CategoryList,
+			removeItemButton: true,
+			maxItemCount: 5,
+			itemSelectText: false,
+			maxItemText: (maxItemCount) => {
+				return `Только ${maxItemCount} позволено`;
+			},
+		});
+		// Обработчик события изменения выбора
+		choices.passedElement.element.addEventListener("change", function () {
+			// Проверяем, есть ли выбранные элементы
+			const selectedItems = choices.getValue(true); // возвращает массив выбранных значений
+			const target = document.querySelector(".choices__input.choices__input--cloned");
+			selectedItems.length > 0 ? (target.style.display = "none") : (target.style.display = "block");
 		});
 	}
 });
 
 /*--------------------------------------------------------------------------------------------------------------
-CHOICES ADD SEARCH FILTER 
+CHOICES ORDERBY IN FILTER 
 ----------------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
 	const searchFilterSelect = document.getElementById("search-filter-select");

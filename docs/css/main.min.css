@@ -340,7 +340,7 @@ svg {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-CUSTOM CHOICES SELECT
+CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 --------------------------------------------------------------------------------------------------------------------------------*/
 /* Добавляем стрелку через псевдоэлемент */
 .choices {
@@ -362,6 +362,20 @@ CUSTOM CHOICES SELECT
   background-size: 100%;
   background-position: center center;
   pointer-events: none; /* чтобы не мешала кликам */
+}
+
+.beforeplus .choices::before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNiAxMkgxOCIgc3Ryb2tlPSIjMkYyRjJGIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgogIDxwYXRoIGQ9Ik0xMiAxOFY2IiBzdHJva2U9IiMyRjJGMkYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIC8+Cjwvc3ZnPg==");
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 1 !important;
+  transition: all 0.3s ease-in-out;
+}
+.beforeplus .choices__list--multiple {
+  margin-right: 35px;
+}
+.beforeplus .choices__input.choices__input--cloned {
+  margin-left: -35px;
 }
 
 .choices.is-open::before {
@@ -494,16 +508,8 @@ CUSTOM CHOICES SELECT
   cursor: pointer;
 }
 
-.desktop-vs {
-  display: none;
-}
-
-.sm-vs {
-  display: none;
-}
-
 /* ------------------------------------------------------------------------------------------------------------------------------
-COMPONENTS
+COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ) 
 --------------------------------------------------------------------------------------------------------------------------------*/
 .section,
 .section-topnull {
@@ -749,6 +755,15 @@ COMPONENTS
   line-height: 122%;
   color: var(--white);
   transition: var(--transition);
+}
+.btn-accent--max493 {
+  display: flex;
+  min-width: 493px;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 20px;
+  min-height: 53px;
+  font-size: 18px;
 }
 .btn-accent:hover {
   filter: var(--filter);
@@ -1126,11 +1141,226 @@ COMPONENTS
   inline-size: 100%;
 }
 
+/*------------------------------------------------------- Upload gallery ----------------------------------------------------*/
+.upload-gallery__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  overflow: hidden;
+  height: 100%;
+  background-color: var(--white);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.upload-gallery__image:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.upload-gallery__image:hover:before {
+  transform: scale(1.05) translate(-48%, -48%);
+}
+.upload-gallery__image:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 21.2%;
+  aspect-ratio: 1/1;
+  background-image: url("../icons/account-placeholder.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+.upload-gallery__image img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+  z-index: 1;
+}
+.upload-gallery__thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 0;
+  margin-left: -6px;
+  margin-right: -6px;
+  align-items: start;
+}
+.upload-gallery__col {
+  width: 33.33%;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+.upload-gallery__thumb {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  aspect-ratio: 130/96;
+  background-color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+.upload-gallery__thumb.up-access:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.upload-gallery__thumb.up-access:hover:before {
+  display: block;
+}
+.upload-gallery__thumb:before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 21.2%;
+  aspect-ratio: 1/1;
+  background-image: url("../icons/account-placeholder.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.upload-gallery__thumb img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+  z-index: 1;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------
-EDITABLE INPUT
+Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 --------------------------------------------------------------------------------------------------------------------------------*/
+.editable {
+  color: rgb(47, 47, 47);
+}
+.editable-text {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.editable-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: var(--white);
+  padding: 10px 12px;
+  min-height: 48px;
+}
+.editable-wrap--top {
+  align-items: start;
+}
+.editable-input {
+  background: var(--white);
+  flex-grow: 1;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(47, 47, 47, 0.5);
+  width: 100%;
+}
+.editable-input:focus {
+  color: rgb(47, 47, 47);
+}
+.editable-input--shorttextarea, .editable-input--textarea {
+  min-height: 210px;
+  resize: none;
+  line-height: 133%;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(47, 47, 47, 0.5);
+}
+.editable-input--shorttextarea:focus, .editable-input--textarea:focus {
+  color: rgb(47, 47, 47);
+}
+.editable-input--shorttextarea::-webkit-scrollbar, .editable-input--textarea::-webkit-scrollbar {
+  inline-size: 0rem;
+  background-color: transparent;
+}
+.editable-input--shorttextarea::-webkit-scrollbar-track, .editable-input--textarea::-webkit-scrollbar-track {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  inline-size: 1px;
+}
+.editable-input--shorttextarea::-webkit-scrollbar-thumb, .editable-input--textarea::-webkit-scrollbar-thumb {
+  border: none;
+  background-color: rgba(0, 71, 186, 0.5);
+}
+.editable-input--shorttextarea {
+  min-height: 89px;
+}
+.editable-input::-moz-placeholder {
+  opacity: 0.5;
+}
+.editable-input::placeholder {
+  opacity: 0.5;
+}
+.editable-buttons {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.editable-buttons--abs {
+  position: relative;
+}
+.editable-buttons--abs .editable-button {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+.editable-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 100%;
+  aspect-ratio: 1/1;
+  font-size: 20px;
+  font-weight: bold;
+}
+.editable-button:hover {
+  color: var(--accent);
+}
+.editable-button:hover svg {
+  stroke: var(--accent);
+}
+.editable-button svg {
+  stroke: var(--text);
+  aspect-ratio: 1/1;
+  width: 22px;
+  transition: 0.3s ease-in-out;
+}
+.editable-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 7px;
+  padding-top: 20px;
+}
+.editable-group svg {
+  stroke-width: 1.5px;
+  width: 24px;
+}
+.editable-group .editable-text {
+  margin-bottom: 0;
+}
+.editable-repeater-block {
+  margin-bottom: 20px;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------
-CATAALOG OVERLAY
+CATAALOG OVERLAY (БОЛЬШОЕ МЕНЮ КАТАЛОГА)
 --------------------------------------------------------------------------------------------------------------------------------*/
 .exp-catalog {
   opacity: 0;
@@ -1293,7 +1523,7 @@ CATAALOG OVERLAY
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-expirience form
+expirience form (Форма - ОПЫТ ПОЛЬЗОВАТЕЛЯ)
 --------------------------------------------------------------------------------------------------------------------------------*/
 .expirience-form {
   padding: 1.875rem;
@@ -1369,6 +1599,22 @@ expirience form
   justify-content: center;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------------------
+Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТКИ BOOTSTRAP 5.3V)
+--------------------------------------------------------------------------------------------------------------------------------*/
+.custom-col-5 {
+  width: 20%;
+  height: inherit;
+}
+
+.desktop-vs {
+  display: none;
+}
+
+.sm-vs {
+  display: none;
+}
+
 .xxl-v {
   display: none;
 }
@@ -1387,6 +1633,16 @@ expirience form
 
 .md-visible {
   display: none;
+}
+
+.g-0i,
+.gx-0i {
+  --bs-gutter-x: 0px;
+}
+
+.g-0i,
+.gy-0i {
+  --bs-gutter-y: 0px;
 }
 
 .g-9,
@@ -1417,6 +1673,16 @@ expirience form
 .g-11,
 .gx-11 {
   --bs-gutter-x: 11px;
+}
+
+.g-12,
+.gy-12 {
+  --bs-gutter-y: 12px;
+}
+
+.g-12,
+.gx-12 {
+  --bs-gutter-x: 12px;
 }
 
 .g-13,
@@ -1540,7 +1806,7 @@ expirience form
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-INNER SVG STYLES FOR SOICAL ICONS
+INNER SVG STYLES FOR SOICAL ICONS (СТИЛИЗАЦИЯ ИКОНОК В ФУТЕРЕ)
 --------------------------------------------------------------------------------------------------------------------------------*/
 .soc-wechat-char-1 {
   fill: white;
@@ -1831,7 +2097,29 @@ HEADER
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-REVIEW && REVIEW ACCOUNT BLOCKS
+MY PRODUCTS BLOCK (БЛОК МОИ ТОВАРЫ В ЛИЧНОМ КАБИНЕТЕ)
+--------------------------------------------------------------------------------------------------------------------------------*/
+.myproducts {
+  color: var(--text);
+}
+.myproducts .section-flexheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.875rem;
+}
+.myproducts__header-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.myproducts__header-group .btn-accent {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 --------------------------------------------------------------------------------------------------------------------------------*/
 .review {
   border: 1px solid rgba(47, 47, 47, 0.1);
@@ -2035,7 +2323,7 @@ REVIEW && REVIEW ACCOUNT BLOCKS
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-ARROWS NAVIGATION
+ARROWS NAVIGATION (НАВИГАЦИЯ ДЛЯ СЛАЙДЕРОВ)
 --------------------------------------------------------------------------------------------------------------------------------*/
 [class*=_navigation-wrap] {
   position: relative;
@@ -2125,7 +2413,7 @@ NAVIGATION GROUP
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-UI range slider for filter apge
+UI range slider for filter apge (РЭНЖ СЛАЙДЕР В ФИЛЬТРЕ НА СТРАНИЦЕ КАТАЛОГА)
 --------------------------------------------------------------------------------------------------------------------------------*/
 /* Обертка слайдера */
 /* Основной трек */
@@ -2337,14 +2625,15 @@ Account layout
   position: relative;
   display: flex;
   gap: 55px;
+  margin-bottom: 60px;
 }
 .account-layout__sidebar {
   width: 24.5%;
-  height: 100%;
+  height: inherit;
 }
 .account-layout__content {
   width: 75.5%;
-  height: 100%;
+  height: inherit;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -2360,6 +2649,7 @@ Account content styles
   background-color: #f6f6f6;
   padding: 30px 40px;
   color: #2f2f2f;
+  height: 100%;
 }
 .account-tile__header {
   display: flex;
@@ -2500,11 +2790,6 @@ Account content styles
   gap: 15px;
 }
 
-/*--------------------------------------------- Form ---------------------------------------------*/
-.account-form {
-  margin-bottom: 60px;
-}
-
 /*--------------------------------------------- Vitrine ---------------------------------------------*/
 .account-vitrine .product-card {
   border: 1px solid rgba(47, 47, 47, 0.1);
@@ -2542,96 +2827,10 @@ Account content styles
 }
 
 /*--------------------------------------------- Editable input  ---------------------------------------------*/
-.editable {
-  color: rgb(47, 47, 47);
-}
-.editable-text {
-  display: block;
-  font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 7px;
-}
-.editable-wrap {
+.sparka {
   display: flex;
-  align-items: center;
-  width: 100%;
-  background: var(--white);
-  padding: 10px 12px;
-  min-height: 48px;
-}
-.editable-wrap--top {
-  align-items: start;
-}
-.editable-input {
-  background: var(--white);
-  flex-grow: 1;
-  font-weight: 400;
-  font-size: 14px;
-}
-.editable-input--textarea {
-  min-height: 210px;
-  resize: none;
-  line-height: 133%;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgba(47, 47, 47, 0.5);
-}
-.editable-input--textarea:focus {
-  color: rgb(47, 47, 47);
-}
-.editable-input--textarea::-webkit-scrollbar {
-  inline-size: 0rem;
-  background-color: transparent;
-}
-.editable-input--textarea::-webkit-scrollbar-track {
-  box-shadow: none;
-  background-color: rgba(0, 0, 0, 0.1);
-  inline-size: 1px;
-}
-.editable-input--textarea::-webkit-scrollbar-thumb {
-  border: none;
-  background-color: rgba(0, 71, 186, 0.5);
-}
-.editable-input::-moz-placeholder {
-  opacity: 0.5;
-}
-.editable-input::placeholder {
-  opacity: 0.5;
-}
-.editable-buttons {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-.editable-buttons--abs {
-  position: relative;
-}
-.editable-buttons--abs .editable-button {
-  position: absolute;
-  right: 0px;
-  top: 10px;
-}
-.editable-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  height: 100%;
-  aspect-ratio: 1/1;
-  font-size: 20px;
-  font-weight: bold;
-}
-.editable-button:hover {
-  color: var(--accent);
-}
-.editable-button:hover svg {
-  stroke: var(--accent);
-}
-.editable-button svg {
-  stroke: var(--text);
-  aspect-ratio: 1/1;
-  width: 22px;
-  transition: 0.3s ease-in-out;
+  flex-direction: column;
+  gap: 6px;
 }
 
 /* --------------------------------------------------------------- Choices select group --------------------------------------------------------------------*/
@@ -2782,6 +2981,50 @@ Account sidebar
   aspect-ratio: 1/1;
   stroke: #939393;
   transition: all 0.3s ease-in-out;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Similar products
+--------------------------------------------------------------------------------------------------------------------------------*/
+.similar-flexheader {
+  color: #2f2f2f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  margin-bottom: 15px;
+}
+.similar-flexheader__navigation-wrap {
+  height: 24px;
+}
+.similar-flexheader__title {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.similar__sm-navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.similar__vitrine .btn-accent {
+  margin-top: 20px;
+  margin-inline: auto;
+}
+.similar__vitrine .swiper-slide {
+  height: initial;
+}
+.similar__vitrine .product-card {
+  border: 1px solid rgba(47, 47, 47, 0.1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  height: initial;
+}
+.similar__vitrine .product-card__header {
+  aspect-ratio: 271/224;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -4437,11 +4680,27 @@ Product card
 .product-card:hover .poroduct-card__title {
   color: var(--accent);
 }
+.product-card__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/account-create-placeholder.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center top;
+  transition: all 0.3s ease-in-out;
+}
+.product-card__placeholder:hover {
+  transform: scale(1.025);
+}
 .product-card__header {
   position: relative;
   width: 100%;
   aspect-ratio: 306/224;
   overflow: hidden;
+  flex-shrink: 0;
   margin-bottom: 4px;
 }
 .product-card__header img {
@@ -4878,6 +5137,12 @@ MEDIAQUERIES
   }
 }
 @media (max-width: 1200px){
+  .similar__vitrine .product-card__price-old {
+    display: none;
+  }
+  .similar__vitrine .product-card__discount {
+    display: none;
+  }
   .authorize-form {
     padding-top: 40px;
     padding-inline: 40px;
@@ -5184,6 +5449,10 @@ MEDIAQUERIES
   .section-topnull-flexheader__title {
     font-size: 1.5rem;
   }
+  .btn-accent--max493 {
+    min-width: initial;
+    width: 100%;
+  }
   .exp-search-orderby__button {
     width: 1rem;
     height: 1rem;
@@ -5243,6 +5512,21 @@ MEDIAQUERIES
   .footer__social-link--whatsapp {
     background-color: var(--red);
   }
+  .myproducts .section-flexheader {
+    padding-block-end: 2.1875rem;
+  }
+  .myproducts__header-group {
+    justify-content: space-between;
+    gap: 0.875rem;
+    flex-grow: 1;
+  }
+  .myproducts__header-group .btn-accent {
+    width: 100%;
+    display: flex;
+  }
+  .myproducts__sm-navigation {
+    margin-top: 2.1875rem;
+  }
   .about-exporteru__block {
     padding: 0;
   }
@@ -5287,6 +5571,18 @@ MEDIAQUERIES
   }
   .account-vitrine .product-card__like {
     right: 8px;
+  }
+  .similar__vitrine .product-card__header {
+    aspect-ratio: 141/188;
+  }
+  .similar__vitrine .product-card__location span {
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .similar__vitrine .product-card__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.38065;
   }
   .article-banner__wrap {
     min-height: 213px;
@@ -5553,9 +5849,6 @@ MEDIAQUERIES
   .choices__item {
     font-size: 0.75rem !important;
   }
-  .sm-vs {
-    display: block;
-  }
   .section,
   .section-topnull {
     padding-block: 1.875rem;
@@ -5756,6 +6049,12 @@ MEDIAQUERIES
     min-height: 3rem;
     font-size: 0.875rem;
   }
+  .custom-col-5 {
+    width: 100%;
+  }
+  .sm-vs {
+    display: block;
+  }
   .sm-hidden {
     display: none;
   }
@@ -5777,6 +6076,14 @@ MEDIAQUERIES
   .g-sm-10,
   .gy-sm-10 {
     --bs-gutter-y: 10px;
+  }
+  .g-sm-30,
+  .gx-sm-30 {
+    --bs-gutter-x: 30px;
+  }
+  .g-sm-30,
+  .gy-sm-30 {
+    --bs-gutter-y: 30px;
   }
   .g-sm-40,
   .gx-sm-40 {
@@ -5850,6 +6157,12 @@ MEDIAQUERIES
   }
   .header__medium {
     min-height: 3.6875rem;
+  }
+  .myproducts.section {
+    padding-block-start: 1.875rem;
+  }
+  .myproducts__sm-navigation {
+    margin-top: 1.75rem;
   }
   .review {
     padding: 0.9375rem 0.75rem 0.9375rem;

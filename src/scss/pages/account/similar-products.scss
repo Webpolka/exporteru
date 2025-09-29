@@ -1,0 +1,81 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+Similar products
+--------------------------------------------------------------------------------------------------------------------------------*/
+.similar-flexheader {
+	color: #2f2f2f;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding-top: 18px;
+	margin-bottom: 15px;
+
+	&__navigation-wrap {
+		height: 24px;
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 14px;
+	}
+}
+
+.similar {
+	&__sm-navigation {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 10px;
+	}
+}
+
+.similar__vitrine {
+	.btn-accent {
+		margin-top: 20px;
+
+		margin-inline: auto;
+	}
+	.swiper-slide {
+		height: initial;
+	}
+	.product-card {
+		border: 1px solid rgba(47, 47, 47, 0.1);
+		user-select: none;
+		cursor: pointer;
+
+		height: initial;
+
+		&__header {
+			aspect-ratio: 271/224;
+
+			@include md{
+				aspect-ratio: 141/188;
+			}
+		}
+		&__location span{
+			@include md {
+				font-weight: 400;
+				font-size: 10px;
+			}
+		}
+
+		&__title {
+			@include md {
+				font-weight: 500;
+				font-size: 12px;
+				line-height: 1.38065;
+			}
+		}
+
+		&__price-old {
+			@include xl {
+				display: none;
+			}
+		}
+		&__discount {
+			@include xl {
+				display: none;
+			}
+		}
+	}
+}

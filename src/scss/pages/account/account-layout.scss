@@ -6,13 +6,15 @@ Account layout
 	display: flex;
 	gap: 55px;
 
+	margin-bottom: 60px;
+
 	@include lg {
 		flex-wrap: wrap;
 	}
 
 	&__sidebar {		
 		width: 24.5%;		
-        height: 100%;
+        height: inherit;
 
 		@include lg {	
 			display: none;
@@ -23,7 +25,7 @@ Account layout
 	}
 	&__content {	
 		width: 75.5%;
-		height: 100%;
+		height: inherit;
 
 		@include lg {
 			max-width: 100%;
