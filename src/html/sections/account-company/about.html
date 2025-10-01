@@ -1,0 +1,235 @@
+<section class="section-topnull">
+	<h2 class="visually-hidden">О компании</h2>
+	<div class="container">
+		<div class="account-layout">
+			<!-- sidebar -->
+			<div class="account-layout__sidebar">@@include('./sidebars/sidebar-about.html')</div>
+
+			<!-- content -->
+			<div class="account-layout__content">
+				<div class="account-tile">
+					<!-- acc 4 cards -->
+					<div class="account-tile__accgrid">
+						<div class="account-tile__accgrid--short">
+							<div class="account-tile__title--center">О компании</div>
+						</div>
+						<div class="account-tile__accgrid--long">
+							<div class="row g-13">
+								<!-- acc-card 1-->
+								<div class="col-sm-4">
+									<div class="acc-card">
+										<!--part 1 -->
+										<div class="acc-card__part">
+											<span class="acc-card__label">
+												<svg class="icon icon--account-eye">
+													<use href="./icons/symbol/sprite.svg#account-eye"></use>
+												</svg>
+											</span>
+											<h3 class="acc-card__title">Просмотры аккаунта за месяц</h3>
+										</div>
+										<!--part 2 -->
+										<div class="acc-card__part">
+											<span class="acc-card__count">1 234</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- acc-card 2-->
+								<div class="col-sm-4">
+									<div class="acc-card">
+										<!--part 1 -->
+										<div class="acc-card__part">
+											<span class="acc-card__label">
+												<svg class="icon icon--account-reviews">
+													<use href="./icons/symbol/sprite.svg#account-reviews"></use>
+												</svg>
+											</span>
+											<h3 class="acc-card__title">Отзывы</h3>
+										</div>
+										<!--part 2 -->
+										<div class="acc-card__part">
+											<span class="acc-card__count">1 234</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- acc-card 3-->
+								<div class="col-sm-4">
+									<div class="acc-card">
+										<!--part 1 -->
+										<div class="acc-card__part">
+											<span class="acc-card__label">
+												<svg class="icon icon--rating">
+													<use href="./icons/symbol/sprite.svg#rating"></use>
+												</svg>
+											</span>
+											<h3 class="acc-card__title">Рейтинг</h3>
+										</div>
+										<!--part 2 -->
+										<div class="acc-card__part">
+											<span class="acc-card__count">4</span>
+											<!-- star -->
+											<span class="acc-card__star">
+												<svg class="icon icon--star-edge">
+													<use href="./icons/symbol/sprite.svg#star-edge"></use>
+												</svg>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row g-14">
+						<div class="col-sm-6">
+							<div class="dolly-label">Страна/Регион</div>
+							<div class="dolly-input">
+								<!-- Флаг россии -->
+								<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_236_8107)">
+										<rect width="22" height="16" fill="#1A47B8" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6667H22V16H0V10.6667Z" fill="#F93939" />
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H22V5.33333H0V0Z" fill="white" />
+									</g>
+									<defs>
+										<clipPath id="clip0_236_8107">
+											<rect width="22" height="16" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+								<span>Россия</span>
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="dolly-label">Категории товаров</div>
+							<div class="dolly-multiselect">
+								<div class="dolly-multiselect__scroll">
+									<a href="#">Уголь</a>
+									<a href="#">Металлургия</a>																
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12">
+							<div class="dolly-label">Описание</div>
+							<div class="dolly-simpletext">
+								<p>
+									В современном мире, где требования к сохранению природных ресурсов выходят на новый уровень, особую
+									актуальность приобретают продукты и технологические решения, которые помогают природе и людям жить в
+									гармонии. Чистая вода, свежий воздух, высокий уровень ответственности при добыче и переработке природных
+									ископаемых — именно в этом мы видим одну из приоритетных задач для ответственного бизнеса в 21 веке.
+								</p>
+
+								<p>
+									Наша цель — активно участвовать в данном процессе. Компания ООО «КАРБО» является поставщиком
+									качественных активированных углей широкого спектра применения, химических поглотителей и карбюризатора.
+									Вся предлагаемая нашей компанией продукция сертифицирована.
+								</p>
+
+								<p>
+									Мы приглашаем к сотрудничеству всех, кто разделяет наши ценности, и верим, что совместными усилиями
+									можно сделать мир вокруг нас лучше.
+								</p>
+							</div>
+						</div>
+
+						<div class="col-12 photoslider">
+							<div class="photoslider__flexheader">
+								<div class="photoslider__label">Фото</div>
+								<!-- Slider navigation -->
+								<div class="photoslider__navigation-wrap" id="photoslider-arrows">
+									<div class="arrow arrow--left"></div>
+									<div class="arrow arrow--right"></div>
+								</div>
+							</div>
+
+							<!-- Slider -->
+							<div class="swiper" id="account-photoslider-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<!-- 1 -->
+										<a href="../../../images/product-page/gallery-child-1.png" class="photoslider__image" data-fancybox="gallery">
+											<img src="../../../images/product-page/gallery-child-1.png" alt="" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<!-- 2 -->
+										<a href="../../../images/product-page/gallery-child-2.png" class="photoslider__image" data-fancybox="gallery">
+											<img src="../../../images/product-page/gallery-child-2.png" alt="" />
+										</a>
+									</div>
+
+									<!-- 3 -->
+									<div class="swiper-slide">
+										<a href="../../../images/product-page/gallery-child-3.png" class="photoslider__image" data-fancybox="gallery">
+											<img src="../../../images/product-page/gallery-child-3.png" alt="" />
+										</a>
+									</div>
+									<!-- 4 -->
+									<div class="swiper-slide">
+										<a href="../../../images/product-page/gallery-child-4.png" class="photoslider__image" data-fancybox="gallery">
+											<img src="../../../images/product-page/gallery-child-4.png" alt="" />
+										</a>
+									</div>
+									<!-- 5 -->
+									<div class="swiper-slide">
+										<a href="../../../images/product-page/gallery-child-1.png" class="photoslider__image" data-fancybox="gallery">
+											<img src="../../../images/product-page/gallery-child-1.png" alt="" />
+										</a>
+									</div>
+									<!-- 6 -->
+									<div class="swiper-slide">
+										<a href="../../../images/product-page/gallery-child-3.png" class="photoslider__image" data-fancybox="gallery">
+											<img src="../../../images/product-page/gallery-child-3.png" alt="" />
+										</a>
+									</div>
+									<!-- 7 -->
+									<div class="swiper-slide">
+										<a href="../../../images/product-page/gallery-child-4.png"" class="photoslider__image" data-fancybox="gallery">
+											<img src="../../../images/product-page/gallery-child-4.png" alt="" />
+										</a>
+									</div>
+									<!-- 8 -->
+									<div class="swiper-slide">
+										<a href="../../../images/product-page/gallery-child-1.png" class="photoslider__image" data-fancybox="gallery">
+											<img src="../../../images/product-page/gallery-child-1.png" alt="" />
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- for transfer id="photoslider-arrows" -->
+							<div class="photoslider__sm-navigation" id="photoslider-sm-place"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Слайдер товары компании-->
+		<div class="section-flexheader">
+			<div class="section-flexheader__title">Товары компании</div>
+
+			<!-- Navig group -->
+			<div class="myproducts__header-group" id="myproducts-navig-group">
+				<a href="#" class="btn-accent myproducts__button">Смотреть все</a>
+				<!-- Slider navigation -->
+				<div class="myproducts__navigation-wrap">
+					<div class="arrow arrow--left"></div>
+					<div class="arrow arrow--right"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Slider -->
+		<div class="swiper" id="myproducts-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-1.html')</div>
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-2.html')</div>
+			</div>
+		</div>
+
+		<!-- for transfer id="myproducts-navig-group" -->
+		<div class="myproducts__sm-navigation" id="myproducts-sm-place"></div>
+	</div>
+</section>

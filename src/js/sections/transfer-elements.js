@@ -103,3 +103,17 @@ if (similarArrows && similarArrowsPlace) {
         },
     });
 }
+
+const photosliderArrows = document.getElementById("photoslider-arrows");
+const photosliderArrowsPlace = document.getElementById("photoslider-sm-place");
+
+if (photosliderArrows && photosliderArrowsPlace) {
+    new TransferElements({
+        sourceElement: photosliderArrows,
+        breakpoints: {
+            768: {
+                targetElement: photosliderArrowsPlace,             
+            },
+        },
+    });
+}

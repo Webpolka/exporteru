@@ -1,34 +1,48 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 Account layout
 --------------------------------------------------------------------------------------------------------------------------------*/
-.account-layout{
-    position: relative;
+.account-company{
+	.account-layout{
+		padding-top: 30px;
+
+		@include sm{
+			padding-top: 10px;
+		}
+	}
+}
+
+.account-layout {
+	position: relative;
 	display: flex;
 	gap: 55px;
 
 	margin-bottom: 60px;
 
+	@include xl {
+		gap: 30px;
+	}
+
 	@include lg {
+		gap: 0;
 		flex-wrap: wrap;
 	}
 
-	&__sidebar {		
-		width: 24.5%;		
-        height: inherit;
-
-		@include lg {	
-			display: none;
-			
-			max-width: 100%;
-            width: 100%;			
-		}
-	}
-	&__content {	
-		width: 75.5%;
+	&__sidebar {
+		width: 294px;
 		height: inherit;
+		flex-shrink: 0;
 
 		@include lg {
-			max-width: 100%;
+			flex-shrink: none;			
+			width: 100%;
+			background-color: #f6f6f6;
+		}
+	}
+	&__content {
+		height: inherit;
+		width: calc(100% - 294px);
+
+		@include lg {			
 			width: 100%;
 		}
 	}

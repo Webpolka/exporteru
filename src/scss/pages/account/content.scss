@@ -13,6 +13,10 @@ Account content styles
 	color: #2f2f2f;
 	height: 100%;
 
+	@include sm {
+		padding: 15px 15px 23px 15px;
+	}
+
 	&__header {
 		display: flex;
 		justify-content: space-between;
@@ -22,12 +26,22 @@ Account content styles
 	&__title {
 		font-weight: 400;
 		font-size: 24px;
-
 		margin-bottom: 25px;
 
-		&--lh08 {
+		@include lg{
+			display: none;
+		}
+
+		&--lh08 {			
 			line-height: 80%;
-			font-size: 24px;
+			font-size: 24px;			
+		}
+
+		&--center {		
+			// width: 100%;	
+			// text-align: center;
+			line-height: 120%;
+			font-size: 24px;			
 		}
 	}
 
@@ -46,8 +60,12 @@ Account content styles
 		gap: 13px;
 		margin-bottom: 30px;
 
-		@include sm {
+		@include xl {
 			flex-wrap: wrap;
+		}
+
+		@include sm{
+			margin-bottom: 15px;
 		}
 
 		&--short {
@@ -57,19 +75,23 @@ Account content styles
 			display: flex;
 			align-items: center;
 
-			@include sm {
+			@include xl {
+				padding-bottom: 10px;
 				width: 100%;
+			}
+
+			@include lg {
+				display: none;
 			}
 		}
 		&--long {
 			width: 81%;
 			height: inherit;
-			@include sm {
+			@include xl {
 				width: 100%;
 			}
 		}
 	}
-	
 }
 
 /*--------------------------------------------- acc card ---------------------------------------------*/
@@ -79,24 +101,42 @@ Account content styles
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: var(--white);
-
 	padding: 15px;
+
+	@include sm {
+		padding: 10px 15px;		
+		gap: 30px;
+		align-items: center;
+		min-height: initial;
+		height: 43px;
+		flex-direction: row;
+	}	
 
 	&__part {
 		display: inline-flex;
 		align-items: center;
-		gap: 10px;
+		gap: 10px;		
 
-		&:nth-child(2) {
+		&:nth-child(2) {			
+			flex-shrink: 0;
 			align-self: flex-end;
+			@include sm{
+				max-height: 20px;
+			}
 		}
 	}
 
 	&__label {
+		display: flex;
+		align-items: center;
 		svg {
 			aspect-ratio: 1/1;
 			width: 28px;
 			stroke: var(--accent);
+
+			@include md {
+				width: 20px;
+			}
 		}
 	}
 
@@ -104,12 +144,24 @@ Account content styles
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 1.07421;
+
+		@include lg {
+			font-size: 13px;
+		}
+
+		@include md {
+			font-size: 12px;
+		}
 	}
 
 	&__count {
 		font-weight: 600;
 		font-size: 26px;
 		line-height: 1.15229;
+
+		@include md {
+			font-size: 20px;
+		}
 	}
 
 	&__star {
@@ -120,6 +172,10 @@ Account content styles
 		svg {
 			aspect-ratio: 1/1;
 			width: 24px;
+
+			@include md {
+				width: 20px;
+			}
 		}
 	}
 }

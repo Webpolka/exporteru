@@ -193,7 +193,7 @@ CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 	margin-right: 20px;
 
 	&::-webkit-scrollbar {
-		block-size: rem(1);
+		block-size: rem(0);
 		background-color: transparent;
 	}
 

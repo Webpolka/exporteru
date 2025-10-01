@@ -1,0 +1,94 @@
+<section class="section-topnull">
+	<h2 class="visually-hidden">Контакты компании</h2>
+	<div class="container">
+		<div class="account-layout">
+			<!-- sidebar -->
+			<div class="account-layout__sidebar">@@include('./sidebars/sidebar-contacts.html')</div>
+
+			<!-- content -->
+			<div class="account-layout__content">
+				<div class="account-tile">
+					<!-- header -->
+					<div class="account-tile__header">
+						<h2 class="account-tile__title">Контакты</h2>
+					</div>
+
+					<div class="row g-14">
+						<div class="col-sm-6">
+							<div class="dolly-label">Номера телефонов</div>
+
+							<div class="dolly-dropdown">
+								<button class="dolly-dropdown__toggle">
+									<span class="list-item--selected"><a href="tel:+71234567890">+7 123 456 78 90</a></span>
+									<span class="down-arrow"></span>
+								</button>
+								<ul class="dolly-dropdown__list">
+									<li class="list-item"><a href="tel:+79876543210">+7 987 654 32 10</a></li>
+									<li class="list-item"><a href="tel:+75556667788">+7 555 666 77 88</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="dolly-label">ИНН</div>
+							<div class="dolly-input"><span>5908077920</span></div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="dolly-label">Электронные почты</div>
+							<div class="dolly-dropdown">
+								<button class="dolly-dropdown__toggle">
+									<span class="list-item--selected">sales@carbo.su</span>
+									<span class="down-arrow"></span>
+								</button>
+								<ul class="dolly-dropdown__list">
+									<li class="list-item">figaro_sales@carbo.su</li>
+									<li class="list-item">gogusha_buyer@carbo.io</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="dolly-label">Сайты</div>
+							<div class="dolly-dropdown">
+								<button class="dolly-dropdown__toggle">
+									<span class="list-item--selected"><a href="#">sales@carbo.su</a></span>
+									<span class="down-arrow"></span>
+								</button>
+								<ul class="dolly-dropdown__list">
+									<li class="list-item"><a href="#">hts://webxalat.io/company</a></li>
+									<li class="list-item"><a href="#">hts://chinaec.ru/company</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Слайдер товары компании-->
+		<div class="section-flexheader">
+			<div class="section-flexheader__title">Товары компании</div>
+
+			<!-- Navig group -->
+			<div class="myproducts__header-group" id="myproducts-navig-group">
+				<a href="#" class="btn-accent myproducts__button">Смотреть все</a>
+				<!-- Slider navigation -->
+				<div class="myproducts__navigation-wrap">
+					<div class="arrow arrow--left"></div>
+					<div class="arrow arrow--right"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Slider -->
+		<div class="swiper" id="myproducts-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-1.html')</div>
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-2.html')</div>
+			</div>
+		</div>
+
+		<!-- for transfer id="myproducts-navig-group" -->
+		<div class="myproducts__sm-navigation" id="myproducts-sm-place"></div>
+	</div>
+</section>

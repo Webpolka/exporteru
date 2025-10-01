@@ -1,0 +1,128 @@
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Аватар - продавец
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.acc-avatar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+
+	&__image {
+		flex-shrink: 0;
+		width: 65px;
+		aspect-ratio: 1/1;
+		overflow: hidden;
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+
+	&__edit {
+		display: inline-flex;
+		align-items: center;
+		gap: 9px;
+
+		font-weight: 400;
+		font-size: 14px;
+		color: rgba(47, 47, 47, 0.5);
+
+		transition: all 0.3s ease-in-out;
+
+		margin-bottom: 15px;
+
+		@include sm{
+			gap: 7px;
+			font-size: 12px;
+		}
+
+		&:hover {
+			color: var(--text);
+			svg {
+				stroke: var(--text);
+			}
+		}
+
+		svg {
+			width: 18px;
+			aspect-ratio: 1/1;
+			stroke: #939393;
+
+			transition: all 0.3s ease-in-out;
+
+			@include sm{
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Аватар компании
+--------------------------------------------------------------------------------------------------------------------------------*/
+.acc-compavatar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+    margin-bottom: 20px;
+
+	@include sm{
+		flex-direction: column;
+
+		margin-bottom: 0;
+	}
+
+	&__image {
+		flex-shrink: 0;
+		aspect-ratio: 1/1;
+		width: 65px;
+		overflow: hidden;
+		border-radius: 50%;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+    &__group{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+	&__name {
+		font-weight: 500;
+		font-size: 18px;
+		color: #2f2f2f;
+
+		@include sm{
+			display: none;
+		}
+	}
+
+	&__email {
+		font-weight: 400;
+		font-size: 12px;
+		color: rgba(47, 47, 47, 0.5);
+
+		@include sm{
+			font-size: 12px;
+		}
+	}
+}

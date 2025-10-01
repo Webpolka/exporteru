@@ -90,7 +90,7 @@ export default class EditableInput {
 	}
 	setPlus(button) {
 		button.setAttribute("data-state", "plus");
-		button.innerHTML = `<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 9.5H13.5" stroke="#2F2F2F" stroke-linecap="round" stroke-linejoin="round" /><path d="M9 14V5" stroke-linecap="round" stroke-linejoin="round" /></svg>`;
+		button.innerHTML = `<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 9.5H13.5" stroke-linecap="round" stroke-linejoin="round" /><path d="M9 14V5" stroke-linecap="round" stroke-linejoin="round" /></svg>`;
 	}
 
 	setMinus(button) {

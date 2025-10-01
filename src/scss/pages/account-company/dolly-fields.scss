@@ -1,0 +1,266 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+Dolly fields
+--------------------------------------------------------------------------------------------------------------------------------*/
+.dolly-label {
+	font-weight: 400;
+	font-size: 14px;
+	color: #2f2f2f;
+
+	margin-bottom: 7px;
+
+	@include sm {
+		font-size: 12px;
+
+		margin-bottom: 4px;
+	}
+}
+
+/*--------------------------------------------- Dolly input ------------------------------------------------------------------*/
+.dolly-input {
+	width: 100%;
+	padding-inline: 15px;
+	min-height: 47px;
+
+	display: flex;
+	align-items: center;
+
+	background-color: var(--white);
+	font-weight: 400;
+	font-size: 14px;
+	color: #2f2f2f;
+
+	gap: 8px;
+
+	@include sm {
+		font-size: 10px;
+		min-height: 43px;
+		& > *:not(svg) {
+			opacity: 0.5;
+		}
+
+		svg {
+			max-width: 18px;
+		}
+	}
+
+	svg {
+		width: 100%;
+		max-width: 22px;
+
+		border-radius: 4px;
+		overflow: hidden;
+		margin-top: -2px;
+	}
+}
+
+/*--------------------------------------------- Dolly simple text ------------------------------------------------------------------*/
+.dolly-simpletext {
+	font-weight: 400;
+	font-size: 14px;
+	color: #2f2f2f;
+
+	margin-bottom: 5px;
+
+	@include sm {
+		padding-top: 3px;
+		font-size: 10px;
+	}
+
+	p,
+	li {
+		margin-bottom: 10px;
+	}
+}
+
+/*--------------------------------------------- Dolly multiselect ------------------------------------------------------------------*/
+.dolly-multiselect {
+	width: 100%;
+	padding-inline: 15px;
+	min-height: 47px;
+	background-color: var(--white);
+
+	display: flex;
+	align-items: center;
+
+	@include sm {
+		min-height: 47px;
+	}
+
+	&__scroll {
+		display: flex;
+		gap: 10px;
+		overflow-x: auto; /* горизонтальный скролл */
+
+		&::-webkit-scrollbar {
+			block-size: rem(0);
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-track {
+			box-shadow: none;
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border: none;
+			background-color: rgb(0, 71, 186, 0.25);
+			cursor: pointer;
+
+			@include any-hover {
+				background-color: grey;
+			}
+		}
+		& > * {
+			background-color: var(--accent);
+			min-height: 27px;
+			padding-inline: 10px;
+			display: flex;
+			align-items: center;
+
+			font-weight: 400;
+			font-size: 14px;
+			color: #fff;
+			user-select: none;
+
+			a,
+			button {
+				color: var(--white);
+				user-select: none;
+				pointer-events: none;
+			}
+
+			@include sm {
+				font-size: 10px;
+				max-height: 23px;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------- Dolly dropdown ------------------------------------------------------------------*/
+.dolly-dropdown {
+	position: relative;
+	width: 100%;
+	color: var(--text);
+
+	a {
+		color: var(--text);
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			color: var(--accent);
+			text-decoration: underline;
+		}
+	}
+
+	&__toggle {
+		width: 100%;
+		padding-inline: 15px;
+		min-height: 47px;
+
+		display: flex;
+		align-items: center;
+
+		background-color: var(--white);
+		font-weight: 400;
+		font-size: 14px;
+		color: #2f2f2f;
+
+		gap: 8px;
+
+		@include sm {
+			font-size: 10px;
+			min-height: 43px;
+			& > *:not(svg) {
+				opacity: 0.5;
+			}
+
+			svg {
+				max-width: 18px;
+			}
+		}
+
+		svg {
+			width: 100%;
+			max-width: 22px;
+
+			border-radius: 4px;
+			overflow: hidden;
+			margin-top: -2px;
+		}
+		cursor: pointer;
+	}
+
+	&__list {
+		display: none;
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: var(--white);	
+		border: 1px solid rgb(0, 0, 0, 0.1);
+		z-index: 1000;
+	}
+	.down-arrow {
+		content: "";
+		position: absolute;
+		right: 15px; /* позиция справа */
+		top: 50%;
+		transform: translateY(-50%);
+
+		width: rem(14);
+		height: rem(14);
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMTEuNjE5OSA1LjIyMDgzTDcuODE2NTUgOS4wMjQxN0M3LjM2NzM4IDkuNDczMzMgNi42MzIzOCA5LjQ3MzMzIDYuMTgzMjIgOS4wMjQxN0wyLjM3OTg4IDUuMjIwODMiIHN0cm9rZT0iIzJGMkYyRiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgo8L3N2Zz4K");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center center;
+		pointer-events: none; /* чтобы не мешала кликам */
+
+		@include md {
+			width: rem(10);
+			height: rem(10);
+		}
+		transition: transform 0.3s;
+	}
+
+	.list-item {
+		min-height: 48px;
+		display: flex;
+		align-items: center;
+		padding-inline: 15px;
+		font-size: 14px;
+		cursor: pointer;
+
+		overflow-x: auto;
+		&::-webkit-scrollbar {
+			block-size: rem(3);
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-track {
+			box-shadow: none;
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border: none;
+			background-color: rgb(0, 71, 186, 0.55);
+			cursor: pointer;
+
+			@include any-hover {
+				background-color: grey;
+			}
+		}
+
+		@include sm {
+			font-size: 10px;
+			min-height: 42px;
+		}
+	}
+
+	.list-item {
+		&:hover {
+			background-color: #eee;
+		}
+	}
+}
