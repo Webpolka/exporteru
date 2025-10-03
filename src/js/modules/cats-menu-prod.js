@@ -5,13 +5,13 @@ export default class CatsMenu {
 			openBtn: false,
 			catButton: "data-catIDoverlay",
 			catBlock: "data-blockIDoverlay",
-			backButton: "data-subcatback='overlay'",
-			closeButton: "data-catsclose='overlay'",
-			openSubListButton: "data-subcatslist='overlay'",
+			backButton: 'data-id="subcat-back"',			
 		};
+
 		this.options = Object.assign(defaultConfig, options);
 		this.parent = document.querySelector(this.options.parent);
 		this.openBtn = document.querySelector(this.options.openBtn);
+		this.back = this.options.backButton;
 
 		this.allCatButtons = this.parent.querySelectorAll(`[${this.options.catButton}]`);
 		this.allCatBlocks = this.parent.querySelectorAll(`[${this.options.catBlock}]`);
@@ -132,7 +132,7 @@ export default class CatsMenu {
 					}, 50);
 				}
 			}
-		});
+		});		
 
 		// Отслеживаем нажатие на бургер
 		this.openBtn &&
@@ -170,48 +170,13 @@ export default class CatsMenu {
 				}
 				return;
 			}
-
-			// Кнопки закрытия
-			if (target.closest(`[${this.options.closeButton}]`)) {
-				this.parent.classList.remove("active");
-				this.openBtn && this.openBtn.classList.remove("active");
-				this.allCatBlocks.forEach((block) => block.classList.remove("active-lg"));
-				setTimeout(() => {
-					this.parent.querySelector(`${this.options.parent}-zindex`) &&
-						this.parent.querySelector(`${this.options.parent}-zindex`).classList.remove("over");
-				}, 300);
-				return;
-			}
+	
 
 			// Кнопки "вернуться"
-			if (target.closest(`[${this.options.backButton}]`)) {
-				this.allCatBlocks.forEach((block) => block.classList.remove("active-lg"));
-
-				setTimeout(() => {
-					this.parent.querySelector(`${this.options.parent}-zindex`) &&
-						this.parent.querySelector(`${this.options.parent}-zindex`).classList.remove("over");
-				}, 300);
-
-				return;
-			}
-
-			// Кнопки открытия списка подкатегорий
-			if (target.closest(`[${this.options.openSubListButton}]`)) {
-				const btn = target.closest(`[${this.options.openSubListButton}]`);
-				const parent = btn.closest(`${this.options.parent}_subcats-list`);
-				const targetList = parent.querySelector("ul");
-				if (targetList) {
-					btn.classList.toggle("active");
-					targetList.classList.toggle("active");
-					if (targetList.classList.contains("active")) {
-						targetList.style.maxHeight = targetList.scrollHeight + "px";
-					} else {
-						targetList.style.maxHeight = "";
-					}
-					this.closeAnotherLists(targetList, btn);
-				}
-				return;
-			}
+			if (target.closest(`[${this.options.backButton}]`)) {				
+				this.closeAllSublists();
+			}	
+			
 		});
 	}
 }

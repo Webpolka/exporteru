@@ -460,10 +460,10 @@ Account content styles
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100%;	
+	height: 100%;
 
 	&:hover {
-		svg{
+		svg {
 			width: 85px;
 		}
 	}
@@ -553,6 +553,13 @@ Account content styles
 		}
 	}
 
+	input[type="search"] {
+		font-size: 14px;
+		@include sm {
+			font-size: 10px;
+		}
+	}
+
 	/* -------------------------------------------------------- Choices custom ------------------------------------------------------*/
 	.choices {
 		color: rgba(47, 47, 47, 0.5);
@@ -595,6 +602,6 @@ Account content styles
 	}
 
 	.choices::before {
-		right: 15px; /* позиция справа */
+		right: 17px; /* позиция справа */
 	}
 }

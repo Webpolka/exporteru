@@ -287,6 +287,13 @@
                                 <div class="exp-catalog__subcats" data-blockidoverlay="1">
                                     <div class="exp-catalog__subcats-wrap">
                                         <div class="exp-catalog__subcats-header">
+                                            <!-- back button -->
+                                            <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                                <svg class="icon icon--left-chevron">
+                                                    <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                                </svg>
+                                            </button>
+
                                             <h2 class="exp-catalog__subcats-title">
                                                 <a href="#">Растениеводство и животноводство</a>
                                             </h2>
@@ -316,6 +323,12 @@
                                 <!-- 2 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="2">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Лесоводство и лесозаготовки</a>
                                         </h2>
@@ -342,6 +355,12 @@
                                 <!-- 3 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="3">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Рыболовство и рыбоводство</a>
                                         </h2>
@@ -368,6 +387,12 @@
                                 <!-- 4 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="4">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Уголь</a>
                                         </h2>
@@ -385,6 +410,12 @@
                                 <!-- 5 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="5">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Нефть и природный газ</a>
                                         </h2>
@@ -627,7 +658,7 @@
                                             <label class="editable">
                                                 <span class="editable-text">Название компании</span>
                                                 <div class="editable-wrap">
-                                                    <input class="editable-input" value="ООО “КАРБО”" type="text" name="seller-personal-company" placeholder="Введите название компании" disabled="disabled">
+                                                    <input class="editable-input" value="ООО “КАРБО”" type="text" name="seller-personal-company" id="seller-personal-company" placeholder="Введите название компании" disabled="disabled">
 
                                                     <div class="editable-buttons">
                                                         <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
@@ -651,7 +682,7 @@
                                             <label class="editable">
                                                 <span class="editable-text">Пароль</span>
                                                 <div class="editable-wrap">
-                                                    <input class="editable-input" value="8939284627429837482" type="password" name="seller-personal-password" placeholder="•••••••••••••••••••" disabled="disabled">
+                                                    <input class="editable-input" value="8939284627429837482" type="password" name="seller-personal-password" id="seller-personal-password" placeholder="•••••••••••••••••••" disabled="disabled">
 
                                                     <div class="editable-buttons">
                                                         <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
@@ -681,7 +712,7 @@
                                             <label class="editable">
                                                 <span class="editable-text">Описание</span>
                                                 <div class="editable-wrap editable-wrap--top">
-                                                    <textarea class="editable-input editable-input--textarea" name="seller-personal-description" disabled="disabled">
+                                                    <textarea class="editable-input editable-input--textarea" id="seller-personal-description" name="seller-personal-description" disabled="disabled">
 В современном мире, где требования к сохранению природных ресурсов выходят на новый уровень, особую актуальность приобретают продукты и технологические решения, которые помогают природе и людям жить в гармонии. Чистая вода, свежий воздух, высокий уровень ответственности при добыче и переработке природных ископаемых — именно в этом мы видим одну из приоритетных задач для ответственного бизнеса в 21 веке.
 
 Наша цель — активно участвовать в данном процессе. Компания ООО «КАРБО» является поставщиком качественных активированных углей широкого спектра применения, химических поглотителей и карбюризатора. Вся предлагаемая нашей компанией продукция сертифицирована.
@@ -707,19 +738,19 @@
 
                                                 <div class="row g-10 g-sm-6 mediaload-container" data-mediaload="upload">
                                                     <div class="mediaload-column">
-                                                        <div class="mediaload-image"></div>
+                                                        <div class="mediaload-image placeholder-before"></div>
                                                     </div>
                                                     <div class="mediaload-column">
-                                                        <div class="mediaload-image"></div>
+                                                        <div class="mediaload-image placeholder-before"></div>
                                                     </div>
                                                     <div class="mediaload-column">
-                                                        <div class="mediaload-image"></div>
+                                                        <div class="mediaload-image placeholder-before"></div>
                                                     </div>
                                                     <div class="mediaload-column">
-                                                        <div class="mediaload-image"></div>
+                                                        <div class="mediaload-image placeholder-before"></div>
                                                     </div>
                                                     <div class="mediaload-column">
-                                                        <div class="mediaload-image"></div>
+                                                        <div class="mediaload-image placeholder-before"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1525,10 +1556,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+
+
+    <script src="vendor/choices.js"></script>
 
     <script src="./js/main.min.js"></script>
 

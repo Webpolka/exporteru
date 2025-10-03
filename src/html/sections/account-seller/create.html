@@ -23,7 +23,7 @@
 				</div>
 				<div class="account-tile">
 					<form action="" id="seller-create-form" class="account-form">
-						<div class="row gx-14 gy-25 pt-3px">
+						<div class="row gx-14 gy-25  gy-sm-9 pt-3px">
 							<div class="col-sm-6">
 								<label class="editable">
 									<span class="editable-text">Название товара</span>
@@ -65,7 +65,7 @@
 
 							<!-- 5 в ряд -->
 							<div class="col-12">
-								<div class="row gx-13">
+								<div class="row g-13 gy-sm-7 gx-sm-6">
 									<!-- 1 -->
 									<div class="custom-col-5">
 										<label class="editable">
@@ -127,7 +127,7 @@
 										</label>
 									</div>
 									<!-- 5 -->
-									<div class="custom-col-5">
+									<div class="custom-col-5 custom-col-5--somefull">
 										<label class="editable">
 											<span class="editable-text">Единица измерения</span>
 											<div class="editable-wrap">
@@ -146,7 +146,7 @@
 						</div>
 
 						<!-- Заголовок с кнопкой размножения "Описание и характеристика" -->
-						<div class="editable-group">
+						<div class="editable-group repeater-head">
 							<span class="editable-text">Таблица описания и характеристик</span>
 							<button type="button" data-clone-target="#repeater-block" class="editable-button repeater-clone-btn">
 								<svg class="icon icon--account-plus">
@@ -156,7 +156,7 @@
 						</div>
 					
 						<!--Первый блок для размножения "Описание и характеристика"-->
-						<div class="row gx-10 editable-repeater-block" id="repeater-block">
+						<div class="row g-10 g-sm-6 editable-repeater-block" id="repeater-block">
 							<div class="col-sm-6">
 								<div class="editable editable-wrap">
 									<input
@@ -216,13 +216,13 @@
 							</div>
 						</div>
 
-						<div class="row gx-14 gy-25">
+						<div class="row gx-14 gy-25 gy-sm-12 gx-sm-6">
 							<div class="col-12">
 								<label class="editable">
 									<span class="editable-text">Описание</span>
 									<div class="editable-wrap editable-wrap--top">
 										<textarea
-											class="editable-input editable-input--textarea"
+											class="editable-input editable-input--textarea mh-sm-113"
 											name="seller-create-description"
 											placeholder="Опишите товар"
 											disabled
@@ -240,7 +240,7 @@
 								</label>
 							</div>
 
-							<div class="col-sm-6">
+							<div class="col-6">
 								<label class="editable">
 									<span class="editable-text">До окончания акции</span>
 									<div class="editable-wrap">
@@ -272,9 +272,9 @@
 								</label>
 							</div>
 
-							<div class="col-sm-6">
+							<div class="col-6">
 								<label class="editable">
-									<span class="editable-text">Максимальный объем заказа</span>
+									<span class="editable-text">Макс. объем заказа</span>
 									<div class="editable-wrap">
 										<input
 											class="editable-input"
@@ -305,17 +305,17 @@
 							</div>
 						</div>
 
-						<div class="row gx-13">
+						<div class="row g-13">
 							<!-- 1 половина -->
 							<div class="col-sm-6">
 								<!-- Заголовок группы -->
-								<div class="editable-group">
+								<div class="editable-group pt-sm-13">
 									<span class="editable-text">Информация о доставке</span>
 								</div>
 
-								<div class="row gx-14 gy-20">
+								<div class="row gx-14 gy-20 gx-sm-6">
 									<!-- 1 -->
-									<div class="col-sm-6">
+									<div class="col-6">
 										<label class="editable">
 											<div class="editable-wrap">
 												<input
@@ -329,7 +329,7 @@
 										</label>
 									</div>
 									<!-- 2 -->
-									<div class="col-sm-6">
+									<div class="col-6">
 										<label class="editable">
 											<div class="editable-wrap">
 												<input
@@ -347,13 +347,13 @@
 							<!-- 2 половина -->
 							<div class="col-sm-6">
 								<!-- Заголовок группы -->
-								<div class="editable-group">
+								<div class="editable-group ">
 									<span class="editable-text">Варианты упаковки</span>
 								</div>
 
-								<div class="row gx-14 gy-20">
+								<div class="row gx-14 gy-20 gx-sm-6">
 									<!-- 1 -->
-									<div class="col-sm-6">
+									<div class="col-6">
 										<label class="editable">
 											<div class="editable-wrap">
 												<input
@@ -367,7 +367,7 @@
 										</label>
 									</div>
 									<!-- 2 -->
-									<div class="col-sm-6">
+									<div class="col-6">
 										<label class="editable">
 											<div class="editable-wrap">
 												<input
@@ -392,34 +392,34 @@
 							<div class="row gx-12 gy-20 gy-sm-30 upload-gallery">
 								<!-- Big -->
 								<div class="col-sm-6 upload-column">
-									<div class="upload-gallery__image upload-image"></div>
+									<div class="upload-gallery__image upload-image placeholder-before"></div>
 								</div>
 								<!-- Container with small -->
 								<div class="col-sm-6">
 									<div class="upload-gallery__thumbnails">
 										<!-- 1 -->
 										<div class="upload-gallery__col upload-column">
-											<div class="upload-gallery__thumb  upload-image"></div>   <!-- up-access -->
+											<div class="upload-gallery__thumb  upload-image placeholder-before"></div>   <!-- up-access -->
 										</div>
 										<!-- 2 -->
 										<div class="upload-gallery__col upload-column">
-											<div class="upload-gallery__thumb upload-image"></div>
+											<div class="upload-gallery__thumb upload-image placeholder-before"></div>
 										</div>
 										<!-- 3 -->
 										<div class="upload-gallery__col upload-column">
-											<div class="upload-gallery__thumb upload-image"></div>
+											<div class="upload-gallery__thumb upload-image placeholder-before"></div>
 										</div>
 										<!-- 4 -->
 										<div class="upload-gallery__col upload-column">
-											<div class="upload-gallery__thumb upload-image"></div>
+											<div class="upload-gallery__thumb upload-image placeholder-before"></div>
 										</div>
 										<!-- 5 -->
 										<div class="upload-gallery__col upload-column">
-											<div class="upload-gallery__thumb upload-image"></div>
+											<div class="upload-gallery__thumb upload-image placeholder-before"></div>
 										</div>
 										<!-- 6 -->
 										<div class="upload-gallery__col upload-column">
-											<div class="upload-gallery__thumb upload-image"></div>
+											<div class="upload-gallery__thumb upload-image placeholder-before"></div>
 										</div>
 									</div>
 								</div>

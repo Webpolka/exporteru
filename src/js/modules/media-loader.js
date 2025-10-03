@@ -9,6 +9,8 @@ export default class MediaLoadUploader {
 			columnClass: "mediaload-column",
 			imageClass: "mediaload-image",
 			messageClass: "mediaload-message",
+			
+			beforeClass: "placeholder-before"
 		};
 		this.options = Object.assign(defaultConfig, options);
 		this.maxFileSizeKB = this.options.maxFileSizeKB || 500;
@@ -134,6 +136,7 @@ export default class MediaLoadUploader {
 
 		const imgDiv = document.createElement("div");
 		imgDiv.className = this.options.imageClass;
+		imgDiv.classList.add(this.options.beforeClass);
 
 		containerDiv.appendChild(imgDiv);
 		this.medialoadContainer.appendChild(containerDiv);
@@ -162,6 +165,7 @@ export default class MediaLoadUploader {
 		imgdiv.appendChild(img);
 		imgdiv.appendChild(deleteBtn);
 		container.appendChild(imgdiv);
+		container.classList.remove(this.options.beforeClass);
 
 		this.ensureEmptyContainerExists();
 	}
@@ -176,6 +180,7 @@ export default class MediaLoadUploader {
 
 		if (container && container.parentNode) {
 			container.innerHTML = "";
+			container.classList.add(this.options.beforeClass);
 		}
 		this.ensureEmptyContainerExists();
 	}

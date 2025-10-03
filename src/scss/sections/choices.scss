@@ -24,8 +24,8 @@ CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 	pointer-events: none; /* чтобы не мешала кликам */
 
 	@include md {
-		width: rem(10);
-		height: rem(10);
+		width: rem(12);
+		height: rem(12);
 	}
 }
 
@@ -84,7 +84,7 @@ CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 	left: -25px;
 	overflow: hidden;
 	word-break: break-all;
-	border: 1px solid rgb(0, 0, 0, 0.15) !important;
+	border: 1px solid rgb(0, 0, 0, 0.05) !important;
 
 	min-width: 184px;
 
@@ -112,7 +112,7 @@ CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 
 		display: flex;
 		align-items: center;
-		max-height: 27px;
+		max-height: 27px;		
 	}
 }
 
@@ -194,7 +194,7 @@ CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 	overflow-x: auto; /* горизонтальный скролл */
 	flex-wrap: nowrap; /* без переноса */
 	gap: 10px; /* расстояние между тегами */
-	margin-right: 20px;
+	margin-right: 25px;
 	padding-left: 3px;
 
 	&::-webkit-scrollbar {

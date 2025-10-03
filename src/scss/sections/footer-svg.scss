@@ -8,21 +8,21 @@ INNER SVG STYLES FOR SOICAL ICONS (СТИЛИЗАЦИЯ ИКОНОК В ФУТЕ
 }
 .soc-wechat-char-2 {
 	fill: white;
-	@include md {
-		fill: #dedede;
-	}
+	// @include md {
+	// 	fill: #dedede;
+	// }
 }
 .soc-wechat-eye-1 {
 	fill: var(--wechat);
-	@include md {
-		fill: var(--red);
-	}
+	// @include md {
+	// 	fill: var(--red);
+	// }
 }
 .soc-wechat-eye-2 {
 	fill: var(--wechat);
-	@include md {
-		fill: var(--red);
-	}
+	// @include md {
+	// 	fill: var(--red);
+	// }
 }
 
 // tg
@@ -33,9 +33,9 @@ INNER SVG STYLES FOR SOICAL ICONS (СТИЛИЗАЦИЯ ИКОНОК В ФУТЕ
 // vk
 .soc-vk-char {
 	fill: var(--vk);
-	@include md {
-		fill: var(--red);
-	}
+	// @include md {
+	// 	fill: var(--red);
+	// }
 }
 .soc-vk-tile {
 	fill: white;
@@ -49,14 +49,14 @@ INNER SVG STYLES FOR SOICAL ICONS (СТИЛИЗАЦИЯ ИКОНОК В ФУТЕ
 // max
 .soc-max-char {	
     fill: white;
-	@include md {
-        fill: var(--red);
+	// @include md {
+    //     fill: var(--red);
 		
-	}
+	// }
 }
 .soc-max-tile {
 	fill: transparent;
-	@include md {
-		fill: white;
-	}
+	// @include md {
+	// 	fill: white;
+	// }
 }

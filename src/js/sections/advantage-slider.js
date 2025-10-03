@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		var advantageSlider = new KeenSlider("#advantages-slider", {
 			slides: {
 				perView: 3.2,
-				spacing: 20,
+				spacing: 26,
 			},
 			controls: false,
 			breakpoints: {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					slides: { perView: 2.2, spacing: 15 },
 				},
 				"(min-width: 768px)": {
-					slides: { perView: 3.31, spacing: 20 },
+					slides: { perView: 3.31, spacing: 26 },
 				},
 			},
 

@@ -203,3 +203,9 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 		margin-bottom: 20px;
 	}
 }
+
+.editable-group.pt-sm-13{
+	@include sm{
+		padding-top: 13px !important;
+	}
+}

@@ -259,6 +259,54 @@ CATAALOG OVERLAY (БОЛЬШОЕ МЕНЮ КАТАЛОГА)
 			padding-inline: var(--container-padding-small);
 			top: rem(135);
 		}
+
+		&-header {
+			display: inline-flex;
+			align-items: start;
+			gap: 10px;
+			margin-bottom: 27px;
+
+			@include lg {
+				margin-bottom: rem(20);
+			}
+
+			@include sm {				
+				margin-bottom: rem(20);
+			}
+		}
+
+		// button back
+		&-back {
+			display: none;
+		
+			align-items: center;
+			justify-content: center;
+					
+			height: 34px;
+			aspect-ratio: 1/1;
+			transition: all 0.3s ease-in-out;
+
+			flex-shrink: 0;
+
+			&:hover {
+				transform: scale(1.2) translateX(5%);
+			}
+			@include lg {
+				display: flex;
+			}
+
+			@include sm{
+				height: 26px;
+			}
+			
+			svg {
+				width: 75%;
+				aspect-ratio: 1/1;
+				stroke: #fff;
+				fill: #fff;
+			}
+		}
+
 		&-title {
 			font-weight: 600;
 			font-size: 22px;
@@ -270,15 +318,8 @@ CATAALOG OVERLAY (БОЛЬШОЕ МЕНЮ КАТАЛОГА)
 				}
 			}
 
-			margin-bottom: 27px;
-
-			@include lg {
-				margin-bottom: rem(20);
-			}
-
 			@include sm {
 				font-size: rem(18);
-				margin-bottom: rem(20);
 			}
 		}
 

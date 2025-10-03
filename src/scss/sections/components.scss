@@ -150,6 +150,7 @@ COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ)
 	flex-grow: 1;
 
 	&__input {
+		background-color: var(--white);
 		font-weight: 400;
 		font-size: rem(15);
 
@@ -861,3 +862,113 @@ COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ)
 	}
 }
 
+/* --------------------------------------------------------------- wl-choice --------------------------------------------------------------------*/
+
+// -- item ---
+.wl-item {
+	// background-color: #fff;
+	&__wrap {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		@include sm{
+			gap: 6px;
+		}
+	}
+	&__flag {
+		flex-shrink: 0;
+		width: 22px;
+		aspect-ratio: 18/13;
+		display: flex;
+		align-items: center;
+		border: 1px solid rgb(0, 0, 0, 0.1);
+		border-radius: 4px;
+		overflow: hidden;
+
+		@include sm{
+			width: 18px;
+		}
+
+		svg {
+			width: 100%;
+		}
+	}
+	&__label {
+		font-size: 14px;
+
+		@include sm{
+			font-size: 10px;
+		}
+	}
+}
+
+// -- choice ---
+.wl-choice {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 14px;
+	// background-color: #fff;
+	min-height: 43px;
+
+	&:hover {
+		background-color: rgb(0, 0, 0, 0.03);
+	}
+
+	&--checked {
+		background-color: rgb(0, 0, 0, 0.03);
+	}
+
+	&__wrap {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		flex-shrink: 0;
+		cursor:  pointer;
+
+		@include sm{
+			gap: 6px;
+		}
+	}
+	&__flag {
+		flex-shrink: 0;
+		width: 22px;
+		aspect-ratio: 18/13;
+		display: flex;
+		align-items: center;
+		border: 1px solid rgb(0, 0, 0, 0.1);
+		border-radius: 4px;
+		overflow: hidden;
+		@include sm{
+			width: 18px;
+		}
+
+		svg {
+			width: 100%;
+		}
+	}
+	&__label {
+		font-size: 14px;
+		color: var(--text);
+
+		@include sm{
+			font-size: 10px;
+		}
+	}
+
+	&__checkbox {
+		width: 16px;
+		aspect-ratio: 1/1;
+		border: 1px solid rgb(0, 0, 0, 0.4);
+		background-color: var(--white);
+		border-radius: 50%;
+
+		&--checked {
+			background-color: var(--accent);
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTQuMjk1MTUgOEM0LjA1NTAzIDggMy44MjY5MSA3LjkxMDcxIDMuNjU4ODMgNy43NTQ0NUwwLjI2MTEzMSA0LjU5NTc0Qy0wLjA4NzA0MzUgNC4yNzIwNiAtMC4wODcwNDM1IDMuNzM2MzEgMC4yNjExMzEgMy40MTI2M0MwLjYwOTMwNSAzLjA4ODk0IDEuMTg1NTkgMy4wODg5NCAxLjUzMzc3IDMuNDEyNjNMNC4yOTUxNSA1Ljk3OTc3TDEwLjQ2NjIgMC4yNDI3NjJDMTAuODE0NCAtMC4wODA5MjA4IDExLjM5MDcgLTAuMDgwOTIwOCAxMS43Mzg5IDAuMjQyNzYyQzEyLjA4NyAwLjU2NjQ0NiAxMi4wODcgMS4xMDIyIDExLjczODkgMS40MjU4OEw0LjkzMTQ3IDcuNzU0NDVDNC43NjMzOCA3LjkxMDcxIDQuNTM1MjcgOCA0LjI5NTE1IDhaIiBmaWxsPSJ3aGl0ZSIgLz4KPC9zdmc+");
+			background-repeat: no-repeat;
+			background-size: 65%;
+			background-position: 55% 50%;
+		}
+	}
+}

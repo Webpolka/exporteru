@@ -287,6 +287,13 @@
                                 <div class="exp-catalog__subcats" data-blockidoverlay="1">
                                     <div class="exp-catalog__subcats-wrap">
                                         <div class="exp-catalog__subcats-header">
+                                            <!-- back button -->
+                                            <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                                <svg class="icon icon--left-chevron">
+                                                    <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                                </svg>
+                                            </button>
+
                                             <h2 class="exp-catalog__subcats-title">
                                                 <a href="#">Растениеводство и животноводство</a>
                                             </h2>
@@ -316,6 +323,12 @@
                                 <!-- 2 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="2">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Лесоводство и лесозаготовки</a>
                                         </h2>
@@ -342,6 +355,12 @@
                                 <!-- 3 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="3">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Рыболовство и рыбоводство</a>
                                         </h2>
@@ -368,6 +387,12 @@
                                 <!-- 4 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="4">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Уголь</a>
                                         </h2>
@@ -385,6 +410,12 @@
                                 <!-- 5 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="5">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Нефть и природный газ</a>
                                         </h2>
@@ -524,68 +555,79 @@
                         <a href="#" id="popularcats-button" class="btn-accent">Смотреть все</a>
                     </div>
 
-                    <div class="popularcats__grid">
+                    <div class="row g-10">
                         <!-- 1 -->
-                        <div class="popularcats__grid-item">
-                            <img src="./images/main/main-2-1.png" alt="">
-                            <div class="popularcats__position">
+                        <div class="column-40">
+                            <div class="popularcats-item item-1">
+                                <img src="./images/main/main-2-1.png" alt="">
+                                <div class="popularcats__position">
+                                    <h3 class="popularcats__title">Металлургическая продукция</h3>
 
-                                <h3 class="popularcats__title">Металлургическая продукция</h3>
-
-                                <!-- WARNING ! don't destroy this construction -->
-                                <div class="popularcats__more">
-                                    <a href="#" class="popularcats__morelink">
-                                        <span>Подробнее</span>
-                                        <svg class="icon icon--right-long">
-                                            <use href="./icons/symbol/sprite.svg#right-long"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- 2 -->
-                        <div class="popularcats__grid-item">
-                            <img src="./images/main/main-2-2.png" alt="">
-                            <div class="popularcats__position">
-                                <h3 class="popularcats__title">Древесина</h3>
-                                <div class="popularcats__more">
-                                    <a href="#" class="popularcats__morelink">
-                                        <span>Подробнее</span>
-                                        <svg class="icon icon--right-long">
-                                            <use href="./icons/symbol/sprite.svg#right-long"></use>
-                                        </svg>
-                                    </a>
+                                    <!-- WARNING ! don't destroy this construction -->
+                                    <div class="popularcats__more">
+                                        <a href="#" class="popularcats__morelink">
+                                            <span>Подробнее</span>
+                                            <svg class="icon icon--right-long">
+                                                <use href="./icons/symbol/sprite.svg#right-long"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 3 -->
-                        <div class="popularcats__grid-item">
-                            <img src="./images/main/main-2-3.png" alt="">
-                            <div class="popularcats__position">
-                                <h3 class="popularcats__title">Минеральная продукция</h3>
-                                <div class="popularcats__more">
-                                    <a href="#" class="popularcats__morelink">
-                                        <span>Подробнее</span>
-                                        <svg class="icon icon--right-long">
-                                            <use href="./icons/symbol/sprite.svg#right-long"></use>
-                                        </svg>
-                                    </a>
+
+                        <div class="column-60">
+                            <div class="row g-10">
+                                <div class="col-6">
+                                    <!-- 2 -->
+                                    <div class="popularcats-item item-2">
+                                        <img src="./images/main/main-2-2.png" alt="">
+                                        <div class="popularcats__position">
+                                            <h3 class="popularcats__title">Древесина</h3>
+                                            <div class="popularcats__more">
+                                                <a href="#" class="popularcats__morelink">
+                                                    <span>Подробнее</span>
+                                                    <svg class="icon icon--right-long">
+                                                        <use href="./icons/symbol/sprite.svg#right-long"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- 4 -->
-                        <div class="popularcats__grid-item">
-                            <img src="./images/main/main-2-4.png" alt="">
-                            <div class="popularcats__position">
-                                <h3 class="popularcats__title">Полезные ископаемые</h3>
-                                <div class="popularcats__more">
-                                    <a href="#" class="popularcats__morelink">
-                                        <span>Подробнее</span>
-                                        <svg class="icon icon--right-long">
-                                            <use href="./icons/symbol/sprite.svg#right-long"></use>
-                                        </svg>
-                                    </a>
+                                <div class="col-6">
+                                    <!-- 3 -->
+                                    <div class="popularcats-item item-3">
+                                        <img src="./images/main/main-2-3.png" alt="">
+                                        <div class="popularcats__position">
+                                            <h3 class="popularcats__title">Минеральная продукция</h3>
+                                            <div class="popularcats__more">
+                                                <a href="#" class="popularcats__morelink">
+                                                    <span>Подробнее</span>
+                                                    <svg class="icon icon--right-long">
+                                                        <use href="./icons/symbol/sprite.svg#right-long"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!-- 4 -->
+                                    <div class="popularcats-item item-4">
+                                        <img src="./images/main/main-2-4.png" alt="">
+                                        <div class="popularcats__position">
+                                            <h3 class="popularcats__title">Полезные ископаемые</h3>
+                                            <div class="popularcats__more">
+                                                <a href="#" class="popularcats__morelink">
+                                                    <span>Подробнее</span>
+                                                    <svg class="icon icon--right-long">
+                                                        <use href="./icons/symbol/sprite.svg#right-long"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1499,10 +1541,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+
+
+    <script src="vendor/choices.js"></script>
 
     <script src="./js/main.min.js"></script>
 

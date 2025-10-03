@@ -51,12 +51,42 @@ Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТ
 	margin-bottom: 40px;
 }
 
+
+.repeater-head{
+	@include sm{
+	padding-top: 15px !important;	
+	}
+	
+}
+
+.mh-sm-113{
+	@include sm{
+		min-height: 113px;
+	}
+}
+
 .custom-col-5 {
 	width: 20%;
-	height: inherit;
+	height: inherit;	
+
+	@media(max-width:1300px){
+		width: 50%;
+	}
+	&--somefull{
+		@media(max-width:1300px){
+			width: 100%;
+		}
+		
+	}
 
 	@include sm {
-		width: 100%;
+		width: 50%;
+	}
+	&--somefull{
+		@include sm{
+			width: 100%;
+		}
+		
 	}
 }
 
@@ -169,6 +199,20 @@ Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТ
 	}
 }
 
+// sm 9px
+.g-sm-9,
+.gx-sm-9 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 9px;
+	}
+}
+.g-sm-9,
+.gy-sm-9 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 9px;
+	}
+}
+
 // sm 10px
 .g-sm-10,
 .gx-sm-10 {
@@ -194,6 +238,34 @@ Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТ
 .gy-sm-11 {
 	@media (max-width: 576px) {
 		--bs-gutter-y: 11px;
+	}
+}
+
+// sm 12px
+.g-sm-12,
+.gx-sm-12 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 12px;
+	}
+}
+.g-sm-12,
+.gy-sm-12 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 12px;
+	}
+}
+
+// sm 14px
+.g-sm-14,
+.gx-sm-14 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 14px;
+	}
+}
+.g-sm-14,
+.gy-sm-14 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 14px;
 	}
 }
 

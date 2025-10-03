@@ -52,10 +52,7 @@ categoriesOverlayMenu &&
 		parent: ".exp-catalog",
 		openBtn: "#catalog-btn",
 		catButton: "data-catIDoverlay",
-		catBlock: "data-blockIDoverlay",
-		backButton: "data-subcatback='overlay'",
-		closeButton: "data-catsclose='overlay'",
-		openSubListButton: "data-subcatslist='overlay'",
+		catBlock: "data-blockIDoverlay",						
 	});
 
 /* --------------------------------------------------------------------------------------------------------------------------
@@ -187,6 +184,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			inputId: "seller-create-media",
 			inputName: "seller-create-media",
+
+			beforeClass: "placeholder-before"
 		});
 });
 
@@ -206,21 +205,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-Poppup
+Popup
 --------------------------------------------------------------------------------------------------------------------------------*/
-document.addEventListener("DOMContentLoaded", () => {
-	const popup = document.getElementById("formPopup");
-	const openPopupbtn = document.querySelector("#open-popup-btn");
-	const closeBtn = popup.querySelector(`[data-popup="close"]`);
+import './modules/popup.js';
 
-	if (popup && openPopupbtn) {
-		openPopupbtn.addEventListener("click", (e) => {
-			e.preventDefault();
-			popup.classList.add("popup--show");
-		});
-		closeBtn.addEventListener("click", (e) => {
-			e.preventDefault();
-			popup.classList.remove("popup--show");
-		});
-	}
-});
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------*/

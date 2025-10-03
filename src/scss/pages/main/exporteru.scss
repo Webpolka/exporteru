@@ -5,7 +5,7 @@ EXPERTS SECTION
 	color: var(--text);
 	&__block {
 		position: relative;
-		padding: rem(30);
+		padding: 43px 40px;
 
 		aspect-ratio: 127/46;
 
@@ -38,9 +38,10 @@ EXPERTS SECTION
 		@include sm {
 			background-image: url("../../images/main/main-5-bg-mobile.png");
 			justify-content: start;
-			gap: rem(25);
+			gap: rem(19);
 
 			padding-inline: rem(12);
+			padding-block: 33px;
 		}
 	}
 

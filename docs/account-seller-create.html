@@ -287,6 +287,13 @@
                                 <div class="exp-catalog__subcats" data-blockidoverlay="1">
                                     <div class="exp-catalog__subcats-wrap">
                                         <div class="exp-catalog__subcats-header">
+                                            <!-- back button -->
+                                            <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                                <svg class="icon icon--left-chevron">
+                                                    <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                                </svg>
+                                            </button>
+
                                             <h2 class="exp-catalog__subcats-title">
                                                 <a href="#">Растениеводство и животноводство</a>
                                             </h2>
@@ -316,6 +323,12 @@
                                 <!-- 2 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="2">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Лесоводство и лесозаготовки</a>
                                         </h2>
@@ -342,6 +355,12 @@
                                 <!-- 3 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="3">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Рыболовство и рыбоводство</a>
                                         </h2>
@@ -368,6 +387,12 @@
                                 <!-- 4 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="4">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Уголь</a>
                                         </h2>
@@ -385,6 +410,12 @@
                                 <!-- 5 -->
                                 <div class="exp-catalog__subcats" data-blockidoverlay="5">
                                     <div class="exp-catalog__subcats-header">
+                                        <!-- back button -->
+                                        <button class="exp-catalog__subcats-back" type="button" data-id="subcat-back">
+                                            <svg class="icon icon--left-chevron">
+                                                <use href="./icons/symbol/sprite.svg#left-chevron"></use>
+                                            </svg>
+                                        </button>
                                         <h2 class="exp-catalog__subcats-title">
                                             <a href="#">Нефть и природный газ</a>
                                         </h2>
@@ -548,7 +579,7 @@
                             </div>
                             <div class="account-tile">
                                 <form action="" id="seller-create-form" class="account-form">
-                                    <div class="row gx-14 gy-25 pt-3px">
+                                    <div class="row gx-14 gy-25 gy-sm-9 pt-3px">
                                         <div class="col-sm-6">
                                             <label class="editable">
                                                 <span class="editable-text">Название товара</span>
@@ -583,7 +614,7 @@
 
                                         <!-- 5 в ряд -->
                                         <div class="col-12">
-                                            <div class="row gx-13">
+                                            <div class="row gx-sm-6 g-13 gy-sm-7">
                                                 <!-- 1 -->
                                                 <div class="custom-col-5">
                                                     <label class="editable">
@@ -621,7 +652,7 @@
                                                     </label>
                                                 </div>
                                                 <!-- 5 -->
-                                                <div class="custom-col-5">
+                                                <div class="custom-col-5 custom-col-5--somefull">
                                                     <label class="editable">
                                                         <span class="editable-text">Единица измерения</span>
                                                         <div class="editable-wrap">
@@ -634,7 +665,7 @@
                                     </div>
 
                                     <!-- Заголовок с кнопкой размножения "Описание и характеристика" -->
-                                    <div class="editable-group">
+                                    <div class="editable-group repeater-head">
                                         <span class="editable-text">Таблица описания и характеристик</span>
                                         <button type="button" data-clone-target="#repeater-block" class="editable-button repeater-clone-btn">
                                             <svg class="icon icon--account-plus">
@@ -644,7 +675,7 @@
                                     </div>
 
                                     <!--Первый блок для размножения "Описание и характеристика"-->
-                                    <div class="row editable-repeater-block gx-10" id="repeater-block">
+                                    <div class="row editable-repeater-block g-10 g-sm-6" id="repeater-block">
                                         <div class="col-sm-6">
                                             <div class="editable editable-wrap">
                                                 <input class="editable-input" value="" type="text" name="seller-create-list-name[]" placeholder="Название" disabled="disabled">
@@ -690,12 +721,12 @@
                                         </div>
                                     </div>
 
-                                    <div class="row gx-14 gy-25">
+                                    <div class="row gx-14 gx-sm-6 gy-25 gy-sm-12">
                                         <div class="col-12">
                                             <label class="editable">
                                                 <span class="editable-text">Описание</span>
                                                 <div class="editable-wrap editable-wrap--top">
-                                                    <textarea class="editable-input editable-input--textarea" name="seller-create-description" placeholder="Опишите товар" disabled="disabled"></textarea>
+                                                    <textarea class="editable-input editable-input--textarea mh-sm-113" name="seller-create-description" placeholder="Опишите товар" disabled="disabled"></textarea>
 
                                                     <div class="editable-buttons">
                                                         <!-- Кнопка редактировать -->
@@ -709,7 +740,7 @@
                                             </label>
                                         </div>
 
-                                        <div class="col-sm-6">
+                                        <div class="col-6">
                                             <label class="editable">
                                                 <span class="editable-text">До окончания акции</span>
                                                 <div class="editable-wrap">
@@ -734,9 +765,9 @@
                                             </label>
                                         </div>
 
-                                        <div class="col-sm-6">
+                                        <div class="col-6">
                                             <label class="editable">
-                                                <span class="editable-text">Максимальный объем заказа</span>
+                                                <span class="editable-text">Макс. объем заказа</span>
                                                 <div class="editable-wrap">
                                                     <input class="editable-input" value="" type="text" name="seller-create-max" placeholder="Макс. объем" disabled="disabled">
 
@@ -760,17 +791,17 @@
                                         </div>
                                     </div>
 
-                                    <div class="row gx-13">
+                                    <div class="row g-13">
                                         <!-- 1 половина -->
                                         <div class="col-sm-6">
                                             <!-- Заголовок группы -->
-                                            <div class="editable-group">
+                                            <div class="editable-group pt-sm-13">
                                                 <span class="editable-text">Информация о доставке</span>
                                             </div>
 
-                                            <div class="row gx-14 gy-20">
+                                            <div class="row gx-14 gx-sm-6 gy-20">
                                                 <!-- 1 -->
-                                                <div class="col-sm-6">
+                                                <div class="col-6">
                                                     <label class="editable">
                                                         <div class="editable-wrap">
                                                             <input class="editable-input" value="" type="text" name="seller-create-delivery-name" placeholder="Название">
@@ -778,7 +809,7 @@
                                                     </label>
                                                 </div>
                                                 <!-- 2 -->
-                                                <div class="col-sm-6">
+                                                <div class="col-6">
                                                     <label class="editable">
                                                         <div class="editable-wrap">
                                                             <input class="editable-input" value="" type="text" name="seller-create-delivery-deadlines" placeholder="Сроки">
@@ -794,9 +825,9 @@
                                                 <span class="editable-text">Варианты упаковки</span>
                                             </div>
 
-                                            <div class="row gx-14 gy-20">
+                                            <div class="row gx-14 gx-sm-6 gy-20">
                                                 <!-- 1 -->
-                                                <div class="col-sm-6">
+                                                <div class="col-6">
                                                     <label class="editable">
                                                         <div class="editable-wrap">
                                                             <input class="editable-input" value="" type="text" name="seller-create-packaging-name" placeholder="Упаковка">
@@ -804,7 +835,7 @@
                                                     </label>
                                                 </div>
                                                 <!-- 2 -->
-                                                <div class="col-sm-6">
+                                                <div class="col-6">
                                                     <label class="editable">
                                                         <div class="editable-wrap">
                                                             <input class="editable-input" value="" type="text" name="seller-create-packaging-price" placeholder="Цена">
@@ -820,37 +851,37 @@
                                     </div>
 
                                     <div id="seller-create-upload">
-                                        <div class="row gy-20 gx-12 gy-sm-30 upload-gallery">
+                                        <div class="row gx-12 gy-20 gy-sm-30 upload-gallery">
                                             <!-- Big -->
                                             <div class="col-sm-6 upload-column">
-                                                <div class="upload-image upload-gallery__image"></div>
+                                                <div class="placeholder-before upload-image upload-gallery__image"></div>
                                             </div>
                                             <!-- Container with small -->
                                             <div class="col-sm-6">
                                                 <div class="upload-gallery__thumbnails">
                                                     <!-- 1 -->
                                                     <div class="upload-column upload-gallery__col">
-                                                        <div class="upload-image upload-gallery__thumb"></div> <!-- up-access -->
+                                                        <div class="placeholder-before upload-image upload-gallery__thumb"></div> <!-- up-access -->
                                                     </div>
                                                     <!-- 2 -->
                                                     <div class="upload-column upload-gallery__col">
-                                                        <div class="upload-image upload-gallery__thumb"></div>
+                                                        <div class="placeholder-before upload-image upload-gallery__thumb"></div>
                                                     </div>
                                                     <!-- 3 -->
                                                     <div class="upload-column upload-gallery__col">
-                                                        <div class="upload-image upload-gallery__thumb"></div>
+                                                        <div class="placeholder-before upload-image upload-gallery__thumb"></div>
                                                     </div>
                                                     <!-- 4 -->
                                                     <div class="upload-column upload-gallery__col">
-                                                        <div class="upload-image upload-gallery__thumb"></div>
+                                                        <div class="placeholder-before upload-image upload-gallery__thumb"></div>
                                                     </div>
                                                     <!-- 5 -->
                                                     <div class="upload-column upload-gallery__col">
-                                                        <div class="upload-image upload-gallery__thumb"></div>
+                                                        <div class="placeholder-before upload-image upload-gallery__thumb"></div>
                                                     </div>
                                                     <!-- 6 -->
                                                     <div class="upload-column upload-gallery__col">
-                                                        <div class="upload-image upload-gallery__thumb"></div>
+                                                        <div class="placeholder-before upload-image upload-gallery__thumb"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1752,10 +1783,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+
+
+    <script src="vendor/choices.js"></script>
 
     <script src="./js/main.min.js"></script>
 

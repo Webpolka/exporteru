@@ -12,6 +12,10 @@ FOOTER
 		padding-block-end: 32px;
 		min-height: rem(165);
 
+		@include xl{
+			gap:15px;
+		}
+
 		@include lg {
 			gap: rem(50) rem(0);
 			flex-wrap: wrap;
@@ -174,9 +178,9 @@ FOOTER
 		&-link {
 			border-radius: 50%;
 
-			@include md {
-				border-radius: 0;
-			}
+			// @include md {
+			// 	border-radius: 0;
+			// }
 			width: rem(36);
 			aspect-ratio: 1/1;
 
@@ -191,9 +195,9 @@ FOOTER
 			}
 			&--vk {
 				background-color: var(--vk);
-				@include md {
-					background-color: var(--red);
-				}
+				// @include md {
+				// 	background-color: var(--red);
+				// }
 			}
 
 			&--tg {
@@ -201,9 +205,9 @@ FOOTER
 					transform: translateX(-3px);
 				}
 				background-color: var(--tg);
-				@include md {
-					background-color: var(--red);
-				}
+				// @include md {
+				// 	background-color: var(--red);
+				// }
 			}
 
 			&--max {		
@@ -212,28 +216,28 @@ FOOTER
 					width: 25px;
 				}		
 				background-image: url('../../images/max-bg.png');
-				@include md {
-					svg{
-					height: initial;
-					width: initial;
-				}	
-					background-image: none;
-					background-color: var(--red);
-				}
+				// @include md {
+				// 	svg{
+				// 	height: initial;
+				// 	width: initial;
+				// }	
+				// 	background-image: none;
+				// 	background-color: var(--red);
+				// }
 			}
 
 			&--wechat {
 				background-color: var(--wechat);
-				@include md {
-					background-color: var(--red);
-				}
+				// @include md {
+				// 	background-color: var(--red);
+				// }
 			}
 
 			&--whatsapp {
 				background-color: var(--whatsapp);
-				@include md {
-					background-color: var(--red);
-				}			
+				// @include md {
+				// 	background-color: var(--red);
+				// }			
 			}
 		}	
 	}

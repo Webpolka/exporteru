@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		let timer;
 		window.addEventListener("change", () => {
-			clearTimeout(timmer);
+			clearTimeout(timer);
 			timer = setTimeout(() => {
 				uppdateTopPosition(swiper);
 			}, 100);
