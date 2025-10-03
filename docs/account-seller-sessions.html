@@ -64,8 +64,8 @@
                             </form>
                         </div>
 
-                        <!-- Login Button -->
-                        <button id="login-btn" class="btn-login">
+                        <!-- Login Button  id="login-btn"-->
+                        <button id="open-popup-btn" class="btn-login">
                             <svg class="icon icon--profile">
                                 <use href="./icons/symbol/sprite.svg#profile"></use>
                             </svg>
@@ -81,6 +81,8 @@
                             </span>
                             <span class="lang-switcher__name">Русский</span>
                         </a>
+
+
                     </div>
                 </div>
 
@@ -410,7 +412,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </header>
@@ -449,6 +450,7 @@
                                         <span>Изменить фото</span>
                                     </button>
                                 </div>
+
 
                                 <div class="menu-human--ord-2 menu-human__group">
                                     <!-- list 1 -->
@@ -536,12 +538,16 @@
 
                         <!-- content -->
                         <div class="account-layout__content">
+                            <!-- header -->
+                            <div class="account__header">
+                                <h2 class="account__title">Мои сессии</h2>
+                                <a href="account-seller-start.html" class="btn-menu" title="Вернуться к меню">
+                                    <svg class="icon icon--menu">
+                                        <use href="./icons/symbol/sprite.svg#menu"></use>
+                                    </svg>
+                                </a>
+                            </div>
                             <div class="account-tile">
-                                <!-- header -->
-                                <div class="account-tile__header">
-                                    <h2 class="account-tile__title">Мои сессии</h2>
-                                </div>
-
                                 <div class="account-sessions">
                                     <!--session 1 -->
                                     <div class="account-sessions__block session">
@@ -614,7 +620,7 @@
                                     </div>
                                 </div>
 
-                                <div class="container justify-content-center">
+                                <div class="justify-content-center">
                                     <div class="exp-pagination">
                                         <a href="#" class="exp-pagination__link exp-pagination__link--disabled exp-pagination__link--prev"></a>
                                         <a href="#" class="exp-pagination__link exp-pagination__link--active">1</a>
@@ -632,7 +638,7 @@
                     </div>
 
                     <!-- Слайдер мои товары -->
-                    <div class="section-flexheader">
+                    <div class="mt-75 section-flexheader">
                         <div class="section-flexheader__title">Мои товары</div>
 
                         <!-- Navig group -->
@@ -649,7 +655,7 @@
                     <div class="swiper" id="myproducts-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="g-3 g-sm-10 gy-32 row">
+                                <div class="row g-3 g-sm-10 gy-32">
                                     <!-- 1 -->
                                     <div class="col-6 col-lg-4 col-xl-3">
                                         <a href="#" class="product-card">
@@ -948,7 +954,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="g-3 g-sm-10 gy-32 row">
+                                <div class="row g-3 g-sm-10 gy-32">
                                     <!-- 1 -->
                                     <div class="col-6 col-lg-4 col-xl-3">
                                         <a href="#" class="product-card">
@@ -1381,6 +1387,44 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- Модальное окно -->
+        <div class="popup" id="formPopup">
+            <div class="popup__content">
+                <button class="popup__close" data-popup="close"></button>
+                <form id="request-form-popup" class="request-form">
+                    <h3 class="request-form__title">Заполните форму</h3>
+                    <p class="request-form__description">Оставьте заявку на обратную связь, чтобы узнать подробнее о поставщике и его продукции</p>
+
+                    <div class="row gx-14 gy-10 gy-sm-7">
+                        <div class="col-sm-6">
+                            <input class="input" type="text" name="request-form-name" placeholder="Ваше имя" autocomplete="on">
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="input" type="phone" name="request-form-name" placeholder="Номер телефона" autocomplete="on">
+                        </div>
+                        <div class="col-12">
+                            <input class="input" type="email" name="request-form-name" placeholder="E-mail" autocomplete="on">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="input" type="text" name="request-form-name" placeholder="Напишите Ваше обращение" autocomplete="on"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="request-group">
+                        <input class="request-checkbox" type="checkbox" name="request-form-policy" id="request-form-policy">
+                        <label for="request-form-policy">Я согласен с пользовательским соглашением и политикой конфиденциальности</label>
+                    </div>
+
+
+                    <div class="justify-content-center">
+                        <button type="submit" class="btn-accent">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
 
     </div>
 

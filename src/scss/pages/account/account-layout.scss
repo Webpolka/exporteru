@@ -1,12 +1,92 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 Account layout
 --------------------------------------------------------------------------------------------------------------------------------*/
-.account-company{
-	.account-layout{
+.account-company {
+	.section-flexheader,
+	.section-topnull-flexheader {
+		@include sm {
+			padding-bottom: 30px;
+		}
+	}
+
+	.account-tile__header {
+		padding-top: 3px;
+		margin-bottom: 33px;
+	}
+
+	.account-layout {
 		padding-top: 30px;
 
-		@include sm{
+		@include sm {
 			padding-top: 10px;
+		}
+	}
+}
+
+.account-human {
+	.account-tile__accgrid{
+		margin-bottom: 30px;
+	}
+
+	.account-tile__title {
+		line-height: 90%;
+	}
+	.account-layout {
+		margin-bottom: 25px;
+
+		@include sm {
+			margin-bottom: 0;
+		}
+	}
+	.section-flexheader,
+	.section-topnull-flexheader {
+		@include sm {
+			padding-bottom: 34px;
+		}
+	}
+
+	.account-vitrine {
+		.product-card__body {
+			padding: 0 8px 14px 8px;
+			@include sm {
+				padding: 8px 8px 6px 8px;
+			}
+		}
+		.product-card__header {
+			aspect-ratio: 272/226;
+
+			@include md {
+				aspect-ratio: 155/192;
+			}
+		}
+		.product-card__title {
+			@include sm {
+				margin-bottom: 9px;
+			}
+		}
+	}
+
+	.section-header {
+		padding-top: 4px;
+		margin-bottom: 56px;
+
+		&__title {
+			font-weight: 400;
+			font-size: 30px;
+			line-height: 100%;
+			letter-spacing: 0.019rem;
+
+			@include lg {
+				font-size: 24px;
+				font-weight: 500;
+			}
+		}
+		@include lg {
+			margin: 0 0 30px;
+			display: none;
+		}
+		@include sm {
+			margin: 0 0 25px;
 		}
 	}
 }
@@ -15,8 +95,9 @@ Account layout
 	position: relative;
 	display: flex;
 	gap: 55px;
+	width: 100%;
 
-	margin-bottom: 60px;
+	margin-bottom: 70px;
 
 	@include xl {
 		gap: 30px;
@@ -26,6 +107,9 @@ Account layout
 		gap: 0;
 		flex-wrap: wrap;
 	}
+	@include sm {
+		margin-bottom: 56px;
+	}
 
 	&__sidebar {
 		width: 294px;
@@ -33,17 +117,30 @@ Account layout
 		flex-shrink: 0;
 
 		@include lg {
-			flex-shrink: none;			
+			display: none;
+			flex-shrink: 1;
 			width: 100%;
 			background-color: #f6f6f6;
+		}
+
+		&.sidebar-everytime-visible {
+			display: block !important;
 		}
 	}
 	&__content {
 		height: inherit;
-		width: calc(100% - 294px);
+		max-width: calc(100% - 294px - 55px);
+		width: 100%;
 
-		@include lg {			
-			width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@include xl {
+			max-width: calc(100% - 294px - 30px);
+		}
+
+		@include lg {
+			max-width: initial;
 		}
 	}
 }

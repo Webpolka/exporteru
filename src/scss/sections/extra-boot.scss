@@ -1,6 +1,55 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТКИ BOOTSTRAP 5.3V)
 --------------------------------------------------------------------------------------------------------------------------------*/
+.max-lg-visible {
+	@media (max-width: 992px) {
+		display: block !important;
+	}
+}
+.max-lg-hidden {
+	@media (max-width: 992px) {
+		display: none !important;
+	}
+}
+.min-lg-hidden {
+	@media (min-width: 992px) {
+		display: none !important;
+	}
+}
+.min-lg-visible {
+	@media (min-width: 992px) {
+		display: block !important;
+	}
+}
+
+.mb-lg-none{
+	@include lg{
+		margin-bottom: 0 !important;
+	}
+}
+
+.pt-10{padding-top: 10px;}
+
+.pt-4px{padding-top: 4px;}
+
+.pt-5px{padding-top: 5px;}
+
+.pt-6px{padding-top: 6px;}
+.pt-3px{padding-top: 3px;}
+
+.mt-50{
+	margin-top: 50px;
+}
+.mt-75{
+	margin-top: 75px;
+	@include sm{
+		margin-top: 60px;
+	}
+}
+
+.mb-40{
+	margin-bottom: 40px;
+}
 
 .custom-col-5 {
 	width: 20%;
@@ -63,6 +112,49 @@ Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТ
 	--bs-gutter-y: 0px;
 }
 
+// sm 5px
+.g-sm-5,
+.gx-sm-5 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 5px;
+	}
+}
+.g-sm-5,
+.gy-sm-5 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 5px;
+	}
+}
+
+// sm 6px
+.g-sm-6,
+.gx-sm-6 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 6px;
+	}
+}
+.g-sm-6,
+.gy-sm-6 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 6px;
+	}
+}
+
+
+// sm 7px
+.g-sm-7,
+.gx-sm-7 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 7px;
+	}
+}
+.g-sm-7,
+.gy-sm-7 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 7px;
+	}
+}
+
 // sm 8px
 .g-sm-8,
 .gx-sm-8 {
@@ -88,6 +180,20 @@ Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТ
 .gy-sm-10 {
 	@media (max-width: 576px) {
 		--bs-gutter-y: 10px;
+	}
+}
+
+// sm 11px
+.g-sm-11,
+.gx-sm-11 {
+	@media (max-width: 576px) {
+		--bs-gutter-x: 11px;
+	}
+}
+.g-sm-11,
+.gy-sm-11 {
+	@media (max-width: 576px) {
+		--bs-gutter-y: 11px;
 	}
 }
 
@@ -199,7 +305,6 @@ Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТ
 	--bs-gutter-x: 12px;
 }
 
-
 // 13
 .g-13,
 .gy-13 {
@@ -218,6 +323,16 @@ Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТ
 .g-14,
 .gx-14 {
 	--bs-gutter-x: 14px;
+}
+
+// 15
+.g-15,
+.gy-15 {
+	--bs-gutter-y: 15px;
+}
+.g-15,
+.gx-15 {
+	--bs-gutter-x: 15px;
 }
 
 // 20
@@ -239,6 +354,18 @@ Extra bootstrap classes (ДОПОЛНИТЕЛЬНЫЕ КЛАССЫ ДЛЯ СЕТ
 .gx-25 {
 	--bs-gutter-x: 25px;
 }
+
+
+// 29
+.g-29,
+.gy-29 {
+	--bs-gutter-y: 29px;
+}
+.g-29,
+.gx-29 {
+	--bs-gutter-x: 29px;
+}
+
 
 // 30
 .g-30,

@@ -3,6 +3,36 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 --------------------------------------------------------------------------------------------------------------------------------*/
 .editable {
 	color: rgba(47, 47, 47);
+
+	&.big-answer {
+		.editable-wrap {
+			padding: 10px 20px;
+			min-height: 69px;
+		}
+		.editable-input {
+			font-size: 16px;
+			color: rgba(47, 47, 47, 0.5);
+
+			&--textarea,
+			&--simpletext {
+				font-size: 16px;
+			}
+		}
+		.editable-buttons {
+			transform: translateY(12px);
+		}
+	}
+
+	&.big-question {
+		.editable-wrap {
+			padding: 20px 20px;
+			min-height: 69px;
+		}
+		.editable-input {
+			font-size: 20px;
+			color: rgba(47, 47, 47, 0.5);
+		}		
+	}
 	// Лейбл
 	&-text {
 		display: block;
@@ -10,6 +40,10 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 		font-size: 14px;
 
 		margin-bottom: 7px;
+
+		@include sm {
+			font-size: 12px;
+		}
 	}
 
 	// Обрертка
@@ -18,12 +52,19 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 		align-items: center;
 		width: 100%;
 		background: var(--white);
-		padding: 10px 12px;
+		padding: 10px 15px;
 
 		min-height: 48px;
 
 		&--top {
 			align-items: start;
+			&>*{
+				padding-right: 10px;
+			}
+		}
+
+		@include sm {
+			min-height: 43px;
 		}
 	}
 
@@ -36,19 +77,24 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 		color: rgba(47, 47, 47, 0.5);
 
 		width: 100%;
+		@include sm {
+			font-size: 10px;
+		}
 		&:focus {
-			color: rgba(47, 47, 47, 1);
+			color: rgba(47, 47, 47, 1) !important;
 		}
 
 		&--shorttextarea,
 		&--textarea {
-			min-height: 210px;
 			resize: none;
-			line-height: 133%;
+			line-height: 135%;
+			min-height: 230px;
 
 			font-weight: 400;
 			font-size: 14px;
 			color: rgba(47, 47, 47, 0.5);
+
+			padding-block: 8px;
 
 			&:focus {
 				color: rgba(47, 47, 47, 1);
@@ -71,6 +117,7 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 			}
 		}
 		&--shorttextarea {
+			min-height: 210px;
 			min-height: 89px;
 		}
 
@@ -83,7 +130,12 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 	&-buttons {
 		display: flex;
 		align-items: center;
-		gap: 9px;
+		gap: 15px;
+		margin-top: -2px;
+
+		@include sm{
+			gap: 8px;
+		}
 
 		&--abs {
 			position: relative;
@@ -109,6 +161,8 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 		font-size: 20px;
 		font-weight: bold;
 
+		
+
 		&:hover {
 			color: var(--accent);
 			svg {
@@ -119,6 +173,10 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 			stroke: var(--text);
 			aspect-ratio: 1/1;
 			width: 22px;
+
+			@include sm{
+				width: 19px;
+		}
 
 			transition: 0.3s ease-in-out;
 		}

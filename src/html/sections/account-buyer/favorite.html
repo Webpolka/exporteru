@@ -12,14 +12,18 @@
 
 			<!-- content -->
 			<div class="account-layout__content">
-				<div class="account-tile">
-					<!-- header -->
-					<div class="account-tile__header">
-						<h2 class="account-tile__title">Избранное</h2>
-					</div>
-
+				<!-- header -->
+				<div class="account__header">
+					<h2 class="account__title">Избранное</h2>
+					<a href="account-buyer-start.html" class="btn-menu" title="Вернуться к меню">
+						<svg class="icon icon--menu">
+							<use href="./icons/symbol/sprite.svg#menu"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="account-tile tile-sm-none">
 					<div class="account-vitrine">
-						<div class="row g-13 gy-31 g-sm-10">
+						<div class="row g-13 gy-29 g-sm-10">
 							<!-- 1 -->
 							<div class="col-6 col-md-6 col-xl-4">
 								<a href="#" class="product-card">
@@ -236,8 +240,7 @@
 										</div>
 									</div>
 								</a>
-							</div>							 
-
+							</div>
 						</div>
 					</div>
 					@@include('../../blocks/block-pagination.html')

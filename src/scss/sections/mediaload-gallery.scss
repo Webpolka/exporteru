@@ -1,0 +1,165 @@
+/*------------------------------------------------------- Media Load ----------------------------------------------------*/
+
+.mediaload {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+
+	&-label {
+		font-weight: 400;
+		font-size: 14px;
+		color: #2f2f2f;
+
+		margin-bottom: 10px;
+
+		@include sm {
+			font-size: 12px;
+
+			margin-bottom: -2px;
+		}
+	}
+	&-message {
+		font-size: 14px;
+		@include sm {
+			font-size: 10px;
+		}
+	}
+
+	&-delete {
+		position: absolute;
+		top: rem(7);
+		right: rem(12);
+
+		width: rem(20);
+		aspect-ratio: 1/1;
+
+		border: 1px solid rgb(0, 0, 0, 0.45);
+		border-radius: 50%;
+		background-color: white;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        z-index: 5;
+
+		transition: all 0.3s ease-in-out;
+
+		@include sm {
+			width: 15px;
+		}
+
+		&:hover {
+			border-color: var(--accent);
+
+			svg {
+				fill: var(--red);
+			}
+		}
+
+		svg {
+			fill: rgb(0, 0, 0, 0.45);
+			width: 50%;
+            aspect-ratio: 1/1;
+
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&-column {
+		width: 20%;
+
+		@include lg {
+			width: 25%;
+		}
+
+		@include sm {
+			width: 33.33%;
+		}
+	}
+
+	&-image {
+		position: relative;
+		cursor: pointer;
+		overflow: hidden;
+		width: 100%;
+		aspect-ratio: 159/114;
+		background-color: var(--white);
+		background-image: url("../../icons/plus.svg");
+		background-repeat: no-repeat;
+		background-size: 30%;
+		background-position: center center;
+
+		transition: all 0.3s ease-in-out;
+		border: 1px solid transparent;
+
+		@include sm {
+			aspect-ratio: 1/1;
+		}
+
+		&:hover {
+			border: 1px solid rgb(47, 47, 247, 0.5);
+			background-color: #fefefe;
+		}
+
+		img {
+			z-index: 1;
+
+			display: block;
+			position: absolute;
+			inset-block-start: 0;
+			inset-inline-start: 0;
+			object-fit: cover;
+			block-size: 100%;
+			inline-size: 100%;
+		}
+	}
+
+	// &-preview {
+	// 	display: flex;
+	// 	align-items: center;
+	// 	gap: 13px;
+	// }
+
+	// &-button {
+	// 	position: relative;
+	// 	overflow: hidden;
+	// 	width: 100%;
+
+	// 	aspect-ratio: 159/114;
+	// 	background-color: var(--white);
+	// 	transition: all 0.3s ease-in-out;
+	// 	border: 1px solid transparent;
+
+	// 	&:hover {
+	// 		border: 1px solid rgb(47, 47, 247, 0.5);
+	// 		svg {
+	// 			stroke: var(--accent);
+	// 		}
+	// 	}
+
+	// 	svg {
+	// 		transition: all 0.3s ease-in-out;
+	// 		stroke: var(--text);
+
+	// 		position: absolute;
+	// 		top: 50%;
+	// 		left: 50%;
+	// 		transform: translate(-50%, -50%);
+	// 		width: 57px;
+	// 		aspect-ratio: 1/1;
+	// 		z-index: 2;
+	// 	}
+
+	// 	img {
+	// 		z-index: 1;
+
+	// 		display: block;
+	// 		position: absolute;
+	// 		inset-block-start: 0;
+	// 		inset-inline-start: 0;
+	// 		object-fit: cover;
+	// 		block-size: 100%;
+	// 		inline-size: 100%;
+	// 	}
+	// }
+}

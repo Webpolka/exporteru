@@ -12,12 +12,16 @@
 
 			<!-- content -->
 			<div class="account-layout__content">
+				<!-- header -->
+				<div class="account__header">
+					<h2 class="account__title">Мои сессии</h2>
+					<a href="account-buyer-start.html" class="btn-menu" title="Вернуться к меню">
+						<svg class="icon icon--menu">
+							<use href="./icons/symbol/sprite.svg#menu"></use>
+						</svg>
+					</a>
+				</div>
 				<div class="account-tile">
-					<!-- header -->
-					<div class="account-tile__header">
-						<h2 class="account-tile__title">Мои сессии</h2>
-					</div>
-
 					<div class="account-sessions">
 						<!--session 1 -->
 						<div class="account-sessions__block session">
@@ -93,6 +97,6 @@
 					@@include('../../blocks/block-pagination.html')
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>
 </section>

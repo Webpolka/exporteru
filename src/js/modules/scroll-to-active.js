@@ -22,12 +22,12 @@ export default class ScrollActiveItem {
    */
   isReady() {
     if (!this.container) {
-      console.warn('Контейнер не найден');
+      console.log('Контейнер не найден');
       return false;
     }
     const activeItem = this.container.querySelector('.' + this.activeClass);
     if (!activeItem) {
-      console.warn('Активный элемент не найден');
+      console.log('Активный элемент не найден');
       return false;
     }
     return true;

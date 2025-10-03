@@ -65,8 +65,8 @@
                             </form>
                         </div>
 
-                        <!-- Login Button -->
-                        <button id="login-btn" class="btn-login">
+                        <!-- Login Button  id="login-btn"-->
+                        <button id="open-popup-btn" class="btn-login">
                             <svg class="icon icon--profile">
                                 <use href="./icons/symbol/sprite.svg#profile"></use>
                             </svg>
@@ -82,6 +82,8 @@
                             </span>
                             <span class="lang-switcher__name">Русский</span>
                         </a>
+
+
                     </div>
                 </div>
 
@@ -411,7 +413,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </header>
@@ -428,7 +429,7 @@
 
             </div>
             <div class="container authorize-layout">
-                <div class="g-2xl-40 gx-97 gx-lg-30 gy-md-14 row">
+                <div class="row g-2xl-40 gx-97 gx-lg-30 gy-md-14">
                     <!-- column 1 -->
                     <div class="authorize-column-1">
                         <form class="authorize-form authorize-form--login" id="authorize-login-form">
@@ -677,6 +678,44 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- Модальное окно -->
+        <div class="popup" id="formPopup">
+            <div class="popup__content">
+                <button class="popup__close" data-popup="close"></button>
+                <form id="request-form-popup" class="request-form">
+                    <h3 class="request-form__title">Заполните форму</h3>
+                    <p class="request-form__description">Оставьте заявку на обратную связь, чтобы узнать подробнее о поставщике и его продукции</p>
+
+                    <div class="row gx-14 gy-10 gy-sm-7">
+                        <div class="col-sm-6">
+                            <input class="input" type="text" name="request-form-name" placeholder="Ваше имя" autocomplete="on">
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="input" type="phone" name="request-form-name" placeholder="Номер телефона" autocomplete="on">
+                        </div>
+                        <div class="col-12">
+                            <input class="input" type="email" name="request-form-name" placeholder="E-mail" autocomplete="on">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="input" type="text" name="request-form-name" placeholder="Напишите Ваше обращение" autocomplete="on"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="request-group">
+                        <input class="request-checkbox" type="checkbox" name="request-form-policy" id="request-form-policy">
+                        <label for="request-form-policy">Я согласен с пользовательским соглашением и политикой конфиденциальности</label>
+                    </div>
+
+
+                    <div class="justify-content-center">
+                        <button type="submit" class="btn-accent">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
 
     </div>
 

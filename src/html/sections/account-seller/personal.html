@@ -12,17 +12,25 @@
 
 			<!-- content -->
 			<div class="account-layout__content">
+				<div class="account__header min-lg-hidden">
+					<div class="account__title">Личные данные</div>
+					<a href="account-seller-start.html" class="btn-menu" title="Вернуться к меню">
+						<svg class="icon icon--menu">
+							<use href="./icons/symbol/sprite.svg#menu"></use>
+						</svg>
+					</a>
+				</div>
 				<div class="account-tile">
 					<!-- acc 4 cards -->
 					<div class="account-tile__accgrid">
-						<div class="account-tile__accgrid--short">
-							<div class="account-tile__title--lh08">Личные данные</div>
+						<div class="account-tile__accgrid--short max-lg-hidden">
+							<div class="account-tile__title">Личные данные</div>
 						</div>
 						<div class="account-tile__accgrid--long">
-							<div class="row g-13">
+							<div class="row g-13 g-sm-7">
 								<!-- acc-card 1-->
 								<div class="col-sm-4">
-									<div class="acc-card">
+									<div class="acc-card acc-card--48">
 										<!--part 1 -->
 										<div class="acc-card__part">
 											<span class="acc-card__label">
@@ -88,7 +96,7 @@
 
 					<!-- form -->
 					<form action="" id="seller-personal-form" class="account-form">
-						<div class="row g-14">
+						<div class="row g-14 g-sm-7">
 							<!-- 1 -->
 							<div class="col-sm-6">
 								<label class="editable">
@@ -164,7 +172,7 @@
 									<div class="editable-wrap editable-wrap--top">
 										<textarea
 											class="editable-input editable-input--textarea"
-											name="seller-personal-description"											
+											name="seller-personal-description"
 											disabled
 										>
 В современном мире, где требования к сохранению природных ресурсов выходят на новый уровень, особую актуальность приобретают продукты и технологические решения, которые помогают природе и людям жить в гармонии. Чистая вода, свежий воздух, высокий уровень ответственности при добыче и переработке природных ископаемых — именно в этом мы видим одну из приоритетных задач для ответственного бизнеса в 21 веке.
@@ -186,42 +194,34 @@
 							</div>
 
 							<div class="col-12">
-								<!-- Нужно писать скрипт для вывода и обработки изображений загрузки -->
-								<div class="mediaload">
-									<label class="media-label" for="seller-personal-media">Фото</label>
-									<input type="file" name="seller-personal-media" id="seller-personal-media" multiple accept="image/jpeg, image/png" hidden />
+								<!-- Нужно дописать скрипт... -->
+								<div class="mediaload mediaload-sellPerson">
+									<label class="mediaload-label" for="seller-personal-media">Фото</label>
+									<input
+										type="file"
+										name="seller-personal-media"
+										id="seller-personal-media"
+										multiple
+										accept="image/jpeg, image/png"
+										hidden
+									/>
 
-									<div class="mediaload-preview">
-										<!-- 1 -->
-										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-											<svg class="icon icon--account-plus">
-												<use href="./icons/symbol/sprite.svg#account-plus"></use>
-											</svg>
-										</button>
-										<!-- 2 -->
-										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-											<svg class="icon icon--account-plus">
-												<use href="./icons/symbol/sprite.svg#account-plus"></use>
-											</svg>
-										</button>
-										<!-- 3 -->
-										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-											<svg class="icon icon--account-plus">
-												<use href="./icons/symbol/sprite.svg#account-plus"></use>
-											</svg>
-										</button>
-										<!-- 4 -->
-										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-											<svg class="icon icon--account-plus">
-												<use href="./icons/symbol/sprite.svg#account-plus"></use>
-											</svg>
-										</button>
-										<!-- 5 -->
-										<button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-											<svg class="icon icon--account-plus">
-												<use href="./icons/symbol/sprite.svg#account-plus"></use>
-											</svg>
-										</button>
+									<div class="row g-10 g-sm-6 mediaload-container" data-mediaload="upload">
+										<div class="mediaload-column">
+											<div class="mediaload-image"></div>
+										</div>										
+										<div class="mediaload-column">
+											<div class="mediaload-image"></div>
+										</div>										
+										<div class="mediaload-column">
+											<div class="mediaload-image"></div>
+										</div>										
+										<div class="mediaload-column">
+											<div class="mediaload-image"></div>
+										</div>										
+										<div class="mediaload-column">
+											<div class="mediaload-image"></div>
+										</div>										
 									</div>
 								</div>
 							</div>
@@ -231,12 +231,12 @@
 			</div>
 		</div>
 
-			<!-- Слайдер мои товары -->
-		<div class="section-flexheader">			
+		<!-- Слайдер мои товары -->
+		<div class="section-flexheader mt-75">
 			<div class="section-flexheader__title">Мои товары</div>
-			
+
 			<!-- Navig group -->
-			<div class="myproducts__header-group" id="myproducts-navig-group">				
+			<div class="myproducts__header-group" id="myproducts-navig-group">
 				<a href="#" class="btn-accent myproducts__button">Смотреть все</a>
 				<!-- Slider navigation -->
 				<div class="myproducts__navigation-wrap">
@@ -246,7 +246,7 @@
 			</div>
 		</div>
 		<!-- Slider -->
-		<div class="swiper" id="myproducts-swiper">		
+		<div class="swiper" id="myproducts-swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-1.html')</div>
 				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-2.html')</div>

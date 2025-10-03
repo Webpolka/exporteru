@@ -139,7 +139,7 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 	padding: 30px 40px;
 
 	@include sm {
-		padding: rem(15) rem(12);
+		padding: 19px 13px 16px
 	}
 
 	.rating-stars {
@@ -161,25 +161,35 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 		align-items: start;
 		gap: rem(17);
 
-		margin-bottom: rem(15);
+		margin-bottom: 30px;
 
 		@include sm {
-			margin-bottom: rem(5);
+
+			margin-bottom: 10px;
 		}
 
 		&__group {
 			display: flex;
-			gap: 15px;
-			align-items: start;
+			gap: 17px;
+			align-items: center;
+
+			@include sm{
+				gap: 5px;
+			}
 
 			.btn-accent {
 				padding-inline: 0;
 				height: 44px;
 				aspect-ratio: 1/1;
 				justify-content: center;
+
+				@include sm{
+					min-height: 32px;
+					height: 32px;
+				}
 				svg {
 					stroke: white;
-					width: 24px;
+					width: 55%;
 					aspect-ratio: 1/1;
 				}
 			}
@@ -192,9 +202,13 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 
 			aspect-ratio: 1/1;
 			overflow: hidden;
-			width: 72px;
+			width: 71px;
 
 			flex-shrink: 0;
+
+			@include sm {
+				width: 45px;
+			}
 
 			img {
 				height: 100%; /* растягиваем изображение по высоте контейнера */
@@ -208,6 +222,10 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 			display: flex;
 			flex-direction: column;
 			gap: 7px;
+
+			@include sm{
+				gap: 3px;
+			}
 		}
 		&__info-group {
 			display: flex;
@@ -219,10 +237,11 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 			.info-group__title {
 				font-weight: 500;
 				font-size: 18px;
-				line-height: 1.28709;
+				line-height: 134%;
 
 				@include sm {
-					font-size: rem(14);
+					line-height: 120%;
+					font-size: rem(12);
 				}
 			}
 			.info-group__date {
@@ -231,6 +250,15 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 
 				@include sm {
 					font-size: rem(10);
+				}
+			}
+		}
+
+		&__rating {
+			@include sm {
+				svg {
+					width: 10px !important;
+					aspect-ratio: 1/1;
 				}
 			}
 		}
@@ -243,7 +271,7 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 			margin-bottom: rem(20);
 
 			@include sm {
-				margin-bottom: rem(15);
+				margin-bottom: 10px;
 				font-size: rem(12);
 				line-height: 142%;
 			}
@@ -286,9 +314,9 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 .review-comp {
 	border: 1px solid rgba(47, 47, 47, 0.1);
 	background-color: var(--white);
-	padding: 30px 40px;
+	padding: 30px 38px;
 
-		color: #2f2f2f;
+	color: #2f2f2f;
 
 	@include sm {
 		padding: rem(15) rem(12);
@@ -297,7 +325,6 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 	.rating-stars {
 		gap: 3px;
 
-		
 		&__item svg {
 			width: rem(24);
 			height: rem(24);
@@ -315,14 +342,15 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 		align-items: start;
 		gap: rem(17);
 
-		margin-bottom: rem(15);
+		margin-bottom: 20px;
 
-		@include xl{
+		@include xl {
 			flex-direction: column;
-			gap: 5px;
+			gap: 7px;
 		}
 
 		@include sm {
+			gap: 7px;
 			margin-bottom: rem(5);
 		}
 
@@ -342,7 +370,7 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 			flex-shrink: 0;
 			background-color: #f6f6f6;
 
-			@include sm{
+			@include sm {
 				font-size: 30px;
 				width: 45px;
 			}
@@ -358,17 +386,19 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 		&__group {
 			display: flex;
 			align-items: center;
-			gap: 15px;
+			gap: 18px;
 
-			&:first-child{
-				@include sm{
-				gap: 8px;	
-				}				
+			&:first-child {
+				@include sm {
+					gap: 8px;
+				}
 			}
-			&:last-child{
-				@include sm{
-				gap: 5px;	
-				}				
+			&:last-child {
+				margin-top: -3px;
+				gap: 15px;
+				@include sm {
+					gap: 5px;
+				}
 			}
 		}
 
@@ -382,9 +412,9 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 	&__name {
 		font-weight: 500;
 		font-size: 18px;
-		line-height: 1.28709;		
+		line-height: 1.28709;
 
-		@include sm {			
+		@include sm {
 			font-size: 12px;
 		}
 	}
@@ -392,7 +422,7 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 	&__description {
 		font-weight: 400;
 		font-size: 14px;
-		line-height: 1.38065;	
+		line-height: 1.38065;
 
 		@include sm {
 			font-size: 10px;
@@ -404,23 +434,23 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 		padding-top: 3px;
 
 		order: 1;
-		@include xl{			
+		@include xl {
 			order: 2;
 		}
 
-		@include sm {			
+		@include sm {
 			font-size: rem(10);
 		}
 	}
 
-	&__rating{
+	&__rating {
 		order: 2;
-		@include xl{
+		@include xl {
 			order: 1;
 		}
 
-		@include sm{			
-			svg{
+		@include sm {
+			svg {
 				width: 10px !important;
 				aspect-ratio: 1/1;
 			}
@@ -432,12 +462,12 @@ REVIEW && REVIEW ACCOUNT BLOCKS (БЛОК С ОТЗЫВАМИ)
 			font-weight: 400;
 			font-size: rem(16);
 
-			margin-bottom: rem(20);
+			margin-bottom: 19px;
 
 			@include sm {
-				margin-bottom: rem(15);
+				margin-bottom: 10px;
 				font-size: rem(12);
-				line-height: 142%;
+				line-height: 153%;
 			}
 			p {
 				margin-bottom: rem(10);

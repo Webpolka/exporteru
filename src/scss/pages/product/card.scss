@@ -22,24 +22,6 @@ Product card
 		}
 	}
 
-	&__placeholder {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-
-		background-image: url("../../../images/account-create-placeholder.png");
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		background-position: center top;
-		transition: all 0.3s ease-in-out;
-
-		&:hover {
-			transform: scale(1.025);
-		}
-	}
-
 	&__header {
 		position: relative;
 		width: 100%;

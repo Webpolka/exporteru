@@ -64,8 +64,8 @@
                             </form>
                         </div>
 
-                        <!-- Login Button -->
-                        <button id="login-btn" class="btn-login">
+                        <!-- Login Button  id="login-btn"-->
+                        <button id="open-popup-btn" class="btn-login">
                             <svg class="icon icon--profile">
                                 <use href="./icons/symbol/sprite.svg#profile"></use>
                             </svg>
@@ -81,6 +81,8 @@
                             </span>
                             <span class="lang-switcher__name">Русский</span>
                         </a>
+
+
                     </div>
                 </div>
 
@@ -410,7 +412,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </header>
@@ -439,88 +440,94 @@
                         <div class="account-layout__sidebar">
                             <nav class="menu-human">
                                 <!-- list 1 -->
-                                <ul class="menu-human__list">
-                                    <!-- 1 -->
-                                    <li>
-                                        <a href="account-buyer-personal.html">
-                                            <svg class="icon icon--account-profile">
-                                                <use href="./icons/symbol/sprite.svg#account-profile"></use>
-                                            </svg>
-                                            <span>Личные данные</span>
-                                        </a>
-                                    </li>
-                                    <!-- 2 -->
-                                    <li>
-                                        <a href="account-buyer-favorite.html">
-                                            <svg class="icon icon--account-favorite">
-                                                <use href="./icons/symbol/sprite.svg#account-favorite"></use>
-                                            </svg>
-                                            <span>Избранное</span>
-                                        </a>
-                                    </li>
-                                    <!-- 3 -->
-                                    <li class="active">
-                                        <a href="account-buyer-recent.html">
-                                            <svg class="icon icon--account-search">
-                                                <use href="./icons/symbol/sprite.svg#account-search"></use>
-                                            </svg>
-                                            <span>Недавно просмотренные</span>
-                                        </a>
-                                    </li>
-                                    <!-- 4 -->
-                                    <li>
-                                        <a href="account-buyer-reviews.html">
-                                            <svg class="icon icon--account-reviews">
-                                                <use href="./icons/symbol/sprite.svg#account-reviews"></use>
-                                            </svg>
-                                            <span>Мои отзывы</span>
-                                        </a>
-                                    </li>
-                                    <!-- 5 -->
-                                    <li>
-                                        <a href="account-buyer-sessions.html">
-                                            <svg class="icon icon--account-sessions">
-                                                <use href="./icons/symbol/sprite.svg#account-sessions"></use>
-                                            </svg>
-                                            <span>Мои сессии</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="menu-human__flex">
+                                    <ul class="menu-human__list">
+                                        <!-- 1 -->
+                                        <li>
+                                            <a href="account-buyer-personal.html">
+                                                <svg class="icon icon--account-profile">
+                                                    <use href="./icons/symbol/sprite.svg#account-profile"></use>
+                                                </svg>
+                                                <span>Личные данные</span>
+                                            </a>
+                                        </li>
+                                        <!-- 2 -->
+                                        <li>
+                                            <a href="account-buyer-favorite.html">
+                                                <svg class="icon icon--account-favorite">
+                                                    <use href="./icons/symbol/sprite.svg#account-favorite"></use>
+                                                </svg>
+                                                <span>Избранное</span>
+                                            </a>
+                                        </li>
+                                        <!-- 3 -->
+                                        <li class="active">
+                                            <a href="account-buyer-recent.html">
+                                                <svg class="icon icon--account-search">
+                                                    <use href="./icons/symbol/sprite.svg#account-search"></use>
+                                                </svg>
+                                                <span>Недавно просмотренные</span>
+                                            </a>
+                                        </li>
+                                        <!-- 4 -->
+                                        <li>
+                                            <a href="account-buyer-reviews.html">
+                                                <svg class="icon icon--account-reviews">
+                                                    <use href="./icons/symbol/sprite.svg#account-reviews"></use>
+                                                </svg>
+                                                <span>Мои отзывы</span>
+                                            </a>
+                                        </li>
+                                        <!-- 5 -->
+                                        <li>
+                                            <a href="account-buyer-sessions.html">
+                                                <svg class="icon icon--account-sessions">
+                                                    <use href="./icons/symbol/sprite.svg#account-sessions"></use>
+                                                </svg>
+                                                <span>Мои сессии</span>
+                                            </a>
+                                        </li>
+                                    </ul>
 
-                                <!-- list 2 -->
-                                <ul class="menu-human__list">
-                                    <!-- 1 -->
-                                    <li class="warn">
-                                        <a href="#">
-                                            <svg class="icon icon--account-trash">
-                                                <use href="./icons/symbol/sprite.svg#account-trash"></use>
-                                            </svg>
-                                            <span>Удалить аккаунт</span>
-                                        </a>
-                                    </li>
-                                    <!-- 2 -->
-                                    <li>
-                                        <a href="#">
-                                            <svg class="icon icon--account-log">
-                                                <use href="./icons/symbol/sprite.svg#account-log"></use>
-                                            </svg>
-                                            <span>Выйти</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                    <!-- list 2 -->
+                                    <ul class="menu-human__list">
+                                        <!-- 1 -->
+                                        <li class="warn">
+                                            <a href="#">
+                                                <svg class="icon icon--account-trash">
+                                                    <use href="./icons/symbol/sprite.svg#account-trash"></use>
+                                                </svg>
+                                                <span>Удалить аккаунт</span>
+                                            </a>
+                                        </li>
+                                        <!-- 2 -->
+                                        <li>
+                                            <a href="#">
+                                                <svg class="icon icon--account-log">
+                                                    <use href="./icons/symbol/sprite.svg#account-log"></use>
+                                                </svg>
+                                                <span>Выйти</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </nav>
                         </div>
 
                         <!-- content -->
                         <div class="account-layout__content">
-                            <div class="account-tile">
-                                <!-- header -->
-                                <div class="account-tile__header">
-                                    <h2 class="account-tile__title">Недавно просмотренные</h2>
-                                </div>
-
+                            <!-- header -->
+                            <div class="account__header">
+                                <h2 class="account__title">Недавно просмотренные</h2>
+                                <a href="account-buyer-start.html" class="btn-menu" title="Вернуться к меню">
+                                    <svg class="icon icon--menu">
+                                        <use href="./icons/symbol/sprite.svg#menu"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="account-tile tile-sm-none">
                                 <div class="account-vitrine">
-                                    <div class="g-13 g-sm-10 gy-31 row">
+                                    <div class="row g-13 g-sm-10 gy-29">
                                         <!-- 1 -->
                                         <div class="col-6 col-md-6 col-xl-4">
                                             <a href="#" class="product-card">
@@ -740,7 +747,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="container justify-content-center">
+                                <div class="justify-content-center">
                                     <div class="exp-pagination">
                                         <a href="#" class="exp-pagination__link exp-pagination__link--disabled exp-pagination__link--prev"></a>
                                         <a href="#" class="exp-pagination__link exp-pagination__link--active">1</a>
@@ -886,6 +893,44 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- Модальное окно -->
+        <div class="popup" id="formPopup">
+            <div class="popup__content">
+                <button class="popup__close" data-popup="close"></button>
+                <form id="request-form-popup" class="request-form">
+                    <h3 class="request-form__title">Заполните форму</h3>
+                    <p class="request-form__description">Оставьте заявку на обратную связь, чтобы узнать подробнее о поставщике и его продукции</p>
+
+                    <div class="row gx-14 gy-10 gy-sm-7">
+                        <div class="col-sm-6">
+                            <input class="input" type="text" name="request-form-name" placeholder="Ваше имя" autocomplete="on">
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="input" type="phone" name="request-form-name" placeholder="Номер телефона" autocomplete="on">
+                        </div>
+                        <div class="col-12">
+                            <input class="input" type="email" name="request-form-name" placeholder="E-mail" autocomplete="on">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="input" type="text" name="request-form-name" placeholder="Напишите Ваше обращение" autocomplete="on"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="request-group">
+                        <input class="request-checkbox" type="checkbox" name="request-form-policy" id="request-form-policy">
+                        <label for="request-form-policy">Я согласен с пользовательским соглашением и политикой конфиденциальности</label>
+                    </div>
+
+
+                    <div class="justify-content-center">
+                        <button type="submit" class="btn-accent">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
 
     </div>
 

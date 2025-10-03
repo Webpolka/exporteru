@@ -3,79 +3,45 @@ Account menu human
 --------------------------------------------------------------------------------------------------------------------------------*/
 .menu-human {
 	background-color: #f6f6f6;
-	padding: 30px;
-
-	min-height: 532px;
-
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-
-	@include lg {
-		align-items: center;
-		min-height: initial;
-	}
-
+	padding: 34px 32px 35px;
 	@include sm {
-		padding-block-start: 15px;
-		padding-block-end: 5px;
+		padding: 35px 30px;
 	}
 
-	&--ord-1 {
-		order: 1;
-		@include lg {
-			order: 2;
-		}
-	}
+	&__flex {
+		display: flex;
+		flex-direction: column;
+		gap: 76px;
 
-	&--ord-2 {
-		order: 2;
-		@include lg {
-			order: 1;
-		}
+		// @include sm {
+		// 	gap: 80px;
+		// }
 	}
 
 	&__group {
 		display: flex;
 		flex-direction: column;
-		gap: 50px;
+		gap: 43px;
 
-		@include lg {
-			width: 100%;
-			overflow-x: scroll;
-			flex-direction: row;
-			gap: 20px;
-
-			&::-webkit-scrollbar {
-				block-size: rem(0);
-				background-color: transparent;
-			}
-
-			&::-webkit-scrollbar-track {
-				box-shadow: none;
-				background: transparent;
-			}
-
-			&::-webkit-scrollbar-thumb {
-				border: none;
-				background-color: rgb(0, 71, 186, 0.55);
-				cursor: pointer;
-
-				@include any-hover {
-					background-color: grey;
-				}
-			}
+		@include sm {
+			gap: 80px;
 		}
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 30px;
 
-		@include lg {
-			flex-shrink: 0;
-			flex-direction: row;
+		&:nth-child(2) {
+			gap: 20px;
+			@include sm {
+				gap: 18px;
+			}
+		}
+
+		@include sm {
+			gap: 30px;
 		}
 
 		li {
@@ -106,7 +72,7 @@ Account menu human
 			a {
 				display: inline-flex;
 				align-items: center;
-				gap: 10px;
+				gap: 15px;
 
 				font-weight: 400;
 				font-size: 16px;
@@ -115,8 +81,10 @@ Account menu human
 				transition: all 0.15s ease-in-out;
 
 				@include sm {
-					font-size: 12px;
+					font-size: 14px;
+					color: var(--text);
 				}
+
 				svg {
 					fill: transparent;
 					width: 24px;
@@ -125,7 +93,7 @@ Account menu human
 					transition: all 0.15s ease-in-out;
 
 					@include sm {
-						width: 18px;
+						stroke: var(--text);
 					}
 				}
 				svg.icon--account-faq {

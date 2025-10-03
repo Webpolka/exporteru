@@ -11,7 +11,7 @@
 
 	// .accordion__item
 	&__item {
-		padding: 15px 20px;
+		padding: 11px 20px;
 		background-color: var(--white);
 
         @include sm{
@@ -35,8 +35,10 @@
 				opacity: 1;
 
 				/** Установить свои значения */
-				padding-block-start: 30px;
+				padding-block-start: 23px;
 				padding-block-end: 10px;
+
+				line-height: 140%;
 
                 @include sm{
                     padding-block-start: 10px;

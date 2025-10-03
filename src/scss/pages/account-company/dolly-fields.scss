@@ -58,17 +58,19 @@ Dolly fields
 	font-weight: 400;
 	font-size: 14px;
 	color: #2f2f2f;
+	line-height: 137%;
 
 	margin-bottom: 5px;
 
 	@include sm {
 		padding-top: 3px;
 		font-size: 10px;
+		margin-bottom: 20px;
 	}
 
-	p,
-	li {
-		margin-bottom: 10px;
+	p:not(:last-child),
+	li:not(:last-child) {
+		margin-bottom: 19px;
 	}
 }
 
@@ -83,7 +85,7 @@ Dolly fields
 	align-items: center;
 
 	@include sm {
-		min-height: 47px;
+		min-height: 43px;
 	}
 
 	&__scroll {
@@ -131,7 +133,7 @@ Dolly fields
 
 			@include sm {
 				font-size: 10px;
-				max-height: 23px;
+				min-height: 23px;
 			}
 		}
 	}
@@ -204,7 +206,7 @@ Dolly fields
 	.down-arrow {
 		content: "";
 		position: absolute;
-		right: 15px; /* позиция справа */
+		right: 18px; /* позиция справа */
 		top: 50%;
 		transform: translateY(-50%);
 

@@ -12,17 +12,22 @@
 
 			<!-- content -->
 			<div class="account-layout__content">
+				<!-- header -->
+				<div class="account__header">
+					<h2 class="account__title">Частые вопросы</h2>
+					<a href="account-seller-start.html" class="btn-menu" title="Вернуться к меню">
+						<svg class="icon icon--menu">
+							<use href="./icons/symbol/sprite.svg#menu"></use>
+						</svg>
+					</a>
+				</div>
+
 				<div class="account-tile">
-					<!-- header -->
-					<div class="account-tile__header">
-						<h2 class="account-tile__title">Частые вопросы</h2>
-					</div>
-
 					<form action="" id="seller-faq-form" class="account-form">
-						<div class="row g-14">
+						<div class="row g-15 pt-5px">
 							<!-- Вопрос  -->
 							<div class="col-12">
-								<label class="editable">
+								<label class="editable big-question">
 									<span class="editable-text">Вопрос</span>
 									<div class="editable-wrap">
 										<input
@@ -55,7 +60,7 @@
 
 							<!-- Ответ -->
 							<div class="col-12">
-								<label class="editable">
+								<label class="editable big-answer">
 									<span class="editable-text">Ответ</span>
 									<div class="editable-wrap editable-wrap--top">
 										<textarea
@@ -89,7 +94,7 @@ Lörem ipsum lätt domåra eller ojös respektive nyl. Deciliga fiskade, i vagt.
 
 							<!-- Вопрос  -->
 							<div class="col-12">
-								<label class="editable">
+								<label class="editable  big-question">
 									<span class="editable-text">Вопрос</span>
 									<div class="editable-wrap">
 										<input
@@ -122,7 +127,7 @@ Lörem ipsum lätt domåra eller ojös respektive nyl. Deciliga fiskade, i vagt.
 
 							<!-- Ответ -->
 							<div class="col-12">
-								<label class="editable">
+								<label class="editable big-answer">
 									<span class="editable-text">Ответ</span>
 									<div class="editable-wrap editable-wrap--top">
 										<textarea
@@ -156,7 +161,7 @@ Lörem ipsum lätt domåra eller ojös respektive nyl. Deciliga fiskade, i vagt.
 
 							<!-- Вопрос  -->
 							<div class="col-12">
-								<label class="editable">
+								<label class="editable big-question">
 									<span class="editable-text">Вопрос</span>
 									<div class="editable-wrap">
 										<input
@@ -188,7 +193,7 @@ Lörem ipsum lätt domåra eller ojös respektive nyl. Deciliga fiskade, i vagt.
 
 							<!-- Ответ -->
 							<div class="col-12">
-								<label class="editable">
+								<label class="editable big-answer">
 									<span class="editable-text">Ответ</span>
 									<div class="editable-wrap editable-wrap--top">
 										<textarea
@@ -223,5 +228,30 @@ Lörem ipsum lätt domåra eller ojös respektive nyl. Deciliga fiskade, i vagt.
 				</div>
 			</div>
 		</div>
+
+		<!-- Слайдер мои товары -->
+		<div class="section-flexheader mt-75">
+			<div class="section-flexheader__title">Мои товары</div>
+
+			<!-- Navig group -->
+			<div class="myproducts__header-group" id="myproducts-navig-group">
+				<a href="#" class="btn-accent myproducts__button">Смотреть все</a>
+				<!-- Slider navigation -->
+				<div class="myproducts__navigation-wrap">
+					<div class="arrow arrow--left"></div>
+					<div class="arrow arrow--right"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Slider -->
+		<div class="swiper" id="myproducts-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-1.html')</div>
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-2.html')</div>
+			</div>
+		</div>
+
+		<!-- for transfer id="myproducts-navig-group" -->
+		<div class="myproducts__sm-navigation" id="myproducts-sm-place"></div>
 	</div>
 </section>

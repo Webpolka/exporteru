@@ -142,19 +142,85 @@ FAQ accordion toggle
 --------------------------------------------------------------------------------------------------------------------------------*/
 import { Accordion } from "./modules/accordion.js";
 
-new Accordion('.accordion', {
+new Accordion(".accordion", {
 	shouldOpenAll: false, // true
 	defaultOpen: [1], // [0,1]
-	collapsedClass: 'open',
+	collapsedClass: "open",
 });
-
 
 /* ------------------------------------------------------------------------------------------------------------------------------
 Скролл к активному элементу в сайдбаре на странице О КОМПАНИИ
 --------------------------------------------------------------------------------------------------------------------------------*/
 import ScrollActiveItem from "./modules/scroll-to-active.js";
 
-const scroller = new ScrollActiveItem('.menu-company__group', 'active');
-window.addEventListener('load', () => {
-  scroller.scrollToActive();
+const scroller = new ScrollActiveItem(".menu-company__group", "active");
+window.addEventListener("load", () => {
+	scroller.scrollToActive();
+});
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Medialoadder
+--------------------------------------------------------------------------------------------------------------------------------*/
+import MediaLoadUploader from "./modules/media-loader.js";
+// Инициализация
+document.addEventListener("DOMContentLoaded", () => {
+	const medialoadPersonal = document.querySelector(".mediaload-sellPerson");
+	medialoadPersonal &&
+		new MediaLoadUploader(medialoadPersonal, {
+			maxFileSizeKB: 1000,
+			maxImages: 9,
+
+			inputId: "seller-personal-media",
+			inputName: "seller-personal-media",
+		});
+
+	const medialoadCreate = document.getElementById("seller-create-upload");
+	medialoadCreate &&
+		new MediaLoadUploader(medialoadCreate, {
+			maxImages: 7,
+			maxFileSizeKB: 1000,
+
+			containerClass: "upload-gallery",
+			columnClass: "upload-column",
+			imageClass: "upload-image",
+			messageClass: "upload-message",
+
+			inputId: "seller-create-media",
+			inputName: "seller-create-media",
+		});
+});
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Cloner
+--------------------------------------------------------------------------------------------------------------------------------*/
+import Cloner from "./modules/cloner.js";
+document.addEventListener("DOMContentLoaded", () => {
+	const cloneBtn = document.querySelector(".repeater-clone-btn");
+
+	cloneBtn &&
+		new Cloner({
+			buttonSelector: ".repeater-clone-btn", // селектор кнопки
+			targetAttribute: "data-clone-target", // дата-атрибут
+			maxClones: 30,
+		});
+});
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Poppup
+--------------------------------------------------------------------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+	const popup = document.getElementById("formPopup");
+	const openPopupbtn = document.querySelector("#open-popup-btn");
+	const closeBtn = popup.querySelector(`[data-popup="close"]`);
+
+	if (popup && openPopupbtn) {
+		openPopupbtn.addEventListener("click", (e) => {
+			e.preventDefault();
+			popup.classList.add("popup--show");
+		});
+		closeBtn.addEventListener("click", (e) => {
+			e.preventDefault();
+			popup.classList.remove("popup--show");
+		});
+	}
 });

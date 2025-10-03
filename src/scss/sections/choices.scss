@@ -95,12 +95,12 @@ CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 	@include sm {
 		left: -20px;
 		min-width: 143px;
-		font-size: rem(12) !important;
+		font-size: rem(10) !important;
 	}
 }
 .choices__item {
 	@include sm {
-		font-size: rem(12) !important;
+		font-size: rem(10) !important;
 	}
 }
 
@@ -158,10 +158,11 @@ CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 	min-height: 28px;
 	border-radius: 0;
 
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 
-	margin-right: 7px;
+	padding-inline: 12px;
+	margin-right: 0px;
 	margin-bottom: 5px;
 	background-color: var(--accent);
 	border: 1px solid var(--accent);
@@ -184,13 +185,17 @@ CUSTOM CHOICES SELECT (ПЕРЕСТИЛИЗАЦИЯ МУЛЬТИСЕЛЕКТА)
 	border: 1px solid var(--accent);
 	filter: brightness(1.2);
 }
+.choices__list--multiple .choices__item[data-deletable] {
+	padding-right: 9px;
+}
 
 .choices__list--multiple {
 	display: flex;
 	overflow-x: auto; /* горизонтальный скролл */
 	flex-wrap: nowrap; /* без переноса */
-	gap: 10зx; /* расстояние между тегами */
+	gap: 10px; /* расстояние между тегами */
 	margin-right: 20px;
+	padding-left: 3px;
 
 	&::-webkit-scrollbar {
 		block-size: rem(0);

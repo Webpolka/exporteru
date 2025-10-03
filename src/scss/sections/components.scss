@@ -3,6 +3,7 @@ COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ)
 --------------------------------------------------------------------------------------------------------------------------------*/
 
 .section,
+.section-null,
 .section-topnull {
 	padding-block: rem(35);
 
@@ -30,7 +31,7 @@ COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ)
 		align-items: center;
 		justify-content: space-between;
 
-		padding-bottom: 24px;
+		padding-bottom: 26px;
 
 		&__title {
 			font-weight: 500;
@@ -41,6 +42,12 @@ COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ)
 				font-size: rem(24);
 			}
 		}
+	}
+}
+.section-null {
+	padding-block: 0;
+	@include sm {
+		padding-block: 0;
 	}
 }
 .section-topnull {
@@ -353,17 +360,18 @@ COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ)
 	color: var(--white);
 
 	transition: var(--transition);
-	
+
 	&--max493 {
+		width: 100%;
 		display: flex;
-		min-width: 493px;
+		max-width: 493px;
 		justify-content: center;
 		margin-inline: auto;
 		margin-top: 20px;
 		min-height: 53px;
 		font-size: 18px;
 
-		@include md{
+		@include md {
 			min-width: initial;
 			width: 100%;
 		}
@@ -498,6 +506,10 @@ COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ)
 
 	@include sm {
 		gap: rem(6);
+	}
+
+	@media (max-width: 375px) {
+		gap: 3px;
 	}
 
 	&__ellipsis {
@@ -849,177 +861,3 @@ COMPONENTS (НЕКОТОРЫЕ БАЗОВЫЕ СТИЛИ КОМПОНЕНТОВ)
 	}
 }
 
-/*------------------------------------------------------- Media Load ----------------------------------------------------*/
-
-.mediaload {
-	display: flex;
-	flex-direction: column;
-	gap: 9px;
-
-	&-preview {
-		display: flex;
-		align-items: center;
-		gap: 13px;
-	}
-
-	&-button {
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-
-		aspect-ratio: 159/114;
-		background-color: var(--white);
-		transition: all 0.3s ease-in-out;
-		border: 1px solid transparent;
-
-		&:hover {
-			border: 1px solid rgb(47, 47, 247, 0.5);
-			svg {
-				stroke: var(--accent);
-			}
-		}
-
-		svg {
-			transition: all 0.3s ease-in-out;
-			stroke: var(--text);
-
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 57px;
-			aspect-ratio: 1/1;
-			z-index: 2;
-		}
-
-		img {
-			z-index: 1;
-
-			display: block;
-			position: absolute;
-			inset-block-start: 0;
-			inset-inline-start: 0;
-			object-fit: cover;
-			block-size: 100%;
-			inline-size: 100%;
-		}
-	}
-}
-
-/*------------------------------------------------------- Upload gallery ----------------------------------------------------*/
-.upload-gallery {
-	&__image {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: start;
-		overflow: hidden;
-
-		height: 100%;
-		background-color: var(--white);
-		overflow: hidden;
-		cursor: pointer;
-
-		transition: all 0.3s ease-in-out;
-
-		&:hover {
-			background-color: rgb(0, 0, 0, 0.1);
-			&:before {
-				transform: scale(1.05) translate(-48%, -48%);
-			}
-		}
-
-		&:before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 21.2%;
-			aspect-ratio: 1/1;
-			background-image: url("../../icons/account-placeholder.svg");
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center center;
-			transform: translate(-50%, -50%);
-
-			transition: all 0.3s ease-in-out;
-		}
-
-		img {
-			height: 100%;
-			width: auto;
-			max-width: 100%;
-			-o-object-fit: cover;
-			object-fit: cover;
-			-o-object-position: center center;
-			object-position: center center;
-			z-index: 1;
-		}
-	}
-	&__thumbnails {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 30px 0;
-
-		margin-left: -6px;
-		margin-right: -6px;
-
-		align-items: start;
-	}
-	&__col {
-		width: 33.33%;
-		padding-right: 6px;
-		padding-left: 6px;
-	}
-
-	&__thumb {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
-
-		aspect-ratio: 130/96;
-
-		background-color: var(--white);
-			transition: all 0.3s ease-in-out;
-
-		&.up-access {
-			&:hover {
-				background-color: rgb(0, 0, 0, 0.1);
-				cursor: pointer;
-				&:before {
-					display: block;
-				}
-			}
-		}
-
-		&:before {
-			display: none;
-
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 21.2%;
-			aspect-ratio: 1/1;
-			background-image: url("../../icons/account-placeholder.svg");
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center center;
-			transform: translate(-50%, -50%);
-
-			z-index: 1;
-		}
-
-		img {
-			height: 100%;
-			width: auto;
-			-o-object-fit: cover;
-			object-fit: cover;
-			-o-object-position: center center;
-			object-position: center center;
-			z-index: 1;
-		}
-	}
-}

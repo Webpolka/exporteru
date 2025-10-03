@@ -64,8 +64,8 @@
                             </form>
                         </div>
 
-                        <!-- Login Button -->
-                        <button id="login-btn" class="btn-login">
+                        <!-- Login Button  id="login-btn"-->
+                        <button id="open-popup-btn" class="btn-login">
                             <svg class="icon icon--profile">
                                 <use href="./icons/symbol/sprite.svg#profile"></use>
                             </svg>
@@ -81,6 +81,8 @@
                             </span>
                             <span class="lang-switcher__name">Русский</span>
                         </a>
+
+
                     </div>
                 </div>
 
@@ -410,7 +412,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </header>
@@ -536,17 +537,25 @@
 
                         <!-- content -->
                         <div class="account-layout__content">
+                            <div class="account__header min-lg-hidden">
+                                <div class="account__title">Личные данные</div>
+                                <a href="account-seller-start.html" class="btn-menu" title="Вернуться к меню">
+                                    <svg class="icon icon--menu">
+                                        <use href="./icons/symbol/sprite.svg#menu"></use>
+                                    </svg>
+                                </a>
+                            </div>
                             <div class="account-tile">
                                 <!-- acc 4 cards -->
                                 <div class="account-tile__accgrid">
-                                    <div class="account-tile__accgrid--short">
-                                        <div class="account-tile__title--lh08">Личные данные</div>
+                                    <div class="account-tile__accgrid--short max-lg-hidden">
+                                        <div class="account-tile__title">Личные данные</div>
                                     </div>
                                     <div class="account-tile__accgrid--long">
-                                        <div class="row g-13">
+                                        <div class="row g-sm-7 g-13">
                                             <!-- acc-card 1-->
                                             <div class="col-sm-4">
-                                                <div class="acc-card">
+                                                <div class="acc-card acc-card--48">
                                                     <!--part 1 -->
                                                     <div class="acc-card__part">
                                                         <span class="acc-card__label">
@@ -612,7 +621,7 @@
 
                                 <!-- form -->
                                 <form action="" id="seller-personal-form" class="account-form">
-                                    <div class="row g-14">
+                                    <div class="row g-sm-7 g-14">
                                         <!-- 1 -->
                                         <div class="col-sm-6">
                                             <label class="editable">
@@ -691,42 +700,27 @@
                                         </div>
 
                                         <div class="col-12">
-                                            <!-- Нужно писать скрипт для вывода и обработки изображений загрузки -->
-                                            <div class="mediaload">
-                                                <label class="media-label" for="seller-personal-media">Фото</label>
+                                            <!-- Нужно дописать скрипт... -->
+                                            <div class="mediaload mediaload-sellPerson">
+                                                <label class="mediaload-label" for="seller-personal-media">Фото</label>
                                                 <input type="file" name="seller-personal-media" id="seller-personal-media" multiple="multiple" accept="image/jpeg, image/png" hidden>
 
-                                                <div class="mediaload-preview">
-                                                    <!-- 1 -->
-                                                    <button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-                                                        <svg class="icon icon--account-plus">
-                                                            <use href="./icons/symbol/sprite.svg#account-plus"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <!-- 2 -->
-                                                    <button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-                                                        <svg class="icon icon--account-plus">
-                                                            <use href="./icons/symbol/sprite.svg#account-plus"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <!-- 3 -->
-                                                    <button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-                                                        <svg class="icon icon--account-plus">
-                                                            <use href="./icons/symbol/sprite.svg#account-plus"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <!-- 4 -->
-                                                    <button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-                                                        <svg class="icon icon--account-plus">
-                                                            <use href="./icons/symbol/sprite.svg#account-plus"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <!-- 5 -->
-                                                    <button type="button" data-id="" class="mediaload-button" title="Добавить изображение">
-                                                        <svg class="icon icon--account-plus">
-                                                            <use href="./icons/symbol/sprite.svg#account-plus"></use>
-                                                        </svg>
-                                                    </button>
+                                                <div class="row g-10 g-sm-6 mediaload-container" data-mediaload="upload">
+                                                    <div class="mediaload-column">
+                                                        <div class="mediaload-image"></div>
+                                                    </div>
+                                                    <div class="mediaload-column">
+                                                        <div class="mediaload-image"></div>
+                                                    </div>
+                                                    <div class="mediaload-column">
+                                                        <div class="mediaload-image"></div>
+                                                    </div>
+                                                    <div class="mediaload-column">
+                                                        <div class="mediaload-image"></div>
+                                                    </div>
+                                                    <div class="mediaload-column">
+                                                        <div class="mediaload-image"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -737,7 +731,7 @@
                     </div>
 
                     <!-- Слайдер мои товары -->
-                    <div class="section-flexheader">
+                    <div class="mt-75 section-flexheader">
                         <div class="section-flexheader__title">Мои товары</div>
 
                         <!-- Navig group -->
@@ -1486,6 +1480,44 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- Модальное окно -->
+        <div class="popup" id="formPopup">
+            <div class="popup__content">
+                <button class="popup__close" data-popup="close"></button>
+                <form id="request-form-popup" class="request-form">
+                    <h3 class="request-form__title">Заполните форму</h3>
+                    <p class="request-form__description">Оставьте заявку на обратную связь, чтобы узнать подробнее о поставщике и его продукции</p>
+
+                    <div class="row gx-14 gy-10 gy-sm-7">
+                        <div class="col-sm-6">
+                            <input class="input" type="text" name="request-form-name" placeholder="Ваше имя" autocomplete="on">
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="input" type="phone" name="request-form-name" placeholder="Номер телефона" autocomplete="on">
+                        </div>
+                        <div class="col-12">
+                            <input class="input" type="email" name="request-form-name" placeholder="E-mail" autocomplete="on">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="input" type="text" name="request-form-name" placeholder="Напишите Ваше обращение" autocomplete="on"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="request-group">
+                        <input class="request-checkbox" type="checkbox" name="request-form-policy" id="request-form-policy">
+                        <label for="request-form-policy">Я согласен с пользовательским соглашением и политикой конфиденциальности</label>
+                    </div>
+
+
+                    <div class="justify-content-center">
+                        <button type="submit" class="btn-accent">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
 
     </div>
 

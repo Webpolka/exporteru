@@ -12,18 +12,25 @@
 
 			<!-- content -->
 			<div class="account-layout__content">
-				<div class="account-tile">
-					<!-- header -->
-					<div class="account-tile__header">
-						<h2 class="account-tile__title">Личные данные</h2>
-						<div class="account-tile__date">
+				<!-- header -->
+				<div class="account__header">
+					<h2 class="account__title">Личные данные</h2>
+
+					<div class="account__inrow">						
+						<div class="account__date">
 							<span>Дата регистрации</span>
 							<span>17.08.25</span>
 						</div>
+						<a href="account-buyer-start.html" class="btn-menu" title="Вернуться к меню">
+							<svg class="icon icon--menu">
+								<use href="./icons/symbol/sprite.svg#menu"></use>
+							</svg>
+						</a>
 					</div>
-
+				</div>
+				<div class="account-tile">
 					<form action="" id="buyer-personal-form" class="account-form">
-						<div class="row g-14">
+						<div class="row g-14 g-sm-8">
 							<div class="col-sm-6">
 								<label class="editable">
 									<span class="editable-text">Имя пользователя</span>

@@ -1,0 +1,150 @@
+<section class="section-null">
+	<h2 class="visually-hidden">Личный кабинет</h2>
+	<div class="container">
+		<!-- Заголовок -->
+		<div class="section-header max-lg-visible">
+			<div class="section-header__title">Личный кабинет</div>
+		</div>
+
+		<div class="account-layout mb-lg-none">
+			<!-- sidebar -->
+			<div class="account-layout__sidebar max-lg-visible">@@include('./sidebars/sidebar-start.html')</div>
+
+			<!-- content -->
+			<div class="account-layout__content max-lg-hidden">
+				<!-- header -->
+				<div class="account__header">
+					<h2 class="account__title">Личные данные</h2>
+                    
+					<div class="account__inrow">						
+						<div class="account__date">
+							<span>Дата регистрации</span>
+							<span>17.08.25</span>
+						</div>
+                        <a href="account-buyer-start.html" class="btn-menu" title="Вернуться к меню">
+							<svg class="icon icon--menu">
+								<use href="./icons/symbol/sprite.svg#menu"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="account-tile">
+					<form action="" id="buyer-personal-form" class="account-form">
+						<div class="row g-14 g-sm-8">
+							<div class="col-sm-6">
+								<label class="editable">
+									<span class="editable-text">Имя пользователя</span>
+									<div class="editable-wrap">
+										<input
+											class="editable-input"
+											value=""
+											type="text"
+											name="buyer-personal-name"
+											placeholder="User Name"
+											disabled
+										/>
+
+										<div class="editable-buttons">
+											<div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+												<svg class="icon icon--account-edit">
+													<use href="./icons/symbol/sprite.svg#account-edit"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="col-sm-6">
+								<div class="choices-select-group">
+									<label for="buyer-personal-counrty">Страна/Регион</label>
+									<select id="buyer-personal-counrty" name="buyer-personal-counrty" required></select>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<label class="editable">
+									<span class="editable-text">Пароль</span>
+									<div class="editable-wrap">
+										<input
+											class="editable-input"
+											value=""
+											type="password"
+											name="buyer-personal-password"
+											placeholder="•••••••••••••••••••"
+											disabled
+										/>
+
+										<div class="editable-buttons">
+											<div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+												<svg class="icon icon--account-edit">
+													<use href="./icons/symbol/sprite.svg#account-edit"></use>
+												</svg>
+											</div>
+
+											<div role="button" data-id="password-value" class="editable-button" title="Посмотреть">
+												<svg class="icon icon--account-eye">
+													<use href="./icons/symbol/sprite.svg#account-eye"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="col-sm-6">
+								<label class="editable">
+									<span class="editable-text">Номер телефона</span>
+									<div class="editable-wrap">
+										<input
+											class="editable-input"
+											value="+7 999 123 45 67"
+											type="phone"
+											name="buyer-personal-phone"
+											placeholder="+7 999 123 45 67"
+											disabled
+										/>
+
+										<div class="editable-buttons">
+											<div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+												<svg class="icon icon--account-edit">
+													<use href="./icons/symbol/sprite.svg#account-edit"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="col-12">
+								<label class="editable">
+									<span class="editable-text">Электронная почта</span>
+									<div class="editable-wrap">
+										<input
+											class="editable-input"
+											value="+7 999 123 45 67"
+											type="phone"
+											name="buyer-personal-email"
+											placeholder="info@mail.ru"
+											disabled
+										/>
+
+										<div class="editable-buttons">
+											<div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+												<svg class="icon icon--account-edit">
+													<use href="./icons/symbol/sprite.svg#account-edit"></use>
+												</svg>
+											</div>
+
+											<div role="button" data-id="clear-value" class="editable-button" title="Очистить">
+												<svg class="icon icon--account-close">
+													<use href="./icons/symbol/sprite.svg#account-close"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

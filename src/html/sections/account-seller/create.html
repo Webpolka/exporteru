@@ -12,14 +12,18 @@
 
 			<!-- content -->
 			<div class="account-layout__content">
+				<!-- header -->
+				<div class="account__header">
+					<h2 class="account__title">Создать товар</h2>
+					<a href="account-seller-start.html" class="btn-menu" title="Вернуться к меню">
+						<svg class="icon icon--menu">
+							<use href="./icons/symbol/sprite.svg#menu"></use>
+						</svg>
+					</a>
+				</div>
 				<div class="account-tile">
-					<!-- header -->
-					<div class="account-tile__header">
-						<h2 class="account-tile__title">Создать товар</h2>
-					</div>
-
 					<form action="" id="seller-create-form" class="account-form">
-						<div class="row gx-14 gy-20">
+						<div class="row gx-14 gy-25 pt-3px">
 							<div class="col-sm-6">
 								<label class="editable">
 									<span class="editable-text">Название товара</span>
@@ -144,15 +148,15 @@
 						<!-- Заголовок с кнопкой размножения "Описание и характеристика" -->
 						<div class="editable-group">
 							<span class="editable-text">Таблица описания и характеристик</span>
-							<button type="button" data-id="editable-repeater" class="editable-button">
+							<button type="button" data-clone-target="#repeater-block" class="editable-button repeater-clone-btn">
 								<svg class="icon icon--account-plus">
 									<use href="./icons/symbol/sprite.svg#account-plus"></use>
 								</svg>
 							</button>
 						</div>
-
+					
 						<!--Первый блок для размножения "Описание и характеристика"-->
-						<div class="row editable-repeater-block" id="repeater-block">
+						<div class="row gx-10 editable-repeater-block" id="repeater-block">
 							<div class="col-sm-6">
 								<div class="editable editable-wrap">
 									<input
@@ -212,7 +216,7 @@
 							</div>
 						</div>
 
-						<div class="row gx-14 gy-20">
+						<div class="row gx-14 gy-25">
 							<div class="col-12">
 								<label class="editable">
 									<span class="editable-text">Описание</span>
@@ -384,50 +388,38 @@
 							<span class="editable-text">Изображение товара</span>
 						</div>
 
-						<div class="row gx-12 gy-20 gy-sm-30 upload-gallery">
-							<!-- Big -->
-							<div class="col-sm-6">
-								<div class="upload-gallery__image up-item">
-									<!-- <img src="../../../images/main/main-10-bg.png" alt="" /> -->
+						<div id="seller-create-upload">
+							<div class="row gx-12 gy-20 gy-sm-30 upload-gallery">
+								<!-- Big -->
+								<div class="col-sm-6 upload-column">
+									<div class="upload-gallery__image upload-image"></div>
 								</div>
-							</div>
-							<!-- Container with small -->
-							<div class="col-sm-6">
-								<div class="upload-gallery__thumbnails">
-									<!-- 1 -->
-									<div class="upload-gallery__col">
-										<div class="upload-gallery__thumb up-item up-access">
-											<!-- <img src="../../../images/product-page/gallery-child-1.png" alt="" /> -->
+								<!-- Container with small -->
+								<div class="col-sm-6">
+									<div class="upload-gallery__thumbnails">
+										<!-- 1 -->
+										<div class="upload-gallery__col upload-column">
+											<div class="upload-gallery__thumb  upload-image"></div>   <!-- up-access -->
 										</div>
-									</div>
-									<!-- 2 -->
-									<div class="upload-gallery__col">
-										<div class="upload-gallery__thumb up-item">
-											<!-- <img src="../../../images/product-page/gallery-child-2.png" alt="" /> -->
+										<!-- 2 -->
+										<div class="upload-gallery__col upload-column">
+											<div class="upload-gallery__thumb upload-image"></div>
 										</div>
-									</div>
-									<!-- 3 -->
-									<div class="upload-gallery__col">
-										<div class="upload-gallery__thumb up-item">
-											<!-- <img src="../../../images/product-page/gallery-child-3.png" alt="" /> -->
+										<!-- 3 -->
+										<div class="upload-gallery__col upload-column">
+											<div class="upload-gallery__thumb upload-image"></div>
 										</div>
-									</div>
-									<!-- 4 -->
-									<div class="upload-gallery__col">
-										<div class="upload-gallery__thumb up-item">
-											<!-- <img src="../../../images/product-page/gallery-child-4.png" alt="" /> -->
+										<!-- 4 -->
+										<div class="upload-gallery__col upload-column">
+											<div class="upload-gallery__thumb upload-image"></div>
 										</div>
-									</div>
-									<!-- 5 -->
-									<div class="upload-gallery__col">
-										<div class="upload-gallery__thumb up-item">
-											<!-- <img src="../../../images/product-page/gallery-child-1.png" alt="" /> -->
+										<!-- 5 -->
+										<div class="upload-gallery__col upload-column">
+											<div class="upload-gallery__thumb upload-image"></div>
 										</div>
-									</div>
-									<!-- 6 -->
-									<div class="upload-gallery__col">
-										<div class="upload-gallery__thumb up-item">
-											<!-- <img src="../../../images/product-page/gallery-child-2.png" alt="" /> -->
+										<!-- 6 -->
+										<div class="upload-gallery__col upload-column">
+											<div class="upload-gallery__thumb upload-image"></div>
 										</div>
 									</div>
 								</div>
@@ -486,31 +478,77 @@
 
 									<!-- 2 -->
 									<div class="swiper-slide">
-										<button type="button" data-id="add-similar" class="product-card__placeholder"></button>
+										<!-- placeholder button -->
+										<button type="button" data-id="add-similar" class="card-placeholder">
+											<div class="card-placeholder__top">
+												<svg class="icon icon--rect-plus">
+													<use href="./icons/symbol/sprite.svg#rect-plus"></use>
+												</svg>
+											</div>
+											<div class="card-placeholder__bottom"></div>
+										</button>
 									</div>
 
 									<!-- 3 -->
 									<div class="swiper-slide">
-										<button type="button" data-id="add-similar" class="product-card__placeholder"></button>
+										<!-- placeholder button -->
+										<button type="button" data-id="add-similar" class="card-placeholder">
+											<div class="card-placeholder__top">
+												<svg class="icon icon--rect-plus">
+													<use href="./icons/symbol/sprite.svg#rect-plus"></use>
+												</svg>
+											</div>
+											<div class="card-placeholder__bottom"></div>
+										</button>
 									</div>
 
 									<!-- 4 -->
 									<div class="swiper-slide">
-										<button type="button" data-id="add-similar" class="product-card__placeholder"></button>
+										<!-- placeholder button -->
+										<button type="button" data-id="add-similar" class="card-placeholder">
+											<div class="card-placeholder__top">
+												<svg class="icon icon--rect-plus">
+													<use href="./icons/symbol/sprite.svg#rect-plus"></use>
+												</svg>
+											</div>
+											<div class="card-placeholder__bottom"></div>
+										</button>
 									</div>
-									
 								</div>
 							</div>
 							<!-- for transfer id="simnilar-navig-group" -->
 							<div class="similar__sm-navigation" id="similar-sm-place"></div>
 
-							<div class="similar__submit">
-								<button type="submit" class="btn-accent btn-accent--max493">Создать</button>
-							</div>
+							<button type="submit" class="btn-accent btn-accent--max493">Создать</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
+
+		<!-- Слайдер мои товары -->
+		<div class="section-flexheader mt-75">
+			<div class="section-flexheader__title">Мои товары</div>
+
+			<!-- Navig group -->
+			<div class="myproducts__header-group" id="myproducts-navig-group">
+				<a href="#" class="btn-accent myproducts__button">Смотреть все</a>
+				<!-- Slider navigation -->
+				<div class="myproducts__navigation-wrap">
+					<div class="arrow arrow--left"></div>
+					<div class="arrow arrow--right"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Slider -->
+		<div class="swiper" id="myproducts-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-1.html')</div>
+				<div class="swiper-slide">@@include('../swiper-popular-products/popular-products-2.html')</div>
+			</div>
+		</div>
+
+		<!-- for transfer id="myproducts-navig-group" -->
+		<div class="myproducts__sm-navigation" id="myproducts-sm-place"></div>
 	</div>
 </section>
