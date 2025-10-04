@@ -1,6 +1,6 @@
 <div class="contacts-form">
-	<form action="" id="contacts-formm">
-        <h2 class="contacts-form__md-media">Контакты</h2>
+	<form id="contacts-formm">
+		<h2 class="contacts-form__md-media">Контакты</h2>
 		<h3 class="contacts-form__title">Заполните форму</h3>
 		<div class="contacts-form__description">
 			При обращении подробно опишите свой вопрос или проблему, с указанием ссылок, скриношотов или фото. Мы открыты для любых
@@ -8,23 +8,16 @@
 		</div>
 		<div class="row gx-13 gy-11 gy-sm-8">
 			<div class="col-sm-6">
-				<input type="text" id="" name="contacts-name" class="contacts-form__input" placeholder="Ваше имя" autocomplete="on" />
+				<input type="text" name="contacts-name" class="contacts-form__input" placeholder="Ваше имя" autocomplete="on" />
 			</div>
 			<div class="col-sm-6">
-				<input
-					type="tel"
-					id=""
-					name="contacts-phone"
-					class="contacts-form__input"
-					placeholder="Номер телефона"
-					autocomplete="on"
-				/>
+				<input type="tel" name="contacts-phone" class="contacts-form__input" placeholder="Номер телефона" autocomplete="on" />
 			</div>
 			<div class="col-12">
-				<input type="email" id="" name="contacts-phone" class="contacts-form__input" placeholder="E-mail" autocomplete="on" />
+				<input type="email" name="contacts-phone" class="contacts-form__input" placeholder="E-mail" autocomplete="on" />
 			</div>
 			<div class="col-12">
-				<textarea id="" name="contacts-message" class="contacts-form__textarea" placeholder="Напишите Ваше обращение"></textarea>
+				<textarea name="contacts-message" class="contacts-form__textarea" placeholder="Напишите Ваше обращение"></textarea>
 			</div>
 			<div class="col-12">
 				<label class="contacts-form__media">
@@ -35,9 +28,9 @@
 					<input hidden name="contacts-media" type="file" class="contacts-form__input" />
 				</label>
 			</div>
-            <div class="col-12">
-                <button type="submit" class="btn-accent">Отправить</button>
-            </div>
+			<div class="col-12">
+				<button type="submit" class="btn-accent">Отправить</button>
+			</div>
 		</div>
 	</form>
 </div>

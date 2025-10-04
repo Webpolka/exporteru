@@ -2140,6 +2140,9 @@ HEADER
   flex-grow: 1;
   order: 1;
 }
+.header__row .btn-catalog {
+  display: block;
+}
 .header__row .btn-login {
   order: 2;
 }
