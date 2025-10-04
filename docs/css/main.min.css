@@ -1228,9 +1228,6 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 .editable-wrap--top {
   align-items: start;
 }
-.editable-wrap--top > * {
-  padding-right: 10px;
-}
 .editable-input {
   background: var(--white);
   flex-grow: 1;
@@ -1906,11 +1903,15 @@ FOOTER
   display: flex;
   justify-content: space-between;
   padding-block-start: 22px;
-  padding-block-end: 32px;
+  padding-block-end: 22px;
   min-height: 10.3125rem;
+  gap: 15px;
 }
-.footer__item:nth-child(3), .footer__item:nth-child(4), .footer__item:nth-child(5) {
-  transform: translate(3px, 2px);
+.footer__item:nth-child(n+2) .footer__title {
+  padding-left: 39px;
+}
+.footer__item:nth-child(n+2) .footer__list {
+  padding-left: 41px;
 }
 .footer__item:first-child .footer__list {
   gap: 2px;
@@ -1970,8 +1971,9 @@ FOOTER
 }
 .footer__social {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  max-width: 11.25rem;
+  max-width: 8rem;
   gap: 15px;
 }
 .footer__social-link {
@@ -2006,6 +2008,7 @@ FOOTER
   background-color: var(--wechat);
 }
 .footer__social-link--whatsapp {
+  display: none;
   background-color: var(--whatsapp);
 }
 .footer__bottom {
@@ -2884,6 +2887,7 @@ UI range slider for filter apge (РЭНЖ СЛАЙДЕР В ФИЛЬТРЕ НА 
   overflow: hidden;
   width: 100%;
   height: 100%;
+  aspect-ratio: 414/221;
   background-color: var(--white);
   overflow: hidden;
   cursor: pointer;
@@ -2931,8 +2935,8 @@ UI range slider for filter apge (РЭНЖ СЛАЙДЕР В ФИЛЬТРЕ НА 
 }
 .upload-gallery__col {
   width: 33.33%;
-  padding-right: 6px;
-  padding-left: 6px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .upload-gallery__thumb {
   position: relative;
@@ -2979,6 +2983,7 @@ UI range slider for filter apge (РЭНЖ СЛАЙДЕР В ФИЛЬТРЕ НА 
 }
 
 .upload-message {
+  padding-top: 7px;
   font-size: 12px;
 }
 
@@ -3679,6 +3684,7 @@ Account content styles
   width: 23px;
 }
 
+/*--------------------------------------------- create card placeholder похожие товары  ---------------------------------------------*/
 .card-placeholder {
   position: absolute;
   top: 0;
@@ -4055,6 +4061,9 @@ Similar products
 }
 .similar__vitrine .product-card__header {
   aspect-ratio: 271/224;
+}
+.similar__vitrine .product-card__body {
+  padding-inline: 6px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -5397,7 +5406,7 @@ ADVANTAGES SECTION
 .advantages-card__text {
   font-weight: 500;
   font-size: 1.09375rem;
-  line-height: 113%;
+  line-height: 117%;
   letter-spacing: 0;
   color: var(--text);
   margin-bottom: 1.25rem;
@@ -6232,7 +6241,18 @@ MEDIAQUERIES
 }
 @media (max-width: 1200px){
   .footer__top {
-    gap: 15px;
+    gap: 1.875rem 0.9375rem;
+    flex-wrap: wrap;
+  }
+  .footer__item:nth-child(n+2) .footer__title {
+    padding-left: 0;
+  }
+  .footer__item:nth-child(n+2) .footer__list {
+    padding-left: 0;
+  }
+  .footer__social {
+    justify-content: flex-start;
+    max-width: 100%;
   }
   .review-comp-header {
     flex-direction: column;
@@ -6403,21 +6423,23 @@ MEDIAQUERIES
     --bs-gutter-y: 30px;
   }
   .footer__top {
-    gap: 3.125rem 0rem;
-    flex-wrap: wrap;
+    gap: 1.875rem 0;
+    padding-block: 1.875rem;
   }
-  .footer__item {
-    width: 50%;
+  .footer__item:nth-child(1), .footer__item:nth-child(3) {
+    width: 55%;
+  }
+  .footer__item:nth-child(2), .footer__item:nth-child(4) {
+    width: 45%;
+  }
+  .footer__item:last-child {
+    width: 100%;
   }
   .footer__item--social {
     width: 100%;
   }
   .footer__item--social .footer__title {
     display: none;
-  }
-  .footer__social {
-    max-width: 100%;
-    gap: 1.875rem;
   }
   .footer__bottom {
     padding-bottom: 1.875rem;
@@ -6688,6 +6710,9 @@ MEDIAQUERIES
   .gx-md-14 {
     --bs-gutter-x: 14px;
   }
+  .footer__social-link--whatsapp {
+    display: flex;
+  }
   .myproducts .section-flexheader {
     padding-block-end: 2.1875rem;
   }
@@ -6772,10 +6797,16 @@ MEDIAQUERIES
     right: 8px;
   }
   .card-placeholder__top {
-    aspect-ratio: 155/192;
+    aspect-ratio: 155/231;
+  }
+  .similar__sm-navigation {
+    margin-bottom: 30px;
   }
   .similar__vitrine .product-card__header {
-    aspect-ratio: 141/188;
+    aspect-ratio: 141/200;
+  }
+  .similar__vitrine .product-card__location {
+    margin-bottom: 9px;
   }
   .similar__vitrine .product-card__location span {
     font-weight: 400;
@@ -6785,6 +6816,7 @@ MEDIAQUERIES
     font-weight: 500;
     font-size: 12px;
     line-height: 1.38065;
+    margin-bottom: 22px;
   }
   .article-banner__wrap {
     min-height: 213px;
@@ -7242,6 +7274,12 @@ MEDIAQUERIES
   .editable-group.pt-sm-13 {
     padding-top: 13px !important;
   }
+  .editable-group.pt-sm-11 {
+    padding-top: 11px !important;
+  }
+  .editable-group.pt-max-sm-0 {
+    padding-top: 0px !important;
+  }
   .exp-catalog {
     top: 5rem;
     padding-top: 0.625rem;
@@ -7428,18 +7466,11 @@ MEDIAQUERIES
   .gy-sm-40 {
     --bs-gutter-y: 44px;
   }
-  .footer__top {
-    gap: 1.875rem 0;
-    margin-left: -1.875rem;
-    margin-right: -1.875rem;
-    padding-block: 1.875rem;
+  .footer__item:first-child .footer__list {
+    gap: 0;
   }
-  .footer__item:nth-child(3), .footer__item:nth-child(4), .footer__item:nth-child(5) {
-    transform: translate(0, 1px);
-  }
-  .footer__item {
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
+  .footer__item:nth-child(2) .footer__list {
+    gap: 0;
   }
   .footer__title {
     width: 85%;
@@ -7464,6 +7495,10 @@ MEDIAQUERIES
   .footer__link .icon--tg {
     width: 1rem;
     height: 0.8125rem;
+  }
+  .footer__social {
+    max-width: 100%;
+    gap: 1.875rem;
   }
   .footer__bottom {
     padding-block-start: 0.9375rem;
@@ -7501,7 +7536,7 @@ MEDIAQUERIES
     font-size: 10px;
   }
   .mediaload-delete {
-    width: 15px;
+    width: 18px;
   }
   .mediaload-column {
     width: 33.33%;
@@ -7656,6 +7691,19 @@ MEDIAQUERIES
   }
   .noUi-base {
     height: 5px;
+  }
+  .upload-gallery__image {
+    aspect-ratio: 288/184;
+  }
+  .upload-gallery__thumbnails {
+    gap: 6px 0;
+    margin-left: -3px;
+    margin-right: -3px;
+  }
+  .upload-gallery__col {
+    width: 25%;
+    padding-right: 3px;
+    padding-left: 3px;
   }
   .upload-message {
     font-size: 10px;
@@ -7855,6 +7903,12 @@ MEDIAQUERIES
   .account-vitrine .product-card__price-old {
     font-size: 12px;
   }
+  .card-placeholder:hover svg {
+    width: 60px;
+  }
+  .card-placeholder__top svg {
+    width: 50px;
+  }
   .choices-select-group {
     gap: 4px;
   }
@@ -7933,6 +7987,13 @@ MEDIAQUERIES
   }
   .menu-human__list li a svg {
     stroke: var(--text);
+  }
+  .similar-flexheader {
+    padding-top: 12px;
+    margin-bottom: 8px;
+  }
+  .similar-flexheader__title {
+    font-size: 12px;
   }
   .article-banner__wrap {
     min-height: 163px;
@@ -8331,7 +8392,8 @@ MEDIAQUERIES
     padding-inline: 0.9375rem;
   }
   .advantages-card__text {
-    margin-bottom: -2px;
+    font-size: 15px;
+    margin-bottom: 17px;
   }
   .exporteru__block {
     background-image: url("../images/main/main-5-bg-mobile.png");

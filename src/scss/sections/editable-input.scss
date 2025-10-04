@@ -57,10 +57,7 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 		min-height: 48px;
 
 		&--top {
-			align-items: start;
-			&>*{
-				padding-right: 10px;
-			}
+			align-items: start;			
 		}
 
 		@include sm {
@@ -207,5 +204,17 @@ Editable input (РЕДАКТИРУЕМЫЙ ИНПУТ И ТЕКСТАРЕА)
 .editable-group.pt-sm-13{
 	@include sm{
 		padding-top: 13px !important;
+	}
+}
+
+.editable-group.pt-sm-11{
+	@include sm{
+		padding-top: 11px !important;
+	}
+}
+
+.editable-group.pt-max-sm-0{
+	@media(max-width:576px){
+		padding-top: 0px !important;
 	}
 }

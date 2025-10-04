@@ -450,6 +450,8 @@ Account content styles
 	}
 }
 
+
+/*--------------------------------------------- create card placeholder похожие товары  ---------------------------------------------*/
 .card-placeholder {
 	position: absolute;
 	top: 0;
@@ -465,6 +467,10 @@ Account content styles
 	&:hover {
 		svg {
 			width: 85px;
+
+			@include sm{
+				width: 60px;
+			}
 		}
 	}
 
@@ -486,7 +492,7 @@ Account content styles
 		transition: all 0.3s ease-in-out;
 
 		@include md {
-			aspect-ratio: 155/192;
+			aspect-ratio: 155/231;
 		}
 
 		svg {
@@ -494,6 +500,10 @@ Account content styles
 			max-height: 120px;
 			width: 80px;
 			aspect-ratio: 1/1;
+
+			@include sm{
+				width: 50px;
+			}
 
 			transition: all 0.1s ease-in-out;
 		}

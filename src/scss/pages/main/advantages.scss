@@ -136,7 +136,7 @@ ADVANTAGES SECTION
 		&__text {
 			font-weight: 500;
 			font-size: rem(17.5);
-			line-height: 113%;
+			line-height: 117%;
 			letter-spacing: 0;
 			color: var(--text);
 				margin-bottom: rem(20);
@@ -146,7 +146,8 @@ ADVANTAGES SECTION
 			}
 
 			@include sm{
-				margin-bottom: -2px;
+				font-size: 15px;
+				margin-bottom: 17px;
 			}
 
 		

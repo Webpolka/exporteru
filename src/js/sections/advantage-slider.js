@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			controls: false,
 			breakpoints: {
 				"(max-width: 575px)": {
-					slides: { perView: 1.47, spacing: 15 },
+					slides: { perView: 1.44, spacing: 10 },
 				},
 				"(min-width: 576px)": {
-					slides: { perView: 2.2, spacing: 15 },
+					slides: { perView: 2.2, spacing: 10 },
 				},
 				"(min-width: 768px)": {
 					slides: { perView: 3.31, spacing: 26 },
