@@ -52,7 +52,7 @@ categoriesOverlayMenu &&
 		parent: ".exp-catalog",
 		openBtn: "#catalog-btn",
 		catButton: "data-catIDoverlay",
-		catBlock: "data-blockIDoverlay",						
+		catBlock: "data-blockIDoverlay",
 	});
 
 /* --------------------------------------------------------------------------------------------------------------------------
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			inputId: "seller-create-media",
 			inputName: "seller-create-media",
 
-			beforeClass: "placeholder-before"
+			beforeClass: "placeholder-before",
 		});
 });
 
@@ -207,9 +207,5 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ------------------------------------------------------------------------------------------------------------------------------
 Popup
 --------------------------------------------------------------------------------------------------------------------------------*/
-import './modules/popup.js';
+import "./modules/popup.js";
 
-
-/* ------------------------------------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------------------------------------*/

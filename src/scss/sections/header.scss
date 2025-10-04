@@ -167,8 +167,7 @@ HEADER
 			}
 		}
 
-		.btn-catalog {
-			display: block;
+		.btn-catalog {			
 			&__name {
 				@include lg {
 					display: none;

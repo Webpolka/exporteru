@@ -9,7 +9,7 @@ EXPERTS SECTION
 
 		aspect-ratio: 127/46;
 
-		background-image: url("../../images/main/main-5-bg.png");
+		background-image: url("../../images/main/main-5-bg.webp");
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: right bottom;
@@ -36,7 +36,7 @@ EXPERTS SECTION
 		}
 
 		@include sm {
-			background-image: url("../../images/main/main-5-bg-mobile.png");
+			background-image: url("../../images/main/main-5-bg-mobile.webp");
 			justify-content: start;
 			gap: rem(19);
 
