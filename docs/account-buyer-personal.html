@@ -46,15 +46,15 @@
                     <div class="header__row">
                         <div class="header__row-group">
                             <!-- Catalog button -->
-                            <button id="catalog-btn" class="btn-catalog" type="button" aria-label="Каталог">
+                            <div id="catalog-btn" class="btn-catalog" aria-label="Каталог">
                                 <div class="btn-catalog__burger">
                                     <span></span>
                                 </div>
                                 <span class="btn-catalog__name">Каталог</span>
-                            </button>
+                            </div>
 
                             <!-- Seacrh form -->
-                            <form class="search-form" action="" id="search-form">
+                            <form class="search-form" id="search-form">
                                 <input type="search" id="search-input" class="search-form__input" placeholder="Поиск по сайту" name="s">
                                 <button type="submit" class="search-form__button" aria-label="Поиск">
                                     <svg class="icon icon--search">
@@ -573,7 +573,7 @@
                                                     <input class="editable-input" value="" type="text" name="buyer-personal-name" placeholder="User Name" disabled="disabled">
 
                                                     <div class="editable-buttons">
-                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <div data-id="edit-value" class="editable-button" title="Редактировать">
                                                             <svg class="icon icon--account-edit">
                                                                 <use href="./icons/symbol/sprite.svg#account-edit"></use>
                                                             </svg>
@@ -595,13 +595,13 @@
                                                     <input class="editable-input" value="" type="password" name="buyer-personal-password" placeholder="•••••••••••••••••••" disabled="disabled">
 
                                                     <div class="editable-buttons">
-                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <div data-id="edit-value" class="editable-button" title="Редактировать">
                                                             <svg class="icon icon--account-edit">
                                                                 <use href="./icons/symbol/sprite.svg#account-edit"></use>
                                                             </svg>
                                                         </div>
 
-                                                        <div role="button" data-id="password-value" class="editable-button" title="Посмотреть">
+                                                        <div data-id="password-value" class="editable-button" title="Посмотреть">
                                                             <svg class="icon icon--account-eye">
                                                                 <use href="./icons/symbol/sprite.svg#account-eye"></use>
                                                             </svg>
@@ -614,10 +614,10 @@
                                             <label class="editable">
                                                 <span class="editable-text">Номер телефона</span>
                                                 <div class="editable-wrap">
-                                                    <input class="editable-input" value="+7 999 123 45 67" type="phone" name="buyer-personal-phone" placeholder="+7 999 123 45 67" disabled="disabled">
+                                                    <input class="editable-input" value="+7 999 123 45 67" type="tel" name="buyer-personal-phone" placeholder="+7 999 123 45 67" disabled="disabled">
 
                                                     <div class="editable-buttons">
-                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <div data-id="edit-value" class="editable-button" title="Редактировать">
                                                             <svg class="icon icon--account-edit">
                                                                 <use href="./icons/symbol/sprite.svg#account-edit"></use>
                                                             </svg>
@@ -630,16 +630,16 @@
                                             <label class="editable">
                                                 <span class="editable-text">Электронная почта</span>
                                                 <div class="editable-wrap">
-                                                    <input class="editable-input" value="+7 999 123 45 67" type="phone" name="buyer-personal-email" placeholder="info@mail.ru" disabled="disabled">
+                                                    <input class="editable-input" value="+7 999 123 45 67" type="tel" name="buyer-personal-email" placeholder="info@mail.ru" disabled="disabled">
 
                                                     <div class="editable-buttons">
-                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <div data-id="edit-value" class="editable-button" title="Редактировать">
                                                             <svg class="icon icon--account-edit">
                                                                 <use href="./icons/symbol/sprite.svg#account-edit"></use>
                                                             </svg>
                                                         </div>
 
-                                                        <div role="button" data-id="clear-value" class="editable-button" title="Очистить">
+                                                        <div data-id="clear-value" class="editable-button" title="Очистить">
                                                             <svg class="icon icon--account-close">
                                                                 <use href="./icons/symbol/sprite.svg#account-close"></use>
                                                             </svg>
@@ -798,13 +798,13 @@
                             <input class="input" type="text" name="request-form-name" placeholder="Ваше имя" autocomplete="on">
                         </div>
                         <div class="col-sm-6">
-                            <input class="input" type="phone" name="request-form-name" placeholder="Номер телефона" autocomplete="on">
+                            <input class="input" type="tel" name="request-form-name" placeholder="Номер телефона" autocomplete="on">
                         </div>
                         <div class="col-12">
                             <input class="input" type="email" name="request-form-name" placeholder="E-mail" autocomplete="on">
                         </div>
                         <div class="col-12">
-                            <textarea class="input" type="text" name="request-form-name" placeholder="Напишите Ваше обращение" autocomplete="on"></textarea>
+                            <textarea class="input" name="request-form-name" placeholder="Напишите Ваше обращение" autocomplete="on"></textarea>
                         </div>
                     </div>
 

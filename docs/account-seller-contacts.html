@@ -46,15 +46,15 @@
                     <div class="header__row">
                         <div class="header__row-group">
                             <!-- Catalog button -->
-                            <button id="catalog-btn" class="btn-catalog" type="button" aria-label="Каталог">
+                            <div id="catalog-btn" class="btn-catalog" aria-label="Каталог">
                                 <div class="btn-catalog__burger">
                                     <span></span>
                                 </div>
                                 <span class="btn-catalog__name">Каталог</span>
-                            </button>
+                            </div>
 
                             <!-- Seacrh form -->
-                            <form class="search-form" action="" id="search-form">
+                            <form class="search-form" id="search-form">
                                 <input type="search" id="search-input" class="search-form__input" placeholder="Поиск по сайту" name="s">
                                 <button type="submit" class="search-form__button" aria-label="Поиск">
                                     <svg class="icon icon--search">
@@ -585,18 +585,18 @@
                                             <label class="editable">
                                                 <span class="editable-text">Номер телефона</span>
                                                 <div class="editable-wrap">
-                                                    <input class="editable-input" value="+7 999 123 45 67" type="phone" name="seller-contacts-phone" placeholder="Введите номер" disabled="disabled">
+                                                    <input class="editable-input" value="+7 999 123 45 67" type="tel" name="seller-contacts-phone" placeholder="Введите номер" disabled="disabled">
 
                                                     <div class="editable-buttons">
                                                         <!-- Кнопка удалить -->
-                                                        <div role="button" data-id="clear-value" class="editable-button" title="Удалить">
+                                                        <div data-id="clear-value" class="editable-button" title="Удалить">
                                                             <svg class="icon icon--account-close">
                                                                 <use href="./icons/symbol/sprite.svg#account-close"></use>
                                                             </svg>
                                                         </div>
 
                                                         <!-- Кнопка редактировать -->
-                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <div data-id="edit-value" class="editable-button" title="Редактировать">
                                                             <svg class="icon icon--account-edit">
                                                                 <use href="./icons/symbol/sprite.svg#account-edit"></use>
                                                             </svg>
@@ -607,11 +607,11 @@
 
                                             <label class="editable">
                                                 <div class="editable-wrap">
-                                                    <input class="editable-input" value="" type="phone" name="seller-contacts-phone-2" placeholder="Добавьте номер" disabled="disabled">
+                                                    <input class="editable-input" value="" type="tel" name="seller-contacts-phone-2" placeholder="Добавьте номер" disabled="disabled">
 
                                                     <div class="editable-buttons">
                                                         <!-- Кнопка с плюсиком -->
-                                                        <div role="button" data-id="add-value" class="editable-button" title="Добавить">
+                                                        <div data-id="add-value" class="editable-button" title="Добавить">
                                                             <svg class="icon icon--account-plus">
                                                                 <use href="./icons/symbol/sprite.svg#account-plus"></use>
                                                             </svg>
@@ -629,14 +629,14 @@
 
                                                     <div class="editable-buttons">
                                                         <!-- Кнопка удалить -->
-                                                        <div role="button" data-id="clear-value" class="editable-button" title="Удалить">
+                                                        <div data-id="clear-value" class="editable-button" title="Удалить">
                                                             <svg class="icon icon--account-close">
                                                                 <use href="./icons/symbol/sprite.svg#account-close"></use>
                                                             </svg>
                                                         </div>
 
                                                         <!-- Кнопка редактировать -->
-                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <div data-id="edit-value" class="editable-button" title="Редактировать">
                                                             <svg class="icon icon--account-edit">
                                                                 <use href="./icons/symbol/sprite.svg#account-edit"></use>
                                                             </svg>
@@ -651,7 +651,7 @@
 
                                                     <div class="editable-buttons">
                                                         <!-- Кнопка с плюсиком -->
-                                                        <div role="button" data-id="add-value" class="editable-button" title="Добавить">
+                                                        <div data-id="add-value" class="editable-button" title="Добавить">
                                                             <svg class="icon icon--account-plus">
                                                                 <use href="./icons/symbol/sprite.svg#account-plus"></use>
                                                             </svg>
@@ -669,7 +669,7 @@
 
                                                     <div class="editable-buttons">
                                                         <!-- Кнопка редактировать -->
-                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <div data-id="edit-value" class="editable-button" title="Редактировать">
                                                             <svg class="icon icon--account-edit">
                                                                 <use href="./icons/symbol/sprite.svg#account-edit"></use>
                                                             </svg>
@@ -687,14 +687,14 @@
 
                                                     <div class="editable-buttons">
                                                         <!-- Кнопка удалить -->
-                                                        <div role="button" data-id="clear-value" class="editable-button" title="Удалить">
+                                                        <div data-id="clear-value" class="editable-button" title="Удалить">
                                                             <svg class="icon icon--account-close">
                                                                 <use href="./icons/symbol/sprite.svg#account-close"></use>
                                                             </svg>
                                                         </div>
 
                                                         <!-- Кнопка редактировать -->
-                                                        <div role="button" data-id="edit-value" class="editable-button" title="Редактировать">
+                                                        <div data-id="edit-value" class="editable-button" title="Редактировать">
                                                             <svg class="icon icon--account-edit">
                                                                 <use href="./icons/symbol/sprite.svg#account-edit"></use>
                                                             </svg>
@@ -709,7 +709,7 @@
 
                                                     <div class="editable-buttons">
                                                         <!-- Кнопка с плюсиком -->
-                                                        <div role="button" data-id="add-value" class="editable-button" title="Добавить">
+                                                        <div data-id="add-value" class="editable-button" title="Добавить">
                                                             <svg class="icon icon--account-plus">
                                                                 <use href="./icons/symbol/sprite.svg#account-plus"></use>
                                                             </svg>
@@ -771,7 +771,7 @@
                                                     </div>
                                                     <div class="product-card__discount">-45%</div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="9" class="product-card__like">
+                                                    <div data-likeid="9" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -807,7 +807,7 @@
                                                         <span class="product-card__price-real">от 12 999 ₽</span>
                                                     </div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="2" class="product-card__like active">
+                                                    <div data-likeid="2" class="product-card__like active">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -845,7 +845,7 @@
                                                     </div>
                                                     <div class="product-card__discount">-45%</div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="65" class="product-card__like">
+                                                    <div data-likeid="65" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -881,7 +881,7 @@
                                                         <span class="product-card__price-real">от 12 999 ₽</span>
                                                     </div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="12" class="product-card__like">
+                                                    <div data-likeid="12" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -917,7 +917,7 @@
                                                         <span class="product-card__price-real">от 12 999 ₽</span>
                                                     </div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="323" class="product-card__like">
+                                                    <div data-likeid="323" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -955,7 +955,7 @@
                                                     </div>
                                                     <div class="product-card__discount">-45%</div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="877" class="product-card__like">
+                                                    <div data-likeid="877" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -991,7 +991,7 @@
                                                         <span class="product-card__price-real">от 12 999 ₽</span>
                                                     </div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="345" class="product-card__like active">
+                                                    <div data-likeid="345" class="product-card__like active">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1029,7 +1029,7 @@
                                                     </div>
                                                     <div class="product-card__discount">-45%</div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="86" class="product-card__like">
+                                                    <div data-likeid="86" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1070,7 +1070,7 @@
                                                     </div>
                                                     <div class="product-card__discount">-45%</div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="9" class="product-card__like">
+                                                    <div data-likeid="9" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1106,7 +1106,7 @@
                                                         <span class="product-card__price-real">от 12 999 ₽</span>
                                                     </div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="2" class="product-card__like active">
+                                                    <div data-likeid="2" class="product-card__like active">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1144,7 +1144,7 @@
                                                     </div>
                                                     <div class="product-card__discount">-45%</div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="65" class="product-card__like">
+                                                    <div data-likeid="65" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1180,7 +1180,7 @@
                                                         <span class="product-card__price-real">от 12 999 ₽</span>
                                                     </div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="12" class="product-card__like">
+                                                    <div data-likeid="12" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1216,7 +1216,7 @@
                                                         <span class="product-card__price-real">от 12 999 ₽</span>
                                                     </div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="323" class="product-card__like">
+                                                    <div data-likeid="323" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1254,7 +1254,7 @@
                                                     </div>
                                                     <div class="product-card__discount">-45%</div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="877" class="product-card__like">
+                                                    <div data-likeid="877" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1290,7 +1290,7 @@
                                                         <span class="product-card__price-real">от 12 999 ₽</span>
                                                     </div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="345" class="product-card__like active">
+                                                    <div data-likeid="345" class="product-card__like active">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1328,7 +1328,7 @@
                                                     </div>
                                                     <div class="product-card__discount">-45%</div>
                                                     <!-- like -->
-                                                    <div role="button" data-likeid="86" class="product-card__like">
+                                                    <div data-likeid="86" class="product-card__like">
                                                         <svg class="icon icon--star-e">
                                                             <use href="./icons/symbol/sprite.svg#star-e"></use>
                                                         </svg>
@@ -1489,13 +1489,13 @@
                             <input class="input" type="text" name="request-form-name" placeholder="Ваше имя" autocomplete="on">
                         </div>
                         <div class="col-sm-6">
-                            <input class="input" type="phone" name="request-form-name" placeholder="Номер телефона" autocomplete="on">
+                            <input class="input" type="tel" name="request-form-name" placeholder="Номер телефона" autocomplete="on">
                         </div>
                         <div class="col-12">
                             <input class="input" type="email" name="request-form-name" placeholder="E-mail" autocomplete="on">
                         </div>
                         <div class="col-12">
-                            <textarea class="input" type="text" name="request-form-name" placeholder="Напишите Ваше обращение" autocomplete="on"></textarea>
+                            <textarea class="input" name="request-form-name" placeholder="Напишите Ваше обращение" autocomplete="on"></textarea>
                         </div>
                     </div>
 
